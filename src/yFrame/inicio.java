@@ -5,6 +5,8 @@
  */
 package yFrame;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Administrador
@@ -16,6 +18,7 @@ public class inicio extends javax.swing.JFrame {
      */
     public inicio() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -28,14 +31,26 @@ public class inicio extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jLabelMenu = new javax.swing.JLabel();
         jLabelCerrar = new javax.swing.JLabel();
         jLabelMinimizar = new javax.swing.JLabel();
+        jPanelMenu = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         jLabelfondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/icons_menu.png"))); // NOI18N
+        jLabelMenu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelMenuMouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 50));
 
         jLabelCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/icons_delete.png"))); // NOI18N
         jLabelCerrar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -52,6 +67,23 @@ public class inicio extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jLabelMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 10, -1, -1));
+
+        jLabel1.setText("Menu");
+
+        javax.swing.GroupLayout jPanelMenuLayout = new javax.swing.GroupLayout(jPanelMenu);
+        jPanelMenu.setLayout(jPanelMenuLayout);
+        jPanelMenuLayout.setHorizontalGroup(
+            jPanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+        );
+        jPanelMenuLayout.setVerticalGroup(
+            jPanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelMenuLayout.createSequentialGroup()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 414, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(jPanelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(-150, 50, 150, 450));
 
         jLabelfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo.jpg"))); // NOI18N
         jPanel1.add(jLabelfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 500));
@@ -85,6 +117,15 @@ public class inicio extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabelMinimizarMouseClicked
 
+    private void jLabelMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelMenuMouseClicked
+        int posicion = this.jPanelMenu.getX();
+        if(posicion > -1){
+            Animacion.Animacion.mover_izquierda(0, -150, 2, 2, jPanelMenu);
+        }else{
+            Animacion.Animacion.mover_derecha(-150, 0, 2, 2, jPanelMenu);
+        }
+    }//GEN-LAST:event_jLabelMenuMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -96,7 +137,7 @@ public class inicio extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -121,9 +162,12 @@ public class inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelCerrar;
+    private javax.swing.JLabel jLabelMenu;
     private javax.swing.JLabel jLabelMinimizar;
     private javax.swing.JLabel jLabelfondo;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanelMenu;
     // End of variables declaration//GEN-END:variables
 }
