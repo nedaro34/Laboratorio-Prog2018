@@ -32,15 +32,15 @@ public class login extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        jLabelCerrar = new javax.swing.JLabel();
+        jLabelMinimizar = new javax.swing.JLabel();
+        jPaneliniciar = new javax.swing.JPanel();
         jLabelUsuario = new javax.swing.JLabel();
         jTextFieldUsuario = new javax.swing.JTextField();
         jLabelContraseña = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        jPasswordField = new javax.swing.JPasswordField();
         jLabeliniciar = new javax.swing.JLabel();
         jLabelpanel = new javax.swing.JLabel();
-        jLabelCerrar = new javax.swing.JLabel();
-        jLabelMinimizar = new javax.swing.JLabel();
         jLabelfondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -48,29 +48,6 @@ public class login extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabelUsuario.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabelUsuario.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelUsuario.setText("Usuario :");
-        jPanel2.add(jLabelUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 100, 30));
-        jPanel2.add(jTextFieldUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 160, 30));
-
-        jLabelContraseña.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabelContraseña.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelContraseña.setText("Contraseña :");
-        jPanel2.add(jLabelContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 160, 30));
-        jPanel2.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 160, 30));
-
-        jLabeliniciar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/icons_iniciar.png"))); // NOI18N
-        jPanel2.add(jLabeliniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 50, 40));
-
-        jLabelpanel.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelpanel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/PANEL.png"))); // NOI18N
-        jPanel2.add(jLabelpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 250));
-
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, 200, -1));
 
         jLabelCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/icons_delete.png"))); // NOI18N
         jLabelCerrar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -87,6 +64,34 @@ public class login extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jLabelMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 10, -1, -1));
+
+        jPaneliniciar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelUsuario.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabelUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelUsuario.setText("Usuario :");
+        jPaneliniciar.add(jLabelUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 100, 30));
+        jPaneliniciar.add(jTextFieldUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 160, 30));
+
+        jLabelContraseña.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabelContraseña.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelContraseña.setText("Contraseña :");
+        jPaneliniciar.add(jLabelContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 160, 30));
+        jPaneliniciar.add(jPasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 160, 30));
+
+        jLabeliniciar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/icons_iniciar.png"))); // NOI18N
+        jLabeliniciar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabeliniciarMouseClicked(evt);
+            }
+        });
+        jPaneliniciar.add(jLabeliniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 50, 40));
+
+        jLabelpanel.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelpanel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/PANEL.png"))); // NOI18N
+        jPaneliniciar.add(jLabelpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 250));
+
+        jPanel1.add(jPaneliniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, 200, -1));
 
         jLabelfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo.jpg"))); // NOI18N
         jPanel1.add(jLabelfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 500));
@@ -119,6 +124,20 @@ public class login extends javax.swing.JFrame {
         //Minimiza la ventana 
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabelMinimizarMouseClicked
+
+    private void jLabeliniciarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabeliniciarMouseClicked
+        String usuario = "admin";
+        String contraseña = "123";
+        String pass = new String(jPasswordField.getPassword());
+        String user = new String(jTextFieldUsuario.getText());
+        if(user.equals(usuario) && pass.equals(contraseña)){
+            inicio acesso = new inicio();
+            acesso.setVisible(true);
+            dispose();
+        }else{
+            JOptionPane.showConfirmDialog(this, "Usuario o Contraseña equivocada");
+        }
+    }//GEN-LAST:event_jLabeliniciarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -164,8 +183,8 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabeliniciar;
     private javax.swing.JLabel jLabelpanel;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JPanel jPaneliniciar;
+    private javax.swing.JPasswordField jPasswordField;
     private javax.swing.JTextField jTextFieldUsuario;
     // End of variables declaration//GEN-END:variables
 }
