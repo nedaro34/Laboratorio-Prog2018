@@ -10,7 +10,7 @@ public class Empleados extends Persona{
     }
      public void BorrarEmpleado(){
         
-        
+        //pppp
     }
      public void ModificarEmpleado(){
         
