@@ -36,6 +36,11 @@ public class inicio extends javax.swing.JFrame {
         jLabelMinimizar = new javax.swing.JLabel();
         jPanelMenu = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        rSButtonMetro1 = new rsbuttom.RSButtonMetro();
+        rSButtonMetro3 = new rsbuttom.RSButtonMetro();
+        rSButtonMetro4 = new rsbuttom.RSButtonMetro();
+        rSButtonMetro5 = new rsbuttom.RSButtonMetro();
+        jPanel2 = new javax.swing.JPanel();
         jLabelfondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -68,22 +73,58 @@ public class inicio extends javax.swing.JFrame {
         });
         jPanel1.add(jLabelMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 10, -1, -1));
 
+        jPanelMenu.setBackground(new java.awt.Color(51, 255, 51));
+
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Menu");
+
+        rSButtonMetro1.setBackground(new java.awt.Color(51, 255, 51));
+        rSButtonMetro1.setForeground(new java.awt.Color(0, 0, 0));
+        rSButtonMetro1.setText("Afiliados");
+
+        rSButtonMetro3.setBackground(new java.awt.Color(51, 255, 51));
+        rSButtonMetro3.setForeground(new java.awt.Color(0, 0, 0));
+        rSButtonMetro3.setText("Pago Afiliado");
+
+        rSButtonMetro4.setBackground(new java.awt.Color(51, 255, 51));
+        rSButtonMetro4.setForeground(new java.awt.Color(0, 0, 0));
+        rSButtonMetro4.setText("Empleado");
+
+        rSButtonMetro5.setBackground(new java.awt.Color(51, 255, 51));
+        rSButtonMetro5.setForeground(new java.awt.Color(0, 0, 0));
+        rSButtonMetro5.setText("Asistencia Medica");
 
         javax.swing.GroupLayout jPanelMenuLayout = new javax.swing.GroupLayout(jPanelMenu);
         jPanelMenu.setLayout(jPanelMenuLayout);
         jPanelMenuLayout.setHorizontalGroup(
             jPanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
+            .addComponent(rSButtonMetro1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(rSButtonMetro3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
+            .addComponent(rSButtonMetro4, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
+            .addComponent(rSButtonMetro5, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
         );
         jPanelMenuLayout.setVerticalGroup(
             jPanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelMenuLayout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 414, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(rSButtonMetro1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(rSButtonMetro4, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17)
+                .addComponent(rSButtonMetro5, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rSButtonMetro3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 8, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(-150, 50, 150, 450));
+        jPanel1.add(jPanelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(-170, 50, 170, 260));
+
+        jPanel2.setLayout(new javax.swing.BoxLayout(jPanel2, javax.swing.BoxLayout.LINE_AXIS));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 900, 440));
 
         jLabelfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo.jpg"))); // NOI18N
         jPanel1.add(jLabelfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 500));
@@ -168,6 +209,11 @@ public class inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelMinimizar;
     private javax.swing.JLabel jLabelfondo;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanelMenu;
+    private rsbuttom.RSButtonMetro rSButtonMetro1;
+    private rsbuttom.RSButtonMetro rSButtonMetro3;
+    private rsbuttom.RSButtonMetro rSButtonMetro4;
+    private rsbuttom.RSButtonMetro rSButtonMetro5;
     // End of variables declaration//GEN-END:variables
 }
