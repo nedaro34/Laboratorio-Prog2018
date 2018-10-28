@@ -7,6 +7,8 @@ package yFrame;
 
 import javax.swing.JOptionPane;
 
+
+
 /**
  *
  * @author Administrador
@@ -19,6 +21,7 @@ public class inicio extends javax.swing.JFrame {
     public inicio() {
         initComponents();
         this.setLocationRelativeTo(null);
+        
     }
 
     /**
@@ -35,6 +38,11 @@ public class inicio extends javax.swing.JFrame {
         jLabelCerrar = new javax.swing.JLabel();
         jLabelMinimizar = new javax.swing.JLabel();
         jPanelMenu = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabelfondo = new javax.swing.JLabel();
 
@@ -68,12 +76,30 @@ public class inicio extends javax.swing.JFrame {
         });
         jPanel1.add(jLabelMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 10, -1, -1));
 
-        jPanelMenu.setBackground(new java.awt.Color(51, 255, 51));
-        jPanelMenu.setLayout(new javax.swing.BoxLayout(jPanelMenu, javax.swing.BoxLayout.LINE_AXIS));
+        jPanelMenu.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Menu");
+        jPanelMenu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 170, 50));
+
+        jButton1.setText("Pago");
+        jPanelMenu.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 170, -1));
+
+        jButton2.setText("Afiliados");
+        jPanelMenu.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 170, -1));
+
+        jButton3.setText("Empleados");
+        jPanelMenu.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 170, -1));
+
+        jButton4.setText("Asistencia");
+        jPanelMenu.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 170, -1));
+
         jPanel1.add(jPanelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(-170, 50, 170, 260));
 
         jPanel2.setLayout(new javax.swing.BoxLayout(jPanel2, javax.swing.BoxLayout.LINE_AXIS));
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 900, 440));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -500, 900, 440));
 
         jLabelfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo.jpg"))); // NOI18N
         jPanel1.add(jLabelfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 500));
@@ -108,6 +134,7 @@ public class inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelMinimizarMouseClicked
 
     private void jLabelMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelMenuMouseClicked
+
         int posicion = this.jPanelMenu.getX();
         if(posicion > -1){
          //   Animacion.Animacion.mover_izquierda(0, -150, 2, 2, jPanelMenu);
@@ -152,6 +179,11 @@ public class inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelCerrar;
     private javax.swing.JLabel jLabelMenu;
     private javax.swing.JLabel jLabelMinimizar;
