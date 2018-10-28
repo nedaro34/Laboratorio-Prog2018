@@ -46,10 +46,8 @@ public class Eliminar_Familiar extends javax.swing.JPanel {
         jTextField7 = new javax.swing.JTextField();
         jTextField8 = new javax.swing.JTextField();
         jTextField9 = new javax.swing.JTextField();
-        rSButtonMetro2 = new rsbuttom.RSButtonMetro();
         jLabel12 = new javax.swing.JLabel();
         jTextField10 = new javax.swing.JTextField();
-        rSButtonMetro3 = new rsbuttom.RSButtonMetro();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -102,18 +100,10 @@ public class Eliminar_Familiar extends javax.swing.JPanel {
         add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 160, 60, -1));
         add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 150, 60, -1));
 
-        rSButtonMetro2.setBackground(new java.awt.Color(51, 255, 51));
-        rSButtonMetro2.setText("Buscar");
-        add(rSButtonMetro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 20, -1, 30));
-
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel12.setText("Nombre :");
         add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 90, 30));
         add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 340, 210, -1));
-
-        rSButtonMetro3.setBackground(new java.awt.Color(51, 255, 51));
-        rSButtonMetro3.setText("Registrar");
-        add(rSButtonMetro3, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 400, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
 
@@ -139,7 +129,5 @@ public class Eliminar_Familiar extends javax.swing.JPanel {
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
-    private rsbuttom.RSButtonMetro rSButtonMetro2;
-    private rsbuttom.RSButtonMetro rSButtonMetro3;
     // End of variables declaration//GEN-END:variables
 }

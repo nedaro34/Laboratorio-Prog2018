@@ -46,7 +46,6 @@ public class Ingresar_Doctor extends javax.swing.JPanel {
         jTextField7 = new javax.swing.JTextField();
         jTextField8 = new javax.swing.JTextField();
         jTextField9 = new javax.swing.JTextField();
-        rSButtonMetro2 = new rsbuttom.RSButtonMetro();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -98,10 +97,6 @@ public class Ingresar_Doctor extends javax.swing.JPanel {
         add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, 210, -1));
         add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 80, 60, -1));
         add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 80, 60, -1));
-
-        rSButtonMetro2.setBackground(new java.awt.Color(51, 255, 51));
-        rSButtonMetro2.setText("Registrar");
-        add(rSButtonMetro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 400, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
 
@@ -125,6 +120,5 @@ public class Ingresar_Doctor extends javax.swing.JPanel {
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
-    private rsbuttom.RSButtonMetro rSButtonMetro2;
     // End of variables declaration//GEN-END:variables
 }
