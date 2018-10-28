@@ -5,9 +5,9 @@
  */
 package yFrame;
 
-import caja.Eliminar_Doctor;
-import caja.Ingresar_Doctor;
-import caja.Modificar_Doctor;
+import caja.Eliminar_Emfermero;
+import caja.Ingresar_Emfermero;
+import caja.Modificar_Emfermero;
 import javax.swing.JOptionPane;
 import paneles.CambiaPanel;
 
@@ -17,12 +17,12 @@ import paneles.CambiaPanel;
  *
  * @author Administrador
  */
-public class inicio extends javax.swing.JFrame {
+public class emfermero extends javax.swing.JFrame {
 
     /**
      * Creates new form inicio
      */
-    public inicio() {
+    public emfermero() {
         initComponents();
         this.setLocationRelativeTo(null);
         
@@ -85,10 +85,10 @@ public class inicio extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Doctor");
+        jLabel1.setText("Emfermero");
         jPanelMenu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 170, 50));
 
-        jButton1.setText("volver");
+        jButton1.setText("Volver");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -96,7 +96,7 @@ public class inicio extends javax.swing.JFrame {
         });
         jPanelMenu.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 170, -1));
 
-        jButton2.setText("Agregar Doctor");
+        jButton2.setText("Ingresar Emfermero");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -104,7 +104,7 @@ public class inicio extends javax.swing.JFrame {
         });
         jPanelMenu.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 170, -1));
 
-        jButton3.setText("Modificar Doctor");
+        jButton3.setText("Modificar Emfermero");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -112,7 +112,7 @@ public class inicio extends javax.swing.JFrame {
         });
         jPanelMenu.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 170, -1));
 
-        jButton4.setText("Eliminar Doctor");
+        jButton4.setText("Eliminar Emfermero");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -168,15 +168,15 @@ public class inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelMenuMouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        new CambiaPanel(jPanel_Caja,new Ingresar_Doctor());
+        new CambiaPanel(jPanel_Caja,new Ingresar_Emfermero());
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        new CambiaPanel(jPanel_Caja,new Modificar_Doctor());
+        new CambiaPanel(jPanel_Caja,new Modificar_Emfermero());
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        new CambiaPanel(jPanel_Caja,new Eliminar_Doctor());
+        new CambiaPanel(jPanel_Caja,new Eliminar_Emfermero());
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -202,20 +202,21 @@ public class inicio extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(emfermero.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(emfermero.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(emfermero.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(emfermero.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new inicio().setVisible(true);
+                new emfermero().setVisible(true);
             }
         });
     }

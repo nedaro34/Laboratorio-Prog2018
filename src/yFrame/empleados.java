@@ -5,11 +5,7 @@
  */
 package yFrame;
 
-import caja.Eliminar_Doctor;
-import caja.Ingresar_Doctor;
-import caja.Modificar_Doctor;
 import javax.swing.JOptionPane;
-import paneles.CambiaPanel;
 
 
 
@@ -17,12 +13,12 @@ import paneles.CambiaPanel;
  *
  * @author Administrador
  */
-public class inicio extends javax.swing.JFrame {
+public class empleados extends javax.swing.JFrame {
 
     /**
      * Creates new form inicio
      */
-    public inicio() {
+    public empleados() {
         initComponents();
         this.setLocationRelativeTo(null);
         
@@ -47,7 +43,7 @@ public class inicio extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jPanel_Caja = new javax.swing.JPanel();
+        jButton5 = new javax.swing.JButton();
         jLabelfondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -85,7 +81,7 @@ public class inicio extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Doctor");
+        jLabel1.setText("Empleados");
         jPanelMenu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 170, 50));
 
         jButton1.setText("volver");
@@ -94,9 +90,9 @@ public class inicio extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanelMenu.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 170, -1));
+        jPanelMenu.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 170, -1));
 
-        jButton2.setText("Agregar Doctor");
+        jButton2.setText("Doctor");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -104,7 +100,7 @@ public class inicio extends javax.swing.JFrame {
         });
         jPanelMenu.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 170, -1));
 
-        jButton3.setText("Modificar Doctor");
+        jButton3.setText("Emfermero");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -112,7 +108,7 @@ public class inicio extends javax.swing.JFrame {
         });
         jPanelMenu.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 170, -1));
 
-        jButton4.setText("Eliminar Doctor");
+        jButton4.setText("Administractivo");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -120,10 +116,15 @@ public class inicio extends javax.swing.JFrame {
         });
         jPanelMenu.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 170, -1));
 
-        jPanel1.add(jPanelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(-170, 50, 170, 260));
+        jButton5.setText("Chofer");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanelMenu.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 170, -1));
 
-        jPanel_Caja.setLayout(new javax.swing.BoxLayout(jPanel_Caja, javax.swing.BoxLayout.LINE_AXIS));
-        jPanel1.add(jPanel_Caja, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -500, 900, 440));
+        jPanel1.add(jPanelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(-170, 50, 170, 260));
 
         jLabelfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo.jpg"))); // NOI18N
         jPanel1.add(jLabelfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 500));
@@ -168,22 +169,34 @@ public class inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelMenuMouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        new CambiaPanel(jPanel_Caja,new Ingresar_Doctor());
+        doctor a = new doctor();
+        a.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        new CambiaPanel(jPanel_Caja,new Modificar_Doctor());
+        emfermero a = new emfermero();
+        a.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        new CambiaPanel(jPanel_Caja,new Eliminar_Doctor());
+        administractivo a = new administractivo();
+        a.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        empleados a = new empleados();
+        chofer a = new chofer();
         a.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        chofer a = new chofer();
+        a.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -202,20 +215,21 @@ public class inicio extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(empleados.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(empleados.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(empleados.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(empleados.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new inicio().setVisible(true);
+                new empleados().setVisible(true);
             }
         });
     }
@@ -225,6 +239,7 @@ public class inicio extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelCerrar;
     private javax.swing.JLabel jLabelMenu;
@@ -232,6 +247,5 @@ public class inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelfondo;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelMenu;
-    private javax.swing.JPanel jPanel_Caja;
     // End of variables declaration//GEN-END:variables
 }
