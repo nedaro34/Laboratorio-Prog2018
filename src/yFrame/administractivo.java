@@ -5,7 +5,11 @@
  */
 package yFrame;
 
+import caja.Eliminar_Administractivo;
+import caja.Ingresar_Administractivo;
+import caja.Modificar_Administractivo;
 import javax.swing.JOptionPane;
+import paneles.CambiaPanel;
 
 
 
@@ -43,7 +47,7 @@ public class administractivo extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
+        jPanel_Caja = new javax.swing.JPanel();
         jLabelfondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -81,13 +85,18 @@ public class administractivo extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Menu");
+        jLabel1.setText("Administractivo");
         jPanelMenu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 170, 50));
 
-        jButton1.setText("Pago");
+        jButton1.setText("Volver");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanelMenu.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 170, -1));
 
-        jButton2.setText("Afiliados");
+        jButton2.setText("Ingresar Admin");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -95,16 +104,26 @@ public class administractivo extends javax.swing.JFrame {
         });
         jPanelMenu.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 170, -1));
 
-        jButton3.setText("Empleados");
+        jButton3.setText("Modificar Admin");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         jPanelMenu.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 170, -1));
 
-        jButton4.setText("Asistencia");
+        jButton4.setText("Eliminar Admin");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
         jPanelMenu.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 170, -1));
 
         jPanel1.add(jPanelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(-170, 50, 170, 260));
 
-        jPanel2.setLayout(new javax.swing.BoxLayout(jPanel2, javax.swing.BoxLayout.LINE_AXIS));
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -500, 900, 440));
+        jPanel_Caja.setLayout(new javax.swing.BoxLayout(jPanel_Caja, javax.swing.BoxLayout.LINE_AXIS));
+        jPanel1.add(jPanel_Caja, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -500, 900, 440));
 
         jLabelfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo.jpg"))); // NOI18N
         jPanel1.add(jLabelfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 500));
@@ -149,10 +168,22 @@ public class administractivo extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelMenuMouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        afiliados a = new afiliados();
-        a.setVisible(true);
-        this.setVisible(false);
+        new CambiaPanel(jPanel_Caja,new Ingresar_Administractivo());
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        empleados a = new empleados();
+        a.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        new CambiaPanel(jPanel_Caja,new Eliminar_Administractivo());
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        new CambiaPanel(jPanel_Caja, new Modificar_Administractivo());
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -201,7 +232,7 @@ public class administractivo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelMinimizar;
     private javax.swing.JLabel jLabelfondo;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanelMenu;
+    private javax.swing.JPanel jPanel_Caja;
     // End of variables declaration//GEN-END:variables
 }

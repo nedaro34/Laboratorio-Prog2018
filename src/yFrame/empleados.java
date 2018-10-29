@@ -193,9 +193,9 @@ public class empleados extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        chofer a = new chofer();
+        inicio a = new inicio();
         a.setVisible(true);
-        this.setVisible(false);
+        dispose();
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
