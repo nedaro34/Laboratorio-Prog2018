@@ -2,13 +2,13 @@
 package principal;
 
 public class Persona {
-public String Nombre;
-public String Apellido;
-public String Direccion;
-public Fecha Fechadenacimiento;
-public int Documento;
-public String Telefono;
-public String DireccionCorreo;
+private String Nombre;
+private String Apellido;
+private String Direccion;
+private Fecha Fechadenacimiento;
+private int Documento;
+private String Telefono;
+private String DireccionCorreo;
 
     public Persona(String Nombre, String Apellido, String Direccion, Fecha Fechadenacimiento, int Documento, String Telefono, String DireccionCorreo) {
         this.Nombre = Nombre;
@@ -19,6 +19,64 @@ public String DireccionCorreo;
         this.Telefono = Telefono;
         this.DireccionCorreo = DireccionCorreo;
     }
+
+    public String getNombre() {
+        return Nombre;
+    }
+
+    public void setNombre(String Nombre) {
+        this.Nombre = Nombre;
+    }
+
+    public String getApellido() {
+        return Apellido;
+    }
+
+    public void setApellido(String Apellido) {
+        this.Apellido = Apellido;
+    }
+
+    public String getDireccion() {
+        return Direccion;
+    }
+
+    public void setDireccion(String Direccion) {
+        this.Direccion = Direccion;
+    }
+
+    public Fecha getFechadenacimiento() {
+        return Fechadenacimiento;
+    }
+
+    public void setFechadenacimiento(Fecha Fechadenacimiento) {
+        this.Fechadenacimiento = Fechadenacimiento;
+    }
+
+    public int getDocumento() {
+        return Documento;
+    }
+
+    public void setDocumento(int Documento) {
+        this.Documento = Documento;
+    }
+
+    public String getTelefono() {
+        return Telefono;
+    }
+
+    public void setTelefono(String Telefono) {
+        this.Telefono = Telefono;
+    }
+
+    public String getDireccionCorreo() {
+        return DireccionCorreo;
+    }
+
+    public void setDireccionCorreo(String DireccionCorreo) {
+        this.DireccionCorreo = DireccionCorreo;
+    }
+
+    
 
 
                         

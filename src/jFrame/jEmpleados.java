@@ -5,12 +5,7 @@
  */
 package jFrame;
 
-import caja.Eliminar_Afiliado;
-import caja.Ingresar_Afiliado;
-import caja.Modificar_Afiliado;
 import javax.swing.JOptionPane;
-import paneles.CambiaPanel;
-
 
 
 
@@ -18,12 +13,12 @@ import paneles.CambiaPanel;
  *
  * @author Administrador
  */
-public class afiliados extends javax.swing.JFrame {
+public class jEmpleados extends javax.swing.JFrame {
 
     /**
      * Creates new form inicio
      */
-    public afiliados() {
+    public jEmpleados() {
         initComponents();
         this.setLocationRelativeTo(null);
         
@@ -49,7 +44,6 @@ public class afiliados extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
-        jPanel_Caja = new javax.swing.JPanel();
         jLabelfondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -87,7 +81,7 @@ public class afiliados extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Afiliados");
+        jLabel1.setText("Empleados");
         jPanelMenu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 170, 50));
 
         jButton1.setText("volver");
@@ -98,7 +92,7 @@ public class afiliados extends javax.swing.JFrame {
         });
         jPanelMenu.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 170, -1));
 
-        jButton2.setText("Ingresar Afiliados");
+        jButton2.setText("Doctor");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -106,7 +100,7 @@ public class afiliados extends javax.swing.JFrame {
         });
         jPanelMenu.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 170, -1));
 
-        jButton3.setText("Modificar Afiliados");
+        jButton3.setText("Emfermero");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -114,7 +108,7 @@ public class afiliados extends javax.swing.JFrame {
         });
         jPanelMenu.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 170, -1));
 
-        jButton4.setText("Eliminar Afiliados");
+        jButton4.setText("Administractivo");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -122,7 +116,7 @@ public class afiliados extends javax.swing.JFrame {
         });
         jPanelMenu.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 170, -1));
 
-        jButton5.setText("Grupo Familiar");
+        jButton5.setText("Chofer");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -131,9 +125,6 @@ public class afiliados extends javax.swing.JFrame {
         jPanelMenu.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 170, -1));
 
         jPanel1.add(jPanelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(-170, 50, 170, 260));
-
-        jPanel_Caja.setLayout(new javax.swing.BoxLayout(jPanel_Caja, javax.swing.BoxLayout.LINE_AXIS));
-        jPanel1.add(jPanel_Caja, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 900, 440));
 
         jLabelfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo.jpg"))); // NOI18N
         jPanel1.add(jLabelfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 500));
@@ -162,7 +153,7 @@ public class afiliados extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelCerrarMouseClicked
 
     private void jLabelMinimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelMinimizarMouseClicked
-        this.setState(jFrame.login.ICONIFIED);
+        this.setState(jFrame.jLogin.ICONIFIED);
         //Minimiza la ventana
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabelMinimizarMouseClicked
@@ -178,45 +169,33 @@ public class afiliados extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelMenuMouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        int posicion = this.jPanel_Caja.getX();
-        if(posicion > -1){
-            Animacion.Animacion.mover_izquierda(0, -170, 2, 2, jPanel_Caja);
-        }else{
-            Animacion.Animacion.mover_derecha(-170, 0, 2, 2, jPanel_Caja);
-        }
-        new CambiaPanel(jPanel_Caja,new Ingresar_Afiliado());
+        jDoctor a = new jDoctor();
+        a.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        int posicion = this.jPanel_Caja.getX();
-        if(posicion > -1){
-            Animacion.Animacion.mover_izquierda(0, -170, 2, 2, jPanel_Caja);
-        }else{
-            Animacion.Animacion.mover_derecha(-170, 0, 2, 2, jPanel_Caja);
-        }
-        new CambiaPanel(jPanel_Caja,new Modificar_Afiliado());
+        jEmfermero a = new jEmfermero();
+        a.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        int posicion = this.jPanel_Caja.getX();
-        if(posicion > -1){
-            Animacion.Animacion.mover_izquierda(0, -170, 2, 2, jPanel_Caja);
-        }else{
-            Animacion.Animacion.mover_derecha(-170, 0, 2, 2, jPanel_Caja);
-        }
-        new CambiaPanel(jPanel_Caja,new Eliminar_Afiliado());
+        jAdministractivo a = new jAdministractivo();
+        a.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        inicio a = new inicio();
+        jChofer a = new jChofer();
         a.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        grupofamiliar a = new grupofamiliar();
-        this.setVisible(false);
+        jChofer a = new jChofer();
         a.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
@@ -236,21 +215,23 @@ public class afiliados extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(afiliados.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jEmpleados.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(afiliados.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jEmpleados.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(afiliados.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jEmpleados.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(afiliados.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jEmpleados.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new afiliados().setVisible(true);
+                new jEmpleados().setVisible(true);
             }
         });
     }
@@ -268,6 +249,5 @@ public class afiliados extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelfondo;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelMenu;
-    private javax.swing.JPanel jPanel_Caja;
     // End of variables declaration//GEN-END:variables
 }

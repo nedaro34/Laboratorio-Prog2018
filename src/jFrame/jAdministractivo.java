@@ -15,12 +15,12 @@ import paneles.CambiaPanel;
  *
  * @author Administrador
  */
-public class administractivo extends javax.swing.JFrame {
+public class jAdministractivo extends javax.swing.JFrame {
 
     /**
      * Creates new form inicio
      */
-    public administractivo() {
+    public jAdministractivo() {
         initComponents();
         this.setLocationRelativeTo(null);
         
@@ -140,7 +140,7 @@ public class administractivo extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelCerrarMouseClicked
 
     private void jLabelMinimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelMinimizarMouseClicked
-        this.setState(jFrame.login.ICONIFIED);
+        this.setState(jFrame.jLogin.ICONIFIED);
         //Minimiza la ventana
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabelMinimizarMouseClicked
@@ -166,7 +166,7 @@ public class administractivo extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        empleados nuevo = new empleados();
+        jEmpleados nuevo = new jEmpleados();
         nuevo.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -188,21 +188,23 @@ public class administractivo extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(administractivo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jAdministractivo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(administractivo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jAdministractivo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(administractivo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jAdministractivo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(administractivo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(jAdministractivo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new administractivo().setVisible(true);
+                new jAdministractivo().setVisible(true);
             }
         });
     }
