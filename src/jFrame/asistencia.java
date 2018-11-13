@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package yFrame;
+package jFrame;
 
 import javax.swing.JOptionPane;
 
@@ -143,7 +143,7 @@ public class asistencia extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelCerrarMouseClicked
 
     private void jLabelMinimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelMinimizarMouseClicked
-        this.setState(yFrame.login.ICONIFIED);
+        this.setState(jFrame.login.ICONIFIED);
         //Minimiza la ventana
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabelMinimizarMouseClicked

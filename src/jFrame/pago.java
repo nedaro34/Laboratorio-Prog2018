@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package yFrame;
+package jFrame;
 
 import javax.swing.JOptionPane;
 
@@ -13,12 +13,12 @@ import javax.swing.JOptionPane;
  *
  * @author Administrador
  */
-public class administractivo extends javax.swing.JFrame {
+public class pago extends javax.swing.JFrame {
 
     /**
      * Creates new form inicio
      */
-    public administractivo() {
+    public pago() {
         initComponents();
         this.setLocationRelativeTo(null);
         
@@ -41,9 +41,8 @@ public class administractivo extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
+        jPanel_Caja = new javax.swing.JPanel();
         jLabelfondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -81,13 +80,18 @@ public class administractivo extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Menu");
+        jLabel1.setText("Pago");
         jPanelMenu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 170, 50));
 
-        jButton1.setText("Pago");
-        jPanelMenu.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 170, -1));
+        jButton1.setText("Volver");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanelMenu.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 170, -1));
 
-        jButton2.setText("Afiliados");
+        jButton2.setText("Registro Pago");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -95,16 +99,18 @@ public class administractivo extends javax.swing.JFrame {
         });
         jPanelMenu.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 170, -1));
 
-        jButton3.setText("Empleados");
-        jPanelMenu.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 170, -1));
-
-        jButton4.setText("Asistencia");
-        jPanelMenu.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 170, -1));
+        jButton4.setText("Ingresar Pago");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanelMenu.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 170, -1));
 
         jPanel1.add(jPanelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(-170, 50, 170, 260));
 
-        jPanel2.setLayout(new javax.swing.BoxLayout(jPanel2, javax.swing.BoxLayout.LINE_AXIS));
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -500, 900, 440));
+        jPanel_Caja.setLayout(new javax.swing.BoxLayout(jPanel_Caja, javax.swing.BoxLayout.LINE_AXIS));
+        jPanel1.add(jPanel_Caja, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -500, 900, 440));
 
         jLabelfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo.jpg"))); // NOI18N
         jPanel1.add(jLabelfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 500));
@@ -133,7 +139,7 @@ public class administractivo extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelCerrarMouseClicked
 
     private void jLabelMinimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelMinimizarMouseClicked
-        this.setState(yFrame.login.ICONIFIED);
+        this.setState(jFrame.login.ICONIFIED);
         //Minimiza la ventana
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabelMinimizarMouseClicked
@@ -149,10 +155,18 @@ public class administractivo extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelMenuMouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        afiliados a = new afiliados();
-        a.setVisible(true);
-        this.setVisible(false);
+       
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        inicio a = new inicio();
+        a.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -171,21 +185,23 @@ public class administractivo extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(administractivo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(pago.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(administractivo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(pago.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(administractivo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(pago.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(administractivo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(pago.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new administractivo().setVisible(true);
+                new pago().setVisible(true);
             }
         });
     }
@@ -193,7 +209,6 @@ public class administractivo extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelCerrar;
@@ -201,7 +216,7 @@ public class administractivo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelMinimizar;
     private javax.swing.JLabel jLabelfondo;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanelMenu;
+    private javax.swing.JPanel jPanel_Caja;
     // End of variables declaration//GEN-END:variables
 }
