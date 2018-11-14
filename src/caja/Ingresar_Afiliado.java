@@ -5,6 +5,10 @@
  */
 package caja;
 
+import jFrame.jAfiliados;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import principal.AfiliadoIgualExcepcion;
 import principal.Afiliados;
 import principal.CentroClinicaMedica;
 import principal.Fecha;
@@ -113,21 +117,46 @@ public class Ingresar_Afiliado extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        // datos que se ingresa por interfacez grafica
         
         String nombre1 = jTextField_nombre.getText();
         String apellido1 = jTextField_apellido.getText();
         String direccion1 = jTextField_direccion.getText();
         String direccioncorreo1 = jTextField_direccioncorreo.getText();
-       
         String telefono1 = jTextField_telefono.getText();
-        Fecha fecha1=new Fecha(2,8,2018);
-          //el documento es provisorio no acepta llenar el campo y trasformar atring
+        
+        // Integer.parseInt se utiliza para combertir String en interos
+        
         int documento1= Integer.parseInt(jTextField_documento.getText());
+        int dia = Integer.parseInt(jTextField_dia.getText());
+        int mes = Integer.parseInt(jTextField_mes.getText());
+        int año = Integer.parseInt(jTextField_año.getText());
+        
+        Fecha fecha1=new Fecha(dia,mes,año);
+        
+        // crea el nuevo objeto
+        
         Afiliados afiliado1;
         afiliado1 = new Afiliados(nombre1,apellido1,direccion1,fecha1,documento1,telefono1,direccioncorreo1);
+        
+        // ingresa el objeto a las listas
+        
+        
         CentroClinicaMedica centro=new CentroClinicaMedica();
-        centro.Ingresar(afiliado1);
+        try {
+            centro.Ingresar_Afiliados(afiliado1 , documento1 );
+        } catch (AfiliadoIgualExcepcion ex) {
+            Logger.getLogger(Ingresar_Afiliado.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+      
+        
+        // abre y cierra ventana
+        
+        jAfiliados nuevo = new jAfiliados();
+        nuevo.setVisible(true);
+        this.setVisible(false);
         
     }//GEN-LAST:event_jButton1ActionPerformed
 

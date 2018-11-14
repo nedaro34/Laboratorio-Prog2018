@@ -5,6 +5,10 @@
  */
 package caja;
 
+import javax.swing.JOptionPane;
+import principal.Afiliados;
+import principal.CentroClinicaMedica;
+
 /**
  *
  * @author Administrador
@@ -33,21 +37,22 @@ public class Modificar_Afiliado extends javax.swing.JPanel {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
+        jTextField_año = new javax.swing.JTextField();
+        jTextField_dni = new javax.swing.JTextField();
+        jTextField_telefono = new javax.swing.JTextField();
+        jTextField_documento = new javax.swing.JTextField();
+        jTextField_direccion = new javax.swing.JTextField();
+        jTextField_apellido = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
+        jTextField_nombre = new javax.swing.JTextField();
+        jTextField_dia = new javax.swing.JTextField();
+        jTextField_mes = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
+        jTextField_correo = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -74,12 +79,12 @@ public class Modificar_Afiliado extends javax.swing.JPanel {
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setText("Direccion Correo :");
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 130, 30));
-        add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 150, 60, -1));
-        add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 30, 210, -1));
-        add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 300, 210, -1));
-        add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, 210, -1));
-        add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 210, -1));
-        add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, 210, -1));
+        add(jTextField_año, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 150, 60, -1));
+        add(jTextField_dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 30, 210, -1));
+        add(jTextField_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 300, 210, -1));
+        add(jTextField_documento, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, 210, -1));
+        add(jTextField_direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 210, -1));
+        add(jTextField_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, 210, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel8.setText("Numero de Documento :");
@@ -96,18 +101,69 @@ public class Modificar_Afiliado extends javax.swing.JPanel {
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel11.setText("Mes:");
         add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 150, 40, 30));
-        add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 210, -1));
-        add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 160, 60, -1));
-        add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 150, 60, -1));
+        add(jTextField_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 210, -1));
+        add(jTextField_dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 160, 60, -1));
+        add(jTextField_mes, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 150, 60, -1));
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel12.setText("Nombre :");
         add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 90, 30));
-        add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 340, 210, -1));
+        add(jTextField_correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 340, 210, -1));
+
+        jButton1.setText("Buscar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 30, 150, -1));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       
+        //Captura de exeption
+        
+        try{
+            
+            // dni a buscar 
+            
+            int dni = Integer.parseInt(jTextField_dni.getText());
+            
+            // asede a las lista afiliados 
+            
+            CentroClinicaMedica centro = new CentroClinicaMedica();
+            
+            //asede al metodo buscar afiliado
+            Afiliados afiliados = centro.Buscar_Afiliado(dni);
+            
+            //muestra los datos del afiliado
+            
+            jTextField_apellido.setText(afiliados.getApellido());
+            jTextField_correo.setText(afiliados.getDireccionCorreo());
+            jTextField_direccion.setText(afiliados.getDireccion());
+            jTextField_nombre.setText(afiliados.getNombre());
+            jTextField_telefono.setText(afiliados.getTelefono());
+            
+            // String.valueog cambia entero a cadena
+            
+            jTextField_documento.setText(String.valueOf(afiliados.getDocumento()));
+            jTextField_dia.setText(String.valueOf(afiliados.getFechadenacimiento().getDia()));
+            jTextField_mes.setText(String.valueOf(afiliados.getFechadenacimiento().getMes()));
+            jTextField_año.setText(String.valueOf(afiliados.getFechadenacimiento().getAño()));
+            
+        }catch(NumberFormatException e){
+            
+            JOptionPane.showConfirmDialog(null, "Campo Vacio");
+            
+        }catch(NullPointerException e){
+           
+            JOptionPane.showConfirmDialog(null, "Error");
+        }   
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -119,15 +175,15 @@ public class Modificar_Afiliado extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField jTextField_apellido;
+    private javax.swing.JTextField jTextField_año;
+    private javax.swing.JTextField jTextField_correo;
+    private javax.swing.JTextField jTextField_dia;
+    private javax.swing.JTextField jTextField_direccion;
+    private javax.swing.JTextField jTextField_dni;
+    private javax.swing.JTextField jTextField_documento;
+    private javax.swing.JTextField jTextField_mes;
+    private javax.swing.JTextField jTextField_nombre;
+    private javax.swing.JTextField jTextField_telefono;
     // End of variables declaration//GEN-END:variables
 }
