@@ -141,11 +141,18 @@ public class Modificar_Afiliado extends javax.swing.JPanel {
             Afiliados afiliado = centro.Buscar_Afiliado(dni);
             
             
-            //muestra los datos
-            
+            //muestra los datos   
             jTextField_apellido.setText(afiliado.getApellido());
             jTextField_año.setText(String.valueOf(afiliado.getFechadenacimiento().getAño()));
             jTextField_correo.setText(afiliado.getDireccionCorreo());
+            jTextField_documento.setText(String.valueOf(afiliado.getDocumento()));
+            jTextField_direccion.setText(afiliado.getDireccion());
+            jTextField_telefono.setText(afiliado.getTelefono());
+            jTextField_nombre.setText(afiliado.getNombre());
+            jTextField_dia.setText(String.valueOf(afiliado.getFechadenacimiento().getDia()));
+            jTextField_mes.setText(String.valueOf(afiliado.getFechadenacimiento().getMes()));
+            jTextField_año.setText(String.valueOf(afiliado.getFechadenacimiento().getAño()));
+
             
            
         }catch(NumberFormatException a){
