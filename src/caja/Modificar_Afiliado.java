@@ -146,6 +146,8 @@ public class Modificar_Afiliado extends javax.swing.JPanel {
             jTextField_apellido.setText(afiliado.getApellido());
             jTextField_año.setText(String.valueOf(afiliado.getFechadenacimiento().getAño()));
             jTextField_correo.setText(afiliado.getDireccionCorreo());
+           
+            
             
            
         }catch(NumberFormatException a){
