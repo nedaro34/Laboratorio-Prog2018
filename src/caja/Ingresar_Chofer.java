@@ -38,7 +38,7 @@ public class Ingresar_Chofer extends javax.swing.JPanel {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jTextField_año = new javax.swing.JTextField();
         jTextField_direccioncorreo = new javax.swing.JTextField();
         jTextField_telefono = new javax.swing.JTextField();
         jTextField_documento = new javax.swing.JTextField();
@@ -49,8 +49,9 @@ public class Ingresar_Chofer extends javax.swing.JPanel {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jTextField_nombre = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
+        jTextField_dia = new javax.swing.JTextField();
+        jTextField_mes = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -77,7 +78,7 @@ public class Ingresar_Chofer extends javax.swing.JPanel {
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setText("Direccion Correo :");
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 130, 30));
-        add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 80, 60, -1));
+        add(jTextField_año, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 80, 60, -1));
         add(jTextField_direccioncorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 250, 210, -1));
         add(jTextField_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 200, 210, -1));
         add(jTextField_documento, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, 210, -1));
@@ -106,8 +107,11 @@ public class Ingresar_Chofer extends javax.swing.JPanel {
             }
         });
         add(jTextField_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, 210, -1));
-        add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 80, 60, -1));
-        add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 80, 60, -1));
+        add(jTextField_dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 80, 60, -1));
+        add(jTextField_mes, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 80, 60, -1));
+
+        jButton1.setText("Ingresar");
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 300, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField_nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_nombreActionPerformed
@@ -126,10 +130,12 @@ public class Ingresar_Chofer extends javax.swing.JPanel {
         Choferes chofer1 = new Choferes(nombre1,apellido1,direccion1,fecha1,documento1,telefono1,direccioncorreo1);
         CentroClinicaMedica centro=new CentroClinicaMedica();
        // centro.Ingresar(chofer1);
+       
     }//GEN-LAST:event_jTextField_nombreActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
@@ -140,13 +146,13 @@ public class Ingresar_Chofer extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     private javax.swing.JTextField jTextField_apellido;
+    private javax.swing.JTextField jTextField_año;
+    private javax.swing.JTextField jTextField_dia;
     private javax.swing.JTextField jTextField_direccion;
     private javax.swing.JTextField jTextField_direccioncorreo;
     private javax.swing.JTextField jTextField_documento;
+    private javax.swing.JTextField jTextField_mes;
     private javax.swing.JTextField jTextField_nombre;
     private javax.swing.JTextField jTextField_telefono;
     // End of variables declaration//GEN-END:variables
