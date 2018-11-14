@@ -130,7 +130,7 @@ public class Ingresar_Familiar extends javax.swing.JPanel {
         
        GrupoFamiliar familiar = new GrupoFamiliar(nombre1,apellido1,direccion1,fecha1,documento1,telefono1,direccioncorreo1);
         CentroClinicaMedica centro=new CentroClinicaMedica();
-        centro.Ingresar(familiar);
+       // centro.Ingresar(familiar);
         
     }//GEN-LAST:event_jButton2ActionPerformed
 

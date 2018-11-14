@@ -5,11 +5,10 @@
  */
 package caja;
 
-import jFrame.jAfiliados;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import principal.AfiliadoIgualExcepcion;
+
+import javax.swing.JOptionPane;
 import principal.Afiliados;
+import principal.AfiliadosDIgualExcepcion;
 import principal.CentroClinicaMedica;
 import principal.Fecha;
 
@@ -117,47 +116,58 @@ public class Ingresar_Afiliado extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // datos que se ingresa por interfacez grafica
-        
-        String nombre1 = jTextField_nombre.getText();
-        String apellido1 = jTextField_apellido.getText();
-        String direccion1 = jTextField_direccion.getText();
-        String direccioncorreo1 = jTextField_direccioncorreo.getText();
-        String telefono1 = jTextField_telefono.getText();
-        
-        // Integer.parseInt se utiliza para combertir String en interos
-        
-        int documento1= Integer.parseInt(jTextField_documento.getText());
-        int dia = Integer.parseInt(jTextField_dia.getText());
-        int mes = Integer.parseInt(jTextField_mes.getText());
-        int año = Integer.parseInt(jTextField_año.getText());
-        
-        Fecha fecha1=new Fecha(dia,mes,año);
-        
-        // crea el nuevo objeto
-        
-        Afiliados afiliado1;
-        afiliado1 = new Afiliados(nombre1,apellido1,direccion1,fecha1,documento1,telefono1,direccioncorreo1);
-        
-        // ingresa el objeto a las listas
-        
-        
-        CentroClinicaMedica centro=new CentroClinicaMedica();
-        try {
-            centro.Ingresar_Afiliados(afiliado1 , documento1 );
-        } catch (AfiliadoIgualExcepcion ex) {
-            Logger.getLogger(Ingresar_Afiliado.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        
-      
-        
-        // abre y cierra ventana
-        
-        jAfiliados nuevo = new jAfiliados();
-        nuevo.setVisible(true);
-        this.setVisible(false);
-        
+       
+        //captura de exepciones
+       
+        try{
+            
+                //asede a las listas
+                CentroClinicaMedica centro = new CentroClinicaMedica();
+                
+                // guarda los campo agregado por la ventana
+                
+                String apellido = jTextField_apellido.getText();
+                int año = Integer.parseInt(jTextField_año.getText());
+                int dia = Integer.parseInt(jTextField_dia.getText());
+                String direccion = jTextField_direccion.getText();
+                String correo = jTextField_direccioncorreo.getText();
+                int dni = Integer.parseInt(jTextField_documento.getText());
+                int mes = Integer.parseInt(jTextField_mes.getText());
+                String nombre = jTextField_nombre.getText();
+                String telefono = jTextField_telefono.getText();
+                
+                // fecha de nacimiento
+                
+                Fecha fecha = new Fecha(2,3,45);
+                
+                // Creacion Ojeto Afiliado
+                
+                Afiliados afiliado = new Afiliados(nombre,apellido,direccion,fecha,dni,telefono,correo);
+                
+                //ingresa al metodo para agregar nueva objeto a la lista
+
+                centro.Ingresar_Afiliados(afiliado, dni);
+ 
+  
+       }catch(AfiliadosDIgualExcepcion l){
+
+           //exepcion afiliado con el mismo documento
+           JOptionPane.showConfirmDialog(null, "Ya existe un afiliado con este documento");
+            jTextField_documento.setText("");
+            
+        }catch(NumberFormatException a){
+            //exepcion limpia los campos
+            JOptionPane.showConfirmDialog(null, "Falta Campos");
+            jTextField_apellido.setText("");
+            jTextField_año.setText("");
+            jTextField_dia.setText("");
+            jTextField_direccion.setText("");
+            jTextField_direccioncorreo.setText("");
+            jTextField_documento.setText("");
+            jTextField_mes.setText("");
+            jTextField_nombre.setText("");
+            jTextField_telefono.setText("");
+       } 
     }//GEN-LAST:event_jButton1ActionPerformed
 
 

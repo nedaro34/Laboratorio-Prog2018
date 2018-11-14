@@ -9,8 +9,8 @@ package principal;
  *
  * @author Administrador
  */
-public class AfiliadoIgualExcepcion extends Exception {
-    public AfiliadoIgualExcepcion() {
+public class AfiliadosDIgualExcepcion extends Exception {
+    public AfiliadosDIgualExcepcion() {
         
     }
 }
