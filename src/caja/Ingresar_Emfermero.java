@@ -126,7 +126,7 @@ public class Ingresar_Emfermero extends javax.swing.JPanel {
         
         Enfermeros enfermero = new Enfermeros(nombre1,apellido1,direccion1,fecha1,documento1,telefono1,direccioncorreo1);
         CentroClinicaMedica centro=new CentroClinicaMedica();
-        centro.Ingresar(enfermero);
+       // centro.Ingresar(enfermero);
         
     }//GEN-LAST:event_jButton1ActionPerformed
 

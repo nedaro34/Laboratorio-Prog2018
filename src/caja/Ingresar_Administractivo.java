@@ -129,7 +129,7 @@ public class Ingresar_Administractivo extends javax.swing.JPanel {
        
        Administrativos administrativo1 = new Administrativos(nombre1,apellido1,direccion1,fecha1,documento1,telefono1,direccioncorreo1);
         CentroClinicaMedica centro=new CentroClinicaMedica();
-        centro.Ingresar(administrativo1);
+        //centro.Ingresar(administrativo1);
     }//GEN-LAST:event_jButton1ActionPerformed
 
 

@@ -53,6 +53,7 @@ public class Modificar_Afiliado extends javax.swing.JPanel {
         jLabel12 = new javax.swing.JLabel();
         jTextField_correo = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -117,53 +118,59 @@ public class Modificar_Afiliado extends javax.swing.JPanel {
             }
         });
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 30, 150, -1));
+
+        jButton2.setText("jButton2");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, 120, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       
-        //Captura de exeption
-        
+        //camptura de exepciones
         try{
-            
-            // dni a buscar 
-            
+            // dni a buscar
             int dni = Integer.parseInt(jTextField_dni.getText());
             
-            // asede a las lista afiliados 
+            //asede a listas
             
             CentroClinicaMedica centro = new CentroClinicaMedica();
             
-            //asede al metodo buscar afiliado
-            Afiliados afiliados = centro.Buscar_Afiliado(dni);
+            Afiliados afiliado = centro.Buscar_Afiliado(dni);
             
-            //muestra los datos del afiliado
             
-            jTextField_apellido.setText(afiliados.getApellido());
-            jTextField_correo.setText(afiliados.getDireccionCorreo());
-            jTextField_direccion.setText(afiliados.getDireccion());
-            jTextField_nombre.setText(afiliados.getNombre());
-            jTextField_telefono.setText(afiliados.getTelefono());
+            //muestra los datos
             
-            // String.valueog cambia entero a cadena
+            jTextField_apellido.setText(afiliado.getApellido());
+            jTextField_año.setText(String.valueOf(afiliado.getFechadenacimiento().getAño()));
+            jTextField_correo.setText(afiliado.getDireccionCorreo());
             
-            jTextField_documento.setText(String.valueOf(afiliados.getDocumento()));
-            jTextField_dia.setText(String.valueOf(afiliados.getFechadenacimiento().getDia()));
-            jTextField_mes.setText(String.valueOf(afiliados.getFechadenacimiento().getMes()));
-            jTextField_año.setText(String.valueOf(afiliados.getFechadenacimiento().getAño()));
-            
-        }catch(NumberFormatException e){
-            
-            JOptionPane.showConfirmDialog(null, "Campo Vacio");
-            
-        }catch(NullPointerException e){
            
-            JOptionPane.showConfirmDialog(null, "Error");
-        }   
+        }catch(NumberFormatException a){
+            //exepcion limpia los campos
+            JOptionPane.showConfirmDialog(null, "Falta Campos");
+            jTextField_apellido.setText("");
+            jTextField_año.setText("");
+            jTextField_dia.setText("");
+            jTextField_direccion.setText("");
+            jTextField_correo.setText("");
+            jTextField_documento.setText("");
+            jTextField_mes.setText("");
+            jTextField_nombre.setText("");
+            jTextField_telefono.setText("");
+       } 
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+       
+    }//GEN-LAST:event_jButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
