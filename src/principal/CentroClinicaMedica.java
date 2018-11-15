@@ -310,6 +310,50 @@ if(administrativo.size()>0)
         }
     }
     
+     
+      public void Eliminar_Doctor(int dni)throws DocumentoIncorrectoExcepcion,ListaVaciaExcepcion
+    {
+        boolean bandera = false;
+        if(doctor.size()==0)
+        {
+            throw new ListaVaciaExcepcion();
+        }
+
+        if(doctor.size()>0)
+        {
+            for(int i=0;i<doctor.size();i++)
+            {
+                if(doctor.get(i).getDocumento()==dni)
+                {
+                    doctor.remove(doctor.get(i));
+                    bandera = true;
+                }
+            }
+        }
+        if(bandera==false)
+        {
+            throw new DocumentoIncorrectoExcepcion(); 
+        }
+    }
+    
+    public void Modificar_Doctor(Doctores doctores,int dni)
+    {
+        if(doctor.size()>0)
+        {
+            for(int i=0;i<doctor.size();i++)
+            {
+                if(doctor.get(i).getDocumento()==dni)
+                {
+                    doctor.set(i, doctores);
+                }
+            } 
+        }
+    }
+
+    
+    
+    
+    
 }
 
 
