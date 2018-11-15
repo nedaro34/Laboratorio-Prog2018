@@ -168,32 +168,35 @@ public class jChofer extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelMenuMouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        /*
         int posicion = this.jPanel_Caja.getX();
         if(posicion > -1){
             Animacion.Animacion.mover_izquierda(0, -170, 2, 2, jPanel_Caja);
         }else{
             Animacion.Animacion.mover_derecha(-170, 0, 2, 2, jPanel_Caja);
-        }
+        }*/
         new CambiaPanel(jPanel_Caja,new Ingresar_Chofer());
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        /*
         int posicion = this.jPanel_Caja.getX();
         if(posicion > -1){
             Animacion.Animacion.mover_izquierda(0, -170, 2, 2, jPanel_Caja);
         }else{
             Animacion.Animacion.mover_derecha(-170, 0, 2, 2, jPanel_Caja);
-        }
+        }*/
         new CambiaPanel(jPanel_Caja,new Modificar_Chofer());
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        /*
         int posicion = this.jPanel_Caja.getX();
         if(posicion > -1){
             Animacion.Animacion.mover_izquierda(0, -170, 2, 2, jPanel_Caja);
         }else{
             Animacion.Animacion.mover_derecha(-170, 0, 2, 2, jPanel_Caja);
-        }
+        }*/
         new CambiaPanel(jPanel_Caja,new Eliminar_Chofer());
     }//GEN-LAST:event_jButton4ActionPerformed
 
