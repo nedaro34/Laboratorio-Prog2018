@@ -6,7 +6,6 @@
 package caja;
 
 import javax.swing.JOptionPane;
-import principal.Afiliados;
 import principal.CentroClinicaMedica;
 import principal.Choferes;
 
@@ -146,10 +145,11 @@ public class Modificar_Chofer extends javax.swing.JPanel {
             jTextField_mes.setText(String.valueOf(chofer.getFechadenacimiento().getMes()));
             jTextField_año.setText(String.valueOf(chofer.getFechadenacimiento().getAño()));
 
-            
+            //aca se va a realizar
            
         }catch(NumberFormatException a){
             //exepcion limpia los campos
+            //aca registra campos vacios
             JOptionPane.showConfirmDialog(null, "Falta Campos");
             jTextField_apellido.setText("");
             jTextField_año.setText("");
@@ -164,10 +164,7 @@ public class Modificar_Chofer extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton1ActionPerformed
 
                                       
-
-    private void jButtonActionPerformed(java.awt.event.ActionEvent evt) {                                         
-       
-    }                                        
+                                    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel10;
