@@ -5,8 +5,9 @@
  */
 package caja;
 
+import javax.swing.JOptionPane;
 import principal.Administrativos;
-import principal.Afiliados;
+import principal.AfiliadosDIgualExcepcion;
 import principal.CentroClinicaMedica;
 import principal.Fecha;
 
@@ -117,19 +118,56 @@ public class Ingresar_Administractivo extends javax.swing.JPanel {
         // TODO add your handling code here:
         
           
-        String nombre1 = jTextField_nombre.getText();
-        String apellido1 = jTextField_apellido.getText();
-        String direccion1 = jTextField_direccion.getText();
-        String direccioncorreo1 = jTextField_direccioncorreo.getText();
        
-        String telefono1 = jTextField_telefono.getText();
-        Fecha fecha1=new Fecha(2,8,2018);
-          //el documento es provisorio no acepta llenar el campo y trasformar atring
-        int documento1= Integer.parseInt(jTextField_documento.getText());
-       
-       Administrativos administrativo1 = new Administrativos(nombre1,apellido1,direccion1,fecha1,documento1,telefono1,direccioncorreo1);
-        CentroClinicaMedica centro=new CentroClinicaMedica();
-        //centro.Ingresar(administrativo1);
+         try{
+            
+                //asede a las listas
+                CentroClinicaMedica centro = new CentroClinicaMedica();
+                
+                // guarda los campo agregado por la ventana
+                
+                String apellido = jTextField_apellido.getText();
+                int año = Integer.parseInt(jTextField_año.getText());
+                int dia = Integer.parseInt(jTextField_dia.getText());
+                String direccion = jTextField_direccion.getText();
+                String correo = jTextField_direccioncorreo.getText();
+                int dni = Integer.parseInt(jTextField_documento.getText());
+                int mes = Integer.parseInt(jTextField_mes.getText());
+                String nombre = jTextField_nombre.getText();
+                String telefono = jTextField_telefono.getText();
+                
+                // fecha de nacimiento
+                
+                Fecha fecha = new Fecha(2,3,45);
+                
+                // Creacion Ojeto Afiliado
+                
+                Administrativos administrativo = new Administrativos(nombre,apellido,direccion,fecha,dni,telefono,correo);
+                
+                //ingresa al metodo para agregar nueva objeto a la lista
+
+                centro.Ingresar_Administrativos(administrativo, dni);
+ 
+  
+       }catch(AfiliadosDIgualExcepcion l){
+            //hay que ver de hacer una nueva excepcion
+           //exepcion afiliado con el mismo documento
+           JOptionPane.showConfirmDialog(null, "Ya existe un afiliado con este documento");
+            jTextField_documento.setText("");
+            
+        }catch(NumberFormatException a){
+            //exepcion limpia los campos
+            JOptionPane.showConfirmDialog(null, "Falta Campos");
+            jTextField_apellido.setText("");
+            jTextField_año.setText("");
+            jTextField_dia.setText("");
+            jTextField_direccion.setText("");
+            jTextField_direccioncorreo.setText("");
+            jTextField_documento.setText("");
+            jTextField_mes.setText("");
+            jTextField_nombre.setText("");
+            jTextField_telefono.setText("");
+       } 
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
