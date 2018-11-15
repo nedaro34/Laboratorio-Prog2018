@@ -352,7 +352,45 @@ if(administrativo.size()>0)
 
     
     
+       public void Eliminar_Enfermero(int dni)throws DocumentoIncorrectoExcepcion,ListaVaciaExcepcion
+    {
+        boolean bandera = false;
+        if(enfermero.size()==0)
+        {
+            throw new ListaVaciaExcepcion();
+        }
+
+        if(enfermero.size()>0)
+        {
+            for(int i=0;i<enfermero.size();i++)
+            {
+                if(enfermero.get(i).getDocumento()==dni)
+                {
+                    enfermero.remove(enfermero.get(i));
+                    bandera = true;
+                }
+            }
+        }
+        if(bandera==false)
+        {
+            throw new DocumentoIncorrectoExcepcion(); 
+        }
+    }
     
+    public void Modificar_Enfermero(Enfermeros enfermeros,int dni)
+    {
+        if(enfermero.size()>0)
+        {
+            for(int i=0;i<enfermero.size();i++)
+            {
+                if(enfermero.get(i).getDocumento()==dni)
+                {
+                    enfermero.set(i, enfermeros);
+                }
+            } 
+        }
+    }
+
     
 }
 
