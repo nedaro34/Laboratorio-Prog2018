@@ -13,6 +13,7 @@ public class CentroClinicaMedica {
     private static LinkedList<Choferes> chofer = new LinkedList<Choferes>();
     private static LinkedList<Doctores> doctor = new LinkedList<Doctores>();
     private static LinkedList<Enfermeros> enfermero = new LinkedList<Enfermeros>();
+    private static LinkedList<Administrativos> administrativo = new LinkedList<Administrativos>();
 
     //metodos afiliados
     //igreso de afiliado a las listas
@@ -159,6 +160,42 @@ if(enfermero.size()>0)
 
             enfermero.add(enfermero1);  
             }
+
+    
+
+    public void Ingresar_Administrativos(Administrativos administrativo1, int dni)throws AfiliadosDIgualExcepcion
+            {
+                if(administrativo.size()>0)
+        {
+            for(int i=0;i<administrativo.size();i++)
+            {
+                if(administrativo.get(i).getDocumento()==dni)
+                {
+                    throw new AfiliadosDIgualExcepcion();
+                }
+            } 
+        }
+
+            administrativo.add(administrativo1);      }
+
+    public Administrativos Buscar_Administrativos(int dni) {
+if(administrativo.size()>0)
+        {
+            for(int i=0;i<administrativo.size();i++)
+            {
+                if(administrativo.get(i).getDocumento()==dni)
+                {
+                    return administrativo.get(i);
+                }
+            }
+            JOptionPane.showMessageDialog(null,"El chofer no existe");
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
+        }    
+        return null;    }
     
 }
+
 
