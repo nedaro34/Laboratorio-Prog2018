@@ -8,6 +8,7 @@ package caja;
 import javax.swing.JOptionPane;
 import principal.Afiliados;
 import principal.CentroClinicaMedica;
+import principal.Fecha;
 
 /**
  *
@@ -119,13 +120,13 @@ public class Modificar_Afiliado extends javax.swing.JPanel {
         });
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 30, 150, -1));
 
-        jButton2.setText("jButton2");
+        jButton2.setText("Ingresar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, 120, -1));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 100, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -171,7 +172,41 @@ public class Modificar_Afiliado extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       
+        try{
+            
+            CentroClinicaMedica centro = new CentroClinicaMedica();
+            
+            String apellido = jTextField_apellido.getText();
+            int año = Integer.parseInt(jTextField_año.getText());
+            int dia = Integer.parseInt(jTextField_dia.getText());
+            String direccion = jTextField_direccion.getText();
+            String correo = jTextField_correo.getText();
+            int dni = Integer.parseInt(jTextField_documento.getText());
+            int mes = Integer.parseInt(jTextField_mes.getText());
+            String nombre = jTextField_nombre.getText();
+            String telefono = jTextField_telefono.getText();
+            
+            Fecha fecha = new Fecha (dia,mes,año);
+                
+            Afiliados afiliado = new Afiliados(nombre,apellido,direccion,fecha,dni,telefono,correo);
+            
+            centro.Modificar_Afiliados(afiliado, dni);
+
+
+       }catch(NumberFormatException e){
+           
+            JOptionPane.showConfirmDialog(null, "Falta Campos");
+            jTextField_apellido.setText("");
+            jTextField_año.setText("");
+            jTextField_dia.setText("");
+            jTextField_direccion.setText("");
+            jTextField_correo.setText("");
+            jTextField_documento.setText("");
+            jTextField_mes.setText("");
+            jTextField_nombre.setText("");
+            jTextField_telefono.setText("");
+            
+       }
     }//GEN-LAST:event_jButton2ActionPerformed
 
 
