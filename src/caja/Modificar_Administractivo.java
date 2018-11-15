@@ -6,6 +6,7 @@
 package caja;
 
 import javax.swing.JOptionPane;
+import principal.Administrativos;
 import principal.Afiliados;
 import principal.CentroClinicaMedica;
 
@@ -130,20 +131,20 @@ public class Modificar_Administractivo extends javax.swing.JPanel {
             
             CentroClinicaMedica centro = new CentroClinicaMedica();
             
-            Afiliados afiliado = centro.Buscar_Afiliado(dni);
+            Administrativos administrativo = centro.Buscar_Administrativos(dni);
             
             
             //muestra los datos   
-            jTextField_apellido.setText(afiliado.getApellido());
-            jTextField_año.setText(String.valueOf(afiliado.getFechadenacimiento().getAño()));
-            jTextField_direccioncorreo.setText(afiliado.getDireccionCorreo());
-            jTextField_documento.setText(String.valueOf(afiliado.getDocumento()));
-            jTextField_direccion.setText(afiliado.getDireccion());
-            jTextField_telefono.setText(afiliado.getTelefono());
-            jTextField_nombre.setText(afiliado.getNombre());
-            jTextField_dia.setText(String.valueOf(afiliado.getFechadenacimiento().getDia()));
-            jTextField_mes.setText(String.valueOf(afiliado.getFechadenacimiento().getMes()));
-            jTextField_año.setText(String.valueOf(afiliado.getFechadenacimiento().getAño()));
+            jTextField_apellido.setText(administrativo.getApellido());
+            jTextField_año.setText(String.valueOf(administrativo.getFechadenacimiento().getAño()));
+            jTextField_direccioncorreo.setText(administrativo.getDireccionCorreo());
+            jTextField_documento.setText(String.valueOf(administrativo.getDocumento()));
+            jTextField_direccion.setText(administrativo.getDireccion());
+            jTextField_telefono.setText(administrativo.getTelefono());
+            jTextField_nombre.setText(administrativo.getNombre());
+            jTextField_dia.setText(String.valueOf(administrativo.getFechadenacimiento().getDia()));
+            jTextField_mes.setText(String.valueOf(administrativo.getFechadenacimiento().getMes()));
+            jTextField_año.setText(String.valueOf(administrativo.getFechadenacimiento().getAño()));
 
             
            
