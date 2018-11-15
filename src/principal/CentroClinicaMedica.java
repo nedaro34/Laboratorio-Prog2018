@@ -271,6 +271,45 @@ if(administrativo.size()>0)
     }
     
     
+      public void Eliminar_Chofer(int dni)throws DocumentoIncorrectoExcepcion,ListaVaciaExcepcion
+    {
+        boolean bandera = false;
+        if(chofer.size()==0)
+        {
+            throw new ListaVaciaExcepcion();
+        }
+
+        if(chofer.size()>0)
+        {
+            for(int i=0;i<chofer.size();i++)
+            {
+                if(chofer.get(i).getDocumento()==dni)
+                {
+                    chofer.remove(chofer.get(i));
+                    bandera = true;
+                }
+            }
+        }
+        if(bandera==false)
+        {
+            throw new DocumentoIncorrectoExcepcion(); 
+        }
+    }
+    
+    public void Modificar_Chofer(Afiliados afiliados,int dni)
+    {
+        if(chofer.size()>0)
+        {
+            for(int i=0;i<chofer.size();i++)
+            {
+                if(chofer.get(i).getDocumento()==dni)
+                {
+                    //chofer.set(i, choferes);
+                }
+            } 
+        }
+    }
+    
 }
 
 
