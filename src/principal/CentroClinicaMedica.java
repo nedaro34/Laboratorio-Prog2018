@@ -231,6 +231,46 @@ if(administrativo.size()>0)
         return null; 
     }
     
+    public void Eliminar_Afiliado(int dni)throws DocumentoIncorrectoExcepcion,ListaVaciaExcepcion
+    {
+        boolean bandera = false;
+        if(afiliado.size()==0)
+        {
+            throw new ListaVaciaExcepcion();
+        }
+
+        if(afiliado.size()>0)
+        {
+            for(int i=0;i<afiliado.size();i++)
+            {
+                if(afiliado.get(i).getDocumento()==dni)
+                {
+                    afiliado.remove(afiliado.get(i));
+                    bandera = true;
+                }
+            }
+        }
+        if(bandera==false)
+        {
+            throw new DocumentoIncorrectoExcepcion(); 
+        }
+    }
+    
+    public void Modificar_Afiliados(Afiliados afiliados,int dni)
+    {
+        if(afiliado.size()>0)
+        {
+            for(int i=0;i<afiliado.size();i++)
+            {
+                if(afiliado.get(i).getDocumento()==dni)
+                {
+                    afiliado.set(i, afiliados);
+                }
+            } 
+        }
+    }
+    
+    
 }
 
 
