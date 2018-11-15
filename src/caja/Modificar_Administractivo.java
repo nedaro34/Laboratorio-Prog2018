@@ -7,7 +7,6 @@ package caja;
 
 import javax.swing.JOptionPane;
 import principal.Administrativos;
-import principal.Afiliados;
 import principal.CentroClinicaMedica;
 
 /**
