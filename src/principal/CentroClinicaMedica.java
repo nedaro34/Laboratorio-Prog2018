@@ -111,7 +111,7 @@ public class CentroClinicaMedica {
     }
 
     public Doctores Buscar_Doctor(int dni) {
- if(chofer.size()>0)
+ if(doctor.size()>0)
         {
             for(int i=0;i<doctor.size();i++)
             {
