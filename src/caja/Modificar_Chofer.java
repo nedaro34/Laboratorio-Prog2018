@@ -5,6 +5,11 @@
  */
 package caja;
 
+import javax.swing.JOptionPane;
+import principal.Afiliados;
+import principal.CentroClinicaMedica;
+import principal.Choferes;
+
 /**
  *
  * @author Administrador
@@ -48,6 +53,7 @@ public class Modificar_Chofer extends javax.swing.JPanel {
         jTextField_mes = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         jTextField_direccioncorreo = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -104,10 +110,66 @@ public class Modificar_Chofer extends javax.swing.JPanel {
         jLabel12.setText("Nombre :");
         add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 90, 30));
         add(jTextField_direccioncorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 340, 210, -1));
+
+        jButton1.setText("Buscar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 30, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+             //camptura de exepciones
+        try{
+            // dni a buscar
+            int dni = Integer.parseInt(jTextField2.getText());
+            
+            //asede a listas
+            
+            CentroClinicaMedica centro = new CentroClinicaMedica();
+            
+            Choferes chofer= centro.Buscar_Chofer(dni);
+            
+            
+            //muestra los datos   
+            jTextField_apellido.setText(chofer.getApellido());
+            jTextField_año.setText(String.valueOf(chofer.getFechadenacimiento().getAño()));
+            jTextField_direccioncorreo.setText(chofer.getDireccionCorreo());
+            jTextField_documento.setText(String.valueOf(chofer.getDocumento()));
+            jTextField_direccion.setText(chofer.getDireccion());
+            jTextField_telefono.setText(chofer.getTelefono());
+            jTextField_nombre.setText(chofer.getNombre());
+            jTextField_dia.setText(String.valueOf(chofer.getFechadenacimiento().getDia()));
+            jTextField_mes.setText(String.valueOf(chofer.getFechadenacimiento().getMes()));
+            jTextField_año.setText(String.valueOf(chofer.getFechadenacimiento().getAño()));
 
+            
+           
+        }catch(NumberFormatException a){
+            //exepcion limpia los campos
+            JOptionPane.showConfirmDialog(null, "Falta Campos");
+            jTextField_apellido.setText("");
+            jTextField_año.setText("");
+            jTextField_dia.setText("");
+            jTextField_direccion.setText("");
+            jTextField_direccioncorreo.setText("");
+            jTextField_documento.setText("");
+            jTextField_mes.setText("");
+            jTextField_nombre.setText("");
+            jTextField_telefono.setText("");
+       } 
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+                                      
+
+    private void jButtonActionPerformed(java.awt.event.ActionEvent evt) {                                         
+       
+    }                                        
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
