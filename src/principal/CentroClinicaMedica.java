@@ -391,7 +391,44 @@ if(administrativo.size()>0)
         }
     }
 
+      public void Eliminar_Familiar(int dni)throws DocumentoIncorrectoExcepcion,ListaVaciaExcepcion
+    {
+        boolean bandera = false;
+        if(familiar.size()==0)
+        {
+            throw new ListaVaciaExcepcion();
+        }
+
+        if(familiar.size()>0)
+        {
+            for(int i=0;i<familiar.size();i++)
+            {
+                if(familiar.get(i).getDocumento()==dni)
+                {
+                    familiar.remove(familiar.get(i));
+                    bandera = true;
+                }
+            }
+        }
+        if(bandera==false)
+        {
+            throw new DocumentoIncorrectoExcepcion(); 
+        }
+    }
     
+    public void Modificar_Familiar(GrupoFamiliar familiar1,int dni)
+    {
+        if(familiar.size()>0)
+        {
+            for(int i=0;i<familiar.size();i++)
+            {
+                if(familiar.get(i).getDocumento()==dni)
+                {
+                    familiar.set(i, familiar1);
+                }
+            } 
+        }
+    }
 }
 
 
