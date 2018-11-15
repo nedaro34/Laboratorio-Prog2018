@@ -296,7 +296,7 @@ if(administrativo.size()>0)
         }
     }
     
-    public void Modificar_Chofer(Afiliados afiliados,int dni)
+    public void Modificar_Chofer(Choferes choferes,int dni)
     {
         if(chofer.size()>0)
         {
@@ -304,7 +304,7 @@ if(administrativo.size()>0)
             {
                 if(chofer.get(i).getDocumento()==dni)
                 {
-                    //chofer.set(i, choferes);
+                    chofer.set(i, choferes);
                 }
             } 
         }
