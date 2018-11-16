@@ -10,6 +10,7 @@ import principal.AfiliadosDIgualExcepcion;
 import principal.CentroClinicaMedica;
 import principal.Fecha;
 import principal.GrupoFamiliar;
+import principal.GrupoFamiliarIgualExcepcion;
 
 /**
  *
@@ -149,7 +150,7 @@ public class Ingresar_Familiar extends javax.swing.JPanel {
                 centro.Ingresar_Familiar(familiar, dni);
  
   
-       }catch(AfiliadosDIgualExcepcion l){
+       }catch(GrupoFamiliarIgualExcepcion l){
             //hay que ver de hacer una nueva excepcion
            //exepcion afiliado con el mismo documento
            JOptionPane.showConfirmDialog(null, "Ya existe un afiliado con este documento");

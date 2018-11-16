@@ -9,6 +9,7 @@ import javax.swing.JOptionPane;
 import principal.AfiliadosDIgualExcepcion;
 import principal.CentroClinicaMedica;
 import principal.Doctores;
+import principal.DoctoresIgualExcepcion;
 import principal.Fecha;
 
 /**
@@ -216,7 +217,7 @@ public class Ingresar_Doctor extends javax.swing.JPanel {
                 centro.Ingresar_Doctores(Doctor, dni);
  
   
-       }catch(AfiliadosDIgualExcepcion l){
+       }catch(DoctoresIgualExcepcion l){
             //hay que ver de hacer una nueva excepcion
            //exepcion afiliado con el mismo documento
            JOptionPane.showConfirmDialog(null, "Ya existe un afiliado con este documento");

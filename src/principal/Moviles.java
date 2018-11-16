@@ -8,6 +8,17 @@ public class Moviles { //ESta va a ser una clase separada para que se utilice
     private int Año;
     private String Patente;
 
+    public Moviles(String Marca, String Modelo, int Año, String Patente) {
+        this.Marca = Marca;
+        this.Modelo = Modelo;
+        this.Año = Año;
+        this.Patente = Patente;
+    }
+    
+    
+    
+    
+
     /**
      * @return the Marca
      */

@@ -15,6 +15,7 @@ public class CentroClinicaMedica {
     private static LinkedList<Enfermeros> enfermero = new LinkedList<Enfermeros>();
     private static LinkedList<Administrativos> administrativo = new LinkedList<Administrativos>();
     private static LinkedList<GrupoFamiliar> familiar = new LinkedList<GrupoFamiliar>();
+    private static LinkedList<Moviles> moviles = new LinkedList<Moviles>();
 
     //metodos afiliados
     //igreso de afiliado a las listas
@@ -36,7 +37,7 @@ public class CentroClinicaMedica {
            
     }
 
-      public void Ingresar_Doctores(Doctores doctores,int dni)throws AfiliadosDIgualExcepcion
+      public void Ingresar_Doctores(Doctores doctores,int dni)throws DoctoresIgualExcepcion
     {
         if(chofer.size()>0)
         {
@@ -44,7 +45,7 @@ public class CentroClinicaMedica {
             {
                 if(chofer.get(i).getDocumento()==dni)
                 {
-                    throw new AfiliadosDIgualExcepcion();
+                    throw new DoctoresIgualExcepcion();
                 }
             } 
         }
@@ -53,7 +54,7 @@ public class CentroClinicaMedica {
            
     }
       
-         public void Ingresar_Choferes(Choferes chofer1,int dni)throws AfiliadosDIgualExcepcion
+         public void Ingresar_Choferes(Choferes chofer1,int dni)throws ChoferesIgualExcepcion
     {
         if(chofer.size()>0)
         {
@@ -61,7 +62,7 @@ public class CentroClinicaMedica {
             {
                 if(chofer.get(i).getDocumento()==dni)
                 {
-                    throw new AfiliadosDIgualExcepcion();
+                    throw new ChoferesIgualExcepcion();
                 }
             } 
         }
@@ -146,7 +147,7 @@ if(enfermero.size()>0)
         }    
         return null;    }
 
-    public void Ingresar_Choferes(Enfermeros enfermero1, int dni)throws AfiliadosDIgualExcepcion
+    public void Ingresar_Enfermero(Enfermeros enfermero1, int dni)throws EnfermeroIgualExcepcion
             {
  if(chofer.size()>0)
         {
@@ -154,7 +155,7 @@ if(enfermero.size()>0)
             {
                 if(chofer.get(i).getDocumento()==dni)
                 {
-                    throw new AfiliadosDIgualExcepcion();
+                    throw new EnfermeroIgualExcepcion();
                 }
             } 
         }
@@ -164,7 +165,7 @@ if(enfermero.size()>0)
 
     
 
-    public void Ingresar_Administrativos(Administrativos administrativo1, int dni)throws AfiliadosDIgualExcepcion
+    public void Ingresar_Administrativos(Administrativos administrativo1, int dni)throws AdministrativosIgualExcepcion
             {
                 if(administrativo.size()>0)
         {
@@ -172,7 +173,7 @@ if(enfermero.size()>0)
             {
                 if(administrativo.get(i).getDocumento()==dni)
                 {
-                    throw new AfiliadosDIgualExcepcion();
+                    throw new AdministrativosIgualExcepcion();
                 }
             } 
         }
@@ -197,7 +198,7 @@ if(administrativo.size()>0)
         }    
         return null;    }
 
-    public void Ingresar_Familiar(GrupoFamiliar familiar1, int dni) throws AfiliadosDIgualExcepcion
+    public void Ingresar_Familiar(GrupoFamiliar familiar1, int dni) throws GrupoFamiliarIgualExcepcion
             {
                 if(familiar.size()>0)
         {
@@ -205,7 +206,7 @@ if(administrativo.size()>0)
             {
                 if(familiar.get(i).getDocumento()==dni)
                 {
-                    throw new AfiliadosDIgualExcepcion();
+                    throw new GrupoFamiliarIgualExcepcion();
                 }
             }
         }
@@ -427,6 +428,82 @@ if(administrativo.size()>0)
                     familiar.set(i, familiar1);
                 }
             } 
+        }
+    }
+    
+    //movil
+    public void Ingresar_Movil(Moviles movil,String pant)throws MovilesIgualExcepcion
+    {  
+        
+        if(moviles.size()>0)
+        {
+            for(int i=0;i<moviles.size();i++)
+            {
+                if(moviles.get(i).getPatente().equals(pant))
+                {
+                    throw new MovilesIgualExcepcion();
+                }
+            } 
+        }
+        moviles.add(movil);
+    }
+    
+    public Moviles Buscar_Movil(String patente)
+    {
+        if(moviles.size()>0)
+        {
+            for(int i=0;i<moviles.size();i++)
+            {
+                if(moviles.get(i).getPatente().equals(patente))
+                {
+                    return moviles.get(i);
+                }
+            }
+            JOptionPane.showMessageDialog(null,"El movil no existe");
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null,"Lista de movil vacia");
+        }    
+        return null;
+    } 
+    
+    public void Modificar_Enfermero(Moviles movil,String Patente)
+    {
+        if(moviles.size()>0)
+        {
+            for(int i=0;i<moviles.size();i++)
+            {
+                if(moviles.get(i).getPatente().equals(movil))
+                {
+                    moviles.set(i, movil);
+                }
+            } 
+        }
+    }
+    
+    public void Eliminar_Movil(String Patente)throws PatenteIncorrectoExcepcion,ListaVaciaExcepcion
+    {
+        boolean bandera = false;
+        if(moviles.size()==0)
+        {
+            throw new ListaVaciaExcepcion();
+        }
+
+        if(moviles.size()>0)
+        {
+            for(int i=0;i<moviles.size();i++)
+            {
+                if(moviles.get(i).getPatente().equals(Patente))
+                {
+                    moviles.remove(moviles.get(i));
+                    bandera = true;
+                }
+            }
+        }
+        if(bandera==false)
+        {
+            throw new PatenteIncorrectoExcepcion(); 
         }
     }
 }

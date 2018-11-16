@@ -49,7 +49,6 @@ public class jEmfermero extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jPanel_Caja = new javax.swing.JPanel();
         jLabelfondo = new javax.swing.JLabel();
-        jPanel_caja2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -124,11 +123,10 @@ public class jEmfermero extends javax.swing.JFrame {
         jPanel1.add(jPanelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(-170, 50, 170, 260));
 
         jPanel_Caja.setLayout(new javax.swing.BoxLayout(jPanel_Caja, javax.swing.BoxLayout.LINE_AXIS));
-        jPanel1.add(jPanel_Caja, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -500, 900, 440));
+        jPanel1.add(jPanel_Caja, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 900, 440));
 
         jLabelfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo.jpg"))); // NOI18N
         jPanel1.add(jLabelfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 60));
-        jPanel1.add(jPanel_caja2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 780, 460));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 500));
 
@@ -170,33 +168,18 @@ public class jEmfermero extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelMenuMouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       /*int posicion = this.jPanel_Caja.getX();
-        if(posicion > -1){
-            Animacion.Animacion.mover_izquierda(0, -170, 2, 2, jPanel_Caja);
-        }else{
-            Animacion.Animacion.mover_derecha(-170, 0, 2, 2, jPanel_Caja);
-        }*/
-        new CambiaPanel(jPanel_caja2,new Ingresar_Emfermero());
+       
+        new CambiaPanel(jPanel_Caja,new Ingresar_Emfermero());
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        /*int posicion = this.jPanel_Caja.getX();
-        if(posicion > -1){
-            Animacion.Animacion.mover_izquierda(0, -170, 2, 2, jPanel_Caja);
-        }else{
-            Animacion.Animacion.mover_derecha(-170, 0, 2, 2, jPanel_Caja);
-        }*/
-        new CambiaPanel(jPanel_caja2,new Modificar_Emfermero());
+       
+        new CambiaPanel(jPanel_Caja,new Modificar_Emfermero());
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        /*int posicion = this.jPanel_Caja.getX();
-        if(posicion > -1){
-            Animacion.Animacion.mover_izquierda(0, -170, 2, 2, jPanel_Caja);
-        }else{
-            Animacion.Animacion.mover_derecha(-170, 0, 2, 2, jPanel_Caja);
-        }*/
-        new CambiaPanel(jPanel_caja2,new Eliminar_Emfermero());
+        
+        new CambiaPanel(jPanel_Caja,new Eliminar_Emfermero());
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -256,6 +239,5 @@ public class jEmfermero extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelMenu;
     private javax.swing.JPanel jPanel_Caja;
-    private javax.swing.JPanel jPanel_caja2;
     // End of variables declaration//GEN-END:variables
 }

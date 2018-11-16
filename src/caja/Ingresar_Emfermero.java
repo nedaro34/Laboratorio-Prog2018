@@ -9,6 +9,7 @@ import javax.swing.JOptionPane;
 import principal.AfiliadosDIgualExcepcion;
 import principal.CentroClinicaMedica;
 import principal.Choferes;
+import principal.EnfermeroIgualExcepcion;
 import principal.Enfermeros;
 import principal.Fecha;
 
@@ -144,10 +145,10 @@ public class Ingresar_Emfermero extends javax.swing.JPanel {
                 
                 //ingresa al metodo para agregar nueva objeto a la lista
 
-                centro.Ingresar_Choferes(enfermero, dni);
+                centro.Ingresar_Enfermero(enfermero, dni);
  
   
-       }catch(AfiliadosDIgualExcepcion l){
+       }catch(EnfermeroIgualExcepcion l){
             //hay que ver de hacer una nueva excepcion
            //exepcion afiliado con el mismo documento
            JOptionPane.showConfirmDialog(null, "Ya existe un afiliado con este documento");
