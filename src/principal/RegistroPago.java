@@ -55,6 +55,24 @@ public class RegistroPago {
         this.dni = dni;
     }
 
+    /**
+     * @return the mes
+     */
+    public LinkedList<String> getMes() {
+        return mes;
+    }
+
+    /**
+     * @param mes the mes to set
+     */
+    public void setMes(LinkedList<String> mes) {
+        this.mes = mes;
+        
+    }
+
+    /**
+     * @return the año
+     */
     public int getAño() {
         return año;
     }
