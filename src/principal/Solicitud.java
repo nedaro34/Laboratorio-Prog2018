@@ -11,4 +11,7 @@ package principal;
  */
 public class Solicitud extends AsistenciaMedica{
     
+    
+    
+    
 }

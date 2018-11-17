@@ -91,6 +91,7 @@ public class RegistroPago {
      */
     public void setMes(LinkedList<String> mes) {
         this.mes = mes;
+        
     }
 
     /**

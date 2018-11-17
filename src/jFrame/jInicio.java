@@ -176,7 +176,7 @@ public class jInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        jAsistencia nuevo = new jAsistencia();
+        jAsistenciaMedica nuevo = new jAsistenciaMedica();
         nuevo.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton4ActionPerformed
