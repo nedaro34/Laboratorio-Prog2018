@@ -537,6 +537,41 @@ if(administrativo.size()>0)
         }
     }
     
+    
+    
+    //metodo pago
+    
+    public void Registar_pago(RegistroPago primer,int dni)throws Afiliado_Pago_Igual_Excepcion
+    {
+        if(registro.size()>0)
+        {
+            for(int i=0;i<registro.size();i++)
+            {
+                if(registro.get(i).getDni()==dni)
+                {
+                    throw new Afiliado_Pago_Igual_Excepcion();
+                }
+            } 
+        }
+
+            registro.add(primer);
+           
+    }
+    
+    public void Ingresar_Pago(RegistroPago pago,String mes,int dni)
+    { 
+        if(registro.size()>0)
+        {
+            for(int i=0;i<registro.size();i++)
+            {
+                if(registro.get(i).getDni()==dni)
+                {
+                    registro.set(i, pago);
+                }
+            } 
+        }
+    }
+    
 }
     
    

@@ -16,17 +16,16 @@ public class RegistroPago {
     private String apellido;
     private int dni;
     private int año;
-    private int mes;
     private int precio_base;
     private int fam_precio;
     private Afiliados afiliado;
+    private static LinkedList<String> mes = new LinkedList<String>();
 
-    public RegistroPago(String nombre, String apellido, int dni, int año, int mes, int precio_base, int fam_precio, Afiliados afiliado) {
+    public RegistroPago(String nombre, String apellido, int dni, int año, int precio_base, int fam_precio, Afiliados afiliado) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
         this.año = año;
-        this.mes = mes;
         this.precio_base = precio_base;
         this.fam_precio = fam_precio;
         this.afiliado = afiliado;
@@ -64,14 +63,6 @@ public class RegistroPago {
         this.año = año;
     }
 
-    public int getMes() {
-        return mes;
-    }
-
-    public void setMes(int mes) {
-        this.mes = mes;
-    }
-
     public int getPrecio_base() {
         return precio_base;
     }
@@ -97,7 +88,8 @@ public class RegistroPago {
     }
 
     
-    
-    
+    public void Ingresar_Mes(){
+        
+    }
     
 }
