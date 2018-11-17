@@ -5,7 +5,7 @@
  */
 package jFrame;
 
-import caja.InformacionAsistenciaMedica;
+import caja.InformaciondeAsistenciaMedica;
 import caja.ResultadoAsistenciaMedica;
 import caja.SolicitudAsistenciaMedica;
 import javax.swing.JOptionPane;
@@ -180,7 +180,7 @@ public class jAsistenciaMedica extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         
-        new CambiaPanel(jPanel_Caja,new InformacionAsistenciaMedica());
+        new CambiaPanel(jPanel_Caja,new InformaciondeAsistenciaMedica());
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

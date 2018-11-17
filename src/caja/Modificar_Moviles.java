@@ -75,6 +75,11 @@ public class Modificar_Moviles extends javax.swing.JPanel {
         add(jTextField_Patente, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 32, 330, 30));
 
         jButton2.setText("Buscar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 30, 90, 30));
     }// </editor-fold>//GEN-END:initComponents
 
@@ -86,13 +91,17 @@ public class Modificar_Moviles extends javax.swing.JPanel {
         int año = Integer.parseInt(jTextField_año.getText());
         Moviles movil = new Moviles(marca,modelo,año,patente);
         try {
-            centro.Ingresar_Movil(movil, patente);
+            centro.Ingresar_Movil(movil,patente);
         } catch (MovilesIgualExcepcion ex) {
             
         }catch(NumberFormatException a){
             
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -8,7 +8,6 @@ package caja;
 import javax.swing.JOptionPane;
 import principal.Afiliados;
 import principal.CentroClinicaMedica;
-import principal.Choferes;
 import principal.Fecha;
 import principal.GrupoFamiliar;
 
