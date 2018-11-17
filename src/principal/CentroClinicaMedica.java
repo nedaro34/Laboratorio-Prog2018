@@ -547,7 +547,7 @@ if(administrativo.size()>0)
         }
     }
     
-        public void Ingresar_Pago(Pago pagos,int dni)throws AfiliadosDIgualExcepcion
+        public void Ingresar_Pago(RegistroPago pagos,int dni)throws AfiliadosDIgualExcepcion
     {
         if(registro.size()>0)
         {
