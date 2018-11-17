@@ -38,79 +38,7 @@ public class CentroClinicaMedica {
            
     }
     
-    
-    public void Ingresar_Pagos(RegistroPago pagos,int dni)throws AfiliadosDIgualExcepcion
-    {
-        if(registro.size()>0)
-        {
-            for(int i=0;i<registro.size();i++)
-            {
-                if(registro.get(i).getDni()==dni)
-                {
-                    throw new AfiliadosDIgualExcepcion();
-                }
-            } 
-        }
 
-            registro.add(pagos);
-           
-    }
-    
-    /*
-    
-    public int mora(){
-        
-        int result,a,b,c=0;
-        a=Integer.parseInt(getMes().getFirst());
-        b=Integer.parseInt(getMes().getLast());
-
-        for(int i=0;i<getMes().size();i++){
-            c++;
-            
-        }
-        result=(b-a)-c;
-        
-        return result;  //esto registra los meses de mora en cantidad S
-        
-        
-    }
-    */
-    
-
-      public void Ingresar_Doctores(Doctores doctores,int dni)throws DoctoresIgualExcepcion
-    {
-        if(chofer.size()>0)
-        {
-            for(int i=0;i<chofer.size();i++)
-            {
-                if(chofer.get(i).getDocumento()==dni)
-                {
-                    throw new DoctoresIgualExcepcion();
-                }
-            } 
-        }
-
-            doctor.add(doctores);
-           
-    }
-      
-         public void Ingresar_Choferes(Choferes chofer1,int dni)throws ChoferesIgualExcepcion
-    {
-        if(chofer.size()>0)
-        {
-            for(int i=0;i<chofer.size();i++)
-            {
-                if(chofer.get(i).getDocumento()==dni)
-                {
-                    throw new ChoferesIgualExcepcion();
-                }
-            } 
-        }
-
-            chofer.add(chofer1);
-           
-    }
-    
     //buscar afiliados
     public Afiliados Buscar_Afiliado(int dni)
     {
@@ -132,145 +60,6 @@ public class CentroClinicaMedica {
         return null;
     } 
 
-    public Choferes Buscar_Chofer(int dni) {
-        if(chofer.size()>0)
-        {
-            for(int i=0;i<chofer.size();i++)
-            {
-                if(chofer.get(i).getDocumento()==dni)
-                {
-                    return chofer.get(i);
-                }
-            }
-            JOptionPane.showMessageDialog(null,"El chofer no existe");
-        }
-        else
-        {
-            JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
-        }    
-        return null;   
-    }
-
-    public Doctores Buscar_Doctor(int dni) {
- if(doctor.size()>0)
-        {
-            for(int i=0;i<doctor.size();i++)
-            {
-                if(doctor.get(i).getDocumento()==dni)
-                {
-                    return doctor.get(i);
-                }
-            }
-            JOptionPane.showMessageDialog(null,"El chofer no existe");
-        }
-        else
-        {
-            JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
-        }    
-        return null;    }
-
-    public Enfermeros Buscar_Enfermero(int dni) {
-if(enfermero.size()>0)
-        {
-            for(int i=0;i<enfermero.size();i++)
-            {
-                if(enfermero.get(i).getDocumento()==dni)
-                {
-                    return enfermero.get(i);
-                }
-            }
-            JOptionPane.showMessageDialog(null,"El chofer no existe");
-        }
-        else
-        {
-            JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
-        }    
-        return null;    }
-
-    public void Ingresar_Enfermero(Enfermeros enfermero1, int dni)throws EnfermeroIgualExcepcion
-            {
- if(chofer.size()>0)
-        {
-            for(int i=0;i<chofer.size();i++)
-            {
-                if(chofer.get(i).getDocumento()==dni)
-                {
-                    throw new EnfermeroIgualExcepcion();
-                }
-            } 
-        }
-
-            enfermero.add(enfermero1);  
-            }
-
-    
-
-    public void Ingresar_Administrativos(Administrativos administrativo1, int dni)throws AdministrativosIgualExcepcion
-            {
-                if(administrativo.size()>0)
-        {
-            for(int i=0;i<administrativo.size();i++)
-            {
-                if(administrativo.get(i).getDocumento()==dni)
-                {
-                    throw new AdministrativosIgualExcepcion();
-                }
-            } 
-        }
-
-            administrativo.add(administrativo1);      }
-
-    public Administrativos Buscar_Administrativos(int dni) {
-if(administrativo.size()>0)
-        {
-            for(int i=0;i<administrativo.size();i++)
-            {
-                if(administrativo.get(i).getDocumento()==dni)
-                {
-                    return administrativo.get(i);
-                }
-            }
-            JOptionPane.showMessageDialog(null,"El chofer no existe");
-        }
-        else
-        {
-            JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
-        }    
-        return null;    }
-
-    public void Ingresar_Familiar(GrupoFamiliar familiar1, int dni) throws GrupoFamiliarIgualExcepcion
-            {
-                if(familiar.size()>0)
-        {
-            for(int i=0;i<familiar.size();i++)
-            {
-                if(familiar.get(i).getDocumento()==dni)
-                {
-                    throw new GrupoFamiliarIgualExcepcion();
-                }
-            }
-        }
-                 familiar.add(familiar1);
-  }
-
-    public GrupoFamiliar Buscar_Familiar(int dni) {
-        if(familiar.size()>0)
-        {
-            for(int i=0;i<familiar.size();i++)
-            {
-                if(familiar.get(i).getDocumento()==dni)
-                {
-                    return familiar.get(i);
-                }
-            }
-            JOptionPane.showMessageDialog(null,"El chofer no existe");
-        }
-        else
-        {
-            JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
-        }    
-        return null; 
-    }
     
     public void Eliminar_Afiliado(int dni)throws DocumentoIncorrectoExcepcion,ListaVaciaExcepcion
     {
@@ -297,7 +86,8 @@ if(administrativo.size()>0)
         }
     }
     
-    public void Modificar_Afiliados(Afiliados afiliados,int dni)
+    
+     public void Modificar_Afiliados(Afiliados afiliados,int dni)
     {
         if(afiliado.size()>0)
         {
@@ -310,34 +100,12 @@ if(administrativo.size()>0)
             } 
         }
     }
-    
-    
-      public void Eliminar_Chofer(int dni)throws DocumentoIncorrectoExcepcion,ListaVaciaExcepcion
-    {
-        boolean bandera = false;
-        if(chofer.size()==0)
-        {
-            throw new ListaVaciaExcepcion();
-        }
-
-        if(chofer.size()>0)
-        {
-            for(int i=0;i<chofer.size();i++)
-            {
-                if(chofer.get(i).getDocumento()==dni)
-                {
-                    chofer.remove(chofer.get(i));
-                    bandera = true;
-                }
-            }
-        }
-        if(bandera==false)
-        {
-            throw new DocumentoIncorrectoExcepcion(); 
-        }
-    }
-    
-    public void Modificar_Chofer(Choferes choferes,int dni)
+     
+     
+     
+    //doctores
+    //ingresar doctores
+      public void Ingresar_Doctores(Doctores doctores,int dni)throws DoctoresIgualExcepcion
     {
         if(chofer.size()>0)
         {
@@ -345,14 +113,37 @@ if(administrativo.size()>0)
             {
                 if(chofer.get(i).getDocumento()==dni)
                 {
-                    chofer.set(i, choferes);
+                    throw new DoctoresIgualExcepcion();
                 }
             } 
         }
+
+            doctor.add(doctores);
+           
     }
-    
-     
-      public void Eliminar_Doctor(int dni)throws DocumentoIncorrectoExcepcion,ListaVaciaExcepcion
+      
+      
+      public Doctores Buscar_Doctor(int dni) {
+ if(doctor.size()>0)
+        {
+            for(int i=0;i<doctor.size();i++)
+            {
+                if(doctor.get(i).getDocumento()==dni)
+                {
+                    return doctor.get(i);
+                }
+            }
+            JOptionPane.showMessageDialog(null,"El chofer no existe");
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
+        }    
+        return null;    }
+      
+      
+      
+       public void Eliminar_Doctor(int dni)throws DocumentoIncorrectoExcepcion,ListaVaciaExcepcion
     {
         boolean bandera = false;
         if(doctor.size()==0)
@@ -390,10 +181,126 @@ if(administrativo.size()>0)
             } 
         }
     }
+    
+    
+    
+      
+         public void Ingresar_Choferes(Choferes chofer1,int dni)throws ChoferesIgualExcepcion
+    {
+        if(chofer.size()>0)
+        {
+            for(int i=0;i<chofer.size();i++)
+            {
+                if(chofer.get(i).getDocumento()==dni)
+                {
+                    throw new ChoferesIgualExcepcion();
+                }
+            } 
+        }
 
+            chofer.add(chofer1);
+           
+    }
     
-    
-       public void Eliminar_Enfermero(int dni)throws DocumentoIncorrectoExcepcion,ListaVaciaExcepcion
+         
+    //buscar choferes
+         
+         public void Modificar_Chofer(Choferes choferes,int dni)
+    {
+        if(chofer.size()>0)
+        {
+            for(int i=0;i<chofer.size();i++)
+            {
+                if(chofer.get(i).getDocumento()==dni)
+                {
+                    chofer.set(i, choferes);
+                }
+            } 
+        }
+    }
+         
+         
+          public void Eliminar_Chofer(int dni)throws DocumentoIncorrectoExcepcion,ListaVaciaExcepcion
+    {
+        boolean bandera = false;
+        if(chofer.size()==0)
+        {
+            throw new ListaVaciaExcepcion();
+        }
+
+        if(chofer.size()>0)
+        {
+            for(int i=0;i<chofer.size();i++)
+            {
+                if(chofer.get(i).getDocumento()==dni)
+                {
+                    chofer.remove(chofer.get(i));
+                    bandera = true;
+                }
+            }
+        }
+        if(bandera==false)
+        {
+            throw new DocumentoIncorrectoExcepcion(); 
+        }
+    }
+
+    public Choferes Buscar_Chofer(int dni) {
+        if(chofer.size()>0)
+        {
+            for(int i=0;i<chofer.size();i++)
+            {
+                if(chofer.get(i).getDocumento()==dni)
+                {
+                    return chofer.get(i);
+                }
+            }
+            JOptionPane.showMessageDialog(null,"El chofer no existe");
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
+        }    
+        return null;   
+    }
+
+     public void Ingresar_Enfermero(Enfermeros enfermero1, int dni)throws EnfermeroIgualExcepcion
+            {
+ if(chofer.size()>0)
+        {
+            for(int i=0;i<chofer.size();i++)
+            {
+                if(chofer.get(i).getDocumento()==dni)
+                {
+                    throw new EnfermeroIgualExcepcion();
+                }
+            } 
+        }
+
+            enfermero.add(enfermero1);  
+            }
+     
+     
+
+    public Enfermeros Buscar_Enfermero(int dni) {
+if(enfermero.size()>0)
+        {
+            for(int i=0;i<enfermero.size();i++)
+            {
+                if(enfermero.get(i).getDocumento()==dni)
+                {
+                    return enfermero.get(i);
+                }
+            }
+            JOptionPane.showMessageDialog(null,"El chofer no existe");
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
+        }    
+        return null;    }
+
+     public void Eliminar_Enfermero(int dni)throws DocumentoIncorrectoExcepcion,ListaVaciaExcepcion
     {
         boolean bandera = false;
         if(enfermero.size()==0)
@@ -431,7 +338,102 @@ if(administrativo.size()>0)
             } 
         }
     }
+    
+     public void Modificar_Enfermero(Moviles movil,String Patente)
+    {
+        if(moviles.size()>0)
+        {
+            for(int i=0;i<moviles.size();i++)
+            {
+                if(moviles.get(i).getPatente().equals(movil))
+                {
+                    moviles.set(i, movil);
+                }
+            } 
+        }
+    }
 
+    
+//  administractivo
+    //ingresar administrativo
+    public void Ingresar_Administrativos(Administrativos administrativo1, int dni)throws AdministrativosIgualExcepcion
+            {
+                if(administrativo.size()>0)
+        {
+            for(int i=0;i<administrativo.size();i++)
+            {
+                if(administrativo.get(i).getDocumento()==dni)
+                {
+                    throw new AdministrativosIgualExcepcion();
+                }
+            } 
+        }
+
+            administrativo.add(administrativo1);      }
+
+    
+    //buscar administractivos
+    public Administrativos Buscar_Administrativos(int dni) {
+if(administrativo.size()>0)
+        {
+            for(int i=0;i<administrativo.size();i++)
+            {
+                if(administrativo.get(i).getDocumento()==dni)
+                {
+                    return administrativo.get(i);
+                }
+            }
+            JOptionPane.showMessageDialog(null,"El chofer no existe");
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
+        }    
+        return null;    }
+    
+    
+    
+    
+
+    public void Ingresar_Familiar(GrupoFamiliar familiar1, int dni) throws GrupoFamiliarIgualExcepcion
+            {
+                if(familiar.size()>0)
+        {
+            for(int i=0;i<familiar.size();i++)
+            {
+                if(familiar.get(i).getDocumento()==dni)
+                {
+                    throw new GrupoFamiliarIgualExcepcion();
+                }
+            }
+        }
+                 familiar.add(familiar1);
+  }
+
+    
+    //buscar grupo familiar
+    
+    public GrupoFamiliar Buscar_Familiar(int dni) {
+        if(familiar.size()>0)
+        {
+            for(int i=0;i<familiar.size();i++)
+            {
+                if(familiar.get(i).getDocumento()==dni)
+                {
+                    return familiar.get(i);
+                }
+            }
+            JOptionPane.showMessageDialog(null,"El chofer no existe");
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
+        }    
+        return null; 
+    }
+    
+
+    
       public void Eliminar_Familiar(int dni)throws DocumentoIncorrectoExcepcion,ListaVaciaExcepcion
     {
         boolean bandera = false;
@@ -508,19 +510,7 @@ if(administrativo.size()>0)
         return null;
     } 
     
-    public void Modificar_Enfermero(Moviles movil,String Patente)
-    {
-        if(moviles.size()>0)
-        {
-            for(int i=0;i<moviles.size();i++)
-            {
-                if(moviles.get(i).getPatente().equals(movil))
-                {
-                    moviles.set(i, movil);
-                }
-            } 
-        }
-    }
+    
     
     public void Eliminar_Movil(String Patente)throws PatenteIncorrectoExcepcion,ListaVaciaExcepcion
     {
@@ -547,23 +537,8 @@ if(administrativo.size()>0)
         }
     }
     
-        public void Ingresar_Pago(RegistroPago pagos,int dni)throws AfiliadosDIgualExcepcion
-    {
-        if(registro.size()>0)
-        {
-            for(int i=0;i<registro.size();i++)
-            {
-                if(registro.get(i).getDni()==dni)
-                {
-                    throw new AfiliadosDIgualExcepcion();
-                }
-            } 
-        }
-
-            registro.add(pagos);
-           
-    }
-    
 }
+    
+   
 
 

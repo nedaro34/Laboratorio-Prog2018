@@ -135,6 +135,7 @@ public class Ingresar_Afiliado extends javax.swing.JPanel {
                 int mes = Integer.parseInt(jTextField_mes.getText());
                 String nombre = jTextField_nombre.getText();
                 String telefono = jTextField_telefono.getText();
+               
                 
                 // fecha de nacimiento
                 
@@ -142,7 +143,7 @@ public class Ingresar_Afiliado extends javax.swing.JPanel {
                 
                 // Creacion Ojeto Afiliado
                 
-                Afiliados afiliado = new Afiliados(nombre,apellido,direccion,fecha,dni,telefono,correo);
+                Afiliados afiliado = new Afiliados(0,nombre,apellido,direccion,fecha,dni,telefono,correo);
                 
                 //ingresa al metodo para agregar nueva objeto a la lista
 

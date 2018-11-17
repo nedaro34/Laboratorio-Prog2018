@@ -51,10 +51,12 @@ public class Modificar_Afiliado extends javax.swing.JPanel {
         jTextField_nombre = new javax.swing.JTextField();
         jTextField_dia = new javax.swing.JTextField();
         jTextField_mes = new javax.swing.JTextField();
-        jLabel12 = new javax.swing.JLabel();
         jTextField_correo = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jTextField_familia = new javax.swing.JTextField();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -75,8 +77,8 @@ public class Modificar_Afiliado extends javax.swing.JPanel {
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 90, 30));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel6.setText("Telefono :");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 90, 30));
+        jLabel6.setText("Cantidad Familia : ");
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 330, 130, 30));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setText("Direccion Correo :");
@@ -106,10 +108,6 @@ public class Modificar_Afiliado extends javax.swing.JPanel {
         add(jTextField_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 210, -1));
         add(jTextField_dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 160, 60, -1));
         add(jTextField_mes, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 150, 60, -1));
-
-        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel12.setText("Nombre :");
-        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 90, 30));
         add(jTextField_correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 340, 210, -1));
 
         jButton1.setText("Buscar");
@@ -127,6 +125,21 @@ public class Modificar_Afiliado extends javax.swing.JPanel {
             }
         });
         add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 100, -1));
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel13.setText("Nombre :");
+        add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 90, 30));
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel12.setText("Telefono :");
+        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 90, 30));
+
+        jTextField_familia.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField_familiaKeyTyped(evt);
+            }
+        });
+        add(jTextField_familia, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 330, 50, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -153,6 +166,7 @@ public class Modificar_Afiliado extends javax.swing.JPanel {
             jTextField_dia.setText(String.valueOf(afiliado.getFechadenacimiento().getDia()));
             jTextField_mes.setText(String.valueOf(afiliado.getFechadenacimiento().getMes()));
             jTextField_año.setText(String.valueOf(afiliado.getFechadenacimiento().getAño()));
+            jTextField_familia.setText(String.valueOf(afiliado.getFamilia()));
 
             
            
@@ -185,10 +199,12 @@ public class Modificar_Afiliado extends javax.swing.JPanel {
             int mes = Integer.parseInt(jTextField_mes.getText());
             String nombre = jTextField_nombre.getText();
             String telefono = jTextField_telefono.getText();
+            int familia = Integer.parseInt(jTextField_familia.getText());
+            
             
             Fecha fecha = new Fecha (dia,mes,año);
                 
-            Afiliados afiliado = new Afiliados(nombre,apellido,direccion,fecha,dni,telefono,correo);
+            Afiliados afiliado = new Afiliados(familia,nombre,apellido,direccion,fecha,dni,telefono,correo);
             
             centro.Modificar_Afiliados(afiliado, dni);
 
@@ -209,6 +225,10 @@ public class Modificar_Afiliado extends javax.swing.JPanel {
        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jTextField_familiaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_familiaKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField_familiaKeyTyped
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
@@ -216,6 +236,7 @@ public class Modificar_Afiliado extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -231,6 +252,7 @@ public class Modificar_Afiliado extends javax.swing.JPanel {
     private javax.swing.JTextField jTextField_direccion;
     private javax.swing.JTextField jTextField_dni;
     private javax.swing.JTextField jTextField_documento;
+    private javax.swing.JTextField jTextField_familia;
     private javax.swing.JTextField jTextField_mes;
     private javax.swing.JTextField jTextField_nombre;
     private javax.swing.JTextField jTextField_telefono;

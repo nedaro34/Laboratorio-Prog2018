@@ -15,98 +15,87 @@ public class RegistroPago {
     private String nombre;
     private String apellido;
     private int dni;
-    private LinkedList<String> mes=new LinkedList<String>();
     private int año;
+    private int mes;
+    private int precio_base;
+    private int fam_precio;
+    private Afiliados afiliado;
 
-    public RegistroPago(String nombre, String apellido, int dni, int año) {
+    public RegistroPago(String nombre, String apellido, int dni, int año, int mes, int precio_base, int fam_precio, Afiliados afiliado) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
         this.año = año;
-    }
-    public void mes(String mes1){//Ingresa mes que se esta pagando
-        if(mes.size()>0)
-        {
-        for(int i=0;i<mes.size();i++)
-            {
-            if(mes.get(i).equals(mes1)){
-                  
-                }
-            } 
-        }
-        mes.add(mes1);
+        this.mes = mes;
+        this.precio_base = precio_base;
+        this.fam_precio = fam_precio;
+        this.afiliado = afiliado;
     }
 
-    /**
-     * @return the nombre
-     */
     public String getNombre() {
         return nombre;
     }
 
-    /**
-     * @param nombre the nombre to set
-     */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    /**
-     * @return the apellido
-     */
     public String getApellido() {
         return apellido;
     }
 
-    /**
-     * @param apellido the apellido to set
-     */
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
 
-    /**
-     * @return the dni
-     */
     public int getDni() {
         return dni;
     }
 
-    /**
-     * @param dni the dni to set
-     */
     public void setDni(int dni) {
         this.dni = dni;
     }
 
-    /**
-     * @return the mes
-     */
-    public LinkedList<String> getMes() {
-        return mes;
-    }
-
-    /**
-     * @param mes the mes to set
-     */
-    public void setMes(LinkedList<String> mes) {
-        this.mes = mes;
-    }
-
-    /**
-     * @return the año
-     */
     public int getAño() {
         return año;
     }
 
-    /**
-     * @param año the año to set
-     */
     public void setAño(int año) {
         this.año = año;
     }
-    
+
+    public int getMes() {
+        return mes;
+    }
+
+    public void setMes(int mes) {
+        this.mes = mes;
+    }
+
+    public int getPrecio_base() {
+        return precio_base;
+    }
+
+    public void setPrecio_base(int precio_base) {
+        this.precio_base = precio_base;
+    }
+
+    public int getFam_precio() {
+        return fam_precio;
+    }
+
+    public void setFam_precio(int fam_precio) {
+        this.fam_precio = fam_precio;
+    }
+
+    public Afiliados getAfiliado() {
+        return afiliado;
+    }
+
+    public void setAfiliado(Afiliados afiliado) {
+        this.afiliado = afiliado;
+    }
+
     
     
     

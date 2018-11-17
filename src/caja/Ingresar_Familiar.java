@@ -6,6 +6,7 @@
 package caja;
 
 import javax.swing.JOptionPane;
+import principal.Afiliados;
 import principal.AfiliadosDIgualExcepcion;
 import principal.CentroClinicaMedica;
 import principal.Fecha;
@@ -55,6 +56,8 @@ public class Ingresar_Familiar extends javax.swing.JPanel {
         jTextField_dia = new javax.swing.JTextField();
         jTextField_mes = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
+        jTextField_afiliado = new javax.swing.JTextField();
 
         jButton1.setText("jButton1");
 
@@ -91,8 +94,8 @@ public class Ingresar_Familiar extends javax.swing.JPanel {
         add(jTextField_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 210, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel8.setText("Nombre :");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 90, 30));
+        jLabel8.setText("Documento Afiliados :");
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 240, 160, 30));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel9.setText("Fecha de Nacimiento :");
@@ -116,6 +119,11 @@ public class Ingresar_Familiar extends javax.swing.JPanel {
             }
         });
         add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, -1, -1));
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel12.setText("Nombre :");
+        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 90, 30));
+        add(jTextField_afiliado, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 240, 180, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -136,14 +144,22 @@ public class Ingresar_Familiar extends javax.swing.JPanel {
                 int mes = Integer.parseInt(jTextField_mes.getText());
                 String nombre = jTextField_nombre.getText();
                 String telefono = jTextField_telefono.getText();
+                int dnia = Integer.parseInt(jTextField_afiliado.getText());
+                
+                
+                //afiliado
+                Afiliados afiliado = centro.Buscar_Afiliado(dnia);
+                int familia = afiliado.getFamilia();
+                afiliado.suma_familia();
+                
                 
                 // fecha de nacimiento
                 
-                Fecha fecha = new Fecha(2,3,45);
+                Fecha fecha = new Fecha(dia,mes,año);
                 
                 // Creacion Ojeto Afiliado
                 
-                GrupoFamiliar familiar = new GrupoFamiliar(nombre,apellido,direccion,fecha,dni,telefono,correo);
+                GrupoFamiliar familiar = new GrupoFamiliar(afiliado,nombre,apellido,direccion,fecha,dni,telefono,correo);
                 
                 //ingresa al metodo para agregar nueva objeto a la lista
 
@@ -178,6 +194,7 @@ public class Ingresar_Familiar extends javax.swing.JPanel {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -186,6 +203,7 @@ public class Ingresar_Familiar extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JTextField jTextField_afiliado;
     private javax.swing.JTextField jTextField_apellido;
     private javax.swing.JTextField jTextField_año;
     private javax.swing.JTextField jTextField_dia;
