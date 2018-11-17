@@ -106,8 +106,19 @@ public class RegistroPago {
     }
 
     
-    public void Ingresar_Mes(){
-        
+    public void Ingresar_Mes(String pago_mes)throws Pago_mes_Igual_Excepcion{
+        if(mes.size()>0)
+        {
+            for(int i=0;i<mes.size();i++)
+            {
+                if(mes.get(i).equals(pago_mes))
+                {
+                    throw new Pago_mes_Igual_Excepcion();
+                }
+            } 
+        }
+
+            mes.add(pago_mes);
     }
     
 }

@@ -10,6 +10,7 @@ import java.util.logging.Logger;
 import principal.Afiliado_Pago_Igual_Excepcion;
 import principal.Afiliados;
 import principal.CentroClinicaMedica;
+import principal.Pago_mes_Igual_Excepcion;
 import principal.RegistroPago;
 
 /**
@@ -125,9 +126,12 @@ public class Ingresar_Pago extends javax.swing.JPanel {
         
         RegistroPago primer = new RegistroPago(nombre,apelliado,dni,año,preci_base,famili,afiliado);
         try {
+            primer.Ingresar_Mes(mes);
             centro.Registar_pago(primer, dni);
         } catch (Afiliado_Pago_Igual_Excepcion ex) {
             
+        } catch (Pago_mes_Igual_Excepcion ex) {
+            Logger.getLogger(Ingresar_Pago.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 

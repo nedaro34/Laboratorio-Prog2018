@@ -5,7 +5,10 @@
  */
 package jFrame;
 
+import caja.Ingresar_Pago;
+import caja.Primer_Pago;
 import javax.swing.JOptionPane;
+import paneles.CambiaPanel;
 
 
 
@@ -89,7 +92,7 @@ public class jPago extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanelMenu.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 170, -1));
+        jPanelMenu.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 170, -1));
 
         jButton2.setText("Registro Pago");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -155,7 +158,7 @@ public class jPago extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelMenuMouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       
+        new CambiaPanel(jPanel_Caja,new Primer_Pago());
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -165,7 +168,7 @@ public class jPago extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+       new CambiaPanel(jPanel_Caja,new Ingresar_Pago());
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
