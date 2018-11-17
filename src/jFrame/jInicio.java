@@ -47,6 +47,7 @@ public class jInicio extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
         jLabelfondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -93,7 +94,7 @@ public class jInicio extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanelMenu.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 170, -1));
+        jPanelMenu.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 170, 30));
 
         jButton2.setText("Afiliados");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -118,6 +119,14 @@ public class jInicio extends javax.swing.JFrame {
             }
         });
         jPanelMenu.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 170, -1));
+
+        jButton5.setText("Movil");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanelMenu.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 170, -1));
 
         jPanel1.add(jPanelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(-170, 50, 170, 260));
 
@@ -187,6 +196,13 @@ public class jInicio extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+         jMovil a = new jMovil();
+        a.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -228,6 +244,7 @@ public class jInicio extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelCerrar;
     private javax.swing.JLabel jLabelMenu;
