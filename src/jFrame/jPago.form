@@ -156,7 +156,7 @@
         <Container class="javax.swing.JPanel" name="jPanel_Caja">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="0" y="-500" width="900" height="440"/>
+              <AbsoluteConstraints x="0" y="60" width="900" height="440"/>
             </Constraint>
           </Constraints>
 
