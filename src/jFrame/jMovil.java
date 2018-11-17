@@ -5,11 +5,8 @@
  */
 package jFrame;
 
-import caja.Eliminar_Afiliado;
 import caja.Eliminar_Moviles;
-import caja.Ingresar_Afiliado;
 import caja.Ingresar_Moviles;
-import caja.Modificar_Afiliado;
 import caja.Modificar_Moviles;
 import javax.swing.JOptionPane;
 import paneles.CambiaPanel;
@@ -217,6 +214,30 @@ public class jMovil extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(jMovil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>

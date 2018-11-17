@@ -5,11 +5,9 @@
  */
 package jFrame;
 
-import caja.Eliminar_Doctor;
-import caja.Ingresar_Doctor;
-import caja.Modificar_Doctor;
 import javax.swing.JOptionPane;
-import paneles.CambiaPanel;
+
+
 
 
 
@@ -130,6 +128,11 @@ public class jInicio extends javax.swing.JFrame {
         jPanelMenu.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 170, -1));
 
         jButton5.setText("Movil");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
         jPanelMenu.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 170, -1));
 
         jPanel1.add(jPanelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(-170, 50, 170, 260));
@@ -201,10 +204,14 @@ public class jInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jPanelMenuAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jPanelMenuAncestorAdded
+
+    }//GEN-LAST:event_jPanelMenuAncestorAdded
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         jMovil a = new jMovil();
         a.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jPanelMenuAncestorAdded
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
