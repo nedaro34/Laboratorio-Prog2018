@@ -53,6 +53,8 @@ public class Ingresar_Pago extends javax.swing.JPanel {
         jTextField_familia = new javax.swing.JTextField();
         jComboBox_mes = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        jTextField_result = new javax.swing.JTextField();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -110,6 +112,10 @@ public class Ingresar_Pago extends javax.swing.JPanel {
             }
         });
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 370, 100, -1));
+
+        jLabel10.setText("Result");
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, -1, -1));
+        add(jTextField_result, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, 230, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -129,9 +135,9 @@ public class Ingresar_Pago extends javax.swing.JPanel {
             primer.Ingresar_Mes(mes);
             centro.Registar_pago(primer, dni);
         } catch (Afiliado_Pago_Igual_Excepcion ex) {
-            
+            jTextField_result.setText("Ya existe el pago");
         } catch (Pago_mes_Igual_Excepcion ex) {
-            Logger.getLogger(Ingresar_Pago.class.getName()).log(Level.SEVERE, null, ex);
+            jTextField_result.setText("Ya existe el mes de pago");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -140,6 +146,7 @@ public class Ingresar_Pago extends javax.swing.JPanel {
     private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox_mes;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -155,5 +162,6 @@ public class Ingresar_Pago extends javax.swing.JPanel {
     private javax.swing.JTextField jTextField_nombre;
     private javax.swing.JTextField jTextField_pago;
     private javax.swing.JTextField jTextField_pricio;
+    private javax.swing.JTextField jTextField_result;
     // End of variables declaration//GEN-END:variables
 }
