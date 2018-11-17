@@ -6,6 +6,8 @@
 package caja;
 
 
+import java.text.DateFormat;
+import java.util.Locale;
 import javax.swing.JOptionPane;
 import principal.Afiliados;
 import principal.AfiliadosDIgualExcepcion;
@@ -17,7 +19,7 @@ import principal.Fecha;
  * @author Administrador
  */
 public class Ingresar_Afiliado extends javax.swing.JPanel {
-
+    DateFormat fecha = DateFormat.getDateInstance();
     /**
      * Creates new form Ingresar_Afiliado
      */
@@ -34,13 +36,11 @@ public class Ingresar_Afiliado extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jTextField_año = new javax.swing.JTextField();
         jTextField_direccioncorreo = new javax.swing.JTextField();
         jTextField_telefono = new javax.swing.JTextField();
         jTextField_documento = new javax.swing.JTextField();
@@ -48,18 +48,11 @@ public class Ingresar_Afiliado extends javax.swing.JPanel {
         jTextField_apellido = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
         jTextField_nombre = new javax.swing.JTextField();
-        jTextField_dia = new javax.swing.JTextField();
-        jTextField_mes = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jDateChooser_fecha = new com.toedter.calendar.JDateChooser();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel2.setText("Año:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 80, 40, 30));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setText("Apellido :");
@@ -80,7 +73,6 @@ public class Ingresar_Afiliado extends javax.swing.JPanel {
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setText("Direccion Correo :");
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 130, 30));
-        add(jTextField_año, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 80, 60, -1));
         add(jTextField_direccioncorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 250, 210, -1));
         add(jTextField_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 200, 210, -1));
         add(jTextField_documento, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, 210, -1));
@@ -93,18 +85,8 @@ public class Ingresar_Afiliado extends javax.swing.JPanel {
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel9.setText("Fecha de Nacimiento :");
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 20, 400, 30));
-
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel10.setText("Dia:");
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 80, 30, 30));
-
-        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel11.setText("Mes:");
-        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 80, 40, 30));
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 20, 400, 30));
         add(jTextField_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, 210, -1));
-        add(jTextField_dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 80, 60, -1));
-        add(jTextField_mes, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 80, 60, -1));
 
         jButton1.setText("Ingresar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -113,6 +95,7 @@ public class Ingresar_Afiliado extends javax.swing.JPanel {
             }
         });
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, -1, -1));
+        add(jDateChooser_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 20, 140, 20));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -127,15 +110,12 @@ public class Ingresar_Afiliado extends javax.swing.JPanel {
                 // guarda los campo agregado por la ventana
                 
                 String apellido = jTextField_apellido.getText();
-                int año = Integer.parseInt(jTextField_año.getText());
-                int dia = Integer.parseInt(jTextField_dia.getText());
                 String direccion = jTextField_direccion.getText();
                 String correo = jTextField_direccioncorreo.getText();
                 int dni = Integer.parseInt(jTextField_documento.getText());
-                int mes = Integer.parseInt(jTextField_mes.getText());
                 String nombre = jTextField_nombre.getText();
                 String telefono = jTextField_telefono.getText();
-               
+                String fecha_nacimiento = fecha.format(jDateChooser_fecha.getDate());
                 
                 // fecha de nacimiento
                 
@@ -160,12 +140,9 @@ public class Ingresar_Afiliado extends javax.swing.JPanel {
             //exepcion limpia los campos
             JOptionPane.showConfirmDialog(null, "Falta Campos");
             jTextField_apellido.setText("");
-            jTextField_año.setText("");
-            jTextField_dia.setText("");
             jTextField_direccion.setText("");
             jTextField_direccioncorreo.setText("");
             jTextField_documento.setText("");
-            jTextField_mes.setText("");
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
        } 
@@ -174,9 +151,7 @@ public class Ingresar_Afiliado extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel2;
+    private com.toedter.calendar.JDateChooser jDateChooser_fecha;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -185,12 +160,9 @@ public class Ingresar_Afiliado extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField jTextField_apellido;
-    private javax.swing.JTextField jTextField_año;
-    private javax.swing.JTextField jTextField_dia;
     private javax.swing.JTextField jTextField_direccion;
     private javax.swing.JTextField jTextField_direccioncorreo;
     private javax.swing.JTextField jTextField_documento;
-    private javax.swing.JTextField jTextField_mes;
     private javax.swing.JTextField jTextField_nombre;
     private javax.swing.JTextField jTextField_telefono;
     // End of variables declaration//GEN-END:variables

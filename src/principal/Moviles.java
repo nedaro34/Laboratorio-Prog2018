@@ -7,6 +7,7 @@ public class Moviles { //ESta va a ser una clase separada para que se utilice
     private String Modelo;
     private int Año;
     private String Patente;
+    private String situacion;
 
     public Moviles(String Marca, String Modelo, int Año, String Patente) {
         this.Marca = Marca;

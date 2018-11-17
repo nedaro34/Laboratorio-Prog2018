@@ -53,6 +53,8 @@ public class Primer_Pago extends javax.swing.JPanel {
         jTextField_familia = new javax.swing.JTextField();
         jComboBox_mes = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        jTextField_result = new javax.swing.JTextField();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -61,8 +63,8 @@ public class Primer_Pago extends javax.swing.JPanel {
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, 140, 30));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel2.setText("Nombre :");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 70, 30));
+        jLabel2.setText("Result :");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 20, 60, 30));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("Apellido :");
@@ -110,6 +112,11 @@ public class Primer_Pago extends javax.swing.JPanel {
             }
         });
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 370, 100, -1));
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel10.setText("Nombre :");
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 70, 30));
+        add(jTextField_result, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 20, 230, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -130,9 +137,9 @@ public class Primer_Pago extends javax.swing.JPanel {
             primer.Ingresar_Mes(mes);
             centro.Registar_pago(primer, dni);
         } catch (Afiliado_Pago_Igual_Excepcion ex) {
-            
+            jTextField_result.setText("Ya existe el pago");
         } catch (Pago_mes_Igual_Excepcion ex) {
-            
+            jTextField_result.setText("Ya existe el mes");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -141,6 +148,7 @@ public class Primer_Pago extends javax.swing.JPanel {
     private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox_mes;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -156,5 +164,6 @@ public class Primer_Pago extends javax.swing.JPanel {
     private javax.swing.JTextField jTextField_nombre;
     private javax.swing.JTextField jTextField_pago;
     private javax.swing.JTextField jTextField_pricio;
+    private javax.swing.JTextField jTextField_result;
     // End of variables declaration//GEN-END:variables
 }
