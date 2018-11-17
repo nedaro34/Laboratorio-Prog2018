@@ -16,6 +16,7 @@ public class CentroClinicaMedica {
     private static LinkedList<Administrativos> administrativo = new LinkedList<Administrativos>();
     private static LinkedList<GrupoFamiliar> familiar = new LinkedList<GrupoFamiliar>();
     private static LinkedList<Moviles> moviles = new LinkedList<Moviles>();
+    private static LinkedList<RegistroPago> registro = new LinkedList<RegistroPago>();
 
     //metodos afiliados
     //igreso de afiliado a las listas
@@ -36,6 +37,45 @@ public class CentroClinicaMedica {
             afiliado.add(afiliados);
            
     }
+    
+    
+    public void Ingresar_Pagos(RegistroPago pagos,int dni)throws AfiliadosDIgualExcepcion
+    {
+        if(registro.size()>0)
+        {
+            for(int i=0;i<registro.size();i++)
+            {
+                if(registro.get(i).getDni()==dni)
+                {
+                    throw new AfiliadosDIgualExcepcion();
+                }
+            } 
+        }
+
+            registro.add(pagos);
+           
+    }
+    
+    /*
+    
+    public int mora(){
+        
+        int result,a,b,c=0;
+        a=Integer.parseInt(getMes().getFirst());
+        b=Integer.parseInt(getMes().getLast());
+
+        for(int i=0;i<getMes().size();i++){
+            c++;
+            
+        }
+        result=(b-a)-c;
+        
+        return result;  //esto registra los meses de mora en cantidad S
+        
+        
+    }
+    */
+    
 
       public void Ingresar_Doctores(Doctores doctores,int dni)throws DoctoresIgualExcepcion
     {
@@ -506,6 +546,24 @@ if(administrativo.size()>0)
             throw new PatenteIncorrectoExcepcion(); 
         }
     }
+    
+        public void Ingresar_Pago(Pago pagos,int dni)throws AfiliadosDIgualExcepcion
+    {
+        if(registro.size()>0)
+        {
+            for(int i=0;i<registro.size();i++)
+            {
+                if(registro.get(i).getDni()==dni)
+                {
+                    throw new AfiliadosDIgualExcepcion();
+                }
+            } 
+        }
+
+            registro.add(pagos);
+           
+    }
+    
 }
 
 
