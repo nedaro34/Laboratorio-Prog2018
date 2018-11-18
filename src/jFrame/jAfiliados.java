@@ -8,6 +8,7 @@ package jFrame;
 import caja.Eliminar_Afiliado;
 import caja.Ingresar_Afiliado;
 import caja.Modificar_Afiliado;
+import caja.Mostrar_Afiliados;
 import javax.swing.JOptionPane;
 import paneles.CambiaPanel;
 
@@ -49,6 +50,7 @@ public class jAfiliados extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
         jPanel_Caja = new javax.swing.JPanel();
         jLabelfondo = new javax.swing.JLabel();
 
@@ -96,7 +98,7 @@ public class jAfiliados extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanelMenu.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 170, -1));
+        jPanelMenu.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 170, -1));
 
         jButton2.setText("Ingresar Afiliados");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -128,9 +130,17 @@ public class jAfiliados extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        jPanelMenu.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 170, -1));
+        jPanelMenu.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 170, -1));
 
-        jPanel1.add(jPanelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(-170, 50, 170, 260));
+        jButton6.setText("Mostrar");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        jPanelMenu.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 170, -1));
+
+        jPanel1.add(jPanelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(-170, 50, 170, 400));
 
         jPanel_Caja.setLayout(new javax.swing.BoxLayout(jPanel_Caja, javax.swing.BoxLayout.LINE_AXIS));
         jPanel1.add(jPanel_Caja, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 900, 440));
@@ -204,6 +214,10 @@ public class jAfiliados extends javax.swing.JFrame {
         a.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        new CambiaPanel(jPanel_Caja,new Mostrar_Afiliados());
+    }//GEN-LAST:event_jButton6ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -248,6 +262,7 @@ public class jAfiliados extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelCerrar;
     private javax.swing.JLabel jLabelMenu;

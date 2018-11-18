@@ -101,7 +101,9 @@ public class CentroClinicaMedica {
         }
     }
      
-     
+     public LinkedList Mostrar_Afiliados(){
+         return afiliado;
+     }
      
     //doctores
     //ingresar doctores
