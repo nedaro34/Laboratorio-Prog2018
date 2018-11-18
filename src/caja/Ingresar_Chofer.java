@@ -117,11 +117,11 @@ public class Ingresar_Chofer extends javax.swing.JPanel {
                 
                 // fecha de nacimiento
                 
-                Fecha fecha = new Fecha(2,3,45);
+
                 
                 // Creacion Ojeto Afiliado
                 
-                Choferes chofer = new Choferes(nombre,apellido,direccion,fecha,dni,telefono,correo);
+                Choferes chofer = new Choferes(nombre,apellido,direccion,fecha_nacimiento,dni,telefono,correo);
                 
                 //ingresa al metodo para agregar nueva objeto a la lista
 

@@ -5,12 +5,12 @@ public class Persona {
 private String Nombre;
 private String Apellido;
 private String Direccion;
-private Fecha Fechadenacimiento;
+private String Fechadenacimiento;
 private int Documento;
 private String Telefono;
 private String DireccionCorreo;
 
-    public Persona(String Nombre, String Apellido, String Direccion, Fecha Fechadenacimiento, int Documento, String Telefono, String DireccionCorreo) {
+    public Persona(String Nombre, String Apellido, String Direccion, String Fechadenacimiento, int Documento, String Telefono, String DireccionCorreo) {
         this.Nombre = Nombre;
         this.Apellido = Apellido;
         this.Direccion = Direccion;
@@ -44,11 +44,11 @@ private String DireccionCorreo;
         this.Direccion = Direccion;
     }
 
-    public Fecha getFechadenacimiento() {
+    public String getFechadenacimiento() {
         return Fechadenacimiento;
     }
 
-    public void setFechadenacimiento(Fecha Fechadenacimiento) {
+    public void setFechadenacimiento(String Fechadenacimiento) {
         this.Fechadenacimiento = Fechadenacimiento;
     }
 
@@ -76,15 +76,10 @@ private String DireccionCorreo;
         this.DireccionCorreo = DireccionCorreo;
     }
 
+
     
 
-
-                        
-                        
-                        
-
-
-
+    
 
 
 }

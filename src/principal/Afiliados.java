@@ -6,7 +6,7 @@ public class Afiliados extends Persona{
     
     private int familia;
 
-    public Afiliados(int familia, String Nombre, String Apellido, String Direccion, Fecha Fechadenacimiento, int Documento, String Telefono, String DireccionCorreo) {
+    public Afiliados(int familia, String Nombre, String Apellido, String Direccion, String Fechadenacimiento, int Documento, String Telefono, String DireccionCorreo) {
         super(Nombre, Apellido, Direccion, Fechadenacimiento, Documento, Telefono, DireccionCorreo);
         this.familia = familia;
     }
@@ -18,6 +18,8 @@ public class Afiliados extends Persona{
     public void setFamilia(int familia) {
         this.familia = familia;
     }
+
+    
     
     public void suma_familia(){
         int result;

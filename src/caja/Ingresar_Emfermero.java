@@ -116,11 +116,11 @@ public class Ingresar_Emfermero extends javax.swing.JPanel {
                 String fecha_nacimiento = fecha.format(jDateChooser_fecha.getDate());
                 // fecha de nacimiento
                 
-                Fecha fecha = new Fecha(2,3,45);
+
                 
                 // Creacion Ojeto Afiliado
                 
-                Enfermeros enfermero = new Enfermeros(nombre,apellido,direccion,fecha,dni,telefono,correo);
+                Enfermeros enfermero = new Enfermeros(nombre,apellido,direccion,fecha_nacimiento,dni,telefono,correo);
                 
                 //ingresa al metodo para agregar nueva objeto a la lista
 

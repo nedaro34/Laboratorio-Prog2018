@@ -119,11 +119,10 @@ public class Ingresar_Afiliado extends javax.swing.JPanel {
                 
                 // fecha de nacimiento
                 
-                Fecha fecha = new Fecha(2,3,45);
                 
                 // Creacion Ojeto Afiliado
                 
-                Afiliados afiliado = new Afiliados(0,nombre,apellido,direccion,fecha,dni,telefono,correo);
+                Afiliados afiliado = new Afiliados(0,nombre,apellido,direccion,fecha_nacimiento,dni,telefono,correo);
                 
                 //ingresa al metodo para agregar nueva objeto a la lista
 

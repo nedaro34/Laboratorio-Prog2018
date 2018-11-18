@@ -123,7 +123,7 @@ public class Ingresar_Administractivo extends javax.swing.JPanel {
                 
                 // Creacion Ojeto Afiliado
                 
-                Administrativos administrativo = new Administrativos(nombre,apellido,direccion,fecha,dni,telefono,correo);
+                Administrativos administrativo = new Administrativos(nombre,apellido,direccion,fecha_nacimiento,dni,telefono,correo);
                 
                 //ingresa al metodo para agregar nueva objeto a la lista
 

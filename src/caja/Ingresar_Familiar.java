@@ -133,11 +133,11 @@ public class Ingresar_Familiar extends javax.swing.JPanel {
                 
                 
                 // fecha de nacimiento
-                Fecha fecha = new Fecha(2,2,1991);
+                
                 
                 // Creacion Ojeto Afiliado
                 
-                GrupoFamiliar familiar = new GrupoFamiliar(afiliado,nombre,apellido,direccion,fecha,dni,telefono,correo);
+                GrupoFamiliar familiar = new GrupoFamiliar(afiliado,nombre,apellido,direccion,fecha_nacimiento,dni,telefono,correo);
                 
                 //ingresa al metodo para agregar nueva objeto a la lista
 

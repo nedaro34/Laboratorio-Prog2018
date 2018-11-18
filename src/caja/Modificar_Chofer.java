@@ -5,6 +5,7 @@
  */
 package caja;
 
+import java.text.DateFormat;
 import javax.swing.JOptionPane;
 import principal.Afiliados;
 import principal.CentroClinicaMedica;
@@ -16,7 +17,7 @@ import principal.Fecha;
  * @author Administrador
  */
 public class Modificar_Chofer extends javax.swing.JPanel {
-
+    DateFormat fecha = DateFormat.getDateInstance();
     /**
      * Creates new form Ingresar_Afiliado
      */
@@ -33,13 +34,11 @@ public class Modificar_Chofer extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jTextField_año = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jTextField_telefono = new javax.swing.JTextField();
         jTextField_documento = new javax.swing.JTextField();
@@ -47,21 +46,16 @@ public class Modificar_Chofer extends javax.swing.JPanel {
         jTextField_apellido = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
         jTextField_nombre = new javax.swing.JTextField();
-        jTextField_dia = new javax.swing.JTextField();
-        jTextField_mes = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         jTextField_direccioncorreo = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jTextField_fecha = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jDateChooser_fecha = new com.toedter.calendar.JDateChooser();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel2.setText("Año:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 150, 40, 30));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setText("Apellido :");
@@ -82,7 +76,6 @@ public class Modificar_Chofer extends javax.swing.JPanel {
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setText("Direccion Correo :");
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 130, 30));
-        add(jTextField_año, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 150, 60, -1));
         add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 30, 210, -1));
         add(jTextField_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 300, 210, -1));
         add(jTextField_documento, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, 210, -1));
@@ -94,19 +87,9 @@ public class Modificar_Chofer extends javax.swing.JPanel {
         add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 180, 30));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel9.setText("Fecha de Nacimiento :");
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 100, 400, 30));
-
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel10.setText("Dia:");
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 160, 30, 30));
-
-        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel11.setText("Mes:");
-        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 150, 40, 30));
+        jLabel9.setText("Nueva Fecha de Naciomiento :");
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 180, 400, 30));
         add(jTextField_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 210, -1));
-        add(jTextField_dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 160, 60, -1));
-        add(jTextField_mes, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 150, 60, -1));
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel12.setText("Nombre :");
@@ -128,6 +111,12 @@ public class Modificar_Chofer extends javax.swing.JPanel {
             }
         });
         add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, -1, -1));
+        add(jTextField_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 100, 160, -1));
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel10.setText("Atual Fecha de Naciomiento :");
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 100, 400, 30));
+        add(jDateChooser_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 180, 150, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -146,15 +135,12 @@ public class Modificar_Chofer extends javax.swing.JPanel {
             
             //muestra los datos   
             jTextField_apellido.setText(chofer.getApellido());
-            jTextField_año.setText(String.valueOf(chofer.getFechadenacimiento().getAño()));
             jTextField_direccioncorreo.setText(chofer.getDireccionCorreo());
             jTextField_documento.setText(String.valueOf(chofer.getDocumento()));
             jTextField_direccion.setText(chofer.getDireccion());
             jTextField_telefono.setText(chofer.getTelefono());
             jTextField_nombre.setText(chofer.getNombre());
-            jTextField_dia.setText(String.valueOf(chofer.getFechadenacimiento().getDia()));
-            jTextField_mes.setText(String.valueOf(chofer.getFechadenacimiento().getMes()));
-            jTextField_año.setText(String.valueOf(chofer.getFechadenacimiento().getAño()));
+            jTextField_fecha.setText(chofer.getFechadenacimiento());
 
             //aca se va a realizar
            
@@ -163,12 +149,9 @@ public class Modificar_Chofer extends javax.swing.JPanel {
             //aca registra campos vacios
             JOptionPane.showConfirmDialog(null, "Falta Campos");
             jTextField_apellido.setText("");
-            jTextField_año.setText("");
-            jTextField_dia.setText("");
             jTextField_direccion.setText("");
             jTextField_direccioncorreo.setText("");
             jTextField_documento.setText("");
-            jTextField_mes.setText("");
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
        } 
@@ -182,18 +165,14 @@ public class Modificar_Chofer extends javax.swing.JPanel {
             CentroClinicaMedica centro = new CentroClinicaMedica();
             
             String apellido = jTextField_apellido.getText();
-            int año = Integer.parseInt(jTextField_año.getText());
-            int dia = Integer.parseInt(jTextField_dia.getText());
             String direccion = jTextField_direccion.getText();
             String correo = jTextField_direccioncorreo.getText();
             int dni = Integer.parseInt(jTextField_documento.getText());
-            int mes = Integer.parseInt(jTextField_mes.getText());
             String nombre = jTextField_nombre.getText();
             String telefono = jTextField_telefono.getText();
-            
-            Fecha fecha = new Fecha (dia,mes,año);
+            String fecha_nacimiento = fecha.format(jDateChooser_fecha.getDate());
                 
-            Choferes chofer = new Choferes(nombre,apellido,direccion,fecha,dni,telefono,correo);
+            Choferes chofer = new Choferes(nombre,apellido,direccion,fecha_nacimiento,dni,telefono,correo);
             
             centro.Modificar_Chofer(chofer, dni);
 
@@ -202,12 +181,10 @@ public class Modificar_Chofer extends javax.swing.JPanel {
            
             JOptionPane.showConfirmDialog(null, "Falta Campos");
             jTextField_apellido.setText("");
-            jTextField_año.setText("");
-            jTextField_dia.setText("");
+
             jTextField_direccion.setText("");
             jTextField_direccioncorreo.setText("");
             jTextField_documento.setText("");
-            jTextField_mes.setText("");
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
             
@@ -220,10 +197,9 @@ public class Modificar_Chofer extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private com.toedter.calendar.JDateChooser jDateChooser_fecha;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -233,12 +209,10 @@ public class Modificar_Chofer extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField_apellido;
-    private javax.swing.JTextField jTextField_año;
-    private javax.swing.JTextField jTextField_dia;
     private javax.swing.JTextField jTextField_direccion;
     private javax.swing.JTextField jTextField_direccioncorreo;
     private javax.swing.JTextField jTextField_documento;
-    private javax.swing.JTextField jTextField_mes;
+    private javax.swing.JTextField jTextField_fecha;
     private javax.swing.JTextField jTextField_nombre;
     private javax.swing.JTextField jTextField_telefono;
     // End of variables declaration//GEN-END:variables

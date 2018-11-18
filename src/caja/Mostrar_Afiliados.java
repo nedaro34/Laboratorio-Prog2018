@@ -95,7 +95,7 @@ public class Mostrar_Afiliados extends javax.swing.JPanel {
             matriz[i][4] = listar.get(i).getTelefono();
             matriz[i][5] = listar.get(i).getDireccionCorreo();
             matriz[i][6] = String.valueOf(listar.get(i).getFamilia());
-            matriz[i][7] = "Fecha";
+            matriz[i][7] = listar.get(i).getFechadenacimiento();
         }
         jTable_afiiliado.setModel(new javax.swing.table.DefaultTableModel(
             matriz,

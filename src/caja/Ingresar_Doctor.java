@@ -123,11 +123,10 @@ public class Ingresar_Doctor extends javax.swing.JPanel {
                 
                 // fecha de nacimiento
                 
-                Fecha fecha = new Fecha(2,3,45);
                 
                 // Creacion Ojeto Afiliado
                 
-                Doctores Doctor = new Doctores(nombre,apellido,direccion,fecha,dni,telefono,correo);
+                Doctores Doctor = new Doctores(nombre,apellido,direccion,fecha_nacimiento,dni,telefono,correo);
                 
                 //ingresa al metodo para agregar nueva objeto a la lista
 
