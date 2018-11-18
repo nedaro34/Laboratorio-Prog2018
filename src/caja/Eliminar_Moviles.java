@@ -5,9 +5,13 @@
  */
 package caja;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import principal.CentroClinicaMedica;
+import principal.ListaVaciaExcepcion;
 import principal.Moviles;
 import principal.MovilesIgualExcepcion;
+import principal.PatenteIncorrectoExcepcion;
 
 /**
  *
@@ -75,6 +79,11 @@ public class Eliminar_Moviles extends javax.swing.JPanel {
         add(jTextField_Patente, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 32, 330, 30));
 
         jButton2.setText("Buscar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 30, 90, 30));
     }// </editor-fold>//GEN-END:initComponents
 
@@ -87,13 +96,22 @@ public class Eliminar_Moviles extends javax.swing.JPanel {
         String estado = "Libre";
         Moviles movil = new Moviles(marca,modelo,año,patente,estado);
         try {
-            centro.Ingresar_Movil(movil, patente);
-        } catch (MovilesIgualExcepcion ex) {
+            centro.Eliminar_Movil(patente);
             
         }catch(NumberFormatException a){
             
+        } catch (PatenteIncorrectoExcepcion ex) {
+            Logger.getLogger(Eliminar_Moviles.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ListaVaciaExcepcion ex) {
+            Logger.getLogger(Eliminar_Moviles.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
