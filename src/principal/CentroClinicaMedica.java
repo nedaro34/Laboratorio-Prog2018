@@ -505,19 +505,7 @@ if(administrativo.size()>0)
         }
         moviles.add(movil);
     }
-     public void Modificar_Movil(Moviles movil1,String Patente)
-    {
-        if(moviles.size()>0)
-        {
-            for(int i=0;i<moviles.size();i++)
-            {
-                if(moviles.get(i).getPatente().equals(Patente))
-                {
-                    moviles.set(i, movil1);
-                }
-            } 
-        }
-    }
+
      
      
      
