@@ -45,6 +45,7 @@ public class jPago extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         jPanel_Caja = new javax.swing.JPanel();
         jLabelfondo = new javax.swing.JLabel();
 
@@ -109,6 +110,9 @@ public class jPago extends javax.swing.JFrame {
             }
         });
         jPanelMenu.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 170, -1));
+
+        jButton3.setText("Mostrar Pagos Afiliado");
+        jPanelMenu.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 170, -1));
 
         jPanel1.add(jPanelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(-170, 50, 170, 260));
 
@@ -216,6 +220,7 @@ public class jPago extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelCerrar;
