@@ -592,7 +592,8 @@ if(administrativo.size()>0)
     }
     
     public LinkedList Mostrar_Pago(){
-         return registro;
+        
+        return registro;
      }
     
 }

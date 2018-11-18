@@ -96,7 +96,7 @@ public class jPago extends javax.swing.JFrame {
         });
         jPanelMenu.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 170, -1));
 
-        jButton2.setText("Registro Pago");
+        jButton2.setText("Registro Primer Pago");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -113,18 +113,12 @@ public class jPago extends javax.swing.JFrame {
         jPanelMenu.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 170, -1));
 
         jButton3.setText("Mostrar Pagos Afiliado");
-        jPanelMenu.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 170, -1));
-
-        jButton3.setText("Mostrar Pagos Afiliado");
-        jPanelMenu.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 170, -1));
-
-        jButton3.setText("Mostrar Pago");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanelMenu.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 170, -1));
+        jPanelMenu.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 170, -1));
 
         jPanel1.add(jPanelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(-170, 50, 170, 260));
 
