@@ -7,14 +7,14 @@ package caja;
 
 import java.util.LinkedList;
 import principal.CentroClinicaMedica;
-import principal.Choferes;
+import principal.Doctores;
 
 /**
  *
  * @author TAPIA
  */
 public class Mostrar_Doctor extends javax.swing.JPanel {
-    LinkedList<Choferes>listar = new LinkedList<Choferes>();
+    LinkedList<Doctores>listar = new LinkedList<Doctores>();
     /**
      * Creates new form Mostrar_Afiliados
      */
@@ -72,7 +72,7 @@ public class Mostrar_Doctor extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 110, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 110, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
