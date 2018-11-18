@@ -553,6 +553,20 @@ if(administrativo.size()>0)
         }
     }
     
+    public void Modificar_Movil(Moviles movil,String patente)
+    {
+        if(moviles.size()>0)
+        {
+            for(int i=0;i<moviles.size();i++)
+            {
+                if(moviles.get(i).getPatente().equals(patente))
+                {
+                    moviles.set(i, movil);
+                }
+            } 
+        }
+    }
+    
     public LinkedList Mostrar_Movil(){
          return moviles;
      }
