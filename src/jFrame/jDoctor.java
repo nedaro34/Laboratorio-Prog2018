@@ -8,6 +8,7 @@ package jFrame;
 import caja.Eliminar_Doctor;
 import caja.Ingresar_Doctor;
 import caja.Modificar_Doctor;
+import caja.Mostrar_Doctor;
 import javax.swing.JOptionPane;
 import paneles.CambiaPanel;
 
@@ -47,9 +48,9 @@ public class jDoctor extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
         jPanel_Caja = new javax.swing.JPanel();
         jLabelfondo = new javax.swing.JLabel();
-        jPanel_caja1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -95,7 +96,7 @@ public class jDoctor extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanelMenu.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 170, -1));
+        jPanelMenu.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 170, -1));
 
         jButton2.setText("Ingresar Doctor");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -121,14 +122,21 @@ public class jDoctor extends javax.swing.JFrame {
         });
         jPanelMenu.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 170, -1));
 
-        jPanel1.add(jPanelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(-170, 50, 170, 260));
+        jButton5.setText("Mostrar Doctor");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanelMenu.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 170, -1));
+
+        jPanel1.add(jPanelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(-170, 50, 170, 400));
 
         jPanel_Caja.setLayout(new javax.swing.BoxLayout(jPanel_Caja, javax.swing.BoxLayout.LINE_AXIS));
         jPanel1.add(jPanel_Caja, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -500, 900, 440));
 
         jLabelfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo.jpg"))); // NOI18N
         jPanel1.add(jLabelfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 50));
-        jPanel1.add(jPanel_caja1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 770, 500));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 500));
 
@@ -170,34 +178,18 @@ public class jDoctor extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelMenuMouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-     /*   int posicion = this.jPanel_Caja.getX();
-        if(posicion > -1){
-            Animacion.Animacion.mover_izquierda(0, -170, 2, 2, jPanel_Caja);
-        }else{
-            Animacion.Animacion.mover_derecha(-170, 0, 2, 2, jPanel_Caja);
-        }*/
-        new CambiaPanel(jPanel_caja1,new Ingresar_Doctor());
+     
+        new CambiaPanel(jPanel_Caja,new Ingresar_Doctor());
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-       /* int posicion = this.jPanel_caja1.getX();
-        if(posicion > -1){
-            Animacion.Animacion.mover_izquierda(0, -170, 2, 2, jPanel_Caja);
-        }else{
-            Animacion.Animacion.mover_derecha(-170, 0, 2, 2, jPanel_Caja);
-        }*/
-        new CambiaPanel(jPanel_caja1,new Eliminar_Doctor());
+      
+        new CambiaPanel(jPanel_Caja,new Eliminar_Doctor());
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       /*
-        int posicion = this.jPanel_Caja.getX();
-        if(posicion > -1){
-            Animacion.Animacion.mover_izquierda(0, -170, 2, 2, jPanel_Caja);
-        }else{
-            Animacion.Animacion.mover_derecha(-170, 0, 2, 2, jPanel_Caja);
-        }*/
-        new CambiaPanel(jPanel_caja1,new Modificar_Doctor());
+       
+        new CambiaPanel(jPanel_Caja,new Modificar_Doctor());
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -205,6 +197,10 @@ public class jDoctor extends javax.swing.JFrame {
         nuevo.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+       new CambiaPanel(jPanel_Caja,new Mostrar_Doctor());
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -253,6 +249,7 @@ public class jDoctor extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelCerrar;
     private javax.swing.JLabel jLabelMenu;
@@ -261,6 +258,5 @@ public class jDoctor extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelMenu;
     private javax.swing.JPanel jPanel_Caja;
-    private javax.swing.JPanel jPanel_caja1;
     // End of variables declaration//GEN-END:variables
 }

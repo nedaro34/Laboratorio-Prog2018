@@ -98,7 +98,7 @@ public class jAfiliados extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanelMenu.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 170, -1));
+        jPanelMenu.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 170, -1));
 
         jButton2.setText("Ingresar Afiliados");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -130,9 +130,9 @@ public class jAfiliados extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        jPanelMenu.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 170, -1));
+        jPanelMenu.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 170, -1));
 
-        jButton6.setText("Mostrar");
+        jButton6.setText("Mostrar Afiliados");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);

@@ -80,7 +80,8 @@ public class Ingresar_Moviles extends javax.swing.JPanel {
         String modelo = jTextField_Modelo.getText();
         String patente = jTextField_patente.getText();
         int año = Integer.parseInt(jTextField_año.getText());
-        Moviles movil = new Moviles(marca,modelo,año,patente);
+        String estado = "libre";
+        Moviles movil = new Moviles(marca,modelo,año,patente,estado);
         try {
             centro.Ingresar_Movil(movil, patente);
         } catch (MovilesIgualExcepcion ex) {

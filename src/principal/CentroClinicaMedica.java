@@ -185,6 +185,10 @@ public class CentroClinicaMedica {
     }
     
     
+    public LinkedList Mostrar_Doctor(){
+         return doctor;
+     }
+    
     
       
          public void Ingresar_Choferes(Choferes chofer1,int dni)throws ChoferesIgualExcepcion
@@ -283,6 +287,10 @@ public class CentroClinicaMedica {
             }
      
      
+     public LinkedList Mostrar_Chofer(){
+         return chofer;
+     }
+     
 
     public Enfermeros Buscar_Enfermero(int dni) {
 if(enfermero.size()>0)
@@ -354,6 +362,10 @@ if(enfermero.size()>0)
             } 
         }
     }
+     
+     public LinkedList Mostrar_Enfermero(){
+         return enfermero;
+     }
 
     
 //  administractivo
@@ -394,7 +406,9 @@ if(administrativo.size()>0)
         return null;    }
     
     
-    
+    public LinkedList Mostrar_Administrativo(){
+         return administrativo;
+     }
     
 
     public void Ingresar_Familiar(GrupoFamiliar familiar1, int dni) throws GrupoFamiliarIgualExcepcion
@@ -539,6 +553,9 @@ if(administrativo.size()>0)
         }
     }
     
+    public LinkedList Mostrar_Movil(){
+         return moviles;
+     }
     
     
     //metodo pago
@@ -573,6 +590,10 @@ if(administrativo.size()>0)
             } 
         }
     }
+    
+    public LinkedList Mostrar_Pago(){
+         return registro;
+     }
     
 }
     
