@@ -5,9 +5,7 @@
  */
 package caja;
 
-import javax.swing.JOptionPane;
 import principal.CentroClinicaMedica;
-import principal.GrupoFamiliar;
 import principal.Moviles;
 import principal.MovilesIgualExcepcion;
 
@@ -94,7 +92,8 @@ public class Modificar_Moviles extends javax.swing.JPanel {
         String estado = "libre";
         Moviles movil = new Moviles(marca,modelo,año,patente,estado);
         try {
-            centro.Modificar_Movil(movil,patente);
+            centro.Ingresar_Movil(movil,patente);
+        } catch (MovilesIgualExcepcion ex) {
             
         }catch(NumberFormatException a){
             
@@ -103,38 +102,6 @@ public class Modificar_Moviles extends javax.swing.JPanel {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-           try{
-            // dni a buscar
-            String patente = jTextField_Patente.getText();
-            
-            //asede a listas
-            
-            CentroClinicaMedica centro = new CentroClinicaMedica();
-            
-            Moviles movil= centro.Buscar_Movil(patente);
-            
-            
-            //muestra los datos   
-            jTextField_Marca.setText(movil.getMarca());
-            jTextField_Modelo.setText(movil.getModelo());
-            jTextField_patente.setText(String.valueOf(movil.getPatente()));
-            jTextField_año.setText(String.valueOf(movil.getAño()));
-           
-
-            //aca se va a realizar
-           
-        }catch(NumberFormatException a){
-            //exepcion limpia los campos
-            //aca registra campos vacios
-            JOptionPane.showConfirmDialog(null, "Falta Campos");
-             jTextField_Marca.setText("");
-            jTextField_Modelo.setText("");
-            jTextField_patente.setText("");
-            jTextField_año.setText("");
-       } 
-        
-        
-        
     }//GEN-LAST:event_jButton2ActionPerformed
 
 
