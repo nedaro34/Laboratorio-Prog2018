@@ -115,6 +115,9 @@ public class jPago extends javax.swing.JFrame {
         jButton3.setText("Mostrar Pagos Afiliado");
         jPanelMenu.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 170, -1));
 
+        jButton3.setText("Mostrar Pagos Afiliado");
+        jPanelMenu.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 170, -1));
+
         jButton3.setText("Mostrar Pago");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
