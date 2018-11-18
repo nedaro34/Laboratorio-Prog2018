@@ -73,13 +73,13 @@ public class Mostrar_Movil extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 110, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, 110, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         
         CentroClinicaMedica centro = new CentroClinicaMedica();
-        listar = centro.Mostrar_Doctor();
+        listar = centro.Mostrar_Movil();
         
         mostrar();
         
