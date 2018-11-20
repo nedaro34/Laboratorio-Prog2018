@@ -5,6 +5,9 @@
  */
 package caja;
 
+import java.text.DateFormat;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import principal.Afiliado_Pago_Igual_Excepcion;
@@ -19,6 +22,7 @@ import principal.RegistroPago;
  */
 public class Primer_Pago extends javax.swing.JPanel {
 
+  
     /**
      * Creates new form Primer_Pago
      */
@@ -55,6 +59,7 @@ public class Primer_Pago extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jTextField_result = new javax.swing.JTextField();
+        jYearChooser_año = new com.toedter.calendar.JYearChooser();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -81,6 +86,12 @@ public class Primer_Pago extends javax.swing.JPanel {
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel6.setText("Año :");
         add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 70, 30));
+
+        jTextField_pago.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField_pagoKeyTyped(evt);
+            }
+        });
         add(jTextField_pago, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 370, 160, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -97,8 +108,14 @@ public class Primer_Pago extends javax.swing.JPanel {
         add(jTextField_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 160, -1));
         add(jTextField_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 160, -1));
         add(jTextField_dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 160, -1));
-        add(jTextField_año, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 160, -1));
+        add(jTextField_año, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 170, 160, -1));
         add(jTextField_pricio, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 270, 160, -1));
+
+        jTextField_familia.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField_familiaKeyTyped(evt);
+            }
+        });
         add(jTextField_familia, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 320, 30, -1));
 
         jComboBox_mes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Setiembre", "Octubre", "Noviembre", "Diciembre" }));
@@ -117,21 +134,33 @@ public class Primer_Pago extends javax.swing.JPanel {
         jLabel10.setText("Nombre :");
         add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 70, 30));
         add(jTextField_result, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 20, 230, -1));
+
+        jYearChooser_año.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jYearChooser_añoKeyTyped(evt);
+            }
+        });
+        add(jYearChooser_año, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 90, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+         Calendar cal = Calendar.getInstance();
+         int year = cal.get(Calendar.YEAR);
+         
+        
         CentroClinicaMedica centro = new CentroClinicaMedica();
         String apelliado = jTextField_apellido.getText();
-        int año = Integer.parseInt(jTextField_año.getText());
         int dni = Integer.parseInt(jTextField_dni.getText());
         String nombre = jTextField_nombre.getText();
         int pago = Integer.parseInt(jTextField_pago.getText());
         int preci_base = Integer.parseInt(jTextField_pricio.getText());
         Afiliados afiliado = centro.Buscar_Afiliado(dni);
         int famili = afiliado.getFamilia();
+        jTextField_familia.setText(String.valueOf(famili));
+        jYearChooser_año.setToolTipText(String.valueOf(year));
         String mes = String.valueOf(jComboBox_mes.getSelectedIndex());
         
-        RegistroPago primer = new RegistroPago(nombre,apelliado,dni,año,preci_base,famili,afiliado);
+        RegistroPago primer = new RegistroPago(nombre,apelliado,dni,year,preci_base,famili,afiliado);
         
         try {
             primer.Ingresar_Mes(mes);
@@ -142,6 +171,18 @@ public class Primer_Pago extends javax.swing.JPanel {
             jTextField_result.setText("Ya existe el mes");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jYearChooser_añoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jYearChooser_añoKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jYearChooser_añoKeyTyped
+
+    private void jTextField_familiaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_familiaKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField_familiaKeyTyped
+
+    private void jTextField_pagoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_pagoKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField_pagoKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -165,5 +206,6 @@ public class Primer_Pago extends javax.swing.JPanel {
     private javax.swing.JTextField jTextField_pago;
     private javax.swing.JTextField jTextField_pricio;
     private javax.swing.JTextField jTextField_result;
+    private com.toedter.calendar.JYearChooser jYearChooser_año;
     // End of variables declaration//GEN-END:variables
 }

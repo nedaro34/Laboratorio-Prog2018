@@ -6,6 +6,7 @@
 package principal;
 
 import java.util.LinkedList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -55,24 +56,6 @@ public class RegistroPago {
         this.dni = dni;
     }
 
-    /**
-     * @return the mes
-     */
-    public LinkedList<String> getMes() {
-        return mes;
-    }
-
-    /**
-     * @param mes the mes to set
-     */
-    public void setMes(LinkedList<String> mes) {
-        this.mes = mes;
-        
-    }
-
-    /**
-     * @return the año
-     */
     public int getAño() {
         return año;
     }
@@ -105,7 +88,19 @@ public class RegistroPago {
         this.afiliado = afiliado;
     }
 
+    public static LinkedList<String> getMes() {
+        return mes;
+    }
+
+    public static void setMes(LinkedList<String> mes) {
+        RegistroPago.mes = mes;
+    }
+
     
+    
+
+
+
     public void Ingresar_Mes(String pago_mes)throws Pago_mes_Igual_Excepcion{
         if(mes.size()>0)
         {
@@ -119,6 +114,21 @@ public class RegistroPago {
         }
 
             mes.add(pago_mes);
+    }
+     
+    
+    public int pago(){
+        int result = precio_base*fam_precio;
+        return result;
+    }
+    
+    public int mora(){
+        int result,a,b,c;
+        a = Integer.parseInt(mes.getFirst());
+        b = Integer.parseInt(mes.getLast());
+        c = mes.size();
+        result = (b-a)-c;
+        return result;
     }
     
 }

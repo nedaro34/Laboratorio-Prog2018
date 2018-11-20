@@ -594,6 +594,26 @@ if(administrativo.size()>0)
            
     }
     
+    public RegistroPago Buscar_Pago(int dni)
+    {
+        if(registro.size()>0)
+        {
+            for(int i=0;i<registro.size();i++)
+            {
+                if(registro.get(i).getDni()==dni)
+                {
+                    return registro.get(i);
+                }
+            }
+            JOptionPane.showMessageDialog(null,"El afiliado no existe");
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
+        }    
+        return null;
+    } 
+    
     public void Ingresar_Pago(RegistroPago pago,String mes,int dni)
     { 
         if(registro.size()>0)

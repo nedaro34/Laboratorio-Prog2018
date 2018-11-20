@@ -55,6 +55,7 @@ public class Ingresar_Pago extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jTextField_result = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -64,19 +65,19 @@ public class Ingresar_Pago extends javax.swing.JPanel {
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText("Nombre :");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 70, 30));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 70, 30));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("Apellido :");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 70, 30));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 70, 30));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setText("Documento :");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 100, 30));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 100, 30));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setText("Mes :");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 70, 30));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 70, 30));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel6.setText("Año :");
@@ -94,16 +95,16 @@ public class Ingresar_Pago extends javax.swing.JPanel {
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel9.setText("Precio Base :");
         add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 90, 30));
-        add(jTextField_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 160, -1));
-        add(jTextField_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 160, -1));
-        add(jTextField_dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 160, -1));
+        add(jTextField_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 160, -1));
+        add(jTextField_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 160, -1));
+        add(jTextField_dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 160, -1));
         add(jTextField_año, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 160, -1));
         add(jTextField_pricio, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 270, 160, -1));
         add(jTextField_familia, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 320, 30, -1));
 
         jComboBox_mes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Setiembre", "Octubre", "Noviembre", "Diciembre" }));
         jComboBox_mes.setSelectedIndex(-1);
-        add(jComboBox_mes, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, -1, -1));
+        add(jComboBox_mes, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, -1, -1));
 
         jButton1.setText("Ingresar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -114,23 +115,38 @@ public class Ingresar_Pago extends javax.swing.JPanel {
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 370, 100, -1));
 
         jLabel10.setText("Result");
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, -1, -1));
-        add(jTextField_result, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, 230, -1));
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 300, -1, 20));
+        add(jTextField_result, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 340, 230, -1));
+
+        jButton2.setText("Buscar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, 190, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       
+        
         CentroClinicaMedica centro = new CentroClinicaMedica();
         String apelliado = jTextField_apellido.getText();
         int año = Integer.parseInt(jTextField_año.getText());
         int dni = Integer.parseInt(jTextField_dni.getText());
         String nombre = jTextField_nombre.getText();
-        int pago = Integer.parseInt(jTextField_pago.getText());
+        int pago;
         int preci_base = Integer.parseInt(jTextField_pricio.getText());
         Afiliados afiliado = centro.Buscar_Afiliado(dni);
         int famili = afiliado.getFamilia();
+        jTextField_familia.setText(String.valueOf(famili));
         String mes = String.valueOf(jComboBox_mes.getSelectedIndex());
         
-        RegistroPago primer = new RegistroPago(nombre,apelliado,dni,año,preci_base,famili,afiliado);
+        
+        RegistroPago primer = new RegistroPago(nombre,apelliado,dni,año,preci_base,famili,afiliado); 
+        pago = primer.pago();
+        jTextField_pago.setText(String.valueOf(pago));
+        
         try {
             primer.Ingresar_Mes(mes);
             centro.Registar_pago(primer, dni);
@@ -141,9 +157,23 @@ public class Ingresar_Pago extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        CentroClinicaMedica centro = new CentroClinicaMedica();
+        int dni = Integer.parseInt(jTextField_dni.getText());
+        RegistroPago nuevo = centro.Buscar_Pago(dni);
+        jTextField_nombre.setText(nuevo.getNombre());
+        jTextField_apellido.setText(nuevo.getApellido());
+        jTextField_año.setText(String.valueOf(nuevo.getAño()));
+        jTextField_familia.setText(String.valueOf(nuevo.getFam_precio()));
+        jTextField_pricio.setText(String.valueOf(nuevo.getPrecio_base()));
+        int pago = nuevo.pago();
+        jTextField_pago.setText(String.valueOf(pago));
+    }//GEN-LAST:event_jButton2ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JComboBox<String> jComboBox_mes;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
