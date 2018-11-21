@@ -197,6 +197,7 @@ public class Resultado extends javax.swing.JPanel {
         } catch (Registro_IgualExcepcion ex) {
            
         }
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
 

@@ -10,6 +10,7 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import principal.Afiliado_Pago_Igual_Excepcion;
 import principal.Afiliados;
 import principal.CentroClinicaMedica;
@@ -179,9 +180,13 @@ public class Primer_Pago extends javax.swing.JPanel {
             centro.Registar_pago(primer, dni);
         } catch (Afiliado_Pago_Igual_Excepcion ex) {
             jTextField_result.setText("Ya existe el pago");
+            }catch(NumberFormatException a){
+             jTextField_result.setText("Falta Campos");
+            
         } catch (Pago_mes_Igual_Excepcion ex) {
             jTextField_result.setText("Ya existe el mes");
         }
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField_resultKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_resultKeyTyped

@@ -208,9 +208,13 @@ public class Ingresar_Pago extends javax.swing.JPanel {
             centro.Registar_pago(primer, dni);
         } catch (Afiliado_Pago_Igual_Excepcion ex) {
             jTextField_result.setText("Ya existe el pago");
+        }catch(NumberFormatException a){
+             jTextField_result.setText("Falta Campos");
+            
         } catch (Pago_mes_Igual_Excepcion ex) {
             jTextField_result.setText("Ya existe el mes de pago");
         }
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
