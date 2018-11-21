@@ -118,7 +118,7 @@ public class RegistroPago {
      
     
     public int pago(){
-        int result = precio_base*fam_precio;
+        int result = precio_base+(precio_base*fam_precio);
         return result;
     }
     

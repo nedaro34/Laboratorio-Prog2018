@@ -45,21 +45,20 @@ public class Primer_Pago extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField_pago = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jTextField_nombre = new javax.swing.JTextField();
         jTextField_apellido = new javax.swing.JTextField();
         jTextField_dni = new javax.swing.JTextField();
-        jTextField_año = new javax.swing.JTextField();
         jTextField_pricio = new javax.swing.JTextField();
-        jTextField_familia = new javax.swing.JTextField();
         jComboBox_mes = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jTextField_result = new javax.swing.JTextField();
-        jYearChooser_año = new com.toedter.calendar.JYearChooser();
+        jTextField_año = new javax.swing.JTextField();
+        jTextField_familia = new javax.swing.JTextField();
+        jTextField_pago = new javax.swing.JTextField();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -87,13 +86,6 @@ public class Primer_Pago extends javax.swing.JPanel {
         jLabel6.setText("Año :");
         add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 70, 30));
 
-        jTextField_pago.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextField_pagoKeyTyped(evt);
-            }
-        });
-        add(jTextField_pago, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 370, 160, -1));
-
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel7.setText("Pago :");
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 90, 30));
@@ -108,15 +100,7 @@ public class Primer_Pago extends javax.swing.JPanel {
         add(jTextField_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 160, -1));
         add(jTextField_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 160, -1));
         add(jTextField_dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 160, -1));
-        add(jTextField_año, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 170, 160, -1));
         add(jTextField_pricio, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 270, 160, -1));
-
-        jTextField_familia.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextField_familiaKeyTyped(evt);
-            }
-        });
-        add(jTextField_familia, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 320, 30, -1));
 
         jComboBox_mes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Setiembre", "Octubre", "Noviembre", "Diciembre" }));
         jComboBox_mes.setSelectedIndex(-1);
@@ -133,14 +117,42 @@ public class Primer_Pago extends javax.swing.JPanel {
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel10.setText("Nombre :");
         add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 70, 30));
-        add(jTextField_result, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 20, 230, -1));
 
-        jYearChooser_año.addKeyListener(new java.awt.event.KeyAdapter() {
+        jTextField_result.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextField_result.setEnabled(false);
+        jTextField_result.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                jYearChooser_añoKeyTyped(evt);
+                jTextField_resultKeyTyped(evt);
             }
         });
-        add(jYearChooser_año, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 90, -1));
+        add(jTextField_result, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 20, 160, -1));
+
+        jTextField_año.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextField_año.setEnabled(false);
+        jTextField_año.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField_añoKeyTyped(evt);
+            }
+        });
+        add(jTextField_año, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 50, -1));
+
+        jTextField_familia.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextField_familia.setEnabled(false);
+        jTextField_familia.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField_familiaKeyTyped(evt);
+            }
+        });
+        add(jTextField_familia, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 320, 60, -1));
+
+        jTextField_pago.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextField_pago.setEnabled(false);
+        jTextField_pago.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField_pagoKeyTyped(evt);
+            }
+        });
+        add(jTextField_pago, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 370, 160, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -152,16 +164,16 @@ public class Primer_Pago extends javax.swing.JPanel {
         String apelliado = jTextField_apellido.getText();
         int dni = Integer.parseInt(jTextField_dni.getText());
         String nombre = jTextField_nombre.getText();
-        int pago = Integer.parseInt(jTextField_pago.getText());
         int preci_base = Integer.parseInt(jTextField_pricio.getText());
         Afiliados afiliado = centro.Buscar_Afiliado(dni);
         int famili = afiliado.getFamilia();
         jTextField_familia.setText(String.valueOf(famili));
-        jYearChooser_año.setToolTipText(String.valueOf(year));
+        jTextField_año.setToolTipText(String.valueOf(year));
         String mes = String.valueOf(jComboBox_mes.getSelectedIndex());
         
         RegistroPago primer = new RegistroPago(nombre,apelliado,dni,year,preci_base,famili,afiliado);
-        
+        int pagar = primer.pago();
+        jTextField_pago.setText(String.valueOf(pagar));
         try {
             primer.Ingresar_Mes(mes);
             centro.Registar_pago(primer, dni);
@@ -172,9 +184,13 @@ public class Primer_Pago extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jYearChooser_añoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jYearChooser_añoKeyTyped
+    private void jTextField_resultKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_resultKeyTyped
+
+    }//GEN-LAST:event_jTextField_resultKeyTyped
+
+    private void jTextField_añoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_añoKeyTyped
         // TODO add your handling code here:
-    }//GEN-LAST:event_jYearChooser_añoKeyTyped
+    }//GEN-LAST:event_jTextField_añoKeyTyped
 
     private void jTextField_familiaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_familiaKeyTyped
         // TODO add your handling code here:
@@ -206,6 +222,5 @@ public class Primer_Pago extends javax.swing.JPanel {
     private javax.swing.JTextField jTextField_pago;
     private javax.swing.JTextField jTextField_pricio;
     private javax.swing.JTextField jTextField_result;
-    private com.toedter.calendar.JYearChooser jYearChooser_año;
     // End of variables declaration//GEN-END:variables
 }
