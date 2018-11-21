@@ -132,12 +132,12 @@ public class Ingresar_Administractivo extends javax.swing.JPanel {
        }catch(AdministrativosIgualExcepcion l){
             //hay que ver de hacer una nueva excepcion
            //exepcion afiliado con el mismo documento
-           JOptionPane.showConfirmDialog(null, "Ya existe un afiliado con este documento");
+           JOptionPane.showMessageDialog(null, "Ya existe un afiliado con este documento");
             jTextField_documento.setText("");
             
         }catch(NumberFormatException a){
             //exepcion limpia los campos
-            JOptionPane.showConfirmDialog(null, "Falta Campos");
+            JOptionPane.showMessageDialog(null, "Falta Campos");
             jTextField_apellido.setText("");
             jTextField_direccion.setText("");
             jTextField_direccioncorreo.setText("");
