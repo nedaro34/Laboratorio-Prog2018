@@ -6,11 +6,14 @@
 package caja;
 
 import java.text.DateFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import principal.Afiliados;
 import principal.CentroClinicaMedica;
 import principal.Fecha;
 import principal.GrupoFamiliar;
+import principal.ListaVaciaExcepcion;
 
 /**
  *
@@ -200,7 +203,7 @@ public class Modificar_Familiar extends javax.swing.JPanel {
 
        }catch(NumberFormatException e){
            
-            JOptionPane.showConfirmDialog(null, "Falta Campos");
+            JOptionPane.showMessageDialog(null, "Falta Campos");
             jTextField_apellido.setText("");
             jTextField_direccion.setText("");
             jTextField_direccioncorreo.setText("");

@@ -135,12 +135,12 @@ public class Ingresar_Emfermero extends javax.swing.JPanel {
        }catch(EnfermeroIgualExcepcion l){
             //hay que ver de hacer una nueva excepcion
            //exepcion afiliado con el mismo documento
-            JOptionPane.showMessageDialog(null,"Faltan Campos ");
+            JOptionPane.showMessageDialog(null,"El Enfermero ya existe ");
             jTextField_documento.setText("");
             
         }catch(NumberFormatException a){
             //exepcion limpia los campos
-            JOptionPane.showConfirmDialog(null, "Falta Campos");
+            JOptionPane.showMessageDialog(null, "Falta Campos");
             jTextField_apellido.setText("");
             jTextField_direccion.setText("");
             jTextField_direccioncorreo.setText("");
