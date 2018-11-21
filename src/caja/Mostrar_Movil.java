@@ -91,13 +91,15 @@ public class Mostrar_Movil extends javax.swing.JPanel {
         for (int i =0;i<listar.size();i++){
             matriz[i][0]=listar.get(i).getMarca();
             matriz[i][1] = listar.get(i).getModelo();
-            matriz[i][2] = String.valueOf(listar.get(i).getAño());
-            matriz[i][3] = listar.get(i).getEstado();
+            matriz[i][2] = listar.get(i).getPatente();
+            matriz[i][3] = String.valueOf(listar.get(i).getAño());
+            matriz[i][4] = listar.get(i).getEstado();
+            
         }
         jTable_afiiliado.setModel(new javax.swing.table.DefaultTableModel(
             matriz,
             new String [] {
-                "Nombre", "Apellido", "Documento", "Direccion", "Telefono", "Correo", "Familia", "Fecha"
+                "Marca", "Modelo", "Patente","Año", "Estado", "", "", "",
             }
         ));
     }
