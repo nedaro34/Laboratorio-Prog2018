@@ -3,44 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/principal/Pago.java</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/caja/Ingresar_Moviles.java</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/principal/Solicitud.java</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/caja/InformaciondeAsistenciaMedica.java</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/principal/CentroClinicaMedica.java</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/jFrame/jAdministractivo.java</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/caja/Eliminar_Familiar.java</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/caja/Mostrar_Enfermero.java</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/caja/Ingresar_Administractivo.java</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/principal/AdministrativosIgualExcepcion.java</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/imagenes/fondo.jpg</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/test/caja/Eliminar_AfiliadoTest.java</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/principal/Fecha.java</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/principal/RegistroPago.java</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/principal/Persona.java</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/imagenes/icons_expand.png</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/principal/Administrativos.java</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/caja/Primer_Pago.java</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/jFrame/jEmpleados.java</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/test/caja/Eliminar_FamiliarTest.java</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/principal/Afiliado_Pago_Igual_Excepcion.java</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/caja/Ingresar_Doctor.java</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/imagenes/Icons_Usuario.png</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/caja/SolicitudAsistenciaMedica.java</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/caja/Mostrar_Doctor.java</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/principal/EnfermeroIgualExcepcion.java</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/caja/Ingresar_Pago.java</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/imagenes/icons_menu.png</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/principal/MovilesIgualExcepcion.java</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/principal/Pago_mes_Igual_Excepcion.java</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/imagenes/icons_iniciar.png</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/imagenes/PANEL.png</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/caja/ResultadoAsistenciaMedica.java</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/caja/Mostrar_Afiliados.java</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/imagenes/iniciar.png</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/caja/Mostrar_Pago.java</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/jFrame/jAsistenciaMedica.java</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/principal/Doctores.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Laboratorio-Prog2018/src/caja/Mostrar_Doctor.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Laboratorio-Prog2018/src/caja/Primer_Pago.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Laboratorio-Prog2018/src/caja/Mostrar_Pago.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Laboratorio-Prog2018/src/caja/Modificar_Chofer.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Laboratorio-Prog2018/src/caja/Mostrar_Administractivo.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Laboratorio-Prog2018/src/caja/Mostrar_Enfermero.java</file>
         </group>
     </open-files>
 </project-private>

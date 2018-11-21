@@ -99,7 +99,7 @@ public class Mostrar_Doctor extends javax.swing.JPanel {
         jTable_afiiliado.setModel(new javax.swing.table.DefaultTableModel(
             matriz,
             new String [] {
-                "Nombre", "Apellido", "Documento", "Direccion", "Telefono", "Correo", "Fecha", "Familia"
+                "Nombre", "Apellido", "Documento", "Direccion", "Telefono", "Correo", "Fecha", ""
             }
         ));
     }
