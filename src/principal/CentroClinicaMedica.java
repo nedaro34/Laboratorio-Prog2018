@@ -23,6 +23,8 @@ public class CentroClinicaMedica {
 
     
     
+    
+    
     public void verificar_documentos(long documento,int longitud)throws verificar_documentosExcepcion
     {
         if(documento<1 || documento>99999999 || longitud!=8)
