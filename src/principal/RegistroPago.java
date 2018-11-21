@@ -128,6 +128,9 @@ public class RegistroPago {
         b = Integer.parseInt(mes.getLast());
         c = mes.size();
         result = (b-a)-c;
+        if(result < 0){
+            return result=0;
+        }
         return result;
     }
     

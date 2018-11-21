@@ -56,7 +56,7 @@ public class CentroClinicaMedica {
         }
         else
         {
-            JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
+            JOptionPane.showMessageDialog(null,"Lista de afiliado vacia");
         }    
         return null;
     } 

@@ -213,15 +213,16 @@ public class Solicitud_Medica extends javax.swing.JPanel {
         CentroClinicaMedica centro = new CentroClinicaMedica();
         int dni = Integer.parseInt(jTextField_dni_solicitud.getText());
         int opc = jComboBox_dni.getSelectedIndex();
-        if(opc == 1){
+        if(opc == 0){
             RegistroPago pago = centro.Buscar_Pago(dni);
             int mora = pago.mora();
             jTextField_mora.setText(String.valueOf(mora));
-        }else{
+        }if(opc == 1){
             GrupoFamiliar familia = centro.Buscar_Familiar(dni);
-            RegistroPago pago = centro.Buscar_Pago(familia.getDocumento());
+            RegistroPago pago = centro.Buscar_Pago(familia.getAfiliado().getDocumento());
             int mora = pago.mora();
             jTextField_mora.setText(String.valueOf(mora));
+
          }
     }//GEN-LAST:event_jButton1ActionPerformed
 
