@@ -12,7 +12,7 @@ package principal;
 public class Solicitud extends AsistenciaMedica{
     
     private String nombre;
-    private String dni;
+    private int dni;
     private String fecha;
     private String hora;
     private Afiliados afiliado;
@@ -22,7 +22,7 @@ public class Solicitud extends AsistenciaMedica{
     private Administrativos administrativo;
     private Moviles movil;
 
-    public Solicitud(String nombre, String dni, String fecha, String hora, Afiliados afiliado, Doctores doctor, Enfermeros enfermero, Choferes chofer, Administrativos administrativo, Moviles movil) {
+    public Solicitud(String nombre, int dni, String fecha, String hora, Afiliados afiliado, Doctores doctor, Enfermeros enfermero, Choferes chofer, Administrativos administrativo, Moviles movil) {
         this.nombre = nombre;
         this.dni = dni;
         this.fecha = fecha;
@@ -43,11 +43,11 @@ public class Solicitud extends AsistenciaMedica{
         this.nombre = nombre;
     }
 
-    public String getDni() {
+    public int getDni() {
         return dni;
     }
 
-    public void setDni(String dni) {
+    public void setDni(int dni) {
         this.dni = dni;
     }
 

@@ -6,7 +6,10 @@
 package caja;
 
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import principal.Administrativos;
+import principal.Afiliados;
 import principal.CentroClinicaMedica;
 import principal.Choferes;
 import principal.Doctores;
@@ -14,6 +17,7 @@ import principal.Enfermeros;
 import principal.GrupoFamiliar;
 import principal.Moviles;
 import principal.RegistroPago;
+import principal.Solicitud;
 
 /**
  *
@@ -197,6 +201,11 @@ public class Solicitud_Medica extends javax.swing.JPanel {
         add(jTextField_result_chofer, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 250, 160, -1));
 
         jButton7.setText("Registrar");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
         add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, 110, -1));
     }// </editor-fold>//GEN-END:initComponents
 
@@ -275,6 +284,41 @@ public class Solicitud_Medica extends javax.swing.JPanel {
         jTextField_result_medico.setText("El movil esta "+nuevo.getEstado());
     }//GEN-LAST:event_jButton6ActionPerformed
 
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        CentroClinicaMedica centro = new CentroClinicaMedica();
+        DateFormat hourFormat = new SimpleDateFormat("HH:mm:ss");
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        String fecha = "";
+        String hora = "";
+        int dni = Integer.parseInt(jTextField_dni_solicitud.getText());
+        int dni_medico = Integer.parseInt(jTextField_medico_dni.getText());
+        int dni_enfermero = Integer.parseInt(jTextField_dni_enfermero.getText());
+        int dni_chofer = Integer.parseInt(jTextField_dni_chofer.getText());
+        int dni_administrativo = Integer.parseInt(jTextField_dni_administrativo.getText());
+        String patente = jTextField_patente.getText();
+        Doctores medico = centro.Buscar_Doctor(dni_medico);
+        Enfermeros enfermero = centro.Buscar_Enfermero(dni_enfermero);
+        Choferes chofer = centro.Buscar_Chofer(dni_chofer);
+        Administrativos administrativo = centro.Buscar_Administrativos(dni_administrativo);
+        Moviles movil = centro.Buscar_Movil(patente);
+        
+        int opc = jComboBox_dni.getSelectedIndex();
+        if(opc == 1){
+            Afiliados afiliado = centro.Buscar_Afiliado(dni);
+            String nombre = afiliado.getNombre();
+            int documento = afiliado.getDocumento();
+            Solicitud solicitud = new Solicitud(nombre,documento,fecha,hora,afiliado,medico,enfermero,chofer,administrativo,movil);
+            centro.Ingresar_Solicitud(solicitud);
+        }else{
+            GrupoFamiliar familia = centro.Buscar_Familiar(dni);
+            Afiliados afiliado = centro.Buscar_Afiliado(familia.getAfiliado().getDocumento());
+            String nombre = familia.getNombre();
+            int documento = familia.getDocumento();
+            Solicitud solicitud = new Solicitud(nombre,documento,fecha,hora,afiliado,medico,enfermero,chofer,administrativo,movil);
+            centro.Ingresar_Solicitud(solicitud);
+         }
+    }//GEN-LAST:event_jButton7ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
@@ -291,8 +335,6 @@ public class Solicitud_Medica extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JTextField jTextField_año;
-    private javax.swing.JTextField jTextField_año1;
     private javax.swing.JTextField jTextField_dni_administrativo;
     private javax.swing.JTextField jTextField_dni_chofer;
     private javax.swing.JTextField jTextField_dni_enfermero;
@@ -300,8 +342,6 @@ public class Solicitud_Medica extends javax.swing.JPanel {
     private javax.swing.JTextField jTextField_medico_dni;
     private javax.swing.JTextField jTextField_mora;
     private javax.swing.JTextField jTextField_patente;
-    private javax.swing.JTextField jTextField_result;
-    private javax.swing.JTextField jTextField_result1;
     private javax.swing.JTextField jTextField_result_administrativo;
     private javax.swing.JTextField jTextField_result_chofer;
     private javax.swing.JTextField jTextField_result_enfermero;
