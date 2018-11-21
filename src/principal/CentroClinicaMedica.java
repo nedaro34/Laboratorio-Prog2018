@@ -1,6 +1,7 @@
 
 package principal;
 
+
 import java.util.LinkedList;
 import javax.swing.JOptionPane;
 
@@ -18,6 +19,7 @@ public class CentroClinicaMedica {
     private static LinkedList<Moviles> moviles = new LinkedList<Moviles>();
     private static LinkedList<RegistroPago> registro = new LinkedList<RegistroPago>();
     private static LinkedList<Solicitud> solicitud = new LinkedList<Solicitud>();
+    private static LinkedList<Registro> result = new LinkedList<Registro>();
 
     //metodos afiliados
     //igreso de afiliado a las listas
@@ -638,6 +640,48 @@ if(administrativo.size()>0)
     public void Ingresar_Solicitud(Solicitud solic)
     {
             solicitud.add(solic);
+           
+    }
+    
+    public Solicitud Buscar_Solicitud(int dni)
+    {
+        if(solicitud.size()>0)
+        {
+            for(int i=0;i<solicitud.size();i++)
+            {
+                if(solicitud.get(i).getDni()==dni)
+                {
+                    return solicitud.get(i);
+                }
+            }
+            JOptionPane.showMessageDialog(null,"El afiliado no existe");
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null,"Lista de afiliado vacia");
+        }    
+        return null;
+    } 
+    
+    public LinkedList Mostrar_Solicitud(){
+        
+        return solicitud;
+     }
+    
+    public void Ingresar_Resultado(Registro registro,int dni)throws Registro_IgualExcepcion
+    {
+        if(result.size()>0)
+        {
+            for(int i=0;i<result.size();i++)
+            {
+                if(result.get(i).getDni()==dni);
+                {
+                    throw new Registro_IgualExcepcion();
+                }
+            } 
+        }
+
+            result.add(registro);
            
     }
 }
