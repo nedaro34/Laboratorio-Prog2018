@@ -67,13 +67,13 @@ public class CentroClinicaMedica {
                     return afiliado.get(i);
                 }
             }
-            JOptionPane.showMessageDialog(null,"El afiliado no existe");
+           // JOptionPane.showMessageDialog(null,"El afiliado no existe");
         }
-        else
+        /*else
         {
-            JOptionPane.showMessageDialog(null,"Lista de afiliado vacia");
-        }    
-        return null;
+          //  JOptionPane.showMessageDialog(null,"Lista de afiliado vacia");
+        }    */
+        return null;//debe retornar excepcion capturar y mandar joptionpane
     } 
 
     
@@ -141,8 +141,8 @@ public class CentroClinicaMedica {
     }
       
       
-      public Doctores Buscar_Doctor(int dni) {
- if(doctor.size()>0)
+  public Doctores Buscar_Doctor(int dni) {
+       if(doctor.size()>0)
         {
             for(int i=0;i<doctor.size();i++)
             {
@@ -151,13 +151,17 @@ public class CentroClinicaMedica {
                     return doctor.get(i);
                 }
             }
-            JOptionPane.showMessageDialog(null,"El chofer no existe");
+            //JOptionPane.showMessageDialog(null,"El chofer no existe");
         }
+       
+       /*
         else
         {
-            JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
+            //JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
         }    
-        return null;    }
+       */
+        return null;
+            }
       
       
       
