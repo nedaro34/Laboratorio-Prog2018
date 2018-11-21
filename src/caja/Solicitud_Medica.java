@@ -96,7 +96,7 @@ public class Solicitud_Medica extends javax.swing.JPanel {
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 10, 50, 20));
 
         jLabel2.setText("Medico Documento : ");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 100, 20));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 140, 20));
 
         jButton2.setText("Agregar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -107,7 +107,7 @@ public class Solicitud_Medica extends javax.swing.JPanel {
         add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 60, 110, -1));
 
         jLabel3.setText("Enfermero Documento : ");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, 130, 20));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 160, 20));
         add(jTextField_dni_enfermero, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 120, 150, -1));
 
         jButton3.setText("Agregar");
@@ -119,7 +119,7 @@ public class Solicitud_Medica extends javax.swing.JPanel {
         add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 120, 110, -1));
 
         jLabel4.setText("Administrativo Documento : ");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 140, 20));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 170, 20));
         add(jTextField_dni_administrativo, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 190, 150, -1));
 
         jButton4.setText("Agregar");
@@ -131,7 +131,7 @@ public class Solicitud_Medica extends javax.swing.JPanel {
         add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, 110, -1));
 
         jLabel5.setText("Chofer Documento : ");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 100, 20));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 130, 20));
         add(jTextField_dni_chofer, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 150, -1));
 
         jButton5.setText("Agregar");
@@ -143,7 +143,7 @@ public class Solicitud_Medica extends javax.swing.JPanel {
         add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 250, 110, -1));
 
         jLabel6.setText("Movil Patente : ");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, 100, 20));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 100, 20));
         add(jTextField_patente, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, 150, -1));
 
         jButton6.setText("Agregar");
@@ -261,28 +261,28 @@ public class Solicitud_Medica extends javax.swing.JPanel {
         CentroClinicaMedica centro = new CentroClinicaMedica();
         int dni = Integer.parseInt(jTextField_dni_enfermero.getText());
         Enfermeros nuevo = centro.Buscar_Enfermero(dni);
-        jTextField_result_medico.setText("Se Agrego con exito el Enfermero");
+        jTextField_result_enfermero.setText("Se Agrego con exito el Enfermero");
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         CentroClinicaMedica centro = new CentroClinicaMedica();
         int dni = Integer.parseInt(jTextField_dni_administrativo.getText());
         Administrativos nuevo = centro.Buscar_Administrativos(dni);
-        jTextField_result_medico.setText("Se Agrego con exito el Administrativo");
+        jTextField_result_chofer.setText("Se Agrego con exito el Administrativo");
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         CentroClinicaMedica centro = new CentroClinicaMedica();
         int dni = Integer.parseInt(jTextField_dni_chofer.getText());
         Choferes nuevo = centro.Buscar_Chofer(dni);
-        jTextField_result_medico.setText("Se Agrego con exito el Chofer");
+        jTextField_result_administrativo.setText("Se Agrego con exito el Chofer");
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         CentroClinicaMedica centro = new CentroClinicaMedica();
         String patente = jTextField_patente.getText();
         Moviles nuevo = centro.Buscar_Movil(patente);
-        jTextField_result_medico.setText("El movil esta "+nuevo.getEstado());
+        jTextField_result_movil.setText("El movil esta "+nuevo.getEstado());
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed

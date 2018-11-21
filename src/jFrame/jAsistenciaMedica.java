@@ -6,8 +6,8 @@
 package jFrame;
 
 import caja.InformaciondeAsistenciaMedica;
-import caja.ResultadoAsistenciaMedica;
-import caja.SolicitudAsistenciaMedica;
+//import caja.ResultadoAsistenciaMedica;
+//import caja.SolicitudAsistenciaMedica;
 import caja.Solicitud_Medica;
 import javax.swing.JOptionPane;
 import paneles.CambiaPanel;
@@ -176,7 +176,7 @@ public class jAsistenciaMedica extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         
-        new CambiaPanel(jPanel_Caja,new ResultadoAsistenciaMedica());
+        //new CambiaPanel(jPanel_Caja,new ResultadoAsistenciaMedica());
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
