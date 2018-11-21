@@ -56,18 +56,7 @@ public class RegistroPagoTest {
 
     
 
-    /**
-     * Test of Ingresar_Mes method, of class RegistroPago.
-     */
-    @Test
-    public void testIngresar_Mes() throws Pago_mes_Igual_Excepcion {
-        Afiliados afiliado = new Afiliados (4,"Lautaro","Tapia","Catamarca","25/09/1991",123456789,"123456","ejemplo@gmail.com");
-        RegistroPago nuevo = new RegistroPago("Lautaro","Tapia",123456789,2018,500,4,afiliado);
-        String mes = "9";
-        nuevo.Ingresar_Mes(mes);
-        
-        
-    }
+    
 
     /**
      * Test of pago method, of class RegistroPago.
@@ -76,8 +65,10 @@ public class RegistroPagoTest {
     public void testPago() {
         Afiliados afiliado = new Afiliados (4,"Lautaro","Tapia","Catamarca","25/09/1991",123456789,"123456","ejemplo@gmail.com");
         RegistroPago nuevo = new RegistroPago("Lautaro","Tapia",123456789,2018,500,4,afiliado);
+        int expResult = 500;
+        int result = nuevo.pago();
         
-      //  assertEquals(expResult, result);
+      assertEquals(expResult, result);
         
     }
 
@@ -88,6 +79,9 @@ public class RegistroPagoTest {
     public void testMora() {
         Afiliados afiliado = new Afiliados (4,"Lautaro","Tapia","Catamarca","25/09/1991",123456789,"123456","ejemplo@gmail.com");
         RegistroPago nuevo = new RegistroPago("Lautaro","Tapia",123456789,2018,500,4,afiliado);
+        int expResult = 500;
+        int result = nuevo.mora();
+        assertEquals(expResult, result);
 
  
     }
