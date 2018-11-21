@@ -67,11 +67,11 @@ public class CentroClinicaMedica {
                     return afiliado.get(i);
                 }
             }
-            JOptionPane.showMessageDialog(null,"El afiliado no existe");
+        //    JOptionPane.showMessageDialog(null,"El afiliado no existe");
         }
         else
         {
-            JOptionPane.showMessageDialog(null,"Lista de afiliado vacia");
+        //    JOptionPane.showMessageDialog(null,"Lista de afiliado vacia");
         }    
         return null;
     } 
@@ -151,11 +151,11 @@ public class CentroClinicaMedica {
                     return doctor.get(i);
                 }
             }
-            JOptionPane.showMessageDialog(null,"El chofer no existe");
+            //JOptionPane.showMessageDialog(null,"El chofer no existe");
         }
         else
         {
-            JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
+          //  JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
         }    
         return null;    }
       
@@ -277,11 +277,11 @@ public class CentroClinicaMedica {
                     return chofer.get(i);
                 }
             }
-            JOptionPane.showMessageDialog(null,"El chofer no existe");
+          //  JOptionPane.showMessageDialog(null,"El chofer no existe");
         }
         else
         {
-            JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
+         //   JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
         }    
         return null;   
     }
@@ -318,11 +318,11 @@ if(enfermero.size()>0)
                     return enfermero.get(i);
                 }
             }
-            JOptionPane.showMessageDialog(null,"El chofer no existe");
+           // JOptionPane.showMessageDialog(null,"El chofer no existe");
         }
         else
         {
-            JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
+        //    JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
         }    
         return null;    }
 
@@ -413,11 +413,11 @@ if(administrativo.size()>0)
                     return administrativo.get(i);
                 }
             }
-            JOptionPane.showMessageDialog(null,"El chofer no existe");
+          //  JOptionPane.showMessageDialog(null,"El chofer no existe");
         }
         else
         {
-            JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
+       //     JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
         }    
         return null;    }
     
@@ -455,11 +455,11 @@ if(administrativo.size()>0)
                     return familiar.get(i);
                 }
             }
-            JOptionPane.showMessageDialog(null,"El chofer no existe");
+         //   JOptionPane.showMessageDialog(null,"El chofer no existe");
         }
         else
         {
-            JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
+        //    JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
         }    
         return null; 
     }
@@ -536,11 +536,11 @@ if(administrativo.size()>0)
                     return moviles.get(i);
                 }
             }
-            JOptionPane.showMessageDialog(null,"El movil no existe");
+        //    JOptionPane.showMessageDialog(null,"El movil no existe");
         }
         else
         {
-            JOptionPane.showMessageDialog(null,"Lista de movil vacia");
+         //   JOptionPane.showMessageDialog(null,"Lista de movil vacia");
         }    
         return null;
     } 
@@ -621,11 +621,11 @@ if(administrativo.size()>0)
                     return registro.get(i);
                 }
             }
-            JOptionPane.showMessageDialog(null,"El afiliado no existe");
+          //  JOptionPane.showMessageDialog(null,"El afiliado no existe");
         }
         else
         {
-            JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
+       //     JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
         }    
         return null;
     } 
@@ -667,11 +667,11 @@ if(administrativo.size()>0)
                     return solicitud.get(i);
                 }
             }
-            JOptionPane.showMessageDialog(null,"El afiliado no existe");
+        //    JOptionPane.showMessageDialog(null,"El afiliado no existe");
         }
         else
         {
-            JOptionPane.showMessageDialog(null,"Lista de afiliado vacia");
+       //     JOptionPane.showMessageDialog(null,"Lista de afiliado vacia");
         }    
         return null;
     } 
