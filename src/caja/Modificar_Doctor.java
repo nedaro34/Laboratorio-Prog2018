@@ -6,10 +6,13 @@
 package caja;
 
 import java.text.DateFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import principal.CentroClinicaMedica;
 import principal.Doctores;
 import principal.Fecha;
+import principal.ListaVaciaExcepcion;
 
 /**
  *
@@ -129,10 +132,13 @@ public class Modificar_Doctor extends javax.swing.JPanel {
             
             CentroClinicaMedica centro = new CentroClinicaMedica();
             
-            Doctores doctor= centro.Buscar_Doctor(dni);
+           // Doctores doctor= centro.Buscar_Doctor(dni);
             
-            
-            //muestra los datos   
+          if( centro.Buscar_Doctor(dni)!=null){
+           
+              Doctores doctor= centro.Buscar_Doctor(dni);
+
+                //muestra los datos   
             jTextField_apellido.setText(doctor.getApellido());
             jTextField_direccioncorreo.setText(doctor.getDireccionCorreo());
             jTextField_documento.setText(String.valueOf(doctor.getDocumento()));
@@ -143,6 +149,10 @@ public class Modificar_Doctor extends javax.swing.JPanel {
 
             //aca se va a realizar
            
+         }else {
+        throw new ListaVaciaExcepcion();
+          }
+          
         }catch(NumberFormatException a){
             //exepcion limpia los campos
             //aca registra campos vacios
@@ -153,6 +163,10 @@ public class Modificar_Doctor extends javax.swing.JPanel {
             jTextField_documento.setText("");
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
+       } catch (ListaVaciaExcepcion ex) { 
+            Logger.getLogger(Modificar_Doctor.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null,"El doctor no existe");
+
        } 
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -178,7 +192,7 @@ public class Modificar_Doctor extends javax.swing.JPanel {
 
        }catch(NumberFormatException e){
            
-            JOptionPane.showConfirmDialog(null, "Falta Campos");
+           JOptionPane.showMessageDialog(null,"Falta Campos ");
             jTextField_apellido.setText("");
             jTextField_direccion.setText("");
             jTextField_direccioncorreo.setText("");

@@ -6,10 +6,13 @@
 package caja;
 
 import java.text.DateFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import principal.Afiliados;
 import principal.CentroClinicaMedica;
 import principal.Fecha;
+import principal.ListaVaciaExcepcion;
 
 /**
  *
@@ -140,10 +143,11 @@ public class Modificar_Afiliado extends javax.swing.JPanel {
             //asede a listas
             
             CentroClinicaMedica centro = new CentroClinicaMedica();
+                          Afiliados afiliado = centro.Buscar_Afiliado(dni);
+
             
-            Afiliados afiliado = centro.Buscar_Afiliado(dni);
-            
-            
+            if( centro.Buscar_Doctor(dni)!=null){
+             // Afiliados afiliado = centro.Buscar_Afiliado(dni);
             //muestra los datos   
             jTextField_apellido.setText(afiliado.getApellido());
             jTextField_correo.setText(afiliado.getDireccionCorreo());
@@ -154,7 +158,9 @@ public class Modificar_Afiliado extends javax.swing.JPanel {
             jTextField_familia.setText(String.valueOf(afiliado.getFamilia()));
             jTextField_fecha.setText(afiliado.getFechadenacimiento());
 
-            
+                      }else{
+                throw new ListaVaciaExcepcion();
+            }
            
         }catch(NumberFormatException a){
             //exepcion limpia los campos
@@ -165,6 +171,10 @@ public class Modificar_Afiliado extends javax.swing.JPanel {
             jTextField_documento.setText("");
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
+       } catch (ListaVaciaExcepcion ex) { 
+            Logger.getLogger(Modificar_Afiliado.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null,"El afiliado no existe");
+
        } 
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -191,7 +201,7 @@ public class Modificar_Afiliado extends javax.swing.JPanel {
 
        }catch(NumberFormatException e){
            
-            JOptionPane.showConfirmDialog(null, "Falta Campos");
+            JOptionPane.showMessageDialog(null,"Falta Campos  ");
             jTextField_apellido.setText("");
             jTextField_direccion.setText("");
             jTextField_correo.setText("");

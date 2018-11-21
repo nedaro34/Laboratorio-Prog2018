@@ -135,7 +135,7 @@ public class Ingresar_Chofer extends javax.swing.JPanel {
        }catch(ChoferesIgualExcepcion l){
             //hay que ver de hacer una nueva excepcion
            //exepcion afiliado con el mismo documento
-           JOptionPane.showConfirmDialog(null, "Ya existe un afiliado con este documento");
+            JOptionPane.showMessageDialog(null,"Faltan Campos ");
             jTextField_documento.setText("");
             
         }catch(NumberFormatException a){

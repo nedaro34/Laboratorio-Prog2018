@@ -179,7 +179,7 @@ public class Modificar_Emfermero extends javax.swing.JPanel {
 
        }catch(NumberFormatException e){
            
-            JOptionPane.showConfirmDialog(null, "Falta Campos");
+            JOptionPane.showMessageDialog(null,"Faltan Campos ");
             jTextField_apellido.setText("");
             jTextField_direccion.setText("");
             jTextField_direccioncorreo.setText("");

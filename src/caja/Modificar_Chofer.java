@@ -147,7 +147,7 @@ public class Modificar_Chofer extends javax.swing.JPanel {
         }catch(NumberFormatException a){
             //exepcion limpia los campos
             //aca registra campos vacios
-            JOptionPane.showConfirmDialog(null, "Falta Campos");
+            JOptionPane.showMessageDialog(null,"Faltan Campos ");
             jTextField_apellido.setText("");
             jTextField_direccion.setText("");
             jTextField_direccioncorreo.setText("");
@@ -179,7 +179,7 @@ public class Modificar_Chofer extends javax.swing.JPanel {
 
        }catch(NumberFormatException e){
            
-            JOptionPane.showConfirmDialog(null, "Falta Campos");
+            JOptionPane.showMessageDialog(null,"Faltan Campos ");
             jTextField_apellido.setText("");
 
             jTextField_direccion.setText("");

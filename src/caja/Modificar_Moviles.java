@@ -126,7 +126,7 @@ public class Modificar_Moviles extends javax.swing.JPanel {
         }catch(NumberFormatException a){
             //exepcion limpia los campos
             //aca registra campos vacios
-            JOptionPane.showConfirmDialog(null, "Falta Campos");
+            JOptionPane.showMessageDialog(null,"Faltan Campos ");
              jTextField_Marca.setText("");
             jTextField_Modelo.setText("");
             jTextField_patente.setText("");

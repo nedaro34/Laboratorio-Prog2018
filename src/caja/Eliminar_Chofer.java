@@ -138,7 +138,7 @@ public class Eliminar_Chofer extends javax.swing.JPanel {
            
         }catch(NumberFormatException a){
             //exepcion limpia los campos
-            JOptionPane.showConfirmDialog(null, "Falta Campos");
+            JOptionPane.showMessageDialog(null,"Faltan Campos ");
             jTextField_apellido.setText("");
             jTextField_nombre.setText("");
             jTextField_direccioncorreo.setText("");
