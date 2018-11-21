@@ -13,12 +13,13 @@ public class Registro extends AsistenciaMedica{
     private String nombre;
     private String apellido;
     private int dni;
-    private Doctores doctor;
+    private String doctor;
     private String diagnostico;
     private String atencion;
     private String fecha;
+    private String hora;
 
-    public Registro(String nombre, String apellido, int dni, Doctores doctor, String diagnostico, String atencion, String fecha) {
+    public Registro(String nombre, String apellido, int dni, String doctor, String diagnostico, String atencion, String fecha, String hora) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
@@ -26,6 +27,7 @@ public class Registro extends AsistenciaMedica{
         this.diagnostico = diagnostico;
         this.atencion = atencion;
         this.fecha = fecha;
+        this.hora = hora;
     }
 
     public String getNombre() {
@@ -52,11 +54,11 @@ public class Registro extends AsistenciaMedica{
         this.dni = dni;
     }
 
-    public Doctores getDoctor() {
+    public String getDoctor() {
         return doctor;
     }
 
-    public void setDoctor(Doctores doctor) {
+    public void setDoctor(String doctor) {
         this.doctor = doctor;
     }
 
@@ -83,6 +85,23 @@ public class Registro extends AsistenciaMedica{
     public void setFecha(String fecha) {
         this.fecha = fecha;
     }
+
+    public String getHora() {
+        return hora;
+    }
+
+    public void setHora(String hora) {
+        this.hora = hora;
+    }
+
+    
+
+    
+
+    
+
+    
+
     
     
     

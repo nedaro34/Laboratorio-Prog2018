@@ -7,7 +7,11 @@ package caja;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import principal.CentroClinicaMedica;
+import principal.Registro;
+import principal.Registro_IgualExcepcion;
 import principal.Solicitud;
 
 /**
@@ -134,6 +138,11 @@ public class Resultado extends javax.swing.JPanel {
         add(jTextField_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, 160, -1));
 
         jButton2.setText("Registar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
@@ -171,6 +180,24 @@ public class Resultado extends javax.swing.JPanel {
         jTextField_fecha.setText(fecha);
         jTextField_hora.setText(hora);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        CentroClinicaMedica centro = new CentroClinicaMedica();
+        String nombre = jTextField_nombre.getText();
+        String atencion = jTextField_atencion.getText();
+        String diagnostico = jTextField_diagnostico.getText();
+        String apellido = jTextField_apellido.getText();
+        String doctor = jTextField_doctor.getText();
+        String fecha = jTextField_fecha.getText();
+        String hora = jTextField_hora.getText();
+        int dni = Integer.parseInt(jTextField_paciente.getText());
+        Registro reg = new Registro(nombre,apellido,dni,doctor,diagnostico,atencion,fecha,hora);
+        try {
+            centro.Ingresar_Resultado(reg, dni);
+        } catch (Registro_IgualExcepcion ex) {
+           
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
