@@ -168,7 +168,7 @@ public class Primer_Pago extends javax.swing.JPanel {
         Afiliados afiliado = centro.Buscar_Afiliado(dni);
         int famili = afiliado.getFamilia();
         jTextField_familia.setText(String.valueOf(famili));
-        jTextField_año.setToolTipText(String.valueOf(year));
+        jTextField_año.setText(String.valueOf(year));
         String mes = String.valueOf(jComboBox_mes.getSelectedIndex());
         
         RegistroPago primer = new RegistroPago(nombre,apelliado,dni,year,preci_base,famili,afiliado);
