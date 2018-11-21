@@ -304,13 +304,13 @@ public class Solicitud_Medica extends javax.swing.JPanel {
         Moviles movil = centro.Buscar_Movil(patente);
         
         int opc = jComboBox_dni.getSelectedIndex();
-        if(opc == 1){
+        if(opc == 0){
             Afiliados afiliado = centro.Buscar_Afiliado(dni);
             String nombre = afiliado.getNombre();
             int documento = afiliado.getDocumento();
             Solicitud solicitud = new Solicitud(nombre,documento,fecha,hora,afiliado,medico,enfermero,chofer,administrativo,movil);
             centro.Ingresar_Solicitud(solicitud);
-        }else{
+        }if(opc==1){
             GrupoFamiliar familia = centro.Buscar_Familiar(dni);
             Afiliados afiliado = centro.Buscar_Afiliado(familia.getAfiliado().getDocumento());
             String nombre = familia.getNombre();
