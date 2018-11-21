@@ -21,6 +21,17 @@ public class CentroClinicaMedica {
     private static LinkedList<Solicitud> solicitud = new LinkedList<Solicitud>();
     private static LinkedList<Registro> result = new LinkedList<Registro>();
 
+    
+    
+    public void verificar_documentos(long documento,int longitud)throws verificar_documentosExcepcion
+    {
+        if(documento<1 || documento>99999999 || longitud!=8)
+        {
+            throw new verificar_documentosExcepcion();
+        }
+    }
+    
+    
     //metodos afiliados
     //igreso de afiliado a las listas
     

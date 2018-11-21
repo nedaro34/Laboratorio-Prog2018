@@ -6,12 +6,15 @@
 package caja;
 
 import java.text.DateFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import principal.AfiliadosDIgualExcepcion;
 import principal.CentroClinicaMedica;
 import principal.Choferes;
 import principal.ChoferesIgualExcepcion;
 import principal.Fecha;
+import principal.verificar_documentosExcepcion;
 
 /**
  *
@@ -114,7 +117,8 @@ public class Ingresar_Chofer extends javax.swing.JPanel {
                 String nombre = jTextField_nombre.getText();
                 String telefono = jTextField_telefono.getText();
                 String fecha_nacimiento = fecha.format(jDateChooser_fecha.getDate());
-                
+                int longitud = jTextField_documento.getText().length();
+                centro.verificar_documentos(dni, longitud);
                 // fecha de nacimiento
                 
 
@@ -143,7 +147,9 @@ public class Ingresar_Chofer extends javax.swing.JPanel {
             jTextField_documento.setText("");
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
-       } 
+       } catch (verificar_documentosExcepcion ex) { 
+            Logger.getLogger(Ingresar_Chofer.class.getName()).log(Level.SEVERE, null, ex);
+        } 
     }//GEN-LAST:event_jButton1ActionPerformed
 
 

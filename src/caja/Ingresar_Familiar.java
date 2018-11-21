@@ -6,6 +6,8 @@
 package caja;
 
 import java.text.DateFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import principal.Afiliados;
 import principal.AfiliadosDIgualExcepcion;
@@ -13,6 +15,7 @@ import principal.CentroClinicaMedica;
 import principal.Fecha;
 import principal.GrupoFamiliar;
 import principal.GrupoFamiliarIgualExcepcion;
+import principal.verificar_documentosExcepcion;
 
 /**
  *
@@ -125,6 +128,8 @@ public class Ingresar_Familiar extends javax.swing.JPanel {
                 String telefono = jTextField_telefono.getText();
                 int dnia = Integer.parseInt(jTextField_afiliado.getText());
                 String fecha_nacimiento = fecha.format(jDateChooser_fecha.getDate());
+                int longitud = jTextField_documento.getText().length();
+                centro.verificar_documentos(dni, longitud);
                 
                 //afiliado
                 Afiliados afiliado = centro.Buscar_Afiliado(dnia);
@@ -159,7 +164,9 @@ public class Ingresar_Familiar extends javax.swing.JPanel {
             jTextField_documento.setText("");
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
-       } 
+       } catch (verificar_documentosExcepcion ex) { 
+            Logger.getLogger(Ingresar_Familiar.class.getName()).log(Level.SEVERE, null, ex);
+        } 
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
