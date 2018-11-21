@@ -5,6 +5,7 @@
  */
 package caja;
 
+import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.logging.Level;
@@ -167,6 +168,8 @@ public class Resultado extends javax.swing.JPanel {
     }//GEN-LAST:event_jTextField_fechaKeyTyped
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+        
         DateFormat hourFormat = new SimpleDateFormat("HH:mm:ss");
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         String fecha = String.valueOf(dateFormat);

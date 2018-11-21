@@ -135,6 +135,7 @@ public class Ingresar_Familiar extends javax.swing.JPanel {
                 Afiliados afiliado = centro.Buscar_Afiliado(dnia);
                 int familia = afiliado.getFamilia();
                 afiliado.suma_familia();
+                centro.Modificar_Afiliados(afiliado, afiliado.getDocumento());
                 
                 
                 // fecha de nacimiento

@@ -6,6 +6,7 @@
 package caja;
 
 import javax.swing.JOptionPane;
+import principal.Afiliados;
 import principal.CentroClinicaMedica;
 import principal.Choferes;
 import principal.DocumentoIncorrectoExcepcion;
@@ -124,6 +125,10 @@ public class Eliminar_Familiar extends javax.swing.JPanel {
             CentroClinicaMedica centro = new CentroClinicaMedica();
             
             GrupoFamiliar familiar = centro.Buscar_Familiar(dni);
+            int dni_afiliado = familiar.getAfiliado().getDocumento();
+            Afiliados afiliado = centro.Buscar_Afiliado(dni_afiliado);
+            afiliado.restar_familia();
+            centro.Modificar_Afiliados(afiliado, dni_afiliado);
             
             
             //muestra los datos   
