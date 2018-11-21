@@ -29,7 +29,7 @@ public class Afiliados extends Persona{
     
     public void restar_familia(){
         int result;
-        if (familia == 0){
+        if (familia > 0){
             result = familia-1;
             familia=result;
         }
