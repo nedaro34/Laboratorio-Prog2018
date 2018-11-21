@@ -695,6 +695,33 @@ if(administrativo.size()>0)
             result.add(registro);
            
     }
+
+    public void Eliminar_Administrativos(int dni) throws ListaVaciaExcepcion, PatenteIncorrectoExcepcion {
+
+
+
+  boolean bandera = false;
+        if(administrativo.size()==0)
+        {
+            throw new ListaVaciaExcepcion();
+        }
+
+        if(administrativo.size()>0)
+        {
+            for(int i=0;i<administrativo.size();i++)
+            {
+                if(administrativo.get(i).getDocumento()==dni)
+                {
+                    administrativo.remove(administrativo.get(i));
+                    bandera = true;
+                }
+            }
+        }
+        if(bandera==false)
+        {
+            throw new PatenteIncorrectoExcepcion(); 
+        }
+    }
 }
     
    
