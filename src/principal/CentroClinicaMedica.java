@@ -17,6 +17,7 @@ public class CentroClinicaMedica {
     private static LinkedList<GrupoFamiliar> familiar = new LinkedList<GrupoFamiliar>();
     private static LinkedList<Moviles> moviles = new LinkedList<Moviles>();
     private static LinkedList<RegistroPago> registro = new LinkedList<RegistroPago>();
+    private static LinkedList<Solicitud> solicitud = new LinkedList<Solicitud>();
 
     //metodos afiliados
     //igreso de afiliado a las listas
@@ -633,6 +634,12 @@ if(administrativo.size()>0)
         return registro;
      }
     
+    
+    public void Ingresar_Solicitud(Solicitud solic)
+    {
+            solicitud.add(solic);
+           
+    }
 }
     
    
