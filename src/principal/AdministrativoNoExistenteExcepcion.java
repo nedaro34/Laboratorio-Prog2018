@@ -11,7 +11,7 @@ package principal;
  */
 public class AdministrativoNoExistenteExcepcion extends Exception {
 
-    public AdministrativoNoExistenteExcepcion() {
+    public void AdministrativoNoExistenteExcepcion() {
         
         
     }

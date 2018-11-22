@@ -7,9 +7,11 @@ package caja;
 
 import java.text.DateFormat;
 import javax.swing.JOptionPane;
+import principal.AfiliadoNoExistenteExcepcion;
 import principal.Afiliados;
 import principal.CentroClinicaMedica;
-import principal.Fecha;
+import principal.ListaVaciaExcepcion;
+
 
 /**
  *
@@ -55,6 +57,8 @@ public class Modificar_Afiliado extends javax.swing.JPanel {
         jDateChooser_fecha = new com.toedter.calendar.JDateChooser();
         jLabel10 = new javax.swing.JLabel();
         jTextField_fecha = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jTextField_resultado = new javax.swing.JTextField();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -129,43 +133,54 @@ public class Modificar_Afiliado extends javax.swing.JPanel {
         jLabel10.setText("Nueva Fecha de Nacimiento :");
         add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 150, 400, 30));
         add(jTextField_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 90, 130, -1));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setText("Resultado :");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 230, 100, 30));
+
+        jTextField_resultado.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextField_resultado.setEnabled(false);
+        jTextField_resultado.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField_resultadoKeyTyped(evt);
+            }
+        });
+        add(jTextField_resultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 230, 220, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        //camptura de exepciones
         try{
-            // dni a buscar
-            int dni = Integer.parseInt(jTextField_dni.getText());
-            
-            //asede a listas
-            
-            CentroClinicaMedica centro = new CentroClinicaMedica();
-            
-            Afiliados afiliado = centro.Buscar_Afiliado(dni);
-            
-            
-            //muestra los datos   
-            jTextField_apellido.setText(afiliado.getApellido());
-            jTextField_correo.setText(afiliado.getDireccionCorreo());
-            jTextField_documento.setText(String.valueOf(afiliado.getDocumento()));
-            jTextField_direccion.setText(afiliado.getDireccion());
-            jTextField_telefono.setText(afiliado.getTelefono());
-            jTextField_nombre.setText(afiliado.getNombre());
-            jTextField_familia.setText(String.valueOf(afiliado.getFamilia()));
-            jTextField_fecha.setText(afiliado.getFechadenacimiento());
-
-            
-           
+        int dni = Integer.parseInt(jTextField_dni.getText());
+        CentroClinicaMedica centro = new CentroClinicaMedica();
+        Afiliados afiliado = centro.BuscarAfiliado(dni);
+        jTextField_apellido.setText(afiliado.getApellido());
+        jTextField_correo.setText(afiliado.getDireccionCorreo());
+        jTextField_documento.setText(String.valueOf(afiliado.getDocumento()));
+        jTextField_direccion.setText(afiliado.getDireccion());
+        jTextField_telefono.setText(afiliado.getTelefono());
+        jTextField_nombre.setText(afiliado.getNombre());
+        jTextField_familia.setText(String.valueOf(afiliado.getFamilia()));
+        jTextField_fecha.setText(afiliado.getFechadenacimiento());
+        }catch(AfiliadoNoExistenteExcepcion a){
+            jTextField_resultado.setText("El Afiliado buscado no Existe");
+        } catch (ListaVaciaExcepcion ex) {
+            jTextField_resultado.setText("Lista Vacia");
         }catch(NumberFormatException a){
-            //exepcion limpia los campos
-            JOptionPane.showMessageDialog(null, "Falta Campos");
+            jTextField_resultado.setText("Falta Completar Campos");
             jTextField_apellido.setText("");
-            jTextField_direccion.setText("");
-            jTextField_correo.setText("");
-            jTextField_documento.setText("");
+            jTextField_correo.setText("");    
+            jTextField_documento.setText("");     
+            jTextField_direccion.setText("");     
+            jTextField_telefono.setText("");     
             jTextField_nombre.setText("");
-            jTextField_telefono.setText("");
+            jTextField_familia.setText("");
+            jTextField_fecha.setText("");
        } 
+        
+                
+                
+     
+                
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -186,7 +201,7 @@ public class Modificar_Afiliado extends javax.swing.JPanel {
                 
             Afiliados afiliado = new Afiliados(familia,nombre,apellido,direccion,fecha_nacimiento,dni,telefono,correo);
             
-            centro.Modificar_Afiliados(afiliado, dni);
+            centro.ModificarAfiliados(afiliado, dni);
 
 
        }catch(NumberFormatException e){
@@ -199,12 +214,20 @@ public class Modificar_Afiliado extends javax.swing.JPanel {
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
             
-       }
+       } catch (ListaVaciaExcepcion ex) {
+           jTextField_resultado.setText("Lista Vacia");
+        } catch (AfiliadoNoExistenteExcepcion ex) {
+            jTextField_resultado.setText("El Afiliado Ingresado no existe");
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jTextField_familiaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_familiaKeyTyped
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField_familiaKeyTyped
+
+    private void jTextField_resultadoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_resultadoKeyTyped
+
+    }//GEN-LAST:event_jTextField_resultadoKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -214,6 +237,7 @@ public class Modificar_Afiliado extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -229,6 +253,7 @@ public class Modificar_Afiliado extends javax.swing.JPanel {
     private javax.swing.JTextField jTextField_familia;
     private javax.swing.JTextField jTextField_fecha;
     private javax.swing.JTextField jTextField_nombre;
+    private javax.swing.JTextField jTextField_resultado;
     private javax.swing.JTextField jTextField_telefono;
     // End of variables declaration//GEN-END:variables
 }

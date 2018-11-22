@@ -10,7 +10,7 @@ package principal;
  * @author SALA3
  */
 public class ChoferesIgualExcepcion extends Exception {
-    public ChoferesIgualExcepcion(){
+    public void ChoferesIgualExcepcion(){
         
     }
 }

@@ -9,7 +9,7 @@ package principal;
  *
  * @author alumno
  */
-class AfiliadoNoExistenteExcepcion extends Exception {
+public class AfiliadoNoExistenteExcepcion extends Exception {
     
     
     public void AfiliadoNoExistenteExcepcion(){

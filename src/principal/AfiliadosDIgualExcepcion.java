@@ -10,7 +10,7 @@ package principal;
  * @author Administrador
  */
 public class AfiliadosDIgualExcepcion extends Exception {
-    public AfiliadosDIgualExcepcion() {
+    public void AfiliadosDIgualExcepcion() {
         
     }
 }

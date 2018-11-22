@@ -61,6 +61,7 @@ public class Eliminar_Administractivo extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jTextField_resultado = new javax.swing.JTextField();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -137,6 +138,15 @@ public class Eliminar_Administractivo extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Eliminar Administrativos");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 10, 230, 50));
+
+        jTextField_resultado.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextField_resultado.setEnabled(false);
+        jTextField_resultado.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField_resultadoKeyTyped(evt);
+            }
+        });
+        add(jTextField_resultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 340, 160, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -151,7 +161,7 @@ public class Eliminar_Administractivo extends javax.swing.JPanel {
             
             CentroClinicaMedica centro = new CentroClinicaMedica();
             
-            Administrativos administrativos = centro.Buscar_Administrativos(dni);
+            Administrativos administrativos = centro.BuscarAdministrativos(dni);
             
             
             //muestra los datos   
@@ -188,7 +198,7 @@ public class Eliminar_Administractivo extends javax.swing.JPanel {
             
             
             int dni = Integer.parseInt(jTextField_dni.getText());
-            centro.Eliminar_Administrativos(dni);
+            centro.EliminarAdministrativos(dni);
            
             
 
@@ -201,6 +211,10 @@ public class Eliminar_Administractivo extends javax.swing.JPanel {
             
            
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jTextField_resultadoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_resultadoKeyTyped
+
+    }//GEN-LAST:event_jTextField_resultadoKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -227,6 +241,7 @@ public class Eliminar_Administractivo extends javax.swing.JPanel {
     private javax.swing.JTextField jTextField_documento;
     private javax.swing.JTextField jTextField_mes;
     private javax.swing.JTextField jTextField_nombre;
+    private javax.swing.JTextField jTextField_resultado;
     private javax.swing.JTextField jTextField_telefono;
     // End of variables declaration//GEN-END:variables
 }

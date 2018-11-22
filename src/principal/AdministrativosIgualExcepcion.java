@@ -10,7 +10,7 @@ package principal;
  * @author SALA3
  */
 public class AdministrativosIgualExcepcion extends Exception {
-    public AdministrativosIgualExcepcion(){
+    public void AdministrativosIgualExcepcion(){
         
     }
 }

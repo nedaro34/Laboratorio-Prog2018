@@ -130,7 +130,7 @@ public class Eliminar_Chofer extends javax.swing.JPanel {
             
             CentroClinicaMedica centro = new CentroClinicaMedica();
             
-            Choferes chofer = centro.Buscar_Chofer(dni);
+            Choferes chofer = centro.BuscarChofer(dni);
             
             
             //muestra los datos   
@@ -170,7 +170,7 @@ public class Eliminar_Chofer extends javax.swing.JPanel {
             
             
             int dni = Integer.parseInt(jTextField_dni.getText());
-            centro.Eliminar_Chofer(dni);
+            centro.EliminarChofer(dni);
            
             
 

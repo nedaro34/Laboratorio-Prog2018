@@ -7,15 +7,14 @@ package caja;
 
 
 import java.text.DateFormat;
-import java.util.Locale;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import principal.Afiliados;
 import principal.AfiliadosDIgualExcepcion;
 import principal.CentroClinicaMedica;
-import principal.Fecha;
-import principal.verificar_documentosExcepcion;
+import principal.VerificarDocumentosExcepcion;
+
 
 /**
  *
@@ -54,6 +53,8 @@ public class Ingresar_Afiliado extends javax.swing.JPanel {
         jTextField_nombre = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jDateChooser_fecha = new com.toedter.calendar.JDateChooser();
+        jTextField_resultado = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -98,7 +99,20 @@ public class Ingresar_Afiliado extends javax.swing.JPanel {
             }
         });
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, -1, -1));
-        add(jDateChooser_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 20, 140, 20));
+        add(jDateChooser_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 20, -1, -1));
+
+        jTextField_resultado.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextField_resultado.setEnabled(false);
+        jTextField_resultado.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField_resultadoKeyTyped(evt);
+            }
+        });
+        add(jTextField_resultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 440, 220, -1));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setText("Resultado :");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 440, 100, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -120,7 +134,7 @@ public class Ingresar_Afiliado extends javax.swing.JPanel {
                 String telefono = jTextField_telefono.getText();
                 String fecha_nacimiento = fecha.format(jDateChooser_fecha.getDate());
                 int longitud = jTextField_documento.getText().length();
-                centro.verificar_documentos(dni, longitud);
+                centro.VerificarDocumentos(dni, longitud);
                 
                 // fecha de nacimiento
                 
@@ -131,33 +145,38 @@ public class Ingresar_Afiliado extends javax.swing.JPanel {
                 
                 //ingresa al metodo para agregar nueva objeto a la lista
 
-                centro.Ingresar_Afiliados(afiliado, dni);
+                centro.IngresarAfiliados(afiliado, dni);
  
   
        }catch(AfiliadosDIgualExcepcion l){
 
            //exepcion afiliado con el mismo documento
-           JOptionPane.showMessageDialog(null, "Ya existe un afiliado con este documento");
+           jTextField_resultado.setText("Ya existe un Afiliado con este Documento");
             jTextField_documento.setText("");
             
         }catch(NumberFormatException a){
             //exepcion limpia los campos
-            JOptionPane.showMessageDialog(null,"Faltan Campos ");
+            jTextField_resultado.setText("Falta Completar Campos");
             jTextField_apellido.setText("");
             jTextField_direccion.setText("");
             jTextField_direccioncorreo.setText("");
             jTextField_documento.setText("");
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
-       } catch (verificar_documentosExcepcion ex) { 
-            jTextField_documento.setText("");
+       } catch (VerificarDocumentosExcepcion ex) {
+            jTextField_resultado.setText("El Documento es invalido");
         } 
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField_resultadoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_resultadoKeyTyped
+
+    }//GEN-LAST:event_jTextField_resultadoKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private com.toedter.calendar.JDateChooser jDateChooser_fecha;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -170,6 +189,7 @@ public class Ingresar_Afiliado extends javax.swing.JPanel {
     private javax.swing.JTextField jTextField_direccioncorreo;
     private javax.swing.JTextField jTextField_documento;
     private javax.swing.JTextField jTextField_nombre;
+    private javax.swing.JTextField jTextField_resultado;
     private javax.swing.JTextField jTextField_telefono;
     // End of variables declaration//GEN-END:variables
 }

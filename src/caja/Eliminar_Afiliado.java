@@ -5,7 +5,10 @@
  */
 package caja;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import principal.AfiliadoNoExistenteExcepcion;
 import principal.Afiliados;
 import principal.CentroClinicaMedica;
 import principal.DocumentoIncorrectoExcepcion;
@@ -122,7 +125,7 @@ public class Eliminar_Afiliado extends javax.swing.JPanel {
             
             
             int dni = Integer.parseInt(jTextField_dni.getText());
-            centro.Eliminar_Afiliado(dni);
+            centro.EliminarAfiliado(dni);
            
             
 
@@ -148,7 +151,7 @@ public class Eliminar_Afiliado extends javax.swing.JPanel {
             
             CentroClinicaMedica centro = new CentroClinicaMedica();
             
-            Afiliados afiliado = centro.Buscar_Afiliado(dni);
+            Afiliados afiliado = centro.BuscarAfiliado(dni);
             
             
             //muestra los datos   
@@ -171,7 +174,11 @@ public class Eliminar_Afiliado extends javax.swing.JPanel {
             jTextField_documento.setText("");
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
-       } 
+       } catch (AfiliadoNoExistenteExcepcion ex) { 
+            Logger.getLogger(Eliminar_Afiliado.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ListaVaciaExcepcion ex) {
+            Logger.getLogger(Eliminar_Afiliado.class.getName()).log(Level.SEVERE, null, ex);
+        } 
     }//GEN-LAST:event_jButton2ActionPerformed
 
 

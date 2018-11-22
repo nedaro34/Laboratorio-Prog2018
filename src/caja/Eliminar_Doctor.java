@@ -5,9 +5,12 @@
  */
 package caja;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import principal.CentroClinicaMedica;
 import principal.Choferes;
+import principal.DoctorNoExistenteExcepcion;
 import principal.Doctores;
 import principal.DocumentoIncorrectoExcepcion;
 import principal.ListaVaciaExcepcion;
@@ -128,7 +131,7 @@ public class Eliminar_Doctor extends javax.swing.JPanel {
             
             CentroClinicaMedica centro = new CentroClinicaMedica();
             
-            Doctores doctor = centro.Buscar_Doctor(dni);
+            Doctores doctor = centro.BuscarDoctor(dni);
             
             
             //muestra los datos   
@@ -151,7 +154,7 @@ public class Eliminar_Doctor extends javax.swing.JPanel {
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
             
-       } 
+        }
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -162,7 +165,7 @@ public class Eliminar_Doctor extends javax.swing.JPanel {
             
             
             int dni = Integer.parseInt(jTextField_dni.getText());
-            centro.Eliminar_Doctor(dni);
+            centro.EliminarDoctor(dni);
            
             
 

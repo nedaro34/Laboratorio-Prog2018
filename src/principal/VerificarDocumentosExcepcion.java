@@ -9,6 +9,8 @@ package principal;
  *
  * @author TAPIA
  */
-public class verificar_documentosExcepcion extends Exception {
-    
+public class VerificarDocumentosExcepcion extends Exception {
+    public void VerificarDocumentosExcepcion(){
+        
+    }
 }

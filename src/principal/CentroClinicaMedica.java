@@ -25,11 +25,11 @@ public class CentroClinicaMedica {
     
     
     
-    public void verificar_documentos(long documento,int longitud)throws verificar_documentosExcepcion
+    public void VerificarDocumentos(long documento,int longitud)throws VerificarDocumentosExcepcion
     {
         if(documento<1 || documento>99999999 || longitud!=8)
         {
-            throw new verificar_documentosExcepcion();
+            throw new VerificarDocumentosExcepcion();
         }
     }
     
@@ -37,7 +37,7 @@ public class CentroClinicaMedica {
     //metodos afiliados
     //igreso de afiliado a las listas
     
-    public void Ingresar_Afiliados(Afiliados afiliados,int dni)throws AfiliadosDIgualExcepcion
+    public void IngresarAfiliados(Afiliados afiliados,int dni)throws AfiliadosDIgualExcepcion
     {
         if(afiliado.size()>0)
         {
@@ -56,7 +56,7 @@ public class CentroClinicaMedica {
     
 
     //buscar afiliados
-    public Afiliados Buscar_Afiliado(int dni)throws AfiliadoNoExistenteExcepcion, ListaVaciaExcepcion
+    public Afiliados BuscarAfiliado(int dni)throws AfiliadoNoExistenteExcepcion, ListaVaciaExcepcion
     {
         if(afiliado.size()>0)
         {
@@ -78,7 +78,7 @@ public class CentroClinicaMedica {
     } 
 
     
-    public void Eliminar_Afiliado(int dni)throws DocumentoIncorrectoExcepcion,ListaVaciaExcepcion
+    public void EliminarAfiliado(int dni)throws DocumentoIncorrectoExcepcion,ListaVaciaExcepcion
     {
         boolean bandera = false;
         if(afiliado.size()==0)
@@ -104,7 +104,7 @@ public class CentroClinicaMedica {
     }
     
     
-     public void Modificar_Afiliados(Afiliados afiliados,int dni) throws ListaVaciaExcepcion, AfiliadoNoExistenteExcepcion
+     public void ModificarAfiliados(Afiliados afiliados,int dni) throws ListaVaciaExcepcion, AfiliadoNoExistenteExcepcion
     {
         if(afiliado.size()==0){
        throw new ListaVaciaExcepcion();
@@ -125,7 +125,7 @@ public class CentroClinicaMedica {
     }
     
      
-     public LinkedList Mostrar_Afiliados() throws ListaVaciaExcepcion{
+     public LinkedList MostrarAfiliados() throws ListaVaciaExcepcion{
          if(afiliado.size()==0){
              throw new ListaVaciaExcepcion();
          }
@@ -134,7 +134,7 @@ public class CentroClinicaMedica {
      
     //doctores
     //ingresar doctores
-      public void Ingresar_Doctores(Doctores doctores,int dni)throws DoctoresIgualExcepcion
+      public void IngresarDoctores(Doctores doctores,int dni)throws DoctoresIgualExcepcion
     {
         if(chofer.size()>0)
         {
@@ -152,7 +152,7 @@ public class CentroClinicaMedica {
     }
       
       
-      public Doctores Buscar_Doctor(int dni)throws DoctorNoExistenteExcepcion, ListaVaciaExcepcion {
+      public Doctores BuscarDoctor(int dni)throws DoctorNoExistenteExcepcion, ListaVaciaExcepcion {
  if(doctor.size()>0)
         {
             for(int i=0;i<doctor.size();i++)
@@ -173,7 +173,7 @@ public class CentroClinicaMedica {
       
       }
       
-       public void Eliminar_Doctor(int dni)throws DocumentoIncorrectoExcepcion,ListaVaciaExcepcion
+       public void EliminarDoctor(int dni)throws DocumentoIncorrectoExcepcion,ListaVaciaExcepcion
     {
         boolean bandera = false;
         if(doctor.size()==0)
@@ -198,7 +198,7 @@ public class CentroClinicaMedica {
         }
     }
     
-    public void Modificar_Doctor(Doctores doctores,int dni) throws ListaVaciaExcepcion, DoctorNoExistenteExcepcion
+    public void ModificarDoctor(Doctores doctores,int dni) throws ListaVaciaExcepcion, DoctorNoExistenteExcepcion
     {
         if(afiliado.size()==0){
         throw new ListaVaciaExcepcion();
@@ -218,7 +218,7 @@ public class CentroClinicaMedica {
     }
     
     
-    public LinkedList Mostrar_Doctor() throws ListaVaciaExcepcion{
+    public LinkedList MostrarDoctor() throws ListaVaciaExcepcion{
         if(doctor.size()==0){
             throw new ListaVaciaExcepcion();
         }
@@ -227,7 +227,7 @@ public class CentroClinicaMedica {
     
     
       
-         public void Ingresar_Choferes(Choferes chofer1,int dni)throws ChoferesIgualExcepcion
+         public void IngresarChoferes(Choferes chofer1,int dni)throws ChoferesIgualExcepcion
     {
         if(chofer.size()>0)
         {
@@ -247,7 +247,7 @@ public class CentroClinicaMedica {
          
     //buscar choferes
          
-         public void Modificar_Chofer(Choferes choferes,int dni) throws ListaVaciaExcepcion, ChoferesNoExisteExcepcion
+         public void ModificarChofer(Choferes choferes,int dni) throws ListaVaciaExcepcion, ChoferesNoExisteExcepcion
     {
         if(afiliado.size()==0){
             throw new ListaVaciaExcepcion();
@@ -267,7 +267,7 @@ public class CentroClinicaMedica {
     }
          
          
-          public void Eliminar_Chofer(int dni)throws DocumentoIncorrectoExcepcion,ListaVaciaExcepcion
+          public void EliminarChofer(int dni)throws DocumentoIncorrectoExcepcion,ListaVaciaExcepcion
     {
         boolean bandera = false;
         if(chofer.size()==0)
@@ -292,7 +292,7 @@ public class CentroClinicaMedica {
         }
     }
 
-    public Choferes Buscar_Chofer(int dni) throws ListaVaciaExcepcion,ChoferesNoExisteExcepcion {
+    public Choferes BuscarChofer(int dni) throws ListaVaciaExcepcion,ChoferesNoExisteExcepcion {
         if(chofer.size()>0)
         {
             for(int i=0;i<chofer.size();i++)
@@ -313,7 +313,7 @@ public class CentroClinicaMedica {
          
     }
 
-     public void Ingresar_Enfermero(Enfermeros enfermero1, int dni)throws EnfermeroIgualExcepcion
+     public void IngresarEnfermero(Enfermeros enfermero1, int dni)throws EnfermeroIgualExcepcion
             {
  if(chofer.size()>0)
         {
@@ -330,7 +330,7 @@ public class CentroClinicaMedica {
             }
      
      
-     public LinkedList Mostrar_Chofer() throws ListaVaciaExcepcion{
+     public LinkedList MostrarChofer() throws ListaVaciaExcepcion{
          if(chofer.size()>0){
              throw new ListaVaciaExcepcion();
          }
@@ -338,7 +338,7 @@ public class CentroClinicaMedica {
      }
      
 
-    public Enfermeros Buscar_Enfermero(int dni)throws EnfermeroNoExistenteExcepcion, ListaVaciaExcepcion {
+    public Enfermeros BuscarEnfermero(int dni)throws EnfermeroNoExistenteExcepcion, ListaVaciaExcepcion {
 if(enfermero.size()>0)
         {
             for(int i=0;i<enfermero.size();i++)
@@ -358,7 +358,7 @@ if(enfermero.size()>0)
         }    
     }
 
-     public void Eliminar_Enfermero(int dni)throws DocumentoIncorrectoExcepcion,ListaVaciaExcepcion
+     public void EliminarEnfermero(int dni)throws DocumentoIncorrectoExcepcion,ListaVaciaExcepcion
     {
         boolean bandera = false;
         if(enfermero.size()==0)
@@ -383,7 +383,7 @@ if(enfermero.size()>0)
         }
     }
     
-    public void Modificar_Enfermero(Enfermeros enfermeros,int dni) throws ListaVaciaExcepcion, EnfermeroNoExistenteExcepcion
+    public void ModificarEnfermero(Enfermeros enfermeros,int dni) throws ListaVaciaExcepcion, EnfermeroNoExistenteExcepcion
     {
         if(enfermero.size()==0){
             throw new ListaVaciaExcepcion();
@@ -402,7 +402,7 @@ if(enfermero.size()>0)
         }
     }
     
-     public void Modificar_Enfermero(Moviles movil,String Patente) throws ListaVaciaExcepcion, EnfermeroNoExistenteExcepcion
+     public void ModificarEnfermero(Moviles movil,String Patente) throws ListaVaciaExcepcion, EnfermeroNoExistenteExcepcion
     {
         if(enfermero.size()==0){
             throw new ListaVaciaExcepcion();
@@ -421,7 +421,7 @@ if(enfermero.size()>0)
         }
     }
      
-     public LinkedList Mostrar_Enfermero() throws ListaVaciaExcepcion{
+     public LinkedList MostrarEnfermero() throws ListaVaciaExcepcion{
          if(enfermero.size()==0){
              throw new ListaVaciaExcepcion();
          }
@@ -431,7 +431,7 @@ if(enfermero.size()>0)
     
 //  administractivo
     //ingresar administrativo
-    public void Ingresar_Administrativos(Administrativos administrativo1, int dni)throws AdministrativosIgualExcepcion
+    public void IngresarAdministrativos(Administrativos administrativo1, int dni)throws AdministrativosIgualExcepcion
             {
                 if(administrativo.size()>0)
         {
@@ -448,7 +448,7 @@ if(enfermero.size()>0)
 
     
     //buscar administractivos
- public Administrativos Buscar_Administrativos(int dni)throws AdministrativoNoExistenteExcepcion, ListaVaciaExcepcion{
+ public Administrativos BuscarAdministrativos(int dni)throws AdministrativoNoExistenteExcepcion, ListaVaciaExcepcion{
         if(administrativo.size()>0)
         {
             for(int i=0;i<administrativo.size();i++)
@@ -477,7 +477,7 @@ if(enfermero.size()>0)
      }
     
 
-    public void Ingresar_Familiar(GrupoFamiliar familiar1, int dni) throws GrupoFamiliarIgualExcepcion
+    public void IngresarFamiliar(GrupoFamiliar familiar1, int dni) throws GrupoFamiliarIgualExcepcion
             {
                 if(familiar.size()>0)
         {
@@ -495,7 +495,7 @@ if(enfermero.size()>0)
     
     //buscar grupo familiar
     
-    public GrupoFamiliar Buscar_Familiar(int dni) {
+    public GrupoFamiliar BuscarFamiliar(int dni) {
         if(familiar.size()>0)
         {
             for(int i=0;i<familiar.size();i++)
@@ -516,7 +516,7 @@ if(enfermero.size()>0)
     
 
     
-      public void Eliminar_Familiar(int dni)throws DocumentoIncorrectoExcepcion,ListaVaciaExcepcion
+      public void EliminarFamiliar(int dni)throws DocumentoIncorrectoExcepcion,ListaVaciaExcepcion
     {
         boolean bandera = false;
         if(familiar.size()==0)
@@ -541,7 +541,7 @@ if(enfermero.size()>0)
         }
     }
     
-    public void Modificar_Familiar(GrupoFamiliar familiar1,int dni)
+    public void ModificarFamiliar(GrupoFamiliar familiar1,int dni)
     {
         if(familiar.size()>0)
         {
@@ -556,7 +556,7 @@ if(enfermero.size()>0)
     }
     
     //movil
-    public void Ingresar_Movil(Moviles movil,String pant)throws MovilesIgualExcepcion
+    public void IngresarMovil(Moviles movil,String pant)throws MovilesIgualExcepcion
     {  
         
         if(moviles.size()>0)
@@ -575,7 +575,7 @@ if(enfermero.size()>0)
      
      
      
-    public Moviles Buscar_Movil(String patente) throws MovilNoExistenteExcepcion, ListaVaciaExcepcion
+    public Moviles BuscarMovil(String patente) throws MovilNoExistenteExcepcion, ListaVaciaExcepcion
     {
         if(moviles.size()>0)
         {
@@ -597,7 +597,7 @@ if(enfermero.size()>0)
     
     
     
-    public void Eliminar_Movil(String Patente)throws PatenteIncorrectoExcepcion,ListaVaciaExcepcion
+    public void EliminarMovil(String Patente)throws PatenteIncorrectoExcepcion,ListaVaciaExcepcion
     {
         boolean bandera = false;
         if(moviles.size()==0)
@@ -622,7 +622,7 @@ if(enfermero.size()>0)
         }
     }
     
-    public void Modificar_Movil(Moviles movil,String patente) throws ListaVaciaExcepcion, MovilNoExistenteExcepcion
+    public void ModificarMovil(Moviles movil,String patente) throws ListaVaciaExcepcion, MovilNoExistenteExcepcion
     {
         if(moviles.size()==0){
             throw new ListaVaciaExcepcion();
@@ -641,7 +641,7 @@ if(enfermero.size()>0)
         }
     }
     
-    public LinkedList Mostrar_Movil() throws ListaVaciaExcepcion{
+    public LinkedList MostrarMovil() throws ListaVaciaExcepcion{
         if(moviles.size()==0){
             throw new ListaVaciaExcepcion();
         }
@@ -651,7 +651,7 @@ if(enfermero.size()>0)
     
     //metodo pago
     
-    public void Registar_pago(RegistroPago primer,int dni)throws Afiliado_Pago_Igual_Excepcion
+    public void Registar_pago(RegistroPago primer,int dni)throws AfiliadoPagoIgualExcepcion
     {
         if(registro.size()>0)
         {
@@ -659,7 +659,7 @@ if(enfermero.size()>0)
             {
                 if(registro.get(i).getDni()==dni)
                 {
-                    throw new Afiliado_Pago_Igual_Excepcion();
+                    throw new AfiliadoPagoIgualExcepcion();
                 }
             } 
         }
@@ -668,7 +668,7 @@ if(enfermero.size()>0)
            
     }
     
-    public RegistroPago Buscar_Pago(int dni)
+    public RegistroPago BuscarPago(int dni)
     {
         if(registro.size()>0)
         {
@@ -688,7 +688,7 @@ if(enfermero.size()>0)
         return null;
     }
     
-    public void Ingresar_Pago(RegistroPago pago,String mes,int dni) throws ListaVaciaExcepcion, DocumentoIncorrectoExcepcion
+    public void IngresarPago(RegistroPago pago,String mes,int dni) throws ListaVaciaExcepcion, DocumentoIncorrectoExcepcion
     { 
         if(registro.size()==0){
             throw new ListaVaciaExcepcion();
@@ -707,7 +707,7 @@ if(enfermero.size()>0)
         }
     }
     
-    public LinkedList Mostrar_Pago() throws ListaVaciaExcepcion{
+    public LinkedList MostrarPago() throws ListaVaciaExcepcion{
         if(registro.size()==0){
             throw new ListaVaciaExcepcion();
         }
@@ -715,13 +715,13 @@ if(enfermero.size()>0)
      }
     
     
-    public void Ingresar_Solicitud(Solicitud solic)
+    public void IngresarSolicitud(Solicitud solic)
     {
             solicitud.add(solic);
            
     }
     
-    public Solicitud Buscar_Solicitud(int dni)throws SolicitudNoExistente, ListaVaciaExcepcion
+    public Solicitud BuscarSolicitud(int dni)throws SolicitudNoExistente, ListaVaciaExcepcion
     {
         if(solicitud.size()>0)
         {
@@ -742,14 +742,14 @@ if(enfermero.size()>0)
         }    
     } 
     
-    public LinkedList Mostrar_Solicitud() throws ListaVaciaExcepcion{
+    public LinkedList MostrarSolicitud() throws ListaVaciaExcepcion{
         if(solicitud.size()>0){
             throw new ListaVaciaExcepcion();
         }
         return solicitud;
      }
     
-    public void Ingresar_Resultado(Registro registro,int dni)throws Registro_IgualExcepcion, ListaVaciaExcepcion, RegistroNoExistenteExcepcion
+    public void Ingresar_Resultado(Registro registro,int dni)throws RegistroIgualExcepcion, ListaVaciaExcepcion, RegistroNoExistenteExcepcion
     {
         if(result.size()>0){
             throw new ListaVaciaExcepcion();
@@ -760,7 +760,7 @@ if(enfermero.size()>0)
             {
                 if(result.get(i).getDni()==dni);
                 {
-                    throw new Registro_IgualExcepcion();
+                    throw new RegistroIgualExcepcion();
                 }
             } 
         }else{
@@ -770,7 +770,7 @@ if(enfermero.size()>0)
            
     }
 
-    public void Eliminar_Administrativos(int dni) throws ListaVaciaExcepcion, PatenteIncorrectoExcepcion {
+    public void EliminarAdministrativos(int dni) throws ListaVaciaExcepcion, PatenteIncorrectoExcepcion {
          boolean bandera = false;
         if(administrativo.size()==0)
         {

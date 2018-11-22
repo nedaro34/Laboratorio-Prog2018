@@ -9,8 +9,8 @@ package principal;
  *
  * @author TAPIA
  */
-public class Pago_mes_Igual_Excepcion extends Exception {
-    public Pago_mes_Igual_Excepcion(){
+public class RegistroIgualExcepcion extends Exception {
+    public RegistroIgualExcepcion(){
         
     }
 }
