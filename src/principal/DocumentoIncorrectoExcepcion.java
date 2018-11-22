@@ -10,7 +10,7 @@ package principal;
  * @author TAPIA
  */
 public class DocumentoIncorrectoExcepcion extends Exception {
-    public DocumentoIncorrectoExcepcion(){
+    public void DocumentoIncorrectoExcepcion(){
         
     }
 }

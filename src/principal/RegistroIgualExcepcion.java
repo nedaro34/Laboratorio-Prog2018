@@ -10,7 +10,7 @@ package principal;
  * @author TAPIA
  */
 public class RegistroIgualExcepcion extends Exception {
-    public RegistroIgualExcepcion(){
+    public void RegistroIgualExcepcion(){
         
     }
 }

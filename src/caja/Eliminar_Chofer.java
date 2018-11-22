@@ -55,6 +55,8 @@ public class Eliminar_Chofer extends javax.swing.JPanel {
         jButton2 = new javax.swing.JButton();
         jTextField_fecha = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jTextField_resultado = new javax.swing.JTextField();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -117,48 +119,23 @@ public class Eliminar_Chofer extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Eliminar Chofer");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 240, 170, 30));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setText("Resultado :");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 190, 100, 30));
+
+        jTextField_resultado.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextField_resultado.setEnabled(false);
+        jTextField_resultado.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField_resultadoKeyTyped(evt);
+            }
+        });
+        add(jTextField_resultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 190, 220, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-         //camptura de exepciones
-        try{
-            // dni a buscar
-            int dni = Integer.parseInt(jTextField_dni.getText());
-            
-            //asede a listas
-            
-            CentroClinicaMedica centro = new CentroClinicaMedica();
-            
-            Choferes chofer = centro.BuscarChofer(dni);
-            
-            
-            //muestra los datos   
-            jTextField_apellido.setText(chofer.getApellido());
-            jTextField_direccioncorreo.setText(chofer.getDireccionCorreo());
-            jTextField_documento.setText(String.valueOf(chofer.getDocumento()));
-            jTextField_direccion.setText(chofer.getDireccion());
-            jTextField_telefono.setText(chofer.getTelefono());
-            jTextField_nombre.setText(chofer.getNombre());
-            jTextField_fecha.setText(chofer.getFechadenacimiento());
-
-            
-           
-        }catch(NumberFormatException a){
-            //exepcion limpia los campos
-            JOptionPane.showMessageDialog(null,"Faltan Campos ");
-            jTextField_apellido.setText("");
-            jTextField_nombre.setText("");
-            jTextField_direccioncorreo.setText("");
-            jTextField_documento.setText("");
-            jTextField_nombre.setText("");
-            jTextField_telefono.setText("");
-            
-       } catch (ListaVaciaExcepcion ex) { 
-            Logger.getLogger(Eliminar_Chofer.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ChoferesNoExisteExcepcion ex) {
-            Logger.getLogger(Eliminar_Chofer.class.getName()).log(Level.SEVERE, null, ex);
-        } 
+        
         
         
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -181,12 +158,17 @@ public class Eliminar_Chofer extends javax.swing.JPanel {
             
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jTextField_resultadoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_resultadoKeyTyped
+
+    }//GEN-LAST:event_jTextField_resultadoKeyTyped
+
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -201,6 +183,7 @@ public class Eliminar_Chofer extends javax.swing.JPanel {
     private javax.swing.JTextField jTextField_documento;
     private javax.swing.JTextField jTextField_fecha;
     private javax.swing.JTextField jTextField_nombre;
+    private javax.swing.JTextField jTextField_resultado;
     private javax.swing.JTextField jTextField_telefono;
     // End of variables declaration//GEN-END:variables
 }

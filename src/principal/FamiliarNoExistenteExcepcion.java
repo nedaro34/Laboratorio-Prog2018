@@ -11,7 +11,7 @@ package principal;
  */
 public class FamiliarNoExistenteExcepcion extends Exception {
 
-    public FamiliarNoExistenteExcepcion() {
+    public void FamiliarNoExistenteExcepcion() {
         
     }
     

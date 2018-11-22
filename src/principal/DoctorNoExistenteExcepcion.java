@@ -9,9 +9,9 @@ package principal;
  *
  * @author alumno
  */
-class DoctorNoExistenteExcepcion extends Exception {
+public class DoctorNoExistenteExcepcion extends Exception {
     
-    public void DoctorNoExistenteExcepcion(){
+    public  void DoctorNoExistenteExcepcion(){
         
         
     }

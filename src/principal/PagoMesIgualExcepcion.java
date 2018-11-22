@@ -10,7 +10,7 @@ package principal;
  * @author TAPIA
  */
 public class PagoMesIgualExcepcion extends Exception {
-    public PagoMesIgualExcepcion(){
+    public void PagoMesIgualExcepcion(){
         
     }
 }

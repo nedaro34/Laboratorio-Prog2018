@@ -10,7 +10,7 @@ package principal;
  * @author SALA3
  */
 public class PatenteIncorrectoExcepcion extends Exception {
-    public PatenteIncorrectoExcepcion(){
+    public void PatenteIncorrectoExcepcion(){
         
     }
 }

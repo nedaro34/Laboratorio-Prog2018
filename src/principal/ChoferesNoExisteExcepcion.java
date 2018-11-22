@@ -11,7 +11,7 @@ package principal;
  */
 public class ChoferesNoExisteExcepcion extends Exception {
 
-    public ChoferesNoExisteExcepcion() {
+    public void ChoferesNoExisteExcepcion() {
         
     }
     

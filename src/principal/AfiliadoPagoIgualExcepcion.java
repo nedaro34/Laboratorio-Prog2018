@@ -10,7 +10,7 @@ package principal;
  * @author TAPIA
  */
 public class AfiliadoPagoIgualExcepcion extends Exception {
-    public void AfiliadoPagoIgualExcepcion(){
+    public  void AfiliadoPagoIgualExcepcion(){
         
     }
 }

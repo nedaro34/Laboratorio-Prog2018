@@ -10,7 +10,7 @@ package principal;
  * @author SALA3
  */
 public class GrupoFamiliarIgualExcepcion extends Exception {
-    public GrupoFamiliarIgualExcepcion(){
+    public void GrupoFamiliarIgualExcepcion(){
         
     }
 }

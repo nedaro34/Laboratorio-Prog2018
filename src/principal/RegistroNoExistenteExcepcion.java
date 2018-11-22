@@ -11,7 +11,7 @@ package principal;
  */
 public class RegistroNoExistenteExcepcion extends Exception {
 
-    public RegistroNoExistenteExcepcion() {
+    public void RegistroNoExistenteExcepcion() {
     }
     
 }

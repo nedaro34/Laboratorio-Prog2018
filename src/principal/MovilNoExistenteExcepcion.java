@@ -11,7 +11,7 @@ package principal;
  */
 public class MovilNoExistenteExcepcion extends Exception {
 
-    public MovilNoExistenteExcepcion() {
+    public void MovilNoExistenteExcepcion() {
         
     }
     

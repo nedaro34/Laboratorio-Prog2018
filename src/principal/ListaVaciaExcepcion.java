@@ -10,7 +10,7 @@ package principal;
  * @author TAPIA
  */
 public class ListaVaciaExcepcion extends Exception {
-    public ListaVaciaExcepcion(){
+    public void ListaVaciaExcepcion(){
         
     }
 }

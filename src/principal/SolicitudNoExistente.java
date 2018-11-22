@@ -9,7 +9,7 @@ package principal;
  *
  * @author alumno
  */
-class SolicitudNoExistente extends Exception {
+public class SolicitudNoExistente extends Exception {
     
     public void SolicitudNoExistente(){
         

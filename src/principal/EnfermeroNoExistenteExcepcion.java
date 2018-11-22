@@ -11,7 +11,7 @@ package principal;
  */
 public class EnfermeroNoExistenteExcepcion extends Exception{
 
-    public EnfermeroNoExistenteExcepcion() {
+    public void EnfermeroNoExistenteExcepcion() {
     }
     
 }
