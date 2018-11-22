@@ -5,9 +5,13 @@
  */
 package caja;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import principal.AdministrativoNoExistenteExcepcion;
 import principal.Administrativos;
 import principal.CentroClinicaMedica;
+import principal.ListaVaciaExcepcion;
 
 /**
  *
@@ -136,7 +140,11 @@ public class Modificar_Administractivo extends javax.swing.JPanel {
  
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
-       } 
+       } catch (AdministrativoNoExistenteExcepcion ex) { 
+            Logger.getLogger(Modificar_Administractivo.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ListaVaciaExcepcion ex) {
+            Logger.getLogger(Modificar_Administractivo.class.getName()).log(Level.SEVERE, null, ex);
+        } 
     }//GEN-LAST:event_jButton1ActionPerformed
 
 

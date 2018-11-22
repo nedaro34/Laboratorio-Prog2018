@@ -6,11 +6,15 @@
 package caja;
 
 import java.text.DateFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import principal.CentroClinicaMedica;
 import principal.Choferes;
+import principal.EnfermeroNoExistenteExcepcion;
 import principal.Enfermeros;
 import principal.Fecha;
+import principal.ListaVaciaExcepcion;
 
 /**
  *
@@ -155,7 +159,11 @@ public class Modificar_Emfermero extends javax.swing.JPanel {
             jTextField_documento.setText("");
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
-       } 
+       } catch (EnfermeroNoExistenteExcepcion ex) { 
+            Logger.getLogger(Modificar_Emfermero.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ListaVaciaExcepcion ex) {
+            Logger.getLogger(Modificar_Emfermero.class.getName()).log(Level.SEVERE, null, ex);
+        } 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -187,7 +195,11 @@ public class Modificar_Emfermero extends javax.swing.JPanel {
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
             
-       }
+       } catch (ListaVaciaExcepcion ex) {
+            Logger.getLogger(Modificar_Emfermero.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (EnfermeroNoExistenteExcepcion ex) {
+            Logger.getLogger(Modificar_Emfermero.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
 

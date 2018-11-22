@@ -6,11 +6,15 @@
 package caja;
 
 import java.text.DateFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import principal.Afiliados;
 import principal.CentroClinicaMedica;
 import principal.Choferes;
+import principal.ChoferesNoExisteExcepcion;
 import principal.Fecha;
+import principal.ListaVaciaExcepcion;
 
 /**
  *
@@ -154,7 +158,11 @@ public class Modificar_Chofer extends javax.swing.JPanel {
             jTextField_documento.setText("");
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
-       } 
+       } catch (ListaVaciaExcepcion ex) { 
+            Logger.getLogger(Modificar_Chofer.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ChoferesNoExisteExcepcion ex) {
+            Logger.getLogger(Modificar_Chofer.class.getName()).log(Level.SEVERE, null, ex);
+        } 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -188,7 +196,11 @@ public class Modificar_Chofer extends javax.swing.JPanel {
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
             
-       }
+       } catch (ListaVaciaExcepcion ex) {
+            Logger.getLogger(Modificar_Chofer.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ChoferesNoExisteExcepcion ex) {
+            Logger.getLogger(Modificar_Chofer.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
     }//GEN-LAST:event_jButton2ActionPerformed
 

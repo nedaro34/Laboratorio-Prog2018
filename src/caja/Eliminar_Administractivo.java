@@ -8,6 +8,7 @@ package caja;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import principal.AdministrativoNoExistenteExcepcion;
 import principal.Administrativos;
 import principal.CentroClinicaMedica;
 import principal.DocumentoIncorrectoExcepcion;
@@ -173,7 +174,11 @@ public class Eliminar_Administractivo extends javax.swing.JPanel {
             jTextField_documento.setText("");
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
-       } 
+       } catch (AdministrativoNoExistenteExcepcion ex) { 
+            Logger.getLogger(Eliminar_Administractivo.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ListaVaciaExcepcion ex) {
+            Logger.getLogger(Eliminar_Administractivo.class.getName()).log(Level.SEVERE, null, ex);
+        } 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

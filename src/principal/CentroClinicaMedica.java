@@ -56,7 +56,7 @@ public class CentroClinicaMedica {
     
 
     //buscar afiliados
-    public Afiliados Buscar_Afiliado(int dni)
+    public Afiliados Buscar_Afiliado(int dni)throws AfiliadoNoExistenteExcepcion, ListaVaciaExcepcion
     {
         if(afiliado.size()>0)
         {
@@ -67,13 +67,14 @@ public class CentroClinicaMedica {
                     return afiliado.get(i);
                 }
             }
+            throw new AfiliadoNoExistenteExcepcion();
         //    JOptionPane.showMessageDialog(null,"El afiliado no existe");
         }
         else
         {
+            throw new ListaVaciaExcepcion();
         //    JOptionPane.showMessageDialog(null,"Lista de afiliado vacia");
         }    
-        return null;
     } 
 
     
@@ -103,8 +104,11 @@ public class CentroClinicaMedica {
     }
     
     
-     public void Modificar_Afiliados(Afiliados afiliados,int dni)
+     public void Modificar_Afiliados(Afiliados afiliados,int dni) throws ListaVaciaExcepcion, AfiliadoNoExistenteExcepcion
     {
+        if(afiliado.size()==0){
+       throw new ListaVaciaExcepcion();
+        }
         if(afiliado.size()>0)
         {
             for(int i=0;i<afiliado.size();i++)
@@ -113,11 +117,18 @@ public class CentroClinicaMedica {
                 {
                     afiliado.set(i, afiliados);
                 }
+                
             } 
+        }else{
+            throw new AfiliadoNoExistenteExcepcion();
         }
     }
+    
      
-     public LinkedList Mostrar_Afiliados(){
+     public LinkedList Mostrar_Afiliados() throws ListaVaciaExcepcion{
+         if(afiliado.size()==0){
+             throw new ListaVaciaExcepcion();
+         }
          return afiliado;
      }
      
@@ -141,7 +152,7 @@ public class CentroClinicaMedica {
     }
       
       
-      public Doctores Buscar_Doctor(int dni) {
+      public Doctores Buscar_Doctor(int dni)throws DoctorNoExistenteExcepcion, ListaVaciaExcepcion {
  if(doctor.size()>0)
         {
             for(int i=0;i<doctor.size();i++)
@@ -151,15 +162,16 @@ public class CentroClinicaMedica {
                     return doctor.get(i);
                 }
             }
+            throw new DoctorNoExistenteExcepcion();
             //JOptionPane.showMessageDialog(null,"El chofer no existe");
         }
         else
         {
+            throw new ListaVaciaExcepcion();
           //  JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
         }    
-        return null;    }
       
-      
+      }
       
        public void Eliminar_Doctor(int dni)throws DocumentoIncorrectoExcepcion,ListaVaciaExcepcion
     {
@@ -186,8 +198,11 @@ public class CentroClinicaMedica {
         }
     }
     
-    public void Modificar_Doctor(Doctores doctores,int dni)
+    public void Modificar_Doctor(Doctores doctores,int dni) throws ListaVaciaExcepcion, DoctorNoExistenteExcepcion
     {
+        if(afiliado.size()==0){
+        throw new ListaVaciaExcepcion();
+     }
         if(doctor.size()>0)
         {
             for(int i=0;i<doctor.size();i++)
@@ -197,11 +212,16 @@ public class CentroClinicaMedica {
                     doctor.set(i, doctores);
                 }
             } 
+        }else {
+            throw new DoctorNoExistenteExcepcion();
         }
     }
     
     
-    public LinkedList Mostrar_Doctor(){
+    public LinkedList Mostrar_Doctor() throws ListaVaciaExcepcion{
+        if(doctor.size()==0){
+            throw new ListaVaciaExcepcion();
+        }
          return doctor;
      }
     
@@ -227,8 +247,11 @@ public class CentroClinicaMedica {
          
     //buscar choferes
          
-         public void Modificar_Chofer(Choferes choferes,int dni)
+         public void Modificar_Chofer(Choferes choferes,int dni) throws ListaVaciaExcepcion, ChoferesNoExisteExcepcion
     {
+        if(afiliado.size()==0){
+            throw new ListaVaciaExcepcion();
+        }
         if(chofer.size()>0)
         {
             for(int i=0;i<chofer.size();i++)
@@ -238,6 +261,8 @@ public class CentroClinicaMedica {
                     chofer.set(i, choferes);
                 }
             } 
+        }else{
+            throw new ChoferesNoExisteExcepcion();
         }
     }
          
@@ -267,7 +292,7 @@ public class CentroClinicaMedica {
         }
     }
 
-    public Choferes Buscar_Chofer(int dni) {
+    public Choferes Buscar_Chofer(int dni) throws ListaVaciaExcepcion,ChoferesNoExisteExcepcion {
         if(chofer.size()>0)
         {
             for(int i=0;i<chofer.size();i++)
@@ -277,13 +302,15 @@ public class CentroClinicaMedica {
                     return chofer.get(i);
                 }
             }
+            throw new ChoferesNoExisteExcepcion();
           //  JOptionPane.showMessageDialog(null,"El chofer no existe");
         }
         else
         {
+            throw new ListaVaciaExcepcion();
          //   JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
         }    
-        return null;   
+         
     }
 
      public void Ingresar_Enfermero(Enfermeros enfermero1, int dni)throws EnfermeroIgualExcepcion
@@ -303,12 +330,15 @@ public class CentroClinicaMedica {
             }
      
      
-     public LinkedList Mostrar_Chofer(){
+     public LinkedList Mostrar_Chofer() throws ListaVaciaExcepcion{
+         if(chofer.size()>0){
+             throw new ListaVaciaExcepcion();
+         }
          return chofer;
      }
      
 
-    public Enfermeros Buscar_Enfermero(int dni) {
+    public Enfermeros Buscar_Enfermero(int dni)throws EnfermeroNoExistenteExcepcion, ListaVaciaExcepcion {
 if(enfermero.size()>0)
         {
             for(int i=0;i<enfermero.size();i++)
@@ -318,13 +348,15 @@ if(enfermero.size()>0)
                     return enfermero.get(i);
                 }
             }
+            throw new EnfermeroNoExistenteExcepcion();
            // JOptionPane.showMessageDialog(null,"El chofer no existe");
         }
         else
         {
+            throw new ListaVaciaExcepcion();
         //    JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
         }    
-        return null;    }
+    }
 
      public void Eliminar_Enfermero(int dni)throws DocumentoIncorrectoExcepcion,ListaVaciaExcepcion
     {
@@ -351,8 +383,11 @@ if(enfermero.size()>0)
         }
     }
     
-    public void Modificar_Enfermero(Enfermeros enfermeros,int dni)
+    public void Modificar_Enfermero(Enfermeros enfermeros,int dni) throws ListaVaciaExcepcion, EnfermeroNoExistenteExcepcion
     {
+        if(enfermero.size()==0){
+            throw new ListaVaciaExcepcion();
+        }
         if(enfermero.size()>0)
         {
             for(int i=0;i<enfermero.size();i++)
@@ -362,11 +397,16 @@ if(enfermero.size()>0)
                     enfermero.set(i, enfermeros);
                 }
             } 
+        }else{
+            throw new EnfermeroNoExistenteExcepcion();
         }
     }
     
-     public void Modificar_Enfermero(Moviles movil,String Patente)
+     public void Modificar_Enfermero(Moviles movil,String Patente) throws ListaVaciaExcepcion, EnfermeroNoExistenteExcepcion
     {
+        if(enfermero.size()==0){
+            throw new ListaVaciaExcepcion();
+        }
         if(moviles.size()>0)
         {
             for(int i=0;i<moviles.size();i++)
@@ -376,10 +416,15 @@ if(enfermero.size()>0)
                     moviles.set(i, movil);
                 }
             } 
+        }else{
+            throw new EnfermeroNoExistenteExcepcion();
         }
     }
      
-     public LinkedList Mostrar_Enfermero(){
+     public LinkedList Mostrar_Enfermero() throws ListaVaciaExcepcion{
+         if(enfermero.size()==0){
+             throw new ListaVaciaExcepcion();
+         }
          return enfermero;
      }
 
@@ -403,8 +448,8 @@ if(enfermero.size()>0)
 
     
     //buscar administractivos
-    public Administrativos Buscar_Administrativos(int dni) {
-if(administrativo.size()>0)
+ public Administrativos Buscar_Administrativos(int dni)throws AdministrativoNoExistenteExcepcion, ListaVaciaExcepcion{
+        if(administrativo.size()>0)
         {
             for(int i=0;i<administrativo.size();i++)
             {
@@ -413,16 +458,21 @@ if(administrativo.size()>0)
                     return administrativo.get(i);
                 }
             }
+            throw new AdministrativoNoExistenteExcepcion();
           //  JOptionPane.showMessageDialog(null,"El chofer no existe");
         }
         else
         {
+         throw new ListaVaciaExcepcion();
        //     JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
         }    
-        return null;    }
+ }
     
     
-    public LinkedList Mostrar_Administrativo(){
+    public LinkedList Mostrar_Administrativo() throws ListaVaciaExcepcion{
+        if(administrativo.size()==0){
+            throw new ListaVaciaExcepcion();
+        }
          return administrativo;
      }
     
@@ -461,7 +511,7 @@ if(administrativo.size()>0)
         {
         //    JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
         }    
-        return null; 
+        return null;
     }
     
 
@@ -525,7 +575,7 @@ if(administrativo.size()>0)
      
      
      
-    public Moviles Buscar_Movil(String patente)
+    public Moviles Buscar_Movil(String patente) throws MovilNoExistenteExcepcion, ListaVaciaExcepcion
     {
         if(moviles.size()>0)
         {
@@ -535,14 +585,14 @@ if(administrativo.size()>0)
                 {
                     return moviles.get(i);
                 }
-            }
+            }throw new MovilNoExistenteExcepcion();
         //    JOptionPane.showMessageDialog(null,"El movil no existe");
         }
         else
         {
+            throw new ListaVaciaExcepcion();
          //   JOptionPane.showMessageDialog(null,"Lista de movil vacia");
         }    
-        return null;
     } 
     
     
@@ -572,8 +622,11 @@ if(administrativo.size()>0)
         }
     }
     
-    public void Modificar_Movil(Moviles movil,String patente)
+    public void Modificar_Movil(Moviles movil,String patente) throws ListaVaciaExcepcion, MovilNoExistenteExcepcion
     {
+        if(moviles.size()==0){
+            throw new ListaVaciaExcepcion();
+        }
         if(moviles.size()>0)
         {
             for(int i=0;i<moviles.size();i++)
@@ -583,10 +636,15 @@ if(administrativo.size()>0)
                     moviles.set(i, movil);
                 }
             } 
+        }else{
+            throw new MovilNoExistenteExcepcion();
         }
     }
     
-    public LinkedList Mostrar_Movil(){
+    public LinkedList Mostrar_Movil() throws ListaVaciaExcepcion{
+        if(moviles.size()==0){
+            throw new ListaVaciaExcepcion();
+        }
          return moviles;
      }
     
@@ -628,10 +686,13 @@ if(administrativo.size()>0)
        //     JOptionPane.showMessageDialog(null,"Lista de afiliado vasia");
         }    
         return null;
-    } 
+    }
     
-    public void Ingresar_Pago(RegistroPago pago,String mes,int dni)
+    public void Ingresar_Pago(RegistroPago pago,String mes,int dni) throws ListaVaciaExcepcion, DocumentoIncorrectoExcepcion
     { 
+        if(registro.size()==0){
+            throw new ListaVaciaExcepcion();
+        }
         if(registro.size()>0)
         {
             for(int i=0;i<registro.size();i++)
@@ -641,11 +702,15 @@ if(administrativo.size()>0)
                     registro.set(i, pago);
                 }
             } 
+        }else{
+        throw new DocumentoIncorrectoExcepcion();
         }
     }
     
-    public LinkedList Mostrar_Pago(){
-        
+    public LinkedList Mostrar_Pago() throws ListaVaciaExcepcion{
+        if(registro.size()==0){
+            throw new ListaVaciaExcepcion();
+        }
         return registro;
      }
     
@@ -656,7 +721,7 @@ if(administrativo.size()>0)
            
     }
     
-    public Solicitud Buscar_Solicitud(int dni)
+    public Solicitud Buscar_Solicitud(int dni)throws SolicitudNoExistente, ListaVaciaExcepcion
     {
         if(solicitud.size()>0)
         {
@@ -667,22 +732,28 @@ if(administrativo.size()>0)
                     return solicitud.get(i);
                 }
             }
+            throw new SolicitudNoExistente();
         //    JOptionPane.showMessageDialog(null,"El afiliado no existe");
         }
         else
         {
+            throw new ListaVaciaExcepcion(); 
        //     JOptionPane.showMessageDialog(null,"Lista de afiliado vacia");
         }    
-        return null;
     } 
     
-    public LinkedList Mostrar_Solicitud(){
-        
+    public LinkedList Mostrar_Solicitud() throws ListaVaciaExcepcion{
+        if(solicitud.size()>0){
+            throw new ListaVaciaExcepcion();
+        }
         return solicitud;
      }
     
-    public void Ingresar_Resultado(Registro registro,int dni)throws Registro_IgualExcepcion
+    public void Ingresar_Resultado(Registro registro,int dni)throws Registro_IgualExcepcion, ListaVaciaExcepcion, RegistroNoExistenteExcepcion
     {
+        if(result.size()>0){
+            throw new ListaVaciaExcepcion();
+        }
         if(result.size()>0)
         {
             for(int i=0;i<result.size();i++)
@@ -692,22 +763,19 @@ if(administrativo.size()>0)
                     throw new Registro_IgualExcepcion();
                 }
             } 
+        }else{
+            throw new RegistroNoExistenteExcepcion();
         }
-
             result.add(registro);
            
     }
 
     public void Eliminar_Administrativos(int dni) throws ListaVaciaExcepcion, PatenteIncorrectoExcepcion {
-
-
-
-  boolean bandera = false;
+         boolean bandera = false;
         if(administrativo.size()==0)
         {
             throw new ListaVaciaExcepcion();
         }
-
         if(administrativo.size()>0)
         {
             for(int i=0;i<administrativo.size();i++)

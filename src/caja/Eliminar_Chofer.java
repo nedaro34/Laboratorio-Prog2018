@@ -5,9 +5,12 @@
  */
 package caja;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import principal.CentroClinicaMedica;
 import principal.Choferes;
+import principal.ChoferesNoExisteExcepcion;
 import principal.DocumentoIncorrectoExcepcion;
 import principal.ListaVaciaExcepcion;
 
@@ -151,7 +154,11 @@ public class Eliminar_Chofer extends javax.swing.JPanel {
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
             
-       } 
+       } catch (ListaVaciaExcepcion ex) { 
+            Logger.getLogger(Eliminar_Chofer.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ChoferesNoExisteExcepcion ex) {
+            Logger.getLogger(Eliminar_Chofer.class.getName()).log(Level.SEVERE, null, ex);
+        } 
         
         
     }//GEN-LAST:event_jButton2ActionPerformed
