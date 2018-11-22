@@ -63,7 +63,7 @@ public class Ingresar_Afiliado extends javax.swing.JPanel {
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 70, 20));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel4.setText("Direccion :");
+        jLabel4.setText("Dirección :");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 80, 20));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -75,7 +75,7 @@ public class Ingresar_Afiliado extends javax.swing.JPanel {
         add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 70, 20));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel7.setText("Direccion Correo :");
+        jLabel7.setText("Dirección Correo :");
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, 130, 20));
         add(jTextField_direccioncorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 270, -1));
         add(jTextField_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 290, 320, -1));

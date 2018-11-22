@@ -60,35 +60,41 @@ public class Ingresar_Doctor extends javax.swing.JPanel {
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("Fecha de Nacimiento ");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 50, 120, 43));
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setText("Fecha de Nacimiento :");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 90, 160, 20));
 
-        jLabel2.setText("Apellido");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 101, 73, 44));
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setText("Apellido :");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 73, 20));
 
-        jLabel3.setText("Direccion");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 151, 73, 56));
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel3.setText("Dirección :");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 73, 20));
 
-        jLabel4.setText("Documento");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 213, 100, 42));
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setText("Documento :");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 100, 20));
 
-        jLabel5.setText("Telefono");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 291, 79, 37));
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel5.setText("Telefono :");
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 79, 20));
 
-        jLabel6.setText("Direccion Correo");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 346, -1, 22));
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel6.setText("Dirección Correo :");
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, -1, 20));
 
         jTextField_nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField_nombreActionPerformed(evt);
             }
         });
-        add(jTextField_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 63, 154, -1));
-        add(jTextField_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 113, 154, -1));
-        add(jTextField_direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 169, 154, -1));
-        add(jTextField_documento, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 224, 154, -1));
-        add(jTextField_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 299, 154, -1));
-        add(jTextField_direccioncorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 347, 162, -1));
+        add(jTextField_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, 330, -1));
+        add(jTextField_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 330, -1));
+        add(jTextField_direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 320, -1));
+        add(jTextField_documento, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, 300, -1));
+        add(jTextField_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 290, 320, -1));
+        add(jTextField_direccioncorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 270, -1));
 
         jButton3.setText("Ingresar");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -96,15 +102,17 @@ public class Ingresar_Doctor extends javax.swing.JPanel {
                 jButton3ActionPerformed(evt);
             }
         });
-        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 386, -1, -1));
-        add(jDateChooser_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 60, 140, -1));
+        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, -1, -1));
+        add(jDateChooser_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 90, 200, -1));
 
-        jLabel10.setText("Nombre");
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 52, 89, 43));
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel10.setText("Nombre :");
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 89, 20));
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Century Gothic", 0, 36)); // NOI18N
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Ingresar Doctor ");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 150, -1, -1));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 910, 50));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField_nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_nombreActionPerformed
