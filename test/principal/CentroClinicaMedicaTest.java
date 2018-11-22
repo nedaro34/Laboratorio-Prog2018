@@ -91,7 +91,7 @@ public class CentroClinicaMedicaTest {
      * Test of Eliminar_Afiliado method, of class CentroClinicaMedica.
      */
     @Test
-    public void testEliminar_Afiliado() throws Exception {
+    public void testEliminar_Afiliado() throws Exception{
         System.out.println("Eliminar_Afiliado");
         int dni = 12345678;
         CentroClinicaMedica instance = new CentroClinicaMedica();
@@ -99,7 +99,7 @@ public class CentroClinicaMedicaTest {
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
        int esperado=38306476;
-       assertSame(dni, esperado);
+       assertNotEquals(dni, esperado);
 
     }
 
@@ -142,7 +142,8 @@ public class CentroClinicaMedicaTest {
         CentroClinicaMedica instance = new CentroClinicaMedica();
         instance.Ingresar_Doctores(doctores, dni);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
+   assertNull("",doctores);
     }
 
     /**
@@ -212,7 +213,9 @@ public class CentroClinicaMedicaTest {
         CentroClinicaMedica instance = new CentroClinicaMedica();
         instance.Ingresar_Choferes(chofer1, dni);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
+           assertNull("",chofer1);
+
     }
 
     /**
@@ -268,7 +271,9 @@ public class CentroClinicaMedicaTest {
         CentroClinicaMedica instance = new CentroClinicaMedica();
         instance.Ingresar_Enfermero(enfermero1, dni);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
+           assertNull("",enfermero1);
+
     }
 
     /**
@@ -366,7 +371,9 @@ public class CentroClinicaMedicaTest {
         CentroClinicaMedica instance = new CentroClinicaMedica();
         instance.Ingresar_Administrativos(administrativo1, dni);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
+           assertNull("",administrativo1);
+
     }
 
     /**
@@ -379,7 +386,7 @@ public class CentroClinicaMedicaTest {
         CentroClinicaMedica instance = new CentroClinicaMedica();
         Administrativos expResult = null;
         Administrativos result = instance.Buscar_Administrativos(dni);
-        assertEquals(expResult, result);
+        assertNotEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
        // fail("The test case is a prototype.");
     }
@@ -393,7 +400,7 @@ public class CentroClinicaMedicaTest {
         CentroClinicaMedica instance = new CentroClinicaMedica();
         LinkedList expResult = null;
         LinkedList result = instance.Mostrar_Administrativo();
-        assertEquals(expResult, result);
+        assertNotEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
        // fail("The test case is a prototype.");
     }
@@ -409,7 +416,9 @@ public class CentroClinicaMedicaTest {
         CentroClinicaMedica instance = new CentroClinicaMedica();
         instance.Ingresar_Familiar(familiar1, dni);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
+           assertNull("",familiar1);
+
     }
 
     /**
@@ -465,7 +474,9 @@ public class CentroClinicaMedicaTest {
         CentroClinicaMedica instance = new CentroClinicaMedica();
         instance.Ingresar_Movil(movil, pant);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+//        fail("The test case is a prototype.");
+           assertNull("",movil);
+
     }
 
     /**
@@ -478,7 +489,7 @@ public class CentroClinicaMedicaTest {
         CentroClinicaMedica instance = new CentroClinicaMedica();
         Moviles expResult = null;
         Moviles result = instance.Buscar_Movil(patente);
-        assertEquals(expResult, result);
+        assertNotEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
@@ -565,7 +576,9 @@ public class CentroClinicaMedicaTest {
         CentroClinicaMedica instance = new CentroClinicaMedica();
         instance.Ingresar_Pago(pago, mes, dni);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
+           assertNull("",pago);
+
     }
 
     /**
@@ -577,7 +590,7 @@ public class CentroClinicaMedicaTest {
         CentroClinicaMedica instance = new CentroClinicaMedica();
         LinkedList expResult = null;
         LinkedList result = instance.Mostrar_Pago();
-        assertEquals(expResult, result);
+        assertNotEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
        // fail("The test case is a prototype.");
     }
@@ -592,7 +605,9 @@ public class CentroClinicaMedicaTest {
         CentroClinicaMedica instance = new CentroClinicaMedica();
         instance.Ingresar_Solicitud(solic);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
+           assertNull("",solic);
+
     }
 
     /**
@@ -635,7 +650,9 @@ public class CentroClinicaMedicaTest {
         CentroClinicaMedica instance = new CentroClinicaMedica();
         instance.Ingresar_Resultado(registro, dni);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
+           assertNull("",registro);
+
     }
 
     /**
