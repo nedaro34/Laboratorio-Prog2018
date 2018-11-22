@@ -63,7 +63,7 @@ public class Ingresar_Administractivo extends javax.swing.JPanel {
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setText("Direccion :");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 70, 20));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 80, 20));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setText("Documento :");
