@@ -18,12 +18,12 @@ import principal.ListaVaciaExcepcion;
  *
  * @author Administrador
  */
-public class Eliminar_Emfermero extends javax.swing.JPanel {
+public class EliminarEmfermero extends javax.swing.JPanel {
 
     /**
      * Creates new form Ingresar_Afiliado
      */
-    public Eliminar_Emfermero() {
+    public EliminarEmfermero() {
         initComponents();
     }
 
@@ -153,9 +153,9 @@ public class Eliminar_Emfermero extends javax.swing.JPanel {
             jTextField_telefono.setText("");
             
        } catch (EnfermeroNoExistenteExcepcion ex) { 
-            Logger.getLogger(Eliminar_Emfermero.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(EliminarEmfermero.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ListaVaciaExcepcion ex) {
-            Logger.getLogger(Eliminar_Emfermero.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(EliminarEmfermero.class.getName()).log(Level.SEVERE, null, ex);
         } 
     }//GEN-LAST:event_jButton1ActionPerformed
 

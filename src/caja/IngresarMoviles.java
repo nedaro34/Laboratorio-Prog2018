@@ -15,12 +15,12 @@ import principal.MovilesIgualExcepcion;
  *
  * @author SALA3
  */
-public class Ingresar_Moviles extends javax.swing.JPanel {
+public class IngresarMoviles extends javax.swing.JPanel {
 
     /**
      * Creates new form Ingresar_Moviles
      */
-    public Ingresar_Moviles() {
+    public IngresarMoviles() {
         initComponents();
     }
 

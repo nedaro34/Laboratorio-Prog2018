@@ -19,12 +19,12 @@ import principal.PatenteIncorrectoExcepcion;
  *
  * @author Administrador
  */
-public class Eliminar_Administractivo extends javax.swing.JPanel {
+public class EliminarAdministractivo extends javax.swing.JPanel {
 
     /**
      * Creates new form Ingresar_Afiliado
      */
-    public Eliminar_Administractivo() {
+    public EliminarAdministractivo() {
         initComponents();
     }
 
@@ -185,9 +185,9 @@ public class Eliminar_Administractivo extends javax.swing.JPanel {
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
        } catch (AdministrativoNoExistenteExcepcion ex) { 
-            Logger.getLogger(Eliminar_Administractivo.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(EliminarAdministractivo.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ListaVaciaExcepcion ex) {
-            Logger.getLogger(Eliminar_Administractivo.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(EliminarAdministractivo.class.getName()).log(Level.SEVERE, null, ex);
         } 
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -206,7 +206,7 @@ public class Eliminar_Administractivo extends javax.swing.JPanel {
             
             
         } catch (PatenteIncorrectoExcepcion ex) {
-            Logger.getLogger(Eliminar_Administractivo.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(EliminarAdministractivo.class.getName()).log(Level.SEVERE, null, ex);
         }
             
            

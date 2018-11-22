@@ -20,12 +20,12 @@ import principal.VerificarDocumentosExcepcion;
  *
  * @author Administrador
  */
-public class Ingresar_Afiliado extends javax.swing.JPanel {
+public class IngresarAfiliado extends javax.swing.JPanel {
     DateFormat fecha = DateFormat.getDateInstance();
     /**
      * Creates new form Ingresar_Afiliado
      */
-    public Ingresar_Afiliado() {
+    public IngresarAfiliado() {
         initComponents();
     }
 
@@ -53,12 +53,9 @@ public class Ingresar_Afiliado extends javax.swing.JPanel {
         jTextField_nombre = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jDateChooser_fecha = new com.toedter.calendar.JDateChooser();
-<<<<<<< HEAD
+        jLabel1 = new javax.swing.JLabel();
         jTextField_resultado = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-=======
-        jLabel1 = new javax.swing.JLabel();
->>>>>>> b9cf2d8881aae6587a182f0dd6550466bc7facc9
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -108,9 +105,13 @@ public class Ingresar_Afiliado extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-<<<<<<< HEAD
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, -1, -1));
-        add(jDateChooser_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 20, -1, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, -1, -1));
+        add(jDateChooser_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 90, 200, -1));
+
+        jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 36)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Ingresar Afiliado");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 910, 50));
 
         jTextField_resultado.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         jTextField_resultado.setEnabled(false);
@@ -124,15 +125,6 @@ public class Ingresar_Afiliado extends javax.swing.JPanel {
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText("Resultado :");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 440, 100, 30));
-=======
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, -1, -1));
-        add(jDateChooser_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 90, 200, -1));
-
-        jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 36)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Ingresar Afiliado");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 910, 50));
->>>>>>> b9cf2d8881aae6587a182f0dd6550466bc7facc9
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -202,11 +194,8 @@ public class Ingresar_Afiliado extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private com.toedter.calendar.JDateChooser jDateChooser_fecha;
-<<<<<<< HEAD
-    private javax.swing.JLabel jLabel2;
-=======
     private javax.swing.JLabel jLabel1;
->>>>>>> b9cf2d8881aae6587a182f0dd6550466bc7facc9
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

@@ -5,8 +5,8 @@
  */
 package jFrame;
 
-import caja.Eliminar_Emfermero;
-import caja.Ingresar_Emfermero;
+import caja.EliminarEmfermero;
+import caja.IngresarEmfermero;
 import caja.Modificar_Emfermero;
 import caja.Mostrar_Enfermero;
 import javax.swing.JOptionPane;
@@ -179,7 +179,7 @@ public class jEmfermero extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
        
-        new CambiaPanel(jPanel_Caja,new Ingresar_Emfermero());
+        new CambiaPanel(jPanel_Caja,new IngresarEmfermero());
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -189,7 +189,7 @@ public class jEmfermero extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         
-        new CambiaPanel(jPanel_Caja,new Eliminar_Emfermero());
+        new CambiaPanel(jPanel_Caja,new EliminarEmfermero());
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

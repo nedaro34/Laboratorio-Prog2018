@@ -13,12 +13,12 @@ import principal.MovilesIgualExcepcion;
  *
  * @author SALA3
  */
-public class Eliminar_Moviles extends javax.swing.JPanel {
+public class EliminarMoviles extends javax.swing.JPanel {
 
     /**
      * Creates new form Ingresar_Moviles
      */
-    public Eliminar_Moviles() {
+    public EliminarMoviles() {
         initComponents();
     }
 

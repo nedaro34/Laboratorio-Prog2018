@@ -20,12 +20,12 @@ import principal.verificar_documentosExcepcion;
  *
  * @author Administrador
  */
-public class Ingresar_Chofer extends javax.swing.JPanel {
+public class IngresarChofer extends javax.swing.JPanel {
     DateFormat fecha = DateFormat.getDateInstance();
     /**
      * Creates new form Ingresar_Afiliado
      */
-    public Ingresar_Chofer() {
+    public IngresarChofer() {
         initComponents();
     }
      ///
@@ -154,7 +154,7 @@ public class Ingresar_Chofer extends javax.swing.JPanel {
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
        } catch (verificar_documentosExcepcion ex) { 
-            Logger.getLogger(Ingresar_Chofer.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(IngresarChofer.class.getName()).log(Level.SEVERE, null, ex);
         } 
     }//GEN-LAST:event_jButton1ActionPerformed
 

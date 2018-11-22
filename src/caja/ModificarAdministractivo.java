@@ -17,12 +17,12 @@ import principal.ListaVaciaExcepcion;
  *
  * @author Administrador
  */
-public class Modificar_Administractivo extends javax.swing.JPanel {
+public class ModificarAdministractivo extends javax.swing.JPanel {
 
     /**
      * Creates new form Ingresar_Afiliado
      */
-    public Modificar_Administractivo() {
+    public ModificarAdministractivo() {
         initComponents();
     }
 
@@ -141,9 +141,9 @@ public class Modificar_Administractivo extends javax.swing.JPanel {
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
        } catch (AdministrativoNoExistenteExcepcion ex) { 
-            Logger.getLogger(Modificar_Administractivo.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ModificarAdministractivo.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ListaVaciaExcepcion ex) {
-            Logger.getLogger(Modificar_Administractivo.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ModificarAdministractivo.class.getName()).log(Level.SEVERE, null, ex);
         } 
     }//GEN-LAST:event_jButton1ActionPerformed
 

@@ -21,12 +21,12 @@ import principal.verificar_documentosExcepcion;
  *
  * @author Administrador
  */
-public class Ingresar_Emfermero extends javax.swing.JPanel {
+public class IngresarEmfermero extends javax.swing.JPanel {
     DateFormat fecha = DateFormat.getDateInstance();
     /**
      * Creates new form Ingresar_Afiliado
      */
-    public Ingresar_Emfermero() {
+    public IngresarEmfermero() {
         initComponents();
     }
 
@@ -154,7 +154,7 @@ public class Ingresar_Emfermero extends javax.swing.JPanel {
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
        } catch (verificar_documentosExcepcion ex) { 
-            Logger.getLogger(Ingresar_Emfermero.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(IngresarEmfermero.class.getName()).log(Level.SEVERE, null, ex);
         } 
     }//GEN-LAST:event_jButton1ActionPerformed
 

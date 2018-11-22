@@ -17,12 +17,12 @@ import principal.ListaVaciaExcepcion;
  *
  * @author Administrador
  */
-public class Modificar_Afiliado extends javax.swing.JPanel {
+public class ModificarAfiliado extends javax.swing.JPanel {
     DateFormat fecha = DateFormat.getDateInstance();
     /**
      * Creates new form Ingresar_Afiliado
      */
-    public Modificar_Afiliado() {
+    public ModificarAfiliado() {
         initComponents();
     }
 

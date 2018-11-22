@@ -6,8 +6,8 @@
 package jFrame;
 
 
-import caja.Eliminar_Familiar;
-import caja.Ingresar_Familiar;
+import caja.EliminarFamiliar;
+import caja.IngresarFamiliar;
 import caja.Modificar_Familiar;
 import javax.swing.JOptionPane;
 import paneles.CambiaPanel;
@@ -170,7 +170,7 @@ public class jGrupoFamiliar extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelMenuMouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        new CambiaPanel(jPanel_Caja,new Ingresar_Familiar());
+        new CambiaPanel(jPanel_Caja,new IngresarFamiliar());
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -178,7 +178,7 @@ public class jGrupoFamiliar extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        new CambiaPanel(jPanel_Caja,new Eliminar_Familiar());
+        new CambiaPanel(jPanel_Caja,new EliminarFamiliar());
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

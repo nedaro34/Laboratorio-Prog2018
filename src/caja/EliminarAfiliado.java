@@ -17,12 +17,12 @@ import principal.ListaVaciaExcepcion;
  *
  * @author Administrador
  */
-public class Eliminar_Afiliado extends javax.swing.JPanel {
+public class EliminarAfiliado extends javax.swing.JPanel {
 
     /**
      * Creates new form Ingresar_Afiliado
      */
-    public Eliminar_Afiliado() {
+    public EliminarAfiliado() {
         initComponents();
     }
 

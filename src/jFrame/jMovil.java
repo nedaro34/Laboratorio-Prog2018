@@ -5,8 +5,8 @@
  */
 package jFrame;
 
-import caja.Eliminar_Moviles;
-import caja.Ingresar_Moviles;
+import caja.EliminarMoviles;
+import caja.IngresarMoviles;
 import caja.Modificar_Moviles;
 import caja.Mostrar_Movil;
 import javax.swing.JOptionPane;
@@ -180,7 +180,7 @@ public class jMovil extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         
-        new CambiaPanel(jPanel_Caja,new Ingresar_Moviles());
+        new CambiaPanel(jPanel_Caja,new IngresarMoviles());
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -190,7 +190,7 @@ public class jMovil extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         
-        new CambiaPanel(jPanel_Caja,new Eliminar_Moviles());
+        new CambiaPanel(jPanel_Caja,new EliminarMoviles());
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

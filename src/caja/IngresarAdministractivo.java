@@ -20,12 +20,12 @@ import principal.verificar_documentosExcepcion;
  *
  * @author Administrador
  */
-public class Ingresar_Administractivo extends javax.swing.JPanel {
+public class IngresarAdministractivo extends javax.swing.JPanel {
     DateFormat fecha = DateFormat.getDateInstance();
     /**
      * Creates new form Ingresar_Afiliado
      */
-    public Ingresar_Administractivo() {
+    public IngresarAdministractivo() {
         initComponents();
     }
 

@@ -5,8 +5,8 @@
  */
 package jFrame;
 
-import caja.Eliminar_Chofer;
-import caja.Ingresar_Chofer;
+import caja.EliminarChofer;
+import caja.IngresarChofer;
 import caja.Modificar_Chofer;
 import caja.Mostrar_Choferes;
 import javax.swing.JOptionPane;
@@ -178,7 +178,7 @@ public class jChofer extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         
-        new CambiaPanel(jPanel_Caja,new Ingresar_Chofer());
+        new CambiaPanel(jPanel_Caja,new IngresarChofer());
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -188,7 +188,7 @@ public class jChofer extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         
-        new CambiaPanel(jPanel_Caja,new Eliminar_Chofer());
+        new CambiaPanel(jPanel_Caja,new EliminarChofer());
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

@@ -5,7 +5,7 @@
  */
 package jFrame;
 
-import caja.Ingresar_Pago;
+import caja.IngresarPago;
 import caja.Mostrar_Pago;
 import caja.Primer_Pago;
 import javax.swing.JOptionPane;
@@ -178,7 +178,7 @@ public class jPago extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-       new CambiaPanel(jPanel_Caja,new Ingresar_Pago());
+       new CambiaPanel(jPanel_Caja,new IngresarPago());
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

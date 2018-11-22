@@ -19,12 +19,12 @@ import principal.ListaVaciaExcepcion;
  *
  * @author Administrador
  */
-public class Eliminar_Doctor extends javax.swing.JPanel {
+public class EliminarDoctor extends javax.swing.JPanel {
 
     /**
      * Creates new form Ingresar_Afiliado
      */
-    public Eliminar_Doctor() {
+    public EliminarDoctor() {
         initComponents();
     }
 

@@ -5,8 +5,8 @@
  */
 package jFrame;
 
-import caja.Eliminar_Doctor;
-import caja.Ingresar_Doctor;
+import caja.EliminarDoctor;
+import caja.IngresarDoctor;
 import caja.Modificar_Doctor;
 import caja.Mostrar_Doctor;
 import javax.swing.JOptionPane;
@@ -179,12 +179,12 @@ public class jDoctor extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
      
-        new CambiaPanel(jPanel_Caja,new Ingresar_Doctor());
+        new CambiaPanel(jPanel_Caja,new IngresarDoctor());
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
       
-        new CambiaPanel(jPanel_Caja,new Eliminar_Doctor());
+        new CambiaPanel(jPanel_Caja,new EliminarDoctor());
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

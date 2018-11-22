@@ -18,12 +18,12 @@ import principal.ListaVaciaExcepcion;
  *
  * @author Administrador
  */
-public class Eliminar_Chofer extends javax.swing.JPanel {
+public class EliminarChofer extends javax.swing.JPanel {
 
     /**
      * Creates new form Ingresar_Afiliado
      */
-    public Eliminar_Chofer() {
+    public EliminarChofer() {
         initComponents();
     }
 

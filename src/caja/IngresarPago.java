@@ -17,12 +17,12 @@ import principal.RegistroPago;
  *
  * @author TAPIA
  */
-public class Ingresar_Pago extends javax.swing.JPanel {
+public class IngresarPago extends javax.swing.JPanel {
 
     /**
      * Creates new form Primer_Pago
      */
-    public Ingresar_Pago() {
+    public IngresarPago() {
         initComponents();
     }
 

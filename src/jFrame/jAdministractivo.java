@@ -5,9 +5,9 @@
  */
 package jFrame;
 
-import caja.Eliminar_Administractivo;
-import caja.Ingresar_Administractivo;
-import caja.Modificar_Administractivo;
+import caja.EliminarAdministractivo;
+import caja.IngresarAdministractivo;
+import caja.ModificarAdministractivo;
 import caja.Mostrar_Administractivo;
 import javax.swing.JOptionPane;
 import paneles.CambiaPanel;
@@ -180,17 +180,17 @@ public class jAdministractivo extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         
-        new CambiaPanel(jPanel_Caja,new Ingresar_Administractivo());
+        new CambiaPanel(jPanel_Caja,new IngresarAdministractivo());
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         
-        new CambiaPanel(jPanel_Caja,new Modificar_Administractivo());
+        new CambiaPanel(jPanel_Caja,new ModificarAdministractivo());
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         
-        new CambiaPanel(jPanel_Caja,new Eliminar_Administractivo());
+        new CambiaPanel(jPanel_Caja,new EliminarAdministractivo());
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
