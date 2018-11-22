@@ -43,15 +43,15 @@ public class RegistroPagoTest {
     /**
      * Test of getFam_precio method, of class RegistroPago.
      */
-    @Test
+    @Test(expected=NullPointerException.class)
     public void testGetFam_precio() {
         System.out.println("getFam_precio");
         RegistroPago instance = null;
         int expResult = 0;
         int result = instance.getFam_precio();
-        assertEquals(expResult, result);
+        assertNotEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     
@@ -65,7 +65,7 @@ public class RegistroPagoTest {
     public void testPago() {
         Afiliados afiliado = new Afiliados (4,"Lautaro","Tapia","Catamarca","25/09/1991",123456789,"123456","ejemplo@gmail.com");
         RegistroPago nuevo = new RegistroPago("Lautaro","Tapia",123456789,2018,500,4,afiliado);
-        int expResult = 500;
+        int expResult = 2500;
         int result = nuevo.pago();
         
       assertEquals(expResult, result);
@@ -75,11 +75,11 @@ public class RegistroPagoTest {
     /**
      * Test of mora method, of class RegistroPago.
      */
-    @Test
+    @Test(expected=Exception.class)
     public void testMora() {
         Afiliados afiliado = new Afiliados (4,"Lautaro","Tapia","Catamarca","25/09/1991",123456789,"123456","ejemplo@gmail.com");
         RegistroPago nuevo = new RegistroPago("Lautaro","Tapia",123456789,2018,500,4,afiliado);
-        int expResult = 500;
+        int expResult = 2500;
         int result = nuevo.mora();
         assertEquals(expResult, result);
 

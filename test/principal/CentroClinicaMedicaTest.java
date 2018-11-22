@@ -386,7 +386,7 @@ public class CentroClinicaMedicaTest {
         CentroClinicaMedica instance = new CentroClinicaMedica();
         Administrativos expResult = null;
         Administrativos result = instance.Buscar_Administrativos(dni);
-        assertNotEquals(expResult, result);
+        assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
        // fail("The test case is a prototype.");
     }
