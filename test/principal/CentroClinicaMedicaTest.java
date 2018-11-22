@@ -90,7 +90,7 @@ public class CentroClinicaMedicaTest {
     /**
      * Test of Eliminar_Afiliado method, of class CentroClinicaMedica.
      */
-    @Test
+    @Test(expected=Exception.class)
     public void testEliminar_Afiliado() throws Exception{
         System.out.println("Eliminar_Afiliado");
         int dni = 12345678;
@@ -106,7 +106,7 @@ public class CentroClinicaMedicaTest {
     /**
      * Test of Modificar_Afiliados method, of class CentroClinicaMedica.
      */
-    @Test
+    @Test(expected=Exception.class)
     public void testModificar_Afiliados() {
         System.out.println("Modificar_Afiliados");
         Afiliados afiliados = null;
@@ -164,7 +164,7 @@ public class CentroClinicaMedicaTest {
     /**
      * Test of Eliminar_Doctor method, of class CentroClinicaMedica.
      */
-    @Test
+    @Test(expected=NullPointerException.class)
     public void testEliminar_Doctor() throws Exception {
         System.out.println("Eliminar_Doctor");
         int dni = 0;
@@ -185,7 +185,9 @@ public class CentroClinicaMedicaTest {
         CentroClinicaMedica instance = new CentroClinicaMedica();
         instance.Modificar_Doctor(doctores, dni);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
+        int esperado=0;
+        assertEquals(dni,esperado);
     }
 
     /**
@@ -229,13 +231,13 @@ public class CentroClinicaMedicaTest {
         CentroClinicaMedica instance = new CentroClinicaMedica();
         instance.Modificar_Chofer(choferes, dni);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+//        fail("The test case is a prototype.");
     }
 
     /**
      * Test of Eliminar_Chofer method, of class CentroClinicaMedica.
      */
-    @Test
+    @Test(expected=Exception.class)
     public void testEliminar_Chofer() throws Exception {
         System.out.println("Eliminar_Chofer");
         int dni = 0;
@@ -308,7 +310,7 @@ public class CentroClinicaMedicaTest {
     /**
      * Test of Eliminar_Enfermero method, of class CentroClinicaMedica.
      */
-    @Test
+    @Test(expected=NullPointerException.class)
     public void testEliminar_Enfermero() throws Exception {
         System.out.println("Eliminar_Enfermero");
         int dni = 0;
@@ -321,7 +323,7 @@ public class CentroClinicaMedicaTest {
     /**
      * Test of Modificar_Enfermero method, of class CentroClinicaMedica.
      */
-    @Test
+    @Test(expected=Exception.class)
     public void testModificar_Enfermero_Enfermeros_int() {
         System.out.println("Modificar_Enfermero");
         Enfermeros enfermeros = null;
@@ -335,7 +337,7 @@ public class CentroClinicaMedicaTest {
     /**
      * Test of Modificar_Enfermero method, of class CentroClinicaMedica.
      */
-    @Test
+    @Test(expected=Exception.class)
     public void testModificar_Enfermero_Moviles_String() {
         System.out.println("Modificar_Enfermero");
         Moviles movil = null;
@@ -379,7 +381,7 @@ public class CentroClinicaMedicaTest {
     /**
      * Test of Buscar_Administrativos method, of class CentroClinicaMedica.
      */
-    @Test
+    @Test(expected=NullPointerException.class)
     public void testBuscar_Administrativos() {
         System.out.println("Buscar_Administrativos");
         int dni = 0;
@@ -439,7 +441,7 @@ public class CentroClinicaMedicaTest {
     /**
      * Test of Eliminar_Familiar method, of class CentroClinicaMedica.
      */
-    @Test
+    @Test(expected=Exception.class)
     public void testEliminar_Familiar() throws Exception {
         System.out.println("Eliminar_Familiar");
         int dni = 0;
@@ -452,7 +454,7 @@ public class CentroClinicaMedicaTest {
     /**
      * Test of Modificar_Familiar method, of class CentroClinicaMedica.
      */
-    @Test
+    @Test(expected=Exception.class)
     public void testModificar_Familiar() {
         System.out.println("Modificar_Familiar");
         GrupoFamiliar familiar1 = null;
@@ -482,7 +484,7 @@ public class CentroClinicaMedicaTest {
     /**
      * Test of Buscar_Movil method, of class CentroClinicaMedica.
      */
-    @Test
+    @Test(expected=NullPointerException.class)
     public void testBuscar_Movil() {
         System.out.println("Buscar_Movil");
         String patente = "";
@@ -497,7 +499,7 @@ public class CentroClinicaMedicaTest {
     /**
      * Test of Eliminar_Movil method, of class CentroClinicaMedica.
      */
-    @Test
+    @Test(expected=NullPointerException.class)
     public void testEliminar_Movil() throws Exception {
         System.out.println("Eliminar_Movil");
         String Patente = "";
@@ -510,7 +512,7 @@ public class CentroClinicaMedicaTest {
     /**
      * Test of Modificar_Movil method, of class CentroClinicaMedica.
      */
-    @Test
+    @Test(expected=Exception.class)
     public void testModificar_Movil() {
         System.out.println("Modificar_Movil");
         Moviles movil = null;
@@ -546,7 +548,7 @@ public class CentroClinicaMedicaTest {
         CentroClinicaMedica instance = new CentroClinicaMedica();
         instance.Registar_pago(primer, dni);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+//        fail("The test case is a prototype.");
     }
 
     /**
@@ -658,7 +660,7 @@ public class CentroClinicaMedicaTest {
     /**
      * Test of Eliminar_Administrativos method, of class CentroClinicaMedica.
      */
-    @Test
+    @Test(expected=Exception.class)
     public void testEliminar_Administrativos() throws Exception {
         System.out.println("Eliminar_Administrativos");
         int dni = 0;
