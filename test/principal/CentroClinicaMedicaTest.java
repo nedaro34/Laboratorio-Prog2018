@@ -44,12 +44,16 @@ public class CentroClinicaMedicaTest {
     @Test
     public void testVerificar_documentos() throws Exception {
         System.out.println("verificar_documentos");
-        long documento = 0L;
-        int longitud = 0;
+        long documento = 38306476;
+        int longitud = 8;
         CentroClinicaMedica instance = new CentroClinicaMedica();
-        instance.verificar_documentos(documento, longitud);
+        instance.verificar_documentos(documento,longitud);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
+       int noesperado=0;
+       assertNotEquals(documento, noesperado);
+
+    
     }
 
     /**
@@ -63,14 +67,16 @@ public class CentroClinicaMedicaTest {
         CentroClinicaMedica instance = new CentroClinicaMedica();
         instance.Ingresar_Afiliados(afiliados, dni);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
+    assertNull("Afiliado no existe",afiliados);
+       
     }
 
     /**
      * Test of Buscar_Afiliado method, of class CentroClinicaMedica.
      */
     @Test
-    public void testBuscar_Afiliado() {
+    public void testBuscar_Afiliado() throws ListaVaciaExcepcion {
         System.out.println("Buscar_Afiliado");
         int dni = 0;
         CentroClinicaMedica instance = new CentroClinicaMedica();
@@ -78,7 +84,7 @@ public class CentroClinicaMedicaTest {
         Afiliados result = instance.Buscar_Afiliado(dni);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -87,11 +93,14 @@ public class CentroClinicaMedicaTest {
     @Test
     public void testEliminar_Afiliado() throws Exception {
         System.out.println("Eliminar_Afiliado");
-        int dni = 0;
+        int dni = 12345678;
         CentroClinicaMedica instance = new CentroClinicaMedica();
         instance.Eliminar_Afiliado(dni);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
+       int esperado=38306476;
+       assertSame(dni, esperado);
+
     }
 
     /**
@@ -117,9 +126,9 @@ public class CentroClinicaMedicaTest {
         CentroClinicaMedica instance = new CentroClinicaMedica();
         LinkedList expResult = null;
         LinkedList result = instance.Mostrar_Afiliados();
-        assertEquals(expResult, result);
+        assertNotEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -148,7 +157,7 @@ public class CentroClinicaMedicaTest {
         Doctores result = instance.Buscar_Doctor(dni);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -187,9 +196,9 @@ public class CentroClinicaMedicaTest {
         CentroClinicaMedica instance = new CentroClinicaMedica();
         LinkedList expResult = null;
         LinkedList result = instance.Mostrar_Doctor();
-        assertEquals(expResult, result);
+        assertNotEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -245,7 +254,7 @@ public class CentroClinicaMedicaTest {
         Choferes result = instance.Buscar_Chofer(dni);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -271,9 +280,9 @@ public class CentroClinicaMedicaTest {
         CentroClinicaMedica instance = new CentroClinicaMedica();
         LinkedList expResult = null;
         LinkedList result = instance.Mostrar_Chofer();
-        assertEquals(expResult, result);
+        assertNotEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -288,7 +297,7 @@ public class CentroClinicaMedicaTest {
         Enfermeros result = instance.Buscar_Enfermero(dni);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -341,9 +350,9 @@ public class CentroClinicaMedicaTest {
         CentroClinicaMedica instance = new CentroClinicaMedica();
         LinkedList expResult = null;
         LinkedList result = instance.Mostrar_Enfermero();
-        assertEquals(expResult, result);
+        assertNotEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -372,7 +381,7 @@ public class CentroClinicaMedicaTest {
         Administrativos result = instance.Buscar_Administrativos(dni);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -386,7 +395,7 @@ public class CentroClinicaMedicaTest {
         LinkedList result = instance.Mostrar_Administrativo();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -415,7 +424,7 @@ public class CentroClinicaMedicaTest {
         GrupoFamiliar result = instance.Buscar_Familiar(dni);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -471,7 +480,7 @@ public class CentroClinicaMedicaTest {
         Moviles result = instance.Buscar_Movil(patente);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -510,9 +519,9 @@ public class CentroClinicaMedicaTest {
         CentroClinicaMedica instance = new CentroClinicaMedica();
         LinkedList expResult = null;
         LinkedList result = instance.Mostrar_Movil();
-        assertEquals(expResult, result);
+        assertNotEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -541,7 +550,7 @@ public class CentroClinicaMedicaTest {
         RegistroPago result = instance.Buscar_Pago(dni);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -570,7 +579,7 @@ public class CentroClinicaMedicaTest {
         LinkedList result = instance.Mostrar_Pago();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -598,7 +607,7 @@ public class CentroClinicaMedicaTest {
         Solicitud result = instance.Buscar_Solicitud(dni);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -610,9 +619,9 @@ public class CentroClinicaMedicaTest {
         CentroClinicaMedica instance = new CentroClinicaMedica();
         LinkedList expResult = null;
         LinkedList result = instance.Mostrar_Solicitud();
-        assertEquals(expResult, result);
+        assertNotEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
