@@ -42,6 +42,7 @@ public class Eliminar_Moviles extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jTextField_Patente = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -76,6 +77,10 @@ public class Eliminar_Moviles extends javax.swing.JPanel {
 
         jButton2.setText("Buscar");
         add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 30, 90, 30));
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel5.setText("Eliminar Movil");
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 340, 160, 20));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -103,6 +108,7 @@ public class Eliminar_Moviles extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JTextField jTextField_Marca;
     private javax.swing.JTextField jTextField_Modelo;
     private javax.swing.JTextField jTextField_Patente;

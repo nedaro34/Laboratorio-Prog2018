@@ -57,6 +57,7 @@ public class Ingresar_Familiar extends javax.swing.JPanel {
         jLabel12 = new javax.swing.JLabel();
         jTextField_afiliado = new javax.swing.JTextField();
         jDateChooser_fecha = new com.toedter.calendar.JDateChooser();
+        jLabel1 = new javax.swing.JLabel();
 
         jButton1.setText("jButton1");
 
@@ -109,6 +110,10 @@ public class Ingresar_Familiar extends javax.swing.JPanel {
         add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 90, 30));
         add(jTextField_afiliado, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 240, 180, -1));
         add(jDateChooser_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 20, 130, -1));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setText("Ingresar familiar");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 110, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -176,6 +181,7 @@ public class Ingresar_Familiar extends javax.swing.JPanel {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private com.toedter.calendar.JDateChooser jDateChooser_fecha;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

@@ -53,6 +53,7 @@ public class Ingresar_Administractivo extends javax.swing.JPanel {
         jTextField_nombre = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jDateChooser_fecha = new com.toedter.calendar.JDateChooser();
+        jLabel1 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -98,6 +99,10 @@ public class Ingresar_Administractivo extends javax.swing.JPanel {
         });
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, -1, -1));
         add(jDateChooser_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 20, 130, -1));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setText("Ingresar Administrativos");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 160, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -153,6 +158,7 @@ public class Ingresar_Administractivo extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private com.toedter.calendar.JDateChooser jDateChooser_fecha;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

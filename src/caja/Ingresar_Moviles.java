@@ -42,6 +42,7 @@ public class Ingresar_Moviles extends javax.swing.JPanel {
         jTextField_Modelo = new javax.swing.JTextField();
         jTextField_patente = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -72,6 +73,10 @@ public class Ingresar_Moviles extends javax.swing.JPanel {
             }
         });
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 160, -1));
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel5.setText("Ingresar Moviles");
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 270, 180, 20));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -98,6 +103,7 @@ public class Ingresar_Moviles extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JTextField jTextField_Marca;
     private javax.swing.JTextField jTextField_Modelo;
     private javax.swing.JTextField jTextField_año;

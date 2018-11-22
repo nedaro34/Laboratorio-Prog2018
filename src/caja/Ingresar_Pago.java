@@ -56,6 +56,7 @@ public class Ingresar_Pago extends javax.swing.JPanel {
         jTextField_año = new javax.swing.JTextField();
         jTextField_apellido = new javax.swing.JTextField();
         jTextField_nombre = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -181,6 +182,10 @@ public class Ingresar_Pago extends javax.swing.JPanel {
             }
         });
         add(jTextField_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, 160, -1));
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel11.setText("Ingresar Pago");
+        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 140, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -265,6 +270,7 @@ public class Ingresar_Pago extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> jComboBox_mes;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

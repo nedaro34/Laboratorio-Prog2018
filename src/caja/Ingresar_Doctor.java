@@ -54,6 +54,7 @@ public class Ingresar_Doctor extends javax.swing.JPanel {
         jButton3 = new javax.swing.JButton();
         jDateChooser_fecha = new com.toedter.calendar.JDateChooser();
         jLabel10 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         jButton1.setText("jButton1");
 
@@ -100,6 +101,10 @@ public class Ingresar_Doctor extends javax.swing.JPanel {
 
         jLabel10.setText("Nombre");
         add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 52, 89, 43));
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel7.setText("Ingresar Doctor ");
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 150, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField_nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_nombreActionPerformed
@@ -170,6 +175,7 @@ public class Ingresar_Doctor extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JTextField jTextField_apellido;
     private javax.swing.JTextField jTextField_direccion;
     private javax.swing.JTextField jTextField_direccioncorreo;
