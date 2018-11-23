@@ -265,7 +265,9 @@ public class Solicitud_Medica extends javax.swing.JPanel {
         CentroClinicaMedica centro = new CentroClinicaMedica();
         int dni = Integer.parseInt(jTextField_medico_dni.getText());
         Doctores nuevo = centro.BuscarDoctor(dni);
-        jTextField_result_medico.setText("Se Agrego con exito el Medico ");
+        jTextField_result_medico.setText(nuevo.getNombre()+" "+nuevo.getApellido());
+        //jTextField_result_medico.setText("Se Agrego con exito el Medico ");
+
         } catch (DoctorNoExistenteExcepcion ex) {
                          JOptionPane.showMessageDialog(null, "Doctor no existe  ");
            
@@ -282,7 +284,7 @@ public class Solicitud_Medica extends javax.swing.JPanel {
         CentroClinicaMedica centro = new CentroClinicaMedica();
         int dni = Integer.parseInt(jTextField_dni_enfermero.getText());
         Enfermeros nuevo = centro.BuscarEnfermero(dni);
-        jTextField_result_enfermero.setText("Se Agrego con exito el Enfermero");
+        jTextField_result_enfermero.setText(nuevo.getNombre()+" "+nuevo.getApellido());
        } catch (EnfermeroNoExistenteExcepcion ex) {
                                  JOptionPane.showMessageDialog(null, "Enfermero no existe");
  
@@ -299,7 +301,7 @@ public class Solicitud_Medica extends javax.swing.JPanel {
         CentroClinicaMedica centro = new CentroClinicaMedica();
         int dni = Integer.parseInt(jTextField_dni_administrativo.getText());
         Administrativos nuevo = centro.BuscarAdministrativos(dni);
-        jTextField_result_administrativo.setText("Se Agrego con exito el Administrativo");
+        jTextField_result_administrativo.setText(nuevo.getNombre()+" "+nuevo.getApellido());
         } catch (AdministrativoNoExistenteExcepcion ex) {
                         JOptionPane.showMessageDialog(null, "El administrativo no existe");
          
@@ -316,7 +318,7 @@ public class Solicitud_Medica extends javax.swing.JPanel {
         CentroClinicaMedica centro = new CentroClinicaMedica();
         int dni = Integer.parseInt(jTextField_dni_chofer.getText());
         Choferes nuevo = centro.BuscarChofer(dni);
-        jTextField_result_chofer.setText("Se Agrego con exito el Chofer");
+        jTextField_result_chofer.setText(nuevo.getNombre()+" "+nuevo.getApellido());
        } catch (ListaVaciaExcepcion ex) {
                         JOptionPane.showMessageDialog(null, "La lista esta vacia");
             

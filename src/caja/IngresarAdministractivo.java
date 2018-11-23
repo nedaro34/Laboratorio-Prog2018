@@ -139,7 +139,7 @@ public class IngresarAdministractivo extends javax.swing.JPanel {
        }catch(AdministrativosIgualExcepcion l){
             //hay que ver de hacer una nueva excepcion
            //exepcion afiliado con el mismo documento
-           JOptionPane.showMessageDialog(null, "Ya existe un afiliado con este documento");
+           JOptionPane.showMessageDialog(null, "Ya existe un Admiistrativo con este documento");
             jTextField_documento.setText("");
             
         }catch(NumberFormatException a){
@@ -152,7 +152,7 @@ public class IngresarAdministractivo extends javax.swing.JPanel {
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
        } catch (VerificarDocumentosExcepcion ex) {
-            JOptionPane.showMessageDialog(null, "El documento no existe   ");
+            JOptionPane.showMessageDialog(null, "El documento no es valido   ");
            
 // Logger.getLogger(IngresarAdministractivo.class.getName()).log(Level.SEVERE, null, ex);
         } 
