@@ -48,23 +48,23 @@ public class IngresarMoviles extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Año :");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 104, 26));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 40, 20));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("Marca :");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 21, 104, 26));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 50, 20));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setText("Modelo :");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 104, 26));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 60, 20));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setText("Patente :");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 104, 26));
-        add(jTextField_año, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, 180, 30));
-        add(jTextField_Marca, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, 180, 30));
-        add(jTextField_Modelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 70, 180, 30));
-        add(jTextField_patente, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, 180, 30));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, 20));
+        add(jTextField_año, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 350, 20));
+        add(jTextField_Marca, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, 340, 20));
+        add(jTextField_Modelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 330, 20));
+        add(jTextField_patente, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 330, 20));
 
         jButton1.setText("Ingresar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -72,11 +72,12 @@ public class IngresarMoviles extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 160, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 160, -1));
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Century Gothic", 0, 36)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Ingresar Moviles");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 270, 180, 20));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 910, 50));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
