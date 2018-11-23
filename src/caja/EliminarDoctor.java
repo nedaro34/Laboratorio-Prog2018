@@ -118,7 +118,7 @@ public class EliminarDoctor extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Eliminar Doctor");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 900, 50));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 910, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
