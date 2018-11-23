@@ -193,9 +193,14 @@ public class EliminarAdministractivo extends javax.swing.JPanel {
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
        } catch (AdministrativoNoExistenteExcepcion ex) { 
-            Logger.getLogger(EliminarAdministractivo.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "EL administrativo no existe");
+            
+//Logger.getLogger(EliminarAdministractivo.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ListaVaciaExcepcion ex) {
-            Logger.getLogger(EliminarAdministractivo.class.getName()).log(Level.SEVERE, null, ex);
+            
+            JOptionPane.showMessageDialog(null, "La lista esta vacia");
+
+//Logger.getLogger(EliminarAdministractivo.class.getName()).log(Level.SEVERE, null, ex);
         } 
     }//GEN-LAST:event_jButton1ActionPerformed
 

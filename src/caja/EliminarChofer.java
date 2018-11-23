@@ -153,9 +153,12 @@ public class EliminarChofer extends javax.swing.JPanel {
             
 
         }catch(DocumentoIncorrectoExcepcion e){
-           
+                       JOptionPane.showMessageDialog(null, "El documento no es correcto");
+
             
         }catch(ListaVaciaExcepcion e){
+                        JOptionPane.showMessageDialog(null, "La lista esta vacia");
+
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 

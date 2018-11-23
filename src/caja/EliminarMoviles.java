@@ -5,6 +5,7 @@
  */
 package caja;
 
+import javax.swing.JOptionPane;
 import principal.CentroClinicaMedica;
 import principal.Moviles;
 import principal.MovilesIgualExcepcion;
@@ -100,9 +101,11 @@ public class EliminarMoviles extends javax.swing.JPanel {
         try {
             centro.IngresarMovil(movil, patente);
         } catch (MovilesIgualExcepcion ex) {
-            
+                        JOptionPane.showMessageDialog(null, "El movil ya existe");
+
         }catch(NumberFormatException a){
-            
+                        JOptionPane.showMessageDialog(null, "Faltan campos");
+
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 

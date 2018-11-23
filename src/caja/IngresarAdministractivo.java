@@ -152,7 +152,9 @@ public class IngresarAdministractivo extends javax.swing.JPanel {
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
        } catch (VerificarDocumentosExcepcion ex) {
-            Logger.getLogger(IngresarAdministractivo.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "El documento no existe   ");
+           
+// Logger.getLogger(IngresarAdministractivo.class.getName()).log(Level.SEVERE, null, ex);
         } 
     }//GEN-LAST:event_jButton1ActionPerformed
 
