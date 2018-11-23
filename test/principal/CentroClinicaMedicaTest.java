@@ -47,7 +47,7 @@ public class CentroClinicaMedicaTest {
         long documento = 38306476;
         int longitud = 8;
         CentroClinicaMedica instance = new CentroClinicaMedica();
-        instance.verificar_documentos(documento,longitud);
+        instance.VerificarDocumentos(documento,longitud);
         // TODO review the generated test code and remove the default call to fail.
        // fail("The test case is a prototype.");
        int noesperado=0;
@@ -65,7 +65,7 @@ public class CentroClinicaMedicaTest {
         Afiliados afiliados = null;
         int dni = 0;
         CentroClinicaMedica instance = new CentroClinicaMedica();
-        instance.Ingresar_Afiliados(afiliados, dni);
+        instance.IngresarAfiliados(afiliados, dni);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     assertNull("Afiliado no existe",afiliados);
@@ -76,12 +76,12 @@ public class CentroClinicaMedicaTest {
      * Test of Buscar_Afiliado method, of class CentroClinicaMedica.
      */
     @Test
-    public void testBuscar_Afiliado() throws ListaVaciaExcepcion {
+    public void testBuscar_Afiliado() throws ListaVaciaExcepcion, AfiliadoNoExistenteExcepcion {
         System.out.println("Buscar_Afiliado");
         int dni = 0;
         CentroClinicaMedica instance = new CentroClinicaMedica();
         Afiliados expResult = null;
-        Afiliados result = instance.Buscar_Afiliado(dni);
+        Afiliados result = instance.BuscarAfiliado(dni);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
        // fail("The test case is a prototype.");
@@ -95,7 +95,7 @@ public class CentroClinicaMedicaTest {
         System.out.println("Eliminar_Afiliado");
         int dni = 12345678;
         CentroClinicaMedica instance = new CentroClinicaMedica();
-        instance.Eliminar_Afiliado(dni);
+        instance.EliminarAfiliado(dni);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
        int esperado=38306476;
@@ -107,12 +107,12 @@ public class CentroClinicaMedicaTest {
      * Test of Modificar_Afiliados method, of class CentroClinicaMedica.
      */
     @Test(expected=Exception.class)
-    public void testModificar_Afiliados() {
+    public void testModificar_Afiliados() throws ListaVaciaExcepcion, AfiliadoNoExistenteExcepcion {
         System.out.println("Modificar_Afiliados");
         Afiliados afiliados = null;
         int dni = 0;
         CentroClinicaMedica instance = new CentroClinicaMedica();
-        instance.Modificar_Afiliados(afiliados, dni);
+        instance.ModificarAfiliados(afiliados, dni);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -121,11 +121,11 @@ public class CentroClinicaMedicaTest {
      * Test of Mostrar_Afiliados method, of class CentroClinicaMedica.
      */
     @Test
-    public void testMostrar_Afiliados() {
+    public void testMostrar_Afiliados() throws ListaVaciaExcepcion {
         System.out.println("Mostrar_Afiliados");
         CentroClinicaMedica instance = new CentroClinicaMedica();
         LinkedList expResult = null;
-        LinkedList result = instance.Mostrar_Afiliados();
+        LinkedList result = instance.MostrarAfiliados();
         assertNotEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
@@ -140,7 +140,7 @@ public class CentroClinicaMedicaTest {
         Doctores doctores = null;
         int dni = 0;
         CentroClinicaMedica instance = new CentroClinicaMedica();
-        instance.Ingresar_Doctores(doctores, dni);
+        instance.IngresarDoctores(doctores, dni);
         // TODO review the generated test code and remove the default call to fail.
        // fail("The test case is a prototype.");
    assertNull("",doctores);
@@ -150,12 +150,12 @@ public class CentroClinicaMedicaTest {
      * Test of Buscar_Doctor method, of class CentroClinicaMedica.
      */
     @Test
-    public void testBuscar_Doctor() {
+    public void testBuscar_Doctor() throws DoctorNoExistenteExcepcion, ListaVaciaExcepcion {
         System.out.println("Buscar_Doctor");
         int dni = 0;
         CentroClinicaMedica instance = new CentroClinicaMedica();
         Doctores expResult = null;
-        Doctores result = instance.Buscar_Doctor(dni);
+        Doctores result = instance.BuscarDoctor(dni);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
        // fail("The test case is a prototype.");
@@ -169,7 +169,7 @@ public class CentroClinicaMedicaTest {
         System.out.println("Eliminar_Doctor");
         int dni = 0;
         CentroClinicaMedica instance = new CentroClinicaMedica();
-        instance.Eliminar_Doctor(dni);
+        instance.EliminarDoctor(dni);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -178,12 +178,12 @@ public class CentroClinicaMedicaTest {
      * Test of Modificar_Doctor method, of class CentroClinicaMedica.
      */
     @Test
-    public void testModificar_Doctor() {
+    public void testModificar_Doctor() throws ListaVaciaExcepcion, DoctorNoExistenteExcepcion {
         System.out.println("Modificar_Doctor");
         Doctores doctores = null;
         int dni = 0;
         CentroClinicaMedica instance = new CentroClinicaMedica();
-        instance.Modificar_Doctor(doctores, dni);
+        instance.ModificarDoctor(doctores, dni);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
         int esperado=0;
@@ -194,11 +194,11 @@ public class CentroClinicaMedicaTest {
      * Test of Mostrar_Doctor method, of class CentroClinicaMedica.
      */
     @Test
-    public void testMostrar_Doctor() {
+    public void testMostrar_Doctor() throws ListaVaciaExcepcion {
         System.out.println("Mostrar_Doctor");
         CentroClinicaMedica instance = new CentroClinicaMedica();
         LinkedList expResult = null;
-        LinkedList result = instance.Mostrar_Doctor();
+        LinkedList result = instance.MostrarDoctor();
         assertNotEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
@@ -213,7 +213,7 @@ public class CentroClinicaMedicaTest {
         Choferes chofer1 = null;
         int dni = 0;
         CentroClinicaMedica instance = new CentroClinicaMedica();
-        instance.Ingresar_Choferes(chofer1, dni);
+        instance.IngresarChoferes(chofer1, dni);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
            assertNull("",chofer1);
@@ -224,12 +224,12 @@ public class CentroClinicaMedicaTest {
      * Test of Modificar_Chofer method, of class CentroClinicaMedica.
      */
     @Test
-    public void testModificar_Chofer() {
+    public void testModificar_Chofer() throws ListaVaciaExcepcion, ChoferesNoExisteExcepcion {
         System.out.println("Modificar_Chofer");
         Choferes choferes = null;
         int dni = 0;
         CentroClinicaMedica instance = new CentroClinicaMedica();
-        instance.Modificar_Chofer(choferes, dni);
+        instance.ModificarChofer(choferes, dni);
         // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
     }
@@ -242,7 +242,7 @@ public class CentroClinicaMedicaTest {
         System.out.println("Eliminar_Chofer");
         int dni = 0;
         CentroClinicaMedica instance = new CentroClinicaMedica();
-        instance.Eliminar_Chofer(dni);
+        instance.EliminarChofer(dni);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -251,12 +251,12 @@ public class CentroClinicaMedicaTest {
      * Test of Buscar_Chofer method, of class CentroClinicaMedica.
      */
     @Test
-    public void testBuscar_Chofer() {
+    public void testBuscar_Chofer() throws ListaVaciaExcepcion, ChoferesNoExisteExcepcion {
         System.out.println("Buscar_Chofer");
         int dni = 0;
         CentroClinicaMedica instance = new CentroClinicaMedica();
         Choferes expResult = null;
-        Choferes result = instance.Buscar_Chofer(dni);
+        Choferes result = instance.BuscarChofer(dni);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
@@ -271,7 +271,7 @@ public class CentroClinicaMedicaTest {
         Enfermeros enfermero1 = null;
         int dni = 0;
         CentroClinicaMedica instance = new CentroClinicaMedica();
-        instance.Ingresar_Enfermero(enfermero1, dni);
+        instance.IngresarEnfermero(enfermero1, dni);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
            assertNull("",enfermero1);
@@ -282,11 +282,11 @@ public class CentroClinicaMedicaTest {
      * Test of Mostrar_Chofer method, of class CentroClinicaMedica.
      */
     @Test
-    public void testMostrar_Chofer() {
+    public void testMostrar_Chofer() throws ListaVaciaExcepcion {
         System.out.println("Mostrar_Chofer");
         CentroClinicaMedica instance = new CentroClinicaMedica();
         LinkedList expResult = null;
-        LinkedList result = instance.Mostrar_Chofer();
+        LinkedList result = instance.MostrarChofer();
         assertNotEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
        // fail("The test case is a prototype.");
@@ -295,13 +295,13 @@ public class CentroClinicaMedicaTest {
     /**
      * Test of Buscar_Enfermero method, of class CentroClinicaMedica.
      */
-    @Test
-    public void testBuscar_Enfermero() {
+    @Test(expected=Exception.class)
+    public void testBuscar_Enfermero() throws ListaVaciaExcepcion, EnfermeroNoExistenteExcepcion {
         System.out.println("Buscar_Enfermero");
         int dni = 0;
         CentroClinicaMedica instance = new CentroClinicaMedica();
         Enfermeros expResult = null;
-        Enfermeros result = instance.Buscar_Enfermero(dni);
+        Enfermeros result = instance.BuscarEnfermero(dni);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
        // fail("The test case is a prototype.");
@@ -315,7 +315,7 @@ public class CentroClinicaMedicaTest {
         System.out.println("Eliminar_Enfermero");
         int dni = 0;
         CentroClinicaMedica instance = new CentroClinicaMedica();
-        instance.Eliminar_Enfermero(dni);
+        instance.EliminarEnfermero(dni);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -324,12 +324,12 @@ public class CentroClinicaMedicaTest {
      * Test of Modificar_Enfermero method, of class CentroClinicaMedica.
      */
     @Test(expected=Exception.class)
-    public void testModificar_Enfermero_Enfermeros_int() {
+    public void testModificar_Enfermero_Enfermeros_int() throws ListaVaciaExcepcion, EnfermeroNoExistenteExcepcion {
         System.out.println("Modificar_Enfermero");
         Enfermeros enfermeros = null;
         int dni = 0;
         CentroClinicaMedica instance = new CentroClinicaMedica();
-        instance.Modificar_Enfermero(enfermeros, dni);
+        instance.ModificarEnfermero(enfermeros, dni);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -338,12 +338,12 @@ public class CentroClinicaMedicaTest {
      * Test of Modificar_Enfermero method, of class CentroClinicaMedica.
      */
     @Test(expected=Exception.class)
-    public void testModificar_Enfermero_Moviles_String() {
+    public void testModificar_Enfermero_Moviles_String() throws ListaVaciaExcepcion, EnfermeroNoExistenteExcepcion {
         System.out.println("Modificar_Enfermero");
         Moviles movil = null;
         String Patente = "";
         CentroClinicaMedica instance = new CentroClinicaMedica();
-        instance.Modificar_Enfermero(movil, Patente);
+        instance.ModificarEnfermero(movil, Patente);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -351,12 +351,12 @@ public class CentroClinicaMedicaTest {
     /**
      * Test of Mostrar_Enfermero method, of class CentroClinicaMedica.
      */
-    @Test
-    public void testMostrar_Enfermero() {
+    @Test(expected=Exception.class)
+    public void testMostrar_Enfermero() throws ListaVaciaExcepcion {
         System.out.println("Mostrar_Enfermero");
         CentroClinicaMedica instance = new CentroClinicaMedica();
         LinkedList expResult = null;
-        LinkedList result = instance.Mostrar_Enfermero();
+        LinkedList result = instance.MostrarEnfermero();
         assertNotEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
@@ -365,13 +365,13 @@ public class CentroClinicaMedicaTest {
     /**
      * Test of Ingresar_Administrativos method, of class CentroClinicaMedica.
      */
-    @Test
+    @Test(expected=Exception.class)
     public void testIngresar_Administrativos() throws Exception {
         System.out.println("Ingresar_Administrativos");
         Administrativos administrativo1 = null;
         int dni = 0;
         CentroClinicaMedica instance = new CentroClinicaMedica();
-        instance.Ingresar_Administrativos(administrativo1, dni);
+        instance.IngresarAdministrativos(administrativo1, dni);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
            assertNull("",administrativo1);
@@ -382,12 +382,12 @@ public class CentroClinicaMedicaTest {
      * Test of Buscar_Administrativos method, of class CentroClinicaMedica.
      */
     @Test(expected=NullPointerException.class)
-    public void testBuscar_Administrativos() {
+    public void testBuscar_Administrativos() throws AdministrativoNoExistenteExcepcion, ListaVaciaExcepcion {
         System.out.println("Buscar_Administrativos");
         int dni = 0;
         CentroClinicaMedica instance = new CentroClinicaMedica();
         Administrativos expResult = null;
-        Administrativos result = instance.Buscar_Administrativos(dni);
+        Administrativos result = instance.BuscarAdministrativos(dni);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
        // fail("The test case is a prototype.");
@@ -396,12 +396,12 @@ public class CentroClinicaMedicaTest {
     /**
      * Test of Mostrar_Administrativo method, of class CentroClinicaMedica.
      */
-    @Test
-    public void testMostrar_Administrativo() {
+    @Test(expected=Exception.class)
+    public void testMostrar_Administrativo() throws ListaVaciaExcepcion {
         System.out.println("Mostrar_Administrativo");
         CentroClinicaMedica instance = new CentroClinicaMedica();
         LinkedList expResult = null;
-        LinkedList result = instance.Mostrar_Administrativo();
+        LinkedList result = instance.MostrarAdministrativo();
         assertNotEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
        // fail("The test case is a prototype.");
@@ -416,7 +416,7 @@ public class CentroClinicaMedicaTest {
         GrupoFamiliar familiar1 = null;
         int dni = 0;
         CentroClinicaMedica instance = new CentroClinicaMedica();
-        instance.Ingresar_Familiar(familiar1, dni);
+        instance.IngresarFamiliar(familiar1, dni);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
            assertNull("",familiar1);
@@ -432,7 +432,7 @@ public class CentroClinicaMedicaTest {
         int dni = 0;
         CentroClinicaMedica instance = new CentroClinicaMedica();
         GrupoFamiliar expResult = null;
-        GrupoFamiliar result = instance.Buscar_Familiar(dni);
+        GrupoFamiliar result = instance.BuscarFamiliar(dni);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
        // fail("The test case is a prototype.");
@@ -446,7 +446,7 @@ public class CentroClinicaMedicaTest {
         System.out.println("Eliminar_Familiar");
         int dni = 0;
         CentroClinicaMedica instance = new CentroClinicaMedica();
-        instance.Eliminar_Familiar(dni);
+        instance.EliminarFamiliar(dni);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -460,7 +460,7 @@ public class CentroClinicaMedicaTest {
         GrupoFamiliar familiar1 = null;
         int dni = 0;
         CentroClinicaMedica instance = new CentroClinicaMedica();
-        instance.Modificar_Familiar(familiar1, dni);
+        instance.ModificarFamiliar(familiar1, dni);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -474,7 +474,7 @@ public class CentroClinicaMedicaTest {
         Moviles movil = null;
         String pant = "";
         CentroClinicaMedica instance = new CentroClinicaMedica();
-        instance.Ingresar_Movil(movil, pant);
+        instance.IngresarMovil(movil, pant);
         // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
            assertNull("",movil);
@@ -485,12 +485,12 @@ public class CentroClinicaMedicaTest {
      * Test of Buscar_Movil method, of class CentroClinicaMedica.
      */
     @Test(expected=NullPointerException.class)
-    public void testBuscar_Movil() {
+    public void testBuscar_Movil() throws MovilNoExistenteExcepcion, ListaVaciaExcepcion {
         System.out.println("Buscar_Movil");
         String patente = "";
         CentroClinicaMedica instance = new CentroClinicaMedica();
         Moviles expResult = null;
-        Moviles result = instance.Buscar_Movil(patente);
+        Moviles result = instance.BuscarMovil(patente);
         assertNotEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
@@ -504,7 +504,7 @@ public class CentroClinicaMedicaTest {
         System.out.println("Eliminar_Movil");
         String Patente = "";
         CentroClinicaMedica instance = new CentroClinicaMedica();
-        instance.Eliminar_Movil(Patente);
+        instance.EliminarMovil(Patente);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -513,12 +513,12 @@ public class CentroClinicaMedicaTest {
      * Test of Modificar_Movil method, of class CentroClinicaMedica.
      */
     @Test(expected=Exception.class)
-    public void testModificar_Movil() {
+    public void testModificar_Movil() throws ListaVaciaExcepcion, MovilNoExistenteExcepcion {
         System.out.println("Modificar_Movil");
         Moviles movil = null;
         String patente = "";
         CentroClinicaMedica instance = new CentroClinicaMedica();
-        instance.Modificar_Movil(movil, patente);
+        instance.ModificarMovil(movil, patente);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -526,12 +526,12 @@ public class CentroClinicaMedicaTest {
     /**
      * Test of Mostrar_Movil method, of class CentroClinicaMedica.
      */
-    @Test
-    public void testMostrar_Movil() {
+    @Test(expected=Exception.class)
+    public void testMostrar_Movil() throws ListaVaciaExcepcion {
         System.out.println("Mostrar_Movil");
         CentroClinicaMedica instance = new CentroClinicaMedica();
         LinkedList expResult = null;
-        LinkedList result = instance.Mostrar_Movil();
+        LinkedList result = instance.MostrarMovil();
         assertNotEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
        // fail("The test case is a prototype.");
@@ -540,7 +540,7 @@ public class CentroClinicaMedicaTest {
     /**
      * Test of Registar_pago method, of class CentroClinicaMedica.
      */
-    @Test
+    @Test(expected=Exception.class)
     public void testRegistar_pago() throws Exception {
         System.out.println("Registar_pago");
         RegistroPago primer = null;
@@ -554,13 +554,13 @@ public class CentroClinicaMedicaTest {
     /**
      * Test of Buscar_Pago method, of class CentroClinicaMedica.
      */
-    @Test
+    @Test(expected=Exception.class)
     public void testBuscar_Pago() {
         System.out.println("Buscar_Pago");
         int dni = 0;
         CentroClinicaMedica instance = new CentroClinicaMedica();
         RegistroPago expResult = null;
-        RegistroPago result = instance.Buscar_Pago(dni);
+        RegistroPago result = instance.BuscarPago(dni);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
@@ -569,14 +569,14 @@ public class CentroClinicaMedicaTest {
     /**
      * Test of Ingresar_Pago method, of class CentroClinicaMedica.
      */
-    @Test
-    public void testIngresar_Pago() {
+    @Test(expected=Exception.class)
+    public void testIngresar_Pago() throws ListaVaciaExcepcion, DocumentoIncorrectoExcepcion {
         System.out.println("Ingresar_Pago");
         RegistroPago pago = null;
         String mes = "";
         int dni = 0;
         CentroClinicaMedica instance = new CentroClinicaMedica();
-        instance.Ingresar_Pago(pago, mes, dni);
+        instance.IngresarPago(pago, mes, dni);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
            assertNull("",pago);
@@ -586,12 +586,12 @@ public class CentroClinicaMedicaTest {
     /**
      * Test of Mostrar_Pago method, of class CentroClinicaMedica.
      */
-    @Test
-    public void testMostrar_Pago() {
+    @Test(expected=Exception.class)
+    public void testMostrar_Pago() throws ListaVaciaExcepcion {
         System.out.println("Mostrar_Pago");
         CentroClinicaMedica instance = new CentroClinicaMedica();
         LinkedList expResult = null;
-        LinkedList result = instance.Mostrar_Pago();
+        LinkedList result = instance.MostrarPago();
         assertNotEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
        // fail("The test case is a prototype.");
@@ -605,7 +605,7 @@ public class CentroClinicaMedicaTest {
         System.out.println("Ingresar_Solicitud");
         Solicitud solic = null;
         CentroClinicaMedica instance = new CentroClinicaMedica();
-        instance.Ingresar_Solicitud(solic);
+        instance.IngresarSolicitud(solic);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
            assertNull("",solic);
@@ -616,12 +616,12 @@ public class CentroClinicaMedicaTest {
      * Test of Buscar_Solicitud method, of class CentroClinicaMedica.
      */
     @Test
-    public void testBuscar_Solicitud() {
+    public void testBuscar_Solicitud() throws SolicitudNoExistente, ListaVaciaExcepcion {
         System.out.println("Buscar_Solicitud");
         int dni = 0;
         CentroClinicaMedica instance = new CentroClinicaMedica();
         Solicitud expResult = null;
-        Solicitud result = instance.Buscar_Solicitud(dni);
+        Solicitud result = instance.BuscarSolicitud(dni);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
        // fail("The test case is a prototype.");
@@ -631,11 +631,11 @@ public class CentroClinicaMedicaTest {
      * Test of Mostrar_Solicitud method, of class CentroClinicaMedica.
      */
     @Test
-    public void testMostrar_Solicitud() {
+    public void testMostrar_Solicitud() throws ListaVaciaExcepcion {
         System.out.println("Mostrar_Solicitud");
         CentroClinicaMedica instance = new CentroClinicaMedica();
         LinkedList expResult = null;
-        LinkedList result = instance.Mostrar_Solicitud();
+        LinkedList result = instance.MostrarSolicitud();
         assertNotEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
@@ -665,7 +665,7 @@ public class CentroClinicaMedicaTest {
         System.out.println("Eliminar_Administrativos");
         int dni = 0;
         CentroClinicaMedica instance = new CentroClinicaMedica();
-        instance.Eliminar_Administrativos(dni);
+        instance.EliminarAdministrativos(dni);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
