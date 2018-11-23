@@ -133,6 +133,12 @@ public class ModificarAfiliado extends javax.swing.JPanel {
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel10.setText("Nueva Fecha de Nacimiento :");
         add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 190, -1, 20));
+
+        jTextField_fecha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField_fechaActionPerformed(evt);
+            }
+        });
         add(jTextField_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 140, 150, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -234,6 +240,10 @@ public class ModificarAfiliado extends javax.swing.JPanel {
     private void jTextField_resultadoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_resultadoKeyTyped
 
     }//GEN-LAST:event_jTextField_resultadoKeyTyped
+
+    private void jTextField_fechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_fechaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField_fechaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

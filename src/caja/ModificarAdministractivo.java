@@ -61,7 +61,7 @@ public class ModificarAdministractivo extends javax.swing.JPanel {
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 70, 20));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel4.setText("Direccion :");
+        jLabel4.setText("Direcci{on :");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 80, 20));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -69,11 +69,11 @@ public class ModificarAdministractivo extends javax.swing.JPanel {
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 90, 20));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel6.setText("Telefono :");
+        jLabel6.setText("Teléfono :");
         add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, 70, 20));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel7.setText("Direccion Correo :");
+        jLabel7.setText("Dirección Correo :");
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 130, 20));
         add(jTextField_dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 90, 220, -1));
         add(jTextField_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, 320, -1));
@@ -82,7 +82,7 @@ public class ModificarAdministractivo extends javax.swing.JPanel {
         add(jTextField_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 330, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel8.setText("Numero de Documento :");
+        jLabel8.setText("N{umero de Documento :");
         add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 180, 20));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
