@@ -43,7 +43,6 @@ public class IngresarPago extends javax.swing.JPanel {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
         jTextField_dni = new javax.swing.JTextField();
         jComboBox_mes = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
@@ -62,44 +61,40 @@ public class IngresarPago extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setText("Numero De Familiar :");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, 140, 30));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, -1, 20));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText("Nombre :");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 70, 30));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 60, 20));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("Apellido :");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 70, 30));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, -1, 20));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setText("Documento :");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 100, 30));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 80, 20));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setText("Mes :");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 70, 30));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 40, 20));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel6.setText("Año :");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 70, 30));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 40, 20));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel7.setText("Pago :");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 90, 30));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, 40, 20));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel8.setText("Precio Base :");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 90, 30));
-
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel9.setText("Precio Base :");
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 90, 30));
-        add(jTextField_dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 160, -1));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, -1, 20));
+        add(jTextField_dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 310, -1));
 
         jComboBox_mes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Setiembre", "Octubre", "Noviembre", "Diciembre" }));
         jComboBox_mes.setSelectedIndex(-1);
-        add(jComboBox_mes, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, -1, -1));
+        add(jComboBox_mes, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 360, -1));
 
         jButton1.setText("Ingresar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -107,18 +102,19 @@ public class IngresarPago extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 370, 100, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, 100, -1));
 
-        jLabel10.setText("Result");
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 300, -1, 20));
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel10.setText("Resultado :");
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 130, 80, 20));
 
-        jButton2.setText("Buscar");
+        jButton2.setText("Buscar Afiliado");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, 190, -1));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 90, 190, 20));
 
         jTextField_result.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         jTextField_result.setEnabled(false);
@@ -127,7 +123,7 @@ public class IngresarPago extends javax.swing.JPanel {
                 jTextField_resultKeyTyped(evt);
             }
         });
-        add(jTextField_result, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, 270, -1));
+        add(jTextField_result, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 130, 270, -1));
 
         jTextField_pago.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         jTextField_pago.setEnabled(false);
@@ -136,7 +132,7 @@ public class IngresarPago extends javax.swing.JPanel {
                 jTextField_pagoKeyTyped(evt);
             }
         });
-        add(jTextField_pago, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 370, 160, -1));
+        add(jTextField_pago, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 370, 350, -1));
 
         jTextField_familia.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         jTextField_familia.setEnabled(false);
@@ -145,7 +141,7 @@ public class IngresarPago extends javax.swing.JPanel {
                 jTextField_familiaKeyTyped(evt);
             }
         });
-        add(jTextField_familia, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 320, 160, -1));
+        add(jTextField_familia, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 330, 270, -1));
 
         jTextField_precio.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         jTextField_precio.setEnabled(false);
@@ -154,7 +150,7 @@ public class IngresarPago extends javax.swing.JPanel {
                 jTextField_precioKeyTyped(evt);
             }
         });
-        add(jTextField_precio, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 270, 160, -1));
+        add(jTextField_precio, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 290, 320, -1));
 
         jTextField_año.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         jTextField_año.setEnabled(false);
@@ -163,7 +159,7 @@ public class IngresarPago extends javax.swing.JPanel {
                 jTextField_añoKeyTyped(evt);
             }
         });
-        add(jTextField_año, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 160, -1));
+        add(jTextField_año, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, 360, -1));
 
         jTextField_apellido.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         jTextField_apellido.setEnabled(false);
@@ -172,7 +168,7 @@ public class IngresarPago extends javax.swing.JPanel {
                 jTextField_apellidoKeyTyped(evt);
             }
         });
-        add(jTextField_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 160, -1));
+        add(jTextField_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 170, 340, -1));
 
         jTextField_nombre.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         jTextField_nombre.setEnabled(false);
@@ -181,11 +177,12 @@ public class IngresarPago extends javax.swing.JPanel {
                 jTextField_nombreKeyTyped(evt);
             }
         });
-        add(jTextField_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, 160, -1));
+        add(jTextField_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, 340, -1));
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Century Gothic", 0, 36)); // NOI18N
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("Ingresar Pago");
-        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 140, -1, -1));
+        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 910, 50));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -278,7 +275,6 @@ public class IngresarPago extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField jTextField_apellido;
     private javax.swing.JTextField jTextField_año;
     private javax.swing.JTextField jTextField_dni;
