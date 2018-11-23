@@ -267,9 +267,13 @@ public class Solicitud_Medica extends javax.swing.JPanel {
         Doctores nuevo = centro.BuscarDoctor(dni);
         jTextField_result_medico.setText("Se Agrego con exito el Medico ");
         } catch (DoctorNoExistenteExcepcion ex) {
-            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+                         JOptionPane.showMessageDialog(null, "Doctor no existe  ");
+           
+//Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ListaVaciaExcepcion ex) {
-            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+                        JOptionPane.showMessageDialog(null, "La lista esta vacia");
+            
+//Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -280,9 +284,13 @@ public class Solicitud_Medica extends javax.swing.JPanel {
         Enfermeros nuevo = centro.BuscarEnfermero(dni);
         jTextField_result_enfermero.setText("Se Agrego con exito el Enfermero");
        } catch (EnfermeroNoExistenteExcepcion ex) {
-            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+                                 JOptionPane.showMessageDialog(null, "Enfermero no existe");
+ 
+           //Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ListaVaciaExcepcion ex) {
-            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+                                    JOptionPane.showMessageDialog(null, "La lista esta vacia");
+
+            //Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -291,11 +299,15 @@ public class Solicitud_Medica extends javax.swing.JPanel {
         CentroClinicaMedica centro = new CentroClinicaMedica();
         int dni = Integer.parseInt(jTextField_dni_administrativo.getText());
         Administrativos nuevo = centro.BuscarAdministrativos(dni);
-        jTextField_result_chofer.setText("Se Agrego con exito el Administrativo");
+        jTextField_result_administrativo.setText("Se Agrego con exito el Administrativo");
         } catch (AdministrativoNoExistenteExcepcion ex) {
-            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+                        JOptionPane.showMessageDialog(null, "El administrativo no existe");
+         
+//   Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ListaVaciaExcepcion ex) {
-            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+                                    JOptionPane.showMessageDialog(null, "La lista esta vacia");
+
+          //  Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -304,11 +316,15 @@ public class Solicitud_Medica extends javax.swing.JPanel {
         CentroClinicaMedica centro = new CentroClinicaMedica();
         int dni = Integer.parseInt(jTextField_dni_chofer.getText());
         Choferes nuevo = centro.BuscarChofer(dni);
-        jTextField_result_administrativo.setText("Se Agrego con exito el Chofer");
+        jTextField_result_chofer.setText("Se Agrego con exito el Chofer");
        } catch (ListaVaciaExcepcion ex) {
-            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+                        JOptionPane.showMessageDialog(null, "La lista esta vacia");
+            
+//Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ChoferesNoExisteExcepcion ex) {
-            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+                        JOptionPane.showMessageDialog(null, "El chofer no existe");
+            
+//Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton5ActionPerformed
 
@@ -319,9 +335,13 @@ public class Solicitud_Medica extends javax.swing.JPanel {
         Moviles nuevo = centro.BuscarMovil(patente);
        jTextField_result_movil.setText("El movil esta "+nuevo.getEstado());
        } catch (MovilNoExistenteExcepcion ex) {
-            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+                                   JOptionPane.showMessageDialog(null, "El movil no existe");
+
+// Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ListaVaciaExcepcion ex) {
-            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+                                    JOptionPane.showMessageDialog(null, "La lista esta vacia");
+
+           // Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton6ActionPerformed
 

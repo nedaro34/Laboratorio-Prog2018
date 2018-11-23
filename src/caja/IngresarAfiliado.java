@@ -121,11 +121,11 @@ public class IngresarAfiliado extends javax.swing.JPanel {
                 jTextField_resultadoKeyTyped(evt);
             }
         });
-        add(jTextField_resultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 440, 220, -1));
+        add(jTextField_resultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 370, 220, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText("Resultado :");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 440, 100, 30));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 370, 100, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
