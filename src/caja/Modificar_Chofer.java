@@ -203,9 +203,14 @@ public class Modificar_Chofer extends javax.swing.JPanel {
             jTextField_telefono.setText("");
             
        } catch (ListaVaciaExcepcion ex) {
-            Logger.getLogger(Modificar_Chofer.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "La lista est5a vacia");
+           
+// Logger.getLogger(Modificar_Chofer.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ChoferesNoExisteExcepcion ex) {
-            Logger.getLogger(Modificar_Chofer.class.getName()).log(Level.SEVERE, null, ex);
+          
+            JOptionPane.showMessageDialog(null, "El Chofer no existe");
+
+//  Logger.getLogger(Modificar_Chofer.class.getName()).log(Level.SEVERE, null, ex);
         }
         
     }//GEN-LAST:event_jButton2ActionPerformed

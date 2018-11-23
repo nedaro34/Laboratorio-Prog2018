@@ -156,9 +156,13 @@ public class ModificarAdministractivo extends javax.swing.JPanel {
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
        } catch (AdministrativoNoExistenteExcepcion ex) { 
-            Logger.getLogger(ModificarAdministractivo.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "Administrativos no existente");
+            
+//Logger.getLogger(ModificarAdministractivo.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ListaVaciaExcepcion ex) {
-            Logger.getLogger(ModificarAdministractivo.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "La lista esta vacia  ");
+          
+//  Logger.getLogger(ModificarAdministractivo.class.getName()).log(Level.SEVERE, null, ex);
         } 
     }//GEN-LAST:event_jButton1ActionPerformed
 

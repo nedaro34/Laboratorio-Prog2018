@@ -8,6 +8,7 @@ package caja;
 import java.util.LinkedList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import principal.CentroClinicaMedica;
 import principal.ListaVaciaExcepcion;
 import principal.Moviles;
@@ -85,7 +86,9 @@ public class Mostrar_Movil extends javax.swing.JPanel {
         try {
             listar = centro.MostrarMovil();
         } catch (ListaVaciaExcepcion ex) {
-            Logger.getLogger(Mostrar_Movil.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "La lista esta vacia");
+            
+//Logger.getLogger(Mostrar_Movil.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         mostrar();

@@ -10,6 +10,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import principal.CentroClinicaMedica;
 import principal.ListaVaciaExcepcion;
 import principal.Registro;
@@ -209,11 +210,16 @@ public class Resultado extends javax.swing.JPanel {
         try {
             centro.Ingresar_Resultado(reg, dni);
         } catch (RegistroIgualExcepcion ex) {
-           
+                       JOptionPane.showMessageDialog(null, "El registro ya existe");
+
         } catch (ListaVaciaExcepcion ex) {
-            Logger.getLogger(Resultado.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "La lista esta vacia");
+           
+// Logger.getLogger(Resultado.class.getName()).log(Level.SEVERE, null, ex);
         } catch (RegistroNoExistenteExcepcion ex) {
-            Logger.getLogger(Resultado.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "El registro no existe");
+           
+// Logger.getLogger(Resultado.class.getName()).log(Level.SEVERE, null, ex);
         }
         
     }//GEN-LAST:event_jButton2ActionPerformed

@@ -164,7 +164,9 @@ public class IngresarAfiliado extends javax.swing.JPanel {
        }catch(AfiliadosDIgualExcepcion l){
 
            //exepcion afiliado con el mismo documento
-           jTextField_resultado.setText("Ya existe un Afiliado con este Documento");
+            JOptionPane.showMessageDialog(null,"EL Afiliado ya existe  ");
+           
+//jTextField_resultado.setText("Ya existe un Afiliado con este Documento");
             jTextField_documento.setText("");
             
         }catch(NumberFormatException a){

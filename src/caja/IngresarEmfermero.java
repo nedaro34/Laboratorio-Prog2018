@@ -155,7 +155,9 @@ public class IngresarEmfermero extends javax.swing.JPanel {
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
        } catch (VerificarDocumentosExcepcion ex) {
-            Logger.getLogger(IngresarEmfermero.class.getName()).log(Level.SEVERE, null, ex);
+       JOptionPane.showMessageDialog(null,"EL Documento ya existe  ");
+            
+//Logger.ge/tLogger(IngresarEmfermero.class.getName()).log(Level.SEVERE, null, ex);
         } 
     }//GEN-LAST:event_jButton1ActionPerformed
 

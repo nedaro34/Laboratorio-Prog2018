@@ -188,13 +188,21 @@ public class Primer_Pago extends javax.swing.JPanel {
          primer.Ingresar_Mes(mes);
 
         } catch (AfiliadoNoExistenteExcepcion ex) {
-            Logger.getLogger(Primer_Pago.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "El afiliado no existe");
+           
+// Logger.getLogger(Primer_Pago.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ListaVaciaExcepcion ex) {
-            Logger.getLogger(Primer_Pago.class.getName()).log(Level.SEVERE, null, ex);
+                        JOptionPane.showMessageDialog(null, "La lista esta vacia");
+
+            //Logger.getLogger(Primer_Pago.class.getName()).log(Level.SEVERE, null, ex);
         } catch (PagoMesIgualExcepcion ex) {
-            Logger.getLogger(Primer_Pago.class.getName()).log(Level.SEVERE, null, ex);
+                        JOptionPane.showMessageDialog(null, "El mes  ya existe");
+
+            //Logger.getLogger(Primer_Pago.class.getName()).log(Level.SEVERE, null, ex);
         } catch (AfiliadoPagoIgualExcepcion ex) {
-            Logger.getLogger(Primer_Pago.class.getName()).log(Level.SEVERE, null, ex);
+                        JOptionPane.showMessageDialog(null, "El pago ya existe");
+
+            //Logger.getLogger(Primer_Pago.class.getName()).log(Level.SEVERE, null, ex);
         }
         
     }//GEN-LAST:event_jButton1ActionPerformed

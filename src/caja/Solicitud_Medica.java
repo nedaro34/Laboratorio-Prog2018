@@ -10,6 +10,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import principal.AdministrativoNoExistenteExcepcion;
 import principal.Administrativos;
 import principal.AfiliadoNoExistenteExcepcion;
@@ -359,19 +360,33 @@ public class Solicitud_Medica extends javax.swing.JPanel {
             centro.IngresarSolicitud(solicitud);
          }
         } catch (DoctorNoExistenteExcepcion ex) {
-            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+                        JOptionPane.showMessageDialog(null, "El registro no existe");
+
+          //  Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ListaVaciaExcepcion ex) {
-            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+                        JOptionPane.showMessageDialog(null, "La lista esta vacia");
+
+            //Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
         } catch (EnfermeroNoExistenteExcepcion ex) {
-            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+                        JOptionPane.showMessageDialog(null, "El enfermero no existe");
+
+            //Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ChoferesNoExisteExcepcion ex) {
-            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+                        JOptionPane.showMessageDialog(null, "El chofer no existe");
+
+            //Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
         } catch (AdministrativoNoExistenteExcepcion ex) {
-            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+                        JOptionPane.showMessageDialog(null, "El administrativo no existe");
+
+            //Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
         } catch (MovilNoExistenteExcepcion ex) {
-            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+                        JOptionPane.showMessageDialog(null, "El movil no existe");
+
+            //Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
         } catch (AfiliadoNoExistenteExcepcion ex) {
-            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+                        JOptionPane.showMessageDialog(null, "El afiliado no existe");
+
+            //Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton7ActionPerformed
 

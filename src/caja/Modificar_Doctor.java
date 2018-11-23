@@ -210,9 +210,13 @@ public class Modificar_Doctor extends javax.swing.JPanel {
             jTextField_telefono.setText("");
             
        } catch (ListaVaciaExcepcion ex) {
-            Logger.getLogger(Modificar_Doctor.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "La lista esta vacia");
+            
+//Logger.getLogger(Modificar_Doctor.class.getName()).log(Level.SEVERE, null, ex);
         } catch (DoctorNoExistenteExcepcion ex) {
-            Logger.getLogger(Modificar_Doctor.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "El doctor no existe  ");
+           
+// Logger.getLogger(Modificar_Doctor.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         

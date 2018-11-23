@@ -7,6 +7,7 @@ package caja;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import principal.CentroClinicaMedica;
 import principal.Moviles;
 import principal.MovilesIgualExcepcion;
@@ -91,9 +92,11 @@ public class IngresarMoviles extends javax.swing.JPanel {
         try {
             centro.IngresarMovil(movil, patente);
         } catch (MovilesIgualExcepcion ex) {
-            
+                        JOptionPane.showMessageDialog(null,"EL movil ya existe  ");
+
         }catch(NumberFormatException a){
-            
+        JOptionPane.showMessageDialog(null,"No es valido  ");
+
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 

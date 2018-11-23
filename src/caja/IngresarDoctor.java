@@ -155,7 +155,7 @@ public class IngresarDoctor extends javax.swing.JPanel {
        }catch(DoctoresIgualExcepcion l){
             //hay que ver de hacer una nueva excepcion
            //exepcion afiliado con el mismo documento
-           JOptionPane.showMessageDialog(null, "Ya existe un doctor con este documento");
+            JOptionPane.showMessageDialog(null,"EL Doctor ya existe  ");
             jTextField_documento.setText("");
             
         }catch(NumberFormatException a){
@@ -168,8 +168,10 @@ public class IngresarDoctor extends javax.swing.JPanel {
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
        } catch (VerificarDocumentosExcepcion ex) { 
-            Logger.getLogger(IngresarDoctor.class.getName()).log(Level.SEVERE, null, ex);
-        } 
+            //Logger.getLogger(IngresarDoctor.class.getName()).log(Level.SEVERE, null, ex);
+                   JOptionPane.showMessageDialog(null,"EL Documento no es valido  ");
+
+       } 
     }//GEN-LAST:event_jButton3ActionPerformed
 
 

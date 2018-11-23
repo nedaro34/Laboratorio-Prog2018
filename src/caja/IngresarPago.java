@@ -214,11 +214,17 @@ public class IngresarPago extends javax.swing.JPanel {
         } catch (AfiliadoPagoIgualExcepcion ex) {
             jTextField_result.setText("Ya existe el pago");
         } catch (AfiliadoNoExistenteExcepcion ex) {
-            Logger.getLogger(IngresarPago.class.getName()).log(Level.SEVERE, null, ex);
+                       jTextField_result.setText("El afiliado no existe");
+
+            //Logger.getLogger(IngresarPago.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ListaVaciaExcepcion ex) {
-            Logger.getLogger(IngresarPago.class.getName()).log(Level.SEVERE, null, ex);
+          jTextField_result.setText("La lista esta vacia");
+          
+//  Logger.getLogger(IngresarPago.class.getName()).log(Level.SEVERE, null, ex);
         } catch (PagoMesIgualExcepcion ex) {
-            Logger.getLogger(IngresarPago.class.getName()).log(Level.SEVERE, null, ex);
+         jTextField_result.setText("El el mes del pago ya  existe");
+
+            //  Logger.getLogger(IngresarPago.class.getName()).log(Level.SEVERE, null, ex);
         }
         
     }//GEN-LAST:event_jButton1ActionPerformed

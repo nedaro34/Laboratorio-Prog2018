@@ -155,7 +155,8 @@ public class IngresarChofer extends javax.swing.JPanel {
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
        } catch (VerificarDocumentosExcepcion ex) { 
-            Logger.getLogger(IngresarChofer.class.getName()).log(Level.SEVERE, null, ex);
+       JOptionPane.showMessageDialog(null, "El documento no es valido");
+
         } 
     }//GEN-LAST:event_jButton1ActionPerformed
 

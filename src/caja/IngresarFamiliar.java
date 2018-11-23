@@ -175,11 +175,17 @@ public class IngresarFamiliar extends javax.swing.JPanel {
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
        } catch (ListaVaciaExcepcion ex) {
-            Logger.getLogger(IngresarFamiliar.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null,"La lista esta vacia  ");
+           
+// Logger.getLogger(IngresarFamiliar.class.getName()).log(Level.SEVERE, null, ex);
         } catch (AfiliadoNoExistenteExcepcion ex) {
-            Logger.getLogger(IngresarFamiliar.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null,"EL Afiliado no existe  ");
+          
+//  Logger.getLogger(IngresarFamiliar.class.getName()).log(Level.SEVERE, null, ex);
         } catch (VerificarDocumentosExcepcion ex) {
-            Logger.getLogger(IngresarFamiliar.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null,"EL Documento no es valido  ");
+           
+// Logger.getLogger(IngresarFamiliar.class.getName()).log(Level.SEVERE, null, ex);
         } 
         
     }//GEN-LAST:event_jButton2ActionPerformed

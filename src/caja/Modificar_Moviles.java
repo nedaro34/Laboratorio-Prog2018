@@ -151,9 +151,14 @@ public class Modificar_Moviles extends javax.swing.JPanel {
             jTextField_patente.setText("");
             jTextField_año.setText("");
        } catch (MovilNoExistenteExcepcion ex) { 
-            Logger.getLogger(Modificar_Moviles.class.getName()).log(Level.SEVERE, null, ex);
+          
+            JOptionPane.showMessageDialog(null, "El movil no existe");
+
+//  Logger.getLogger(Modificar_Moviles.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ListaVaciaExcepcion ex) {
-            Logger.getLogger(Modificar_Moviles.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "La lista esta vacia");
+           
+// Logger.getLogger(Modificar_Moviles.class.getName()).log(Level.SEVERE, null, ex);
         } 
         
         

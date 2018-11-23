@@ -8,6 +8,7 @@ package caja;
 import java.util.LinkedList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import principal.CentroClinicaMedica;
 import principal.Enfermeros;
 import principal.ListaVaciaExcepcion;
@@ -84,7 +85,9 @@ public class Mostrar_Enfermero extends javax.swing.JPanel {
         try {
             listar = centro.MostrarEnfermero();
         } catch (ListaVaciaExcepcion ex) {
-            Logger.getLogger(Mostrar_Enfermero.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "La lista esta vacia");
+            
+//Logger.getLogger(Mostrar_Enfermero.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         mostrar();

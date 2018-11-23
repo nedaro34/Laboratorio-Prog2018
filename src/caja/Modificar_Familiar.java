@@ -217,9 +217,13 @@ public class Modificar_Familiar extends javax.swing.JPanel {
             jTextField_telefono.setText("");
             
        } catch (AfiliadoNoExistenteExcepcion ex) {
-            Logger.getLogger(Modificar_Familiar.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "El afiliado nloexistente");
+           
+// Logger.getLogger(Modificar_Familiar.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ListaVaciaExcepcion ex) {
-            Logger.getLogger(Modificar_Familiar.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "Lista esta vacia");
+           
+// Logger.getLogger(Modificar_Familiar.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
