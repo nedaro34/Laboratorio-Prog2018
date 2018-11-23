@@ -56,55 +56,56 @@ public class Modificar_Doctor extends javax.swing.JPanel {
         jLabel13 = new javax.swing.JLabel();
         jDateChooser_fecha = new com.toedter.calendar.JDateChooser();
         jTextField_fecha = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setText("Apellido :");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 90, 30));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 70, 20));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel4.setText("Direccion :");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 90, 30));
+        jLabel4.setText("Dirección :");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 80, 20));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setText("Documento :");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 90, 30));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 90, 20));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel6.setText("Telefono :");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 90, 30));
+        jLabel6.setText("Teléfono :");
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, 70, 20));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel7.setText("Direccion Correo :");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 130, 30));
-        add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 30, 210, -1));
-        add(jTextField_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 300, 210, -1));
-        add(jTextField_documento, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, 210, -1));
-        add(jTextField_direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 210, -1));
-        add(jTextField_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, 210, -1));
+        jLabel7.setText("Dirección Correo :");
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 130, 20));
+        add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 90, 220, -1));
+        add(jTextField_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, 320, -1));
+        add(jTextField_documento, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 290, 300, -1));
+        add(jTextField_direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 320, -1));
+        add(jTextField_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 330, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel8.setText("Numero de Documento :");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 180, 30));
+        jLabel8.setText("Número de Documento :");
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 170, 20));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel9.setText("Nuevo Fecha de Nacimiento :");
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 180, 400, 30));
-        add(jTextField_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 210, -1));
+        jLabel9.setText("Nueva Fecha de Nacimiento :");
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 190, 200, 20));
+        add(jTextField_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 330, -1));
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel12.setText("Nombre :");
-        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 90, 30));
-        add(jTextField_direccioncorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 340, 210, -1));
+        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 70, 20));
+        add(jTextField_direccioncorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 390, 270, -1));
 
-        jButton1.setText("Buscar");
+        jButton1.setText("Buscar Doctor");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 30, -1, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 90, 140, 20));
 
         jButton2.setText("Modificar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -112,13 +113,18 @@ public class Modificar_Doctor extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 340, -1, -1));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 390, 140, 20));
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel13.setText("Atual Fecha de Nacimiento :");
-        add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 100, 400, 30));
-        add(jDateChooser_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 180, 120, -1));
-        add(jTextField_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 100, 140, -1));
+        jLabel13.setText("Actual Fecha de Nacimiento :");
+        add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 140, 200, 20));
+        add(jDateChooser_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 190, 150, -1));
+        add(jTextField_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 140, 150, -1));
+
+        jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 36)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Modificar Doctor");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 910, 50));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -211,6 +217,7 @@ public class Modificar_Doctor extends javax.swing.JPanel {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private com.toedter.calendar.JDateChooser jDateChooser_fecha;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel3;
