@@ -61,31 +61,31 @@ public class EliminarAfiliado extends javax.swing.JPanel {
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setText("Apellido :");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 70, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 70, 20));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setText("Dirección :");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 80, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 80, 20));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setText("Documento :");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 90, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 90, 20));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel6.setText("Teléfono :");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, 70, -1));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, 70, 20));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setText("Dirección Correo :");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 130, -1));
-        add(jTextField_dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 90, 210, -1));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 130, 20));
+        add(jTextField_dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 90, 220, -1));
         add(jTextField_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, 320, -1));
         add(jTextField_direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 320, -1));
         add(jTextField_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 330, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel8.setText("Numero de Documento :");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 180, -1));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 180, 20));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel9.setText("Fecha de Nacimiento :");
@@ -94,7 +94,7 @@ public class EliminarAfiliado extends javax.swing.JPanel {
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel12.setText("Nombre :");
-        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 70, -1));
+        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 70, 20));
         add(jTextField_correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 390, 270, -1));
 
         jButton1.setText("Eliminar");
@@ -113,7 +113,7 @@ public class EliminarAfiliado extends javax.swing.JPanel {
             }
         });
         add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 90, 140, 20));
-        add(jTextField_Fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 140, 190, -1));
+        add(jTextField_Fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 140, 200, -1));
 
         jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -131,7 +131,7 @@ public class EliminarAfiliado extends javax.swing.JPanel {
                 jTextField_resultadoKeyTyped(evt);
             }
         });
-        add(jTextField_resultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 190, 260, -1));
+        add(jTextField_resultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 190, 270, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

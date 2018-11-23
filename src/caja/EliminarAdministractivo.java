@@ -89,7 +89,7 @@ public class EliminarAdministractivo extends javax.swing.JPanel {
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setText("Dirección Correo :");
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 130, 20));
-        add(jTextField_año, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 200, 140, -1));
+        add(jTextField_año, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 200, 150, -1));
         add(jTextField_dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 90, 220, -1));
         add(jTextField_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, 320, -1));
         add(jTextField_documento, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 290, 300, -1));
@@ -112,8 +112,8 @@ public class EliminarAdministractivo extends javax.swing.JPanel {
         jLabel11.setText("Mes:");
         add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 170, 40, 20));
         add(jTextField_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 330, -1));
-        add(jTextField_dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 140, 140, -1));
-        add(jTextField_mes, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 170, 140, -1));
+        add(jTextField_dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 140, 150, -1));
+        add(jTextField_mes, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 170, 150, -1));
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel12.setText("Nombre :");
@@ -134,7 +134,7 @@ public class EliminarAdministractivo extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 390, 80, 20));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 390, 140, 20));
 
         jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -148,7 +148,7 @@ public class EliminarAdministractivo extends javax.swing.JPanel {
                 jTextField_resultadoKeyTyped(evt);
             }
         });
-        add(jTextField_resultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 240, 260, -1));
+        add(jTextField_resultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 240, 270, -1));
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel13.setText("Resultado :");
