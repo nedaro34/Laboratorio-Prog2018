@@ -113,7 +113,7 @@ public class EliminarDoctor extends javax.swing.JPanel {
             }
         });
         add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 390, 140, 20));
-        add(jTextField_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 140, 180, -1));
+        add(jTextField_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 140, 200, -1));
 
         jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

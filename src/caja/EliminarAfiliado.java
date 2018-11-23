@@ -84,7 +84,7 @@ public class EliminarAfiliado extends javax.swing.JPanel {
         add(jTextField_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 330, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel8.setText("Numero de Documento :");
+        jLabel8.setText("Número de Documento :");
         add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 180, 20));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
