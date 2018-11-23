@@ -44,28 +44,30 @@ public class Modificar_Moviles extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jTextField_Patente = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Año :");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 104, 26));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 104, 20));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("Marca :");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 104, 26));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 104, 20));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setText("Modelo :");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 104, 26));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 104, 20));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setText("Patente :");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 104, 26));
-        add(jTextField_año, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, 180, 30));
-        add(jTextField_Marca, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 180, 30));
-        add(jTextField_Modelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, 180, 30));
-        add(jTextField_patente, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 200, 180, 30));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 104, 20));
+        add(jTextField_año, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 290, 350, 20));
+        add(jTextField_Marca, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, 340, 20));
+        add(jTextField_Modelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 330, 20));
+        add(jTextField_patente, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, 330, 20));
 
         jButton1.setText("Modificar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -73,16 +75,25 @@ public class Modificar_Moviles extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 160, -1));
-        add(jTextField_Patente, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 32, 330, 30));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 290, 140, 20));
+        add(jTextField_Patente, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, 320, 20));
 
-        jButton2.setText("Buscar");
+        jButton2.setText("Buscar Movil");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 30, 90, 30));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 90, 140, 20));
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel5.setText("Matrícula :");
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 80, 20));
+
+        jLabel6.setFont(new java.awt.Font("Century Gothic", 0, 36)); // NOI18N
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("Modificar Moviles");
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 910, 50));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -145,6 +156,8 @@ public class Modificar_Moviles extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField jTextField_Marca;
     private javax.swing.JTextField jTextField_Modelo;
     private javax.swing.JTextField jTextField_Patente;
