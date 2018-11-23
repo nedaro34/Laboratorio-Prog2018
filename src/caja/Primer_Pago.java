@@ -11,10 +11,14 @@ import java.util.GregorianCalendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import principal.Afiliado_Pago_Igual_Excepcion;
+import principal.AfiliadoNoExistenteExcepcion;
+import principal.AfiliadoPagoIgualExcepcion;
+//import principal.AfiliadoPagoIgual_Excepcion;
 import principal.Afiliados;
 import principal.CentroClinicaMedica;
-import principal.Pago_mes_Igual_Excepcion;
+import principal.ListaVaciaExcepcion;
+import principal.PagoMesIgualExcepcion;
+//import principal.Pago_mesIgualExcepcion;
 import principal.RegistroPago;
 
 /**
@@ -160,31 +164,37 @@ public class Primer_Pago extends javax.swing.JPanel {
          Calendar cal = Calendar.getInstance();
          int year = cal.get(Calendar.YEAR);
          
-        
+         try {
+             
         CentroClinicaMedica centro = new CentroClinicaMedica();
         String apelliado = jTextField_apellido.getText();
         int dni = Integer.parseInt(jTextField_dni.getText());
         String nombre = jTextField_nombre.getText();
         int preci_base = Integer.parseInt(jTextField_pricio.getText());
-        Afiliados afiliado = centro.Buscar_Afiliado(dni);
+        Afiliados afiliado;
+         afiliado = centro.BuscarAfiliado(dni);
         int famili = afiliado.getFamilia();
+
+       RegistroPago primer = new RegistroPago(nombre,apelliado,dni,year,preci_base,famili,afiliado);
+
+        centro.Registar_pago(primer, dni);
         jTextField_familia.setText(String.valueOf(famili));
         jTextField_año.setText(String.valueOf(year));
-        String mes = String.valueOf(jComboBox_mes.getSelectedIndex());
         
-        RegistroPago primer = new RegistroPago(nombre,apelliado,dni,year,preci_base,famili,afiliado);
         int pagar = primer.pago();
         jTextField_pago.setText(String.valueOf(pagar));
-        try {
-            primer.Ingresar_Mes(mes);
-            centro.Registar_pago(primer, dni);
-        } catch (Afiliado_Pago_Igual_Excepcion ex) {
-            jTextField_result.setText("Ya existe el pago");
-            }catch(NumberFormatException a){
-             jTextField_result.setText("Falta Campos");
-            
-        } catch (Pago_mes_Igual_Excepcion ex) {
-            jTextField_result.setText("Ya existe el mes");
+ 
+        String mes = String.valueOf(jComboBox_mes.getSelectedIndex());
+         primer.Ingresar_Mes(mes);
+
+        } catch (AfiliadoNoExistenteExcepcion ex) {
+            Logger.getLogger(Primer_Pago.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ListaVaciaExcepcion ex) {
+            Logger.getLogger(Primer_Pago.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (PagoMesIgualExcepcion ex) {
+            Logger.getLogger(Primer_Pago.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (AfiliadoPagoIgualExcepcion ex) {
+            Logger.getLogger(Primer_Pago.class.getName()).log(Level.SEVERE, null, ex);
         }
         
     }//GEN-LAST:event_jButton1ActionPerformed

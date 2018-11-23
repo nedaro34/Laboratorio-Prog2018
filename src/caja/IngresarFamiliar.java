@@ -9,13 +9,16 @@ import java.text.DateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import principal.AfiliadoNoExistenteExcepcion;
 import principal.Afiliados;
 import principal.AfiliadosDIgualExcepcion;
 import principal.CentroClinicaMedica;
 import principal.Fecha;
 import principal.GrupoFamiliar;
 import principal.GrupoFamiliarIgualExcepcion;
-import principal.verificar_documentosExcepcion;
+import principal.ListaVaciaExcepcion;
+import principal.VerificarDocumentosExcepcion;
+//import principal.verificar_documentosExcepcion;
 
 /**
  *
@@ -135,13 +138,13 @@ public class IngresarFamiliar extends javax.swing.JPanel {
                 int dnia = Integer.parseInt(jTextField_afiliado.getText());
                 String fecha_nacimiento = fecha.format(jDateChooser_fecha.getDate());
                 int longitud = jTextField_documento.getText().length();
-                centro.verificar_documentos(dni, longitud);
+                centro.VerificarDocumentos(dni, longitud);
                 
                 //afiliado
-                Afiliados afiliado = centro.Buscar_Afiliado(dnia);
+                Afiliados afiliado = centro.BuscarAfiliado(dnia);
                 int familia = afiliado.getFamilia();
                 afiliado.suma_familia();
-                centro.Modificar_Afiliados(afiliado, afiliado.getDocumento());
+                centro.ModificarAfiliados(afiliado, afiliado.getDocumento());
                 
                 
                 // fecha de nacimiento
@@ -153,7 +156,7 @@ public class IngresarFamiliar extends javax.swing.JPanel {
                 
                 //ingresa al metodo para agregar nueva objeto a la lista
 
-                centro.Ingresar_Familiar(familiar, dni);
+                centro.IngresarFamiliar(familiar, dni);
  
   
        }catch(GrupoFamiliarIgualExcepcion l){
@@ -171,7 +174,11 @@ public class IngresarFamiliar extends javax.swing.JPanel {
             jTextField_documento.setText("");
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
-       } catch (verificar_documentosExcepcion ex) { 
+       } catch (ListaVaciaExcepcion ex) {
+            Logger.getLogger(IngresarFamiliar.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (AfiliadoNoExistenteExcepcion ex) {
+            Logger.getLogger(IngresarFamiliar.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (VerificarDocumentosExcepcion ex) {
             Logger.getLogger(IngresarFamiliar.class.getName()).log(Level.SEVERE, null, ex);
         } 
         

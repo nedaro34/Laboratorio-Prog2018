@@ -156,14 +156,14 @@ public class EliminarChofer extends javax.swing.JPanel {
            
             
         }catch(ListaVaciaExcepcion e){
-            
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField_resultadoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_resultadoKeyTyped
 
     }//GEN-LAST:event_jTextField_resultadoKeyTyped
 
-    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;

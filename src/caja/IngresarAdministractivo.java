@@ -14,7 +14,8 @@ import principal.AdministrativosIgualExcepcion;
 import principal.AfiliadosDIgualExcepcion;
 import principal.CentroClinicaMedica;
 import principal.Fecha;
-import principal.verificar_documentosExcepcion;
+import principal.VerificarDocumentosExcepcion;
+//import principal.verificar_documentosExcepcion;
 
 /**
  *
@@ -126,13 +127,13 @@ public class IngresarAdministractivo extends javax.swing.JPanel {
                 String telefono = jTextField_telefono.getText();
                 String fecha_nacimiento = fecha.format(jDateChooser_fecha.getDate());
                 int longitud = jTextField_documento.getText().length();
-                centro.verificar_documentos(dni, longitud);
+                centro.VerificarDocumentos(dni, longitud);
                 
                 Administrativos administrativo = new Administrativos(nombre,apellido,direccion,fecha_nacimiento,dni,telefono,correo);
                 
                 //ingresa al metodo para agregar nueva objeto a la lista
 
-                centro.Ingresar_Administrativos(administrativo, dni);
+                centro.IngresarAdministrativos(administrativo, dni);
  
   
        }catch(AdministrativosIgualExcepcion l){
@@ -150,8 +151,8 @@ public class IngresarAdministractivo extends javax.swing.JPanel {
             jTextField_documento.setText("");
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
-       } catch (verificar_documentosExcepcion ex) { 
-            jTextField_documento.setText("");
+       } catch (VerificarDocumentosExcepcion ex) {
+            Logger.getLogger(IngresarAdministractivo.class.getName()).log(Level.SEVERE, null, ex);
         } 
     }//GEN-LAST:event_jButton1ActionPerformed
 

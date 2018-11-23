@@ -10,6 +10,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import principal.CentroClinicaMedica;
+import principal.DoctorNoExistenteExcepcion;
 import principal.Doctores;
 import principal.Fecha;
 import principal.ListaVaciaExcepcion;
@@ -140,9 +141,9 @@ public class Modificar_Doctor extends javax.swing.JPanel {
             
            // Doctores doctor= centro.Buscar_Doctor(dni);
             
-          if( centro.Buscar_Doctor(dni)!=null){
+          if( centro.BuscarDoctor(dni)!=null){
            
-              Doctores doctor= centro.Buscar_Doctor(dni);
+              Doctores doctor= centro.BuscarDoctor(dni);
 
                 //muestra los datos   
             jTextField_apellido.setText(doctor.getApellido());
@@ -173,7 +174,9 @@ public class Modificar_Doctor extends javax.swing.JPanel {
             Logger.getLogger(Modificar_Doctor.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(null,"El doctor no existe");
 
-       } 
+       } catch (DoctorNoExistenteExcepcion ex) { 
+            Logger.getLogger(Modificar_Doctor.class.getName()).log(Level.SEVERE, null, ex);
+        } 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -193,7 +196,7 @@ public class Modificar_Doctor extends javax.swing.JPanel {
                 
             Doctores doctor = new Doctores(nombre,apellido,direccion,fecha_nacimiento,dni,telefono,correo);
             
-            centro.Modificar_Doctor(doctor, dni);
+            centro.ModificarDoctor(doctor, dni);
 
 
        }catch(NumberFormatException e){
@@ -206,7 +209,11 @@ public class Modificar_Doctor extends javax.swing.JPanel {
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
             
-       }
+       } catch (ListaVaciaExcepcion ex) {
+            Logger.getLogger(Modificar_Doctor.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (DoctorNoExistenteExcepcion ex) {
+            Logger.getLogger(Modificar_Doctor.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
         
         

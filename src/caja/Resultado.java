@@ -11,9 +11,12 @@ import java.text.SimpleDateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import principal.CentroClinicaMedica;
+import principal.ListaVaciaExcepcion;
 import principal.Registro;
-import principal.Registro_IgualExcepcion;
+import principal.RegistroIgualExcepcion;
+import principal.RegistroNoExistenteExcepcion;
 import principal.Solicitud;
+import principal.SolicitudNoExistente;
 
 /**
  *
@@ -169,19 +172,27 @@ public class Resultado extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         
-        
+        try{
         DateFormat hourFormat = new SimpleDateFormat("HH:mm:ss");
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         String fecha = String.valueOf(dateFormat);
         String hora = String.valueOf(hourFormat);
         CentroClinicaMedica centro = new CentroClinicaMedica();
         int dni= Integer.parseInt(jTextField_paciente.getText());
-        Solicitud nuevo = centro.Buscar_Solicitud(dni);
+        Solicitud nuevo;
+      
+            nuevo = centro.BuscarSolicitud(dni);
+       
         jTextField_nombre.setText(nuevo.getNombre());
         jTextField_apellido.setText(nuevo.getAfiliado().getApellido());
         jTextField_doctor.setText(nuevo.getDoctor().getNombre());
         jTextField_fecha.setText(fecha);
         jTextField_hora.setText(hora);
+         } catch (SolicitudNoExistente ex) {
+            Logger.getLogger(Resultado.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ListaVaciaExcepcion ex) {
+            Logger.getLogger(Resultado.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -197,8 +208,12 @@ public class Resultado extends javax.swing.JPanel {
         Registro reg = new Registro(nombre,apellido,dni,doctor,diagnostico,atencion,fecha,hora);
         try {
             centro.Ingresar_Resultado(reg, dni);
-        } catch (Registro_IgualExcepcion ex) {
+        } catch (RegistroIgualExcepcion ex) {
            
+        } catch (ListaVaciaExcepcion ex) {
+            Logger.getLogger(Resultado.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (RegistroNoExistenteExcepcion ex) {
+            Logger.getLogger(Resultado.class.getName()).log(Level.SEVERE, null, ex);
         }
         
     }//GEN-LAST:event_jButton2ActionPerformed

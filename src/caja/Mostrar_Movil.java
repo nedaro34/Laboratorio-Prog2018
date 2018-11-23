@@ -6,7 +6,10 @@
 package caja;
 
 import java.util.LinkedList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import principal.CentroClinicaMedica;
+import principal.ListaVaciaExcepcion;
 import principal.Moviles;
 
 
@@ -79,7 +82,11 @@ public class Mostrar_Movil extends javax.swing.JPanel {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         
         CentroClinicaMedica centro = new CentroClinicaMedica();
-        listar = centro.Mostrar_Movil();
+        try {
+            listar = centro.MostrarMovil();
+        } catch (ListaVaciaExcepcion ex) {
+            Logger.getLogger(Mostrar_Movil.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
         mostrar();
         

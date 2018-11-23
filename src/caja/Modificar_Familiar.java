@@ -9,6 +9,7 @@ import java.text.DateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import principal.AfiliadoNoExistenteExcepcion;
 import principal.Afiliados;
 import principal.CentroClinicaMedica;
 import principal.Fecha;
@@ -152,7 +153,7 @@ public class Modificar_Familiar extends javax.swing.JPanel {
             
             CentroClinicaMedica centro = new CentroClinicaMedica();
             
-            GrupoFamiliar familiar= centro.Buscar_Familiar(dni);
+            GrupoFamiliar familiar= centro.BuscarFamiliar(dni);
             
             
             //muestra los datos   
@@ -198,11 +199,11 @@ public class Modificar_Familiar extends javax.swing.JPanel {
             String telefono = jTextField_telefono.getText();
             int dnia = Integer.parseInt(jTextField_dniafiliado.getText());
             String fecha_nacimiento = fecha.format(jDateChooser_fecha.getDate());
-            Afiliados afiliado = centro.Buscar_Afiliado(dni);
+            Afiliados afiliado = centro.BuscarAfiliado(dni);
                 
             GrupoFamiliar familiar = new GrupoFamiliar(afiliado,nombre,apellido,direccion,fecha_nacimiento,dni,telefono,correo);
             
-            centro.Modificar_Familiar(familiar, dni);
+            centro.ModificarFamiliar(familiar, dni);
 
 
        }catch(NumberFormatException e){
@@ -215,7 +216,11 @@ public class Modificar_Familiar extends javax.swing.JPanel {
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
             
-       }
+       } catch (AfiliadoNoExistenteExcepcion ex) {
+            Logger.getLogger(Modificar_Familiar.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ListaVaciaExcepcion ex) {
+            Logger.getLogger(Modificar_Familiar.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jTextField_dniafiliadoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_dniafiliadoKeyTyped

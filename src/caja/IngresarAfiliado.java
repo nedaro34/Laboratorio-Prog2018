@@ -10,6 +10,7 @@ import java.text.DateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import static javax.swing.text.html.HTML.Tag.HEAD;
 import principal.Afiliados;
 import principal.AfiliadosDIgualExcepcion;
 import principal.CentroClinicaMedica;
@@ -180,15 +181,15 @@ public class IngresarAfiliado extends javax.swing.JPanel {
         } 
     }//GEN-LAST:event_jButton1ActionPerformed
 
-<<<<<<< HEAD
+
     private void jTextField_resultadoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_resultadoKeyTyped
 
     }//GEN-LAST:event_jTextField_resultadoKeyTyped
-=======
+
     private void jTextField_apellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_apellidoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField_apellidoActionPerformed
->>>>>>> b9cf2d8881aae6587a182f0dd6550466bc7facc9
+
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

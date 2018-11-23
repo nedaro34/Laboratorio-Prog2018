@@ -53,6 +53,7 @@ public class ModificarAdministractivo extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jTextField_fecha = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -108,6 +109,14 @@ public class ModificarAdministractivo extends javax.swing.JPanel {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Modificar Administrativo");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 910, 50));
+
+        jButton2.setText("Modificar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 390, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -121,7 +130,7 @@ public class ModificarAdministractivo extends javax.swing.JPanel {
             
             CentroClinicaMedica centro = new CentroClinicaMedica();
             
-            Administrativos administrativo = centro.Buscar_Administrativos(dni);
+            Administrativos administrativo = centro.BuscarAdministrativos(dni);
             
             
             //muestra los datos   
@@ -153,9 +162,14 @@ public class ModificarAdministractivo extends javax.swing.JPanel {
         } 
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel3;

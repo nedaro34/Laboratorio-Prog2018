@@ -155,6 +155,10 @@ public class EliminarDoctor extends javax.swing.JPanel {
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
             
+        } catch (DoctorNoExistenteExcepcion ex) {
+            Logger.getLogger(EliminarDoctor.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ListaVaciaExcepcion ex) {
+            Logger.getLogger(EliminarDoctor.class.getName()).log(Level.SEVERE, null, ex);
         }
         
     }//GEN-LAST:event_jButton1ActionPerformed

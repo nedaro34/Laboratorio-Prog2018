@@ -5,9 +5,13 @@
  */
 package caja;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import principal.CentroClinicaMedica;
 import principal.GrupoFamiliar;
+import principal.ListaVaciaExcepcion;
+import principal.MovilNoExistenteExcepcion;
 import principal.Moviles;
 import principal.MovilesIgualExcepcion;
 
@@ -105,10 +109,14 @@ public class Modificar_Moviles extends javax.swing.JPanel {
         String estado = "libre";
         Moviles movil = new Moviles(marca,modelo,año,patente,estado);
         try {
-            centro.Modificar_Movil(movil,patente);
+            centro.ModificarMovil(movil,patente);
             
         }catch(NumberFormatException a){
             
+        } catch (ListaVaciaExcepcion ex) {
+            Logger.getLogger(Modificar_Moviles.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (MovilNoExistenteExcepcion ex) {
+            Logger.getLogger(Modificar_Moviles.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -122,7 +130,7 @@ public class Modificar_Moviles extends javax.swing.JPanel {
             
             CentroClinicaMedica centro = new CentroClinicaMedica();
             
-            Moviles movil= centro.Buscar_Movil(patente);
+            Moviles movil= centro.BuscarMovil(patente);
             
             
             //muestra los datos   
@@ -142,7 +150,11 @@ public class Modificar_Moviles extends javax.swing.JPanel {
             jTextField_Modelo.setText("");
             jTextField_patente.setText("");
             jTextField_año.setText("");
-       } 
+       } catch (MovilNoExistenteExcepcion ex) { 
+            Logger.getLogger(Modificar_Moviles.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ListaVaciaExcepcion ex) {
+            Logger.getLogger(Modificar_Moviles.class.getName()).log(Level.SEVERE, null, ex);
+        } 
         
         
         

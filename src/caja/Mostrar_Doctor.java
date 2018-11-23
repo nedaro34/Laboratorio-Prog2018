@@ -6,8 +6,11 @@
 package caja;
 
 import java.util.LinkedList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import principal.CentroClinicaMedica;
 import principal.Doctores;
+import principal.ListaVaciaExcepcion;
 
 /**
  *
@@ -78,7 +81,11 @@ public class Mostrar_Doctor extends javax.swing.JPanel {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         
         CentroClinicaMedica centro = new CentroClinicaMedica();
-        listar = centro.Mostrar_Doctor();
+        try {
+            listar = centro.MostrarDoctor();
+        } catch (ListaVaciaExcepcion ex) {
+            Logger.getLogger(Mostrar_Doctor.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
         mostrar();
         

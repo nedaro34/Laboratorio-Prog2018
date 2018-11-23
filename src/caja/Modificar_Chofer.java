@@ -140,7 +140,7 @@ public class Modificar_Chofer extends javax.swing.JPanel {
             
             CentroClinicaMedica centro = new CentroClinicaMedica();
             
-            Choferes chofer= centro.Buscar_Chofer(dni);
+            Choferes chofer= centro.BuscarChofer(dni);
             
             
             //muestra los datos   
@@ -188,7 +188,7 @@ public class Modificar_Chofer extends javax.swing.JPanel {
                 
             Choferes chofer = new Choferes(nombre,apellido,direccion,fecha_nacimiento,dni,telefono,correo);
             
-            centro.Modificar_Chofer(chofer, dni);
+            centro.ModificarChofer(chofer, dni);
 
 
        }catch(NumberFormatException e){

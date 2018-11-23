@@ -147,7 +147,7 @@ public class Modificar_Emfermero extends javax.swing.JPanel {
             
             CentroClinicaMedica centro = new CentroClinicaMedica();
             
-            Enfermeros enfermero= centro.Buscar_Enfermero(dni);
+            Enfermeros enfermero= centro.BuscarEnfermero(dni);
             
             
             //muestra los datos   
@@ -194,7 +194,7 @@ public class Modificar_Emfermero extends javax.swing.JPanel {
                 
             Enfermeros enfermero = new Enfermeros(nombre,apellido,direccion,fecha_nacimiento,dni,telefono,correo);
             
-            centro.Modificar_Enfermero(enfermero, dni);
+            centro.ModificarEnfermero(enfermero, dni);
 
 
        }catch(NumberFormatException e){

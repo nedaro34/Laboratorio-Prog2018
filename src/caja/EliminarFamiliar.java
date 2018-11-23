@@ -5,7 +5,10 @@
  */
 package caja;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import principal.AfiliadoNoExistenteExcepcion;
 import principal.Afiliados;
 import principal.CentroClinicaMedica;
 import principal.Choferes;
@@ -130,11 +133,11 @@ public class EliminarFamiliar extends javax.swing.JPanel {
             
             CentroClinicaMedica centro = new CentroClinicaMedica();
             
-            GrupoFamiliar familiar = centro.Buscar_Familiar(dni);
+            GrupoFamiliar familiar = centro.BuscarFamiliar(dni);
             int dni_afiliado = familiar.getAfiliado().getDocumento();
-            Afiliados afiliado = centro.Buscar_Afiliado(dni_afiliado);
+            Afiliados afiliado = centro.BuscarAfiliado(dni_afiliado);
             afiliado.restar_familia();
-            centro.Modificar_Afiliados(afiliado, dni_afiliado);
+            centro.ModificarAfiliados(afiliado, dni_afiliado);
             
             
             //muestra los datos   
@@ -157,7 +160,11 @@ public class EliminarFamiliar extends javax.swing.JPanel {
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
             
-       } 
+       } catch (AfiliadoNoExistenteExcepcion ex) { 
+            Logger.getLogger(EliminarFamiliar.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ListaVaciaExcepcion ex) {
+            Logger.getLogger(EliminarFamiliar.class.getName()).log(Level.SEVERE, null, ex);
+        } 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -167,7 +174,7 @@ public class EliminarFamiliar extends javax.swing.JPanel {
             
             
             int dni = Integer.parseInt(jTextField_dni.getText());
-            centro.Eliminar_Familiar(dni);
+            centro.EliminarFamiliar(dni);
            
             
 

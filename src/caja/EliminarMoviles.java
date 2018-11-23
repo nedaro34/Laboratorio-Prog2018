@@ -98,7 +98,7 @@ public class EliminarMoviles extends javax.swing.JPanel {
         String estado = "Libre";
         Moviles movil = new Moviles(marca,modelo,año,patente,estado);
         try {
-            centro.Ingresar_Movil(movil, patente);
+            centro.IngresarMovil(movil, patente);
         } catch (MovilesIgualExcepcion ex) {
             
         }catch(NumberFormatException a){

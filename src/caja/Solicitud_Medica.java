@@ -8,13 +8,22 @@ package caja;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import principal.AdministrativoNoExistenteExcepcion;
 import principal.Administrativos;
+import principal.AfiliadoNoExistenteExcepcion;
 import principal.Afiliados;
 import principal.CentroClinicaMedica;
 import principal.Choferes;
+import principal.ChoferesNoExisteExcepcion;
+import principal.DoctorNoExistenteExcepcion;
 import principal.Doctores;
+import principal.EnfermeroNoExistenteExcepcion;
 import principal.Enfermeros;
 import principal.GrupoFamiliar;
+import principal.ListaVaciaExcepcion;
+import principal.MovilNoExistenteExcepcion;
 import principal.Moviles;
 import principal.RegistroPago;
 import principal.Solicitud;
@@ -214,12 +223,12 @@ public class Solicitud_Medica extends javax.swing.JPanel {
         int dni = Integer.parseInt(jTextField_dni_solicitud.getText());
         int opc = jComboBox_dni.getSelectedIndex();
         if(opc == 0){
-            RegistroPago pago = centro.Buscar_Pago(dni);
+            RegistroPago pago = centro.BuscarPago(dni);
             int mora = pago.mora();
             jTextField_mora.setText(String.valueOf(mora));
         }if(opc == 1){
-            GrupoFamiliar familia = centro.Buscar_Familiar(dni);
-            RegistroPago pago = centro.Buscar_Pago(familia.getAfiliado().getDocumento());
+            GrupoFamiliar familia = centro.BuscarFamiliar(dni);
+            RegistroPago pago = centro.BuscarPago(familia.getAfiliado().getDocumento());
             int mora = pago.mora();
             jTextField_mora.setText(String.valueOf(mora));
 
@@ -251,41 +260,72 @@ public class Solicitud_Medica extends javax.swing.JPanel {
     }//GEN-LAST:event_jTextField_result_choferKeyTyped
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        try{
         CentroClinicaMedica centro = new CentroClinicaMedica();
         int dni = Integer.parseInt(jTextField_medico_dni.getText());
-        Doctores nuevo = centro.Buscar_Doctor(dni);
+        Doctores nuevo = centro.BuscarDoctor(dni);
         jTextField_result_medico.setText("Se Agrego con exito el Medico ");
+        } catch (DoctorNoExistenteExcepcion ex) {
+            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ListaVaciaExcepcion ex) {
+            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+       try{
         CentroClinicaMedica centro = new CentroClinicaMedica();
         int dni = Integer.parseInt(jTextField_dni_enfermero.getText());
-        Enfermeros nuevo = centro.Buscar_Enfermero(dni);
+        Enfermeros nuevo = centro.BuscarEnfermero(dni);
         jTextField_result_enfermero.setText("Se Agrego con exito el Enfermero");
+       } catch (EnfermeroNoExistenteExcepcion ex) {
+            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ListaVaciaExcepcion ex) {
+            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        try{
         CentroClinicaMedica centro = new CentroClinicaMedica();
         int dni = Integer.parseInt(jTextField_dni_administrativo.getText());
-        Administrativos nuevo = centro.Buscar_Administrativos(dni);
+        Administrativos nuevo = centro.BuscarAdministrativos(dni);
         jTextField_result_chofer.setText("Se Agrego con exito el Administrativo");
+        } catch (AdministrativoNoExistenteExcepcion ex) {
+            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ListaVaciaExcepcion ex) {
+            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+       try{
         CentroClinicaMedica centro = new CentroClinicaMedica();
         int dni = Integer.parseInt(jTextField_dni_chofer.getText());
-        Choferes nuevo = centro.Buscar_Chofer(dni);
+        Choferes nuevo = centro.BuscarChofer(dni);
         jTextField_result_administrativo.setText("Se Agrego con exito el Chofer");
+       } catch (ListaVaciaExcepcion ex) {
+            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ChoferesNoExisteExcepcion ex) {
+            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+       try{
         CentroClinicaMedica centro = new CentroClinicaMedica();
         String patente = jTextField_patente.getText();
-        Moviles nuevo = centro.Buscar_Movil(patente);
-        jTextField_result_movil.setText("El movil esta "+nuevo.getEstado());
+        Moviles nuevo = centro.BuscarMovil(patente);
+       jTextField_result_movil.setText("El movil esta "+nuevo.getEstado());
+       } catch (MovilNoExistenteExcepcion ex) {
+            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ListaVaciaExcepcion ex) {
+            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        try{
         CentroClinicaMedica centro = new CentroClinicaMedica();
         DateFormat hourFormat = new SimpleDateFormat("HH:mm:ss");
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
@@ -297,27 +337,42 @@ public class Solicitud_Medica extends javax.swing.JPanel {
         int dni_chofer = Integer.parseInt(jTextField_dni_chofer.getText());
         int dni_administrativo = Integer.parseInt(jTextField_dni_administrativo.getText());
         String patente = jTextField_patente.getText();
-        Doctores medico = centro.Buscar_Doctor(dni_medico);
-        Enfermeros enfermero = centro.Buscar_Enfermero(dni_enfermero);
-        Choferes chofer = centro.Buscar_Chofer(dni_chofer);
-        Administrativos administrativo = centro.Buscar_Administrativos(dni_administrativo);
-        Moviles movil = centro.Buscar_Movil(patente);
+        Doctores medico = centro.BuscarDoctor(dni_medico);
+        Enfermeros enfermero = centro.BuscarEnfermero(dni_enfermero);
+        Choferes chofer = centro.BuscarChofer(dni_chofer);
+        Administrativos administrativo = centro.BuscarAdministrativos(dni_administrativo);
+        Moviles movil = centro.BuscarMovil(patente);
         
         int opc = jComboBox_dni.getSelectedIndex();
         if(opc == 0){
-            Afiliados afiliado = centro.Buscar_Afiliado(dni);
+            Afiliados afiliado = centro.BuscarAfiliado(dni);
             String nombre = afiliado.getNombre();
             int documento = afiliado.getDocumento();
             Solicitud solicitud = new Solicitud(nombre,documento,fecha,hora,afiliado,medico,enfermero,chofer,administrativo,movil);
-            centro.Ingresar_Solicitud(solicitud);
+            centro.IngresarSolicitud(solicitud);
         }if(opc==1){
-            GrupoFamiliar familia = centro.Buscar_Familiar(dni);
-            Afiliados afiliado = centro.Buscar_Afiliado(familia.getAfiliado().getDocumento());
+            GrupoFamiliar familia = centro.BuscarFamiliar(dni);
+            Afiliados afiliado = centro.BuscarAfiliado(familia.getAfiliado().getDocumento());
             String nombre = familia.getNombre();
             int documento = familia.getDocumento();
             Solicitud solicitud = new Solicitud(nombre,documento,fecha,hora,afiliado,medico,enfermero,chofer,administrativo,movil);
-            centro.Ingresar_Solicitud(solicitud);
+            centro.IngresarSolicitud(solicitud);
          }
+        } catch (DoctorNoExistenteExcepcion ex) {
+            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ListaVaciaExcepcion ex) {
+            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (EnfermeroNoExistenteExcepcion ex) {
+            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ChoferesNoExisteExcepcion ex) {
+            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (AdministrativoNoExistenteExcepcion ex) {
+            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (MovilNoExistenteExcepcion ex) {
+            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (AfiliadoNoExistenteExcepcion ex) {
+            Logger.getLogger(Solicitud_Medica.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton7ActionPerformed
 
 

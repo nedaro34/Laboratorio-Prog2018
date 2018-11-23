@@ -469,7 +469,7 @@ if(enfermero.size()>0)
  }
     
     
-    public LinkedList Mostrar_Administrativo() throws ListaVaciaExcepcion{
+    public LinkedList MostrarAdministrativo() throws ListaVaciaExcepcion{
         if(administrativo.size()==0){
             throw new ListaVaciaExcepcion();
         }

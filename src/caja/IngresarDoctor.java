@@ -14,7 +14,8 @@ import principal.CentroClinicaMedica;
 import principal.Doctores;
 import principal.DoctoresIgualExcepcion;
 import principal.Fecha;
-import principal.verificar_documentosExcepcion;
+import principal.VerificarDocumentosExcepcion;
+//import principal.verificar_documentosExcepcion;
 
 /**
  *
@@ -137,7 +138,7 @@ public class IngresarDoctor extends javax.swing.JPanel {
                 String telefono = jTextField_telefono.getText();
                 String fecha_nacimiento = fecha.format(jDateChooser_fecha.getDate());
                 int longitud = jTextField_documento.getText().length();
-                centro.verificar_documentos(dni, longitud);
+                centro.VerificarDocumentos(dni, longitud);
                 
                 // fecha de nacimiento
                 
@@ -148,7 +149,7 @@ public class IngresarDoctor extends javax.swing.JPanel {
                 
                 //ingresa al metodo para agregar nueva objeto a la lista
 
-                centro.Ingresar_Doctores(Doctor, dni);
+                centro.IngresarDoctores(Doctor, dni);
  
   
        }catch(DoctoresIgualExcepcion l){
@@ -166,7 +167,7 @@ public class IngresarDoctor extends javax.swing.JPanel {
             jTextField_documento.setText("");
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
-       } catch (verificar_documentosExcepcion ex) { 
+       } catch (VerificarDocumentosExcepcion ex) { 
             Logger.getLogger(IngresarDoctor.class.getName()).log(Level.SEVERE, null, ex);
         } 
     }//GEN-LAST:event_jButton3ActionPerformed

@@ -7,10 +7,13 @@ package caja;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import principal.Afiliado_Pago_Igual_Excepcion;
+import principal.AfiliadoNoExistenteExcepcion;
+import principal.AfiliadoPagoIgualExcepcion;
 import principal.Afiliados;
 import principal.CentroClinicaMedica;
-import principal.Pago_mes_Igual_Excepcion;
+import principal.ListaVaciaExcepcion;
+import principal.PagoMesIgualExcepcion;
+//import principal.Pago_mes_Igual_Excepcion;
 import principal.RegistroPago;
 
 /**
@@ -187,7 +190,7 @@ public class IngresarPago extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        
-        
+        try{
         CentroClinicaMedica centro = new CentroClinicaMedica();
         String apelliado = jTextField_apellido.getText();
         int año = Integer.parseInt(jTextField_año.getText());
@@ -195,7 +198,7 @@ public class IngresarPago extends javax.swing.JPanel {
         String nombre = jTextField_apellido.getText();
         int pago;
         int precio_base = Integer.parseInt(jTextField_precio.getText());
-        Afiliados afiliado = centro.Buscar_Afiliado(dni);
+        Afiliados afiliado = centro.BuscarAfiliado(dni);
         int famili = afiliado.getFamilia();
         jTextField_familia.setText(String.valueOf(famili));
         String mes = String.valueOf(jComboBox_mes.getSelectedIndex());
@@ -205,24 +208,26 @@ public class IngresarPago extends javax.swing.JPanel {
         pago = primer.pago();
         jTextField_pago.setText(String.valueOf(pago));
         
-        try {
+        
             primer.Ingresar_Mes(mes);
             centro.Registar_pago(primer, dni);
-        } catch (Afiliado_Pago_Igual_Excepcion ex) {
+        } catch (AfiliadoPagoIgualExcepcion ex) {
             jTextField_result.setText("Ya existe el pago");
-        }catch(NumberFormatException a){
-             jTextField_result.setText("Falta Campos");
-            
-        } catch (Pago_mes_Igual_Excepcion ex) {
-            jTextField_result.setText("Ya existe el mes de pago");
+        } catch (AfiliadoNoExistenteExcepcion ex) {
+            Logger.getLogger(IngresarPago.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ListaVaciaExcepcion ex) {
+            Logger.getLogger(IngresarPago.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (PagoMesIgualExcepcion ex) {
+            Logger.getLogger(IngresarPago.class.getName()).log(Level.SEVERE, null, ex);
         }
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+       
         CentroClinicaMedica centro = new CentroClinicaMedica();
         int dni = Integer.parseInt(jTextField_dni.getText());
-        RegistroPago nuevo = centro.Buscar_Pago(dni);
+        RegistroPago nuevo = centro.BuscarPago(dni);
         jTextField_apellido.setText(nuevo.getNombre());
         jTextField_apellido.setText(nuevo.getApellido());
         jTextField_año.setText(String.valueOf(nuevo.getAño()));

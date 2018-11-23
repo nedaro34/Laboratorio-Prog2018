@@ -130,7 +130,7 @@ public class EliminarEmfermero extends javax.swing.JPanel {
             
             CentroClinicaMedica centro = new CentroClinicaMedica();
             
-            Enfermeros enfermero = centro.Buscar_Enfermero(dni);
+            Enfermeros enfermero = centro.BuscarEnfermero(dni);
             
             
             //muestra los datos   
@@ -167,7 +167,7 @@ public class EliminarEmfermero extends javax.swing.JPanel {
             
             
             int dni = Integer.parseInt(jTextField_dni.getText());
-            centro.Eliminar_Enfermero(dni);
+            centro.EliminarEnfermero(dni);
            
             
 
