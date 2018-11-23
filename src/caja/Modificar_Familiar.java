@@ -102,7 +102,7 @@ public class Modificar_Familiar extends javax.swing.JPanel {
         add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 240, 100, 20));
         add(jTextField_direccioncorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 390, 270, -1));
 
-        jButton1.setText("Buscar");
+        jButton1.setText("Buscar Familiar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
