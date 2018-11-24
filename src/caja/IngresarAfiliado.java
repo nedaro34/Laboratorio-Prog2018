@@ -121,11 +121,11 @@ public class IngresarAfiliado extends javax.swing.JPanel {
                 jTextField_resultadoKeyTyped(evt);
             }
         });
-        add(jTextField_resultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 370, 220, -1));
+        add(jTextField_resultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 140, 270, -1));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("Resultado :");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 370, 100, 30));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 140, 80, 20));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -164,14 +164,14 @@ public class IngresarAfiliado extends javax.swing.JPanel {
        }catch(AfiliadosDIgualExcepcion l){
 
            //exepcion afiliado con el mismo documento
-            JOptionPane.showMessageDialog(null,"EL Afiliado ya existe  ");
+            JOptionPane.showMessageDialog(null,"Ya existe un afiliado con este documento");
            
 //jTextField_resultado.setText("Ya existe un Afiliado con este Documento");
             jTextField_documento.setText("");
             
         }catch(NumberFormatException a){
             //exepcion limpia los campos
-            jTextField_resultado.setText("Falta Completar Campos");
+            jTextField_resultado.setText("Falta completar campos");
             jTextField_apellido.setText("");
             jTextField_direccion.setText("");
             jTextField_direccioncorreo.setText("");
@@ -179,7 +179,7 @@ public class IngresarAfiliado extends javax.swing.JPanel {
             jTextField_nombre.setText("");
             jTextField_telefono.setText("");
        } catch (VerificarDocumentosExcepcion ex) {
-            jTextField_resultado.setText("El Documento es invalido");
+            jTextField_resultado.setText("El documento debe contener al menos 8 dígitos");
         } 
     }//GEN-LAST:event_jButton1ActionPerformed
 
