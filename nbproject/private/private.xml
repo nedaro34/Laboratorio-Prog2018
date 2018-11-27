@@ -3,7 +3,6 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/caja/EliminarDoctor.java</file>
             <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/caja/Modificar_Emfermero.java</file>
             <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/caja/InformaciondeAsistenciaMedica.java</file>
             <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/caja/IngresarPago.java</file>
@@ -32,7 +31,6 @@
             <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/principal/EnfermeroNoExistenteExcepcion.java</file>
             <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/principal/ChoferesIgualExcepcion.java</file>
             <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/principal/ListaVaciaExcepcion.java</file>
-            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/test/principal/AfiliadosTest.java</file>
             <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/caja/IngresarDoctor.java</file>
             <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/principal/AdministrativoNoExistenteExcepcion.java</file>
             <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/caja/Mostrar_Administractivo.java</file>
@@ -47,6 +45,7 @@
             <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/principal/DoctorNoExistenteExcepcion.java</file>
             <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/principal/PatenteIncorrectoExcepcion.java</file>
             <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/caja/Modificar_Chofer.java</file>
+            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/principal/Afiliados.java</file>
             <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/principal/DoctoresIgualExcepcion.java</file>
             <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/principal/EnfermeroIgualExcepcion.java</file>
             <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/caja/EliminarAfiliado.java</file>
@@ -62,6 +61,7 @@
             <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/caja/Mostrar_Pago.java</file>
             <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/caja/EliminarChofer.java</file>
             <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/principal/GrupoFamiliarIgualExcepcion.java</file>
+            <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/test/principal/RegistroPagoTest.java</file>
             <file>file:/F:/usuarios/alumno/Documentos/GitHub/Laboratorio-Prog2018/src/principal/FamiliarNoExistenteExcepcion.java</file>
         </group>
     </open-files>
