@@ -1,0 +1,4 @@
+Para poder ejecutar este laboratorio correctamente es necesario instalar la librería NefAnimacion y JCalendar, ambas se encuentran en la carpeta creada al clonar el repositorio.
+
+User: admin
+Pass: 123
